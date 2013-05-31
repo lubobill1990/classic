@@ -1,0 +1,22 @@
+.file-list{
+  font-size:12px;
+  tr{
+    height: 46px;
+  }
+  .file-icon {
+    width: 35px;
+    padding: 2px;
+    float: left;
+    position: relative;
+  }
+  .file-intro {
+    width: 369px;
+    float: left;
+    margin-left: 10px;
+  }
+  .file-tool{
+    a{
+      margin-right: 12px;
+    }
+  }
+}

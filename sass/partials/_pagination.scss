@@ -1,0 +1,16 @@
+.pagination{
+  font: 14px/150% Arial,Helvetica,sans-serif;
+  text-align: center;
+  margin: 20px 0;
+  line-height: 150%;
+  span,a{
+    padding: 0 4px;
+    margin:2px;
+  }
+  .prev,.next{
+
+  }
+  .current{
+    color: #AAAAAA;
+  }
+}

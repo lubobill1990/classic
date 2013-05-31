@@ -1,0 +1,186 @@
+.comment {
+  word-wrap: break-word;
+  overflow: hidden;
+  padding: 20px 0 0;
+}
+
+.comment-item {
+  font-size: 12px;
+  margin-bottom:12px;
+  .pic {
+    float: left;
+    margin-right: 20px;
+  }
+  .content {
+    zoom: 1;
+    overflow: hidden;
+    position:relative;
+    .author {
+      background: #F2FBF2;
+      color: #666;
+      padding: 2px 6px;
+      margin-bottom: 1em;
+    }
+    p{
+      margin-bottom: 1em;
+    }
+    .op-lnks {
+      visibility: hidden;
+      text-align: right;
+      a {
+        margin-right: 20px;
+        color: #bbb;
+      }
+      .comment-report{
+        visibility: hidden;
+        a{
+          margin-right: 0;
+        }
+      }
+    }
+    .comment-report {
+      float: right;
+      clear: right;
+    }
+    .group_banned {
+      text-align: right;
+    }
+  }
+  .pic {
+    height: 48px;
+    width: 48px;
+    overflow: hidden;
+    img {
+      height: 48px;
+    }
+  }
+  h3 {
+    background-color: #F2FBF2;
+    color: #666666;
+    font: 14px/1.62 Arial, Helvetica, sans-serif;
+    height: 26px;
+    margin-bottom: 1px;
+    margin-left: 4px;
+  }
+  &.over .op-lnks{
+    visibility: visible;
+  }
+  &.over .comment-report{
+    visibility: visible !important;
+  }
+
+}
+#add_comment {
+  border-top: 1px dotted #ddd;
+  padding:10px 0 ;
+}
+#comment_textarea{
+  width: 98%;
+}
+
+.reply-quote {
+  width: 90%;
+  padding-left: 7px;
+  margin: 20px 0;
+  border-left: 1px solid;
+}
+#add_comment{
+  h4{
+    font: 15px Arial,Helvetica,sans-serif;
+    color: #072;
+    margin: 0 0 12px 0;
+    line-height: 150%;
+  }
+}
+.pubdate {
+  color: #ccc;
+  font-size: small;
+}
+
+
+.reply-comment {
+  width: 90%;
+  position: relative;
+  padding: 3px 4px;
+  margin-bottom: 5px;
+  background-color: #e8eef2;
+  display:none;
+  p {
+    width: 30em;
+    padding: 6px;
+    margin: 0;
+  }
+
+  .lnk-close {
+    position: absolute;
+    right: 10px;
+    top: 8px;
+    line-height: 1;
+    padding: 0 2px;
+    font-size: 16px;
+  }
+  .lnk-close:hover {
+    background-color: #999;
+    color: #fff;
+  }
+}
+
+.tree-children {
+  margin-left: 20px;
+}
+
+.more-sibling-count, .more-parent-count {
+  background-color: #ccc;
+  margin-bottom: 5px;
+  a {
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+  }
+}
+
+#at-view {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: none;
+  margin-top: 18px;
+  background: white;
+  border: 1px solid #DDD;
+  border-radius: 3px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  min-width: 120px;
+  .cur {
+    background: #3366FF;
+    color: white;
+    small {
+      color: white;
+    }
+    strong {
+      color: white;
+      font: bold;
+    }
+  }
+  strong {
+    color: #3366FF;
+  }
+  small {
+    font-size: smaller;
+    color: #777;
+    font-weight: normal;
+  }
+  ul {
+    /* width: 100px; */
+    list-style: none;
+    padding: 0;
+    margin: auto;
+    li {
+      display: block;
+      padding: 5px 10px;
+      border-bottom: 1px solid #DDD;
+      cursor: pointer;
+      /* border-top: 1px solid #C8C8C8; */
+    }
+  }
+}
+
