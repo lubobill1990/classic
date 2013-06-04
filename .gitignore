@@ -6,4 +6,4 @@ assets
 
 upload
 !upload/README
-protected/runtime/application.log
+protected/runtime/*
