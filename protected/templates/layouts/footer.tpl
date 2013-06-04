@@ -1,10 +1,17 @@
-<div class="footer" id='page_footer'>
-    <div class="container">
-        <span id="icp" class="fleft gray-link">
-            © 2012－2013 <a href="https://github.com/lubobill1990/rts-client"">npeasy.com</a>, all rights reserved
-        </span>
-        <span class="fright">
-            <a href="/about">关于RTS</a>
-        </span>
+<footer id='footer'>
+    <div class="w960 bc">
+
+        <div id="footer-left" class="fl">
+            <span>版权信息</span>
+        </div>
+
+        <div id="footer-right" class="fr">
+            <ul>
+                <li><a href="#">FAQ</a></li>
+                <li><a href="#">关于我们</a></li>
+                <li><a href="#">捐赠ClassIC</a></li>
+            </ul>
+        </div>
+
     </div>
-</div>
+</footer>

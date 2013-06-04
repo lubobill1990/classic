@@ -1,17 +1,29 @@
-<div class="header" id='page_header'>
-{if $login_user}
+<header id='header'>
 
-    {else}
-    <div class="top-nav-info">
-        <a href="/signup">注册</a>
-        <a href="/login">登录</a>
+
+    <div id="header-top">
+        <div class="w960 bc">
+            <div id="header-top-logo" class="fl"></div>
+            <nav id="header-top-nav" class="fl">
+                <ul>
+                    <li><a href="#">课程分类</a></li>
+                    <li><a href="#">二手市场</a></li>
+                    <li><a href="#">捐赠我们</a></li>
+                </ul>
+            </nav>
+            <div id="header-top-info" class="fr">
+                你好，呵呵呵
+            </div>
+        </div>
     </div>
-{/if}
-    <div class="global-nav-items">
-        <ul>
-            <li><a href="/">rts</a></li>
-            <li></li>
-            <li></li>
-        </ul>
+
+    <div id="header-logged">
+        <div class="w960 bc">
+            <form id="header-search" class="bc">
+                <input type="input" placeholder="发现，搜索，学习" id="header-search-input"  />
+                <input type="submit" value="" id="header-search-button"/>
+            </form>
+        </div>
     </div>
-</div>
+
+</header>

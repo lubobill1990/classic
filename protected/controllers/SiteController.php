@@ -29,7 +29,7 @@ class SiteController extends Controller
     {
         // renders the view file 'protected/views/site/index.php'
         // using the default layout 'protected/views/layouts/main.php'
-        $this->smarty->renderAll('index');
+        $this->smarty->render('index');
     }
 
     /**
@@ -38,7 +38,7 @@ class SiteController extends Controller
     public function actionError()
     {
 
-        $this->smarty->renderAll('error');
+        $this->smarty->render('error');
     }
 
     /**

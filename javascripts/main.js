@@ -43,9 +43,13 @@ requirejs.config({
         'jquery.fileupload-validate':'fileupload/jquery.fileupload-validate',
         'jquery.ui.widget':'lib/jquery.ui.widget',
         'load-image':'fileupload/load-image',
-        'canvas-to-blob':'fileupload/canvas-to-blob'
+        'canvas-to-blob':'fileupload/canvas-to-blob',
+        'components':'common/components'
     },
     shim:{
+        components:{
+            deps:['jquery']
+        },
         backbone:{
             deps:['underscore', 'jquery'],
             exports:'Backbone'

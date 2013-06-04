@@ -1,7 +1,5 @@
+{extends file='layouts/main.tpl'}
 
-<div>
-{if $login_user}
-    {$login_user->email}
+{block name=content}
 
-    {/if}
-</div>
+{/block}
