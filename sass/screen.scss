@@ -1,13 +1,13 @@
-//css3简化
+//css3 mixin
 @import "compass/css3";
 
-//全局样式
+//all
 @import "common/variables";
 @import "common/base";
 @import "common/common";
 @import "common/components";
 
-//插件样式
+//plugin
 //@import "partials/font-awesome";
 //@import "partials/webim";
 //@import "partials/scroll_bar";

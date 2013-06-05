@@ -16,13 +16,22 @@
     <div id="header-top">
         <div class="w960 bc">
             <a href="" id="header-top-logo" class="fl"></a>
-            <div id="header-top-nav" class="fl">
-                <ul>
-                    <li><a href="#">课程分类</a></li>
-                    <li><a href="#">二手市场</a></li>
-                    <li><a href="#">捐赠我们</a></li>
-                </ul>
-            </div>
+            <ul id="header-top-nav" class="fl">
+                <li>
+                    <div id="header-top-nav-hover" class="none"></div>
+                    <a>课程分类<span class="header-top-nav-arrow"></span></a>
+                    <ul id="header-top-nav-subnav" class="none">
+                        <li>数理科学</li>
+                        <li>生命、医学</li>
+                        <li>计算机</li>
+                        <li>经济、管理</li>
+                        <li>工程、材料</li>
+                        <li>文史哲学</li>
+                    </ul>
+                </li>
+                <li><a href="#">二手市场</a></li>
+                <li><a href="#">捐赠我们</a></li>
+            </ul>
             <div id="header-top-info" class="fr">
                 你好，呵呵呵
             </div>
@@ -63,7 +72,13 @@
 <script type="text/javascript" src='/javascripts/main.js'></script>
 <script type="text/javascript">
 require(['jquery','components'], function ($){
-
+    $('#header-top-nav li').eq(0).mouseover(function(){
+        $(this).find('#header-top-nav-hover').removeClass('none');
+        $(this).find('#header-top-nav-subnav').removeClass('none');
+    }).mouseout(function(){
+        $(this).find('#header-top-nav-hover').addClass('none');
+        $(this).find('#header-top-nav-subnav').addClass('none');
+    });
 });
 </script>
 {block name=js}{/block}
