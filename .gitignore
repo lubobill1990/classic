@@ -6,3 +6,4 @@ assets
 
 upload
 !upload/README
+protected/runtime/*
