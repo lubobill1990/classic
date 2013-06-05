@@ -757,7 +757,7 @@ body #header #header-top #header-top-nav li a:hover {
   color: #2e7720;
 }
 /* line 30, ../sass/common/_common.scss */
-body #header #header-logged {
+body #header #header-normal {
   height: 60px;
   background: #edede7;
   -webkit-box-shadow: 0 1px 3px #aaaaaa;
@@ -765,7 +765,7 @@ body #header #header-logged {
   box-shadow: 0 1px 3px #aaaaaa;
 }
 /* line 33, ../sass/common/_common.scss */
-body #header #header-logged #header-logged-search {
+body #header #header-normal #header-normal-search {
   width: 640px;
   height: 40px;
   background: #fff;
@@ -781,7 +781,7 @@ body #header #header-logged #header-logged-search {
   box-shadow: 0 0 1px #aaaaaa;
 }
 /* line 37, ../sass/common/_common.scss */
-body #header #header-logged #header-logged-search #header-logged-search-input {
+body #header #header-normal #header-normal-search #header-normal-search-input {
   outline: none;
   border: none;
   width: 580px;
@@ -793,7 +793,7 @@ body #header #header-logged #header-logged-search #header-logged-search-input {
   color: #787a78;
 }
 /* line 42, ../sass/common/_common.scss */
-body #header #header-logged #header-logged-search #header-logged-search-button {
+body #header #header-normal #header-normal-search #header-normal-search-button {
   border: none;
   width: 24px;
   height: 24px;
@@ -803,9 +803,9 @@ body #header #header-logged #header-logged-search #header-logged-search-button {
   background: url("../../images/common/header-search-button.png") no-repeat center;
 }
 /* line 49, ../sass/common/_common.scss */
-body #header #header-unlogged {
+body #header #header-index {
   height: 258px;
-  background: url("../../images/common/header-unlogged-bg.png");
+  background: url("../../images/common/header-index-bg.png");
   -webkit-background-size: 100%, 100%;
   -moz-background-size: 100%, 100%;
   -o-background-size: 100%, 100%;
@@ -815,20 +815,20 @@ body #header #header-unlogged {
   box-shadow: 0 0 50px black inset;
 }
 /* line 53, ../sass/common/_common.scss */
-body #header #header-unlogged #header-unlogged-content {
+body #header #header-index #header-index-content {
   width: 500px;
   position: relative;
   top: 40px;
 }
 /* line 56, ../sass/common/_common.scss */
-body #header #header-unlogged #header-unlogged-content #header-unlogged-content-slogan {
+body #header #header-index #header-index-content #header-index-content-slogan {
   font-size: 60px;
   font-weight: bold;
   color: #fff;
   text-shadow: 3px 6px 5px #7d7d7d;
 }
 /* line 60, ../sass/common/_common.scss */
-body #header #header-unlogged #header-unlogged-content #header-unlogged-content-search {
+body #header #header-index #header-index-content #header-index-content-search {
   width: 380px;
   height: 40px;
   background: #fff;
@@ -845,7 +845,7 @@ body #header #header-unlogged #header-unlogged-content #header-unlogged-content-
   box-shadow: 0 2px 2px #777777;
 }
 /* line 64, ../sass/common/_common.scss */
-body #header #header-unlogged #header-unlogged-content #header-unlogged-content-search #header-unlogged-content-search-input {
+body #header #header-index #header-index-content #header-index-content-search #header-index-content-search-input {
   outline: none;
   border: none;
   width: 310px;
@@ -857,7 +857,7 @@ body #header #header-unlogged #header-unlogged-content #header-unlogged-content-
   color: #787a78;
 }
 /* line 69, ../sass/common/_common.scss */
-body #header #header-unlogged #header-unlogged-content #header-unlogged-content-search #header-unlogged-content-search-button {
+body #header #header-index #header-index-content #header-index-content-search #header-index-content-search-button {
   border: none;
   width: 24px;
   height: 24px;
@@ -867,14 +867,14 @@ body #header #header-unlogged #header-unlogged-content #header-unlogged-content-
   background: url("../../images/common/header-search-button.png") no-repeat center;
 }
 /* line 75, ../sass/common/_common.scss */
-body #header #header-unlogged #header-unlogged-content #header-unlogged-content-detail {
+body #header #header-index #header-index-content #header-index-content-detail {
   position: relative;
   top: 40px;
   font-size: 22px;
   color: #fff;
 }
 /* line 78, ../sass/common/_common.scss */
-body #header #header-unlogged #header-unlogged-content #header-unlogged-content-detail a {
+body #header #header-index #header-index-content #header-index-content-detail a {
   margin-left: 14px;
   color: #ffff00;
   text-decoration: underline;
