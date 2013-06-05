@@ -1,0 +1,6 @@
+//css3 mixin
+@import "compass/css3";
+
+#index-login{
+  padding: 22px 34px;background: #f3f3f3;@include box-shadow(0 0 1px #888);
+}
