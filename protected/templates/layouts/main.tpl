@@ -21,12 +21,78 @@
                     <div id="header-top-nav-hover" class="none"></div>
                     <a>课程分类<span class="header-top-nav-arrow"></span></a>
                     <ul id="header-top-nav-subnav" class="none">
-                        <li>数理科学</li>
-                        <li>生命、医学</li>
-                        <li>计算机</li>
-                        <li>经济、管理</li>
-                        <li>工程、材料</li>
-                        <li>文史哲学</li>
+                        <li>数理科学<ul class="none">
+                                <li><a href="#">数据学</a></li>
+                                <li><a href="#">编程语言</a></li>
+                                <li><a href="#">网络</a></li>
+                                <li><a href="#">软件工程</a></li>
+                                <li><a href="#">Linux</a></li>
+                                <li><a href="#">嵌入式</a></li>
+                                <li><a href="#">web开发</a></li>
+                                <li><a href="#">移动开发</a></li>
+                                <li><a href="#">硬件</a></li>
+                                <li><a href="#">你懂的</a></li>
+                            </ul></li>
+                        <li>生命、医学<ul class="none">
+                                <li><a href="#">数据学</a></li>
+                                <li><a href="#">编程语言</a></li>
+                                <li><a href="#">网络</a></li>
+                                <li><a href="#">软件工程</a></li>
+                                <li><a href="#">Linux</a></li>
+                                <li><a href="#">嵌入式</a></li>
+                                <li><a href="#">web开发</a></li>
+                                <li><a href="#">移动开发</a></li>
+                                <li><a href="#">硬件</a></li>
+                                <li><a href="#">你懂的</a></li>
+                            </ul></li>
+                        <li>计算机<ul class="none">
+                                <li><a href="#">数据学</a></li>
+                                <li><a href="#">编程语言</a></li>
+                                <li><a href="#">网络</a></li>
+                                <li><a href="#">软件工程</a></li>
+                                <li><a href="#">Linux</a></li>
+                                <li><a href="#">嵌入式</a></li>
+                                <li><a href="#">web开发</a></li>
+                                <li><a href="#">移动开发</a></li>
+                                <li><a href="#">硬件</a></li>
+                                <li><a href="#">你懂的</a></li>
+                            </ul></li>
+                        <li>经济、管理<ul class="none">
+                                <li><a href="#">数据学</a></li>
+                                <li><a href="#">编程语言</a></li>
+                                <li><a href="#">网络</a></li>
+                                <li><a href="#">软件工程</a></li>
+                                <li><a href="#">Linux</a></li>
+                                <li><a href="#">嵌入式</a></li>
+                                <li><a href="#">web开发</a></li>
+                                <li><a href="#">移动开发</a></li>
+                                <li><a href="#">硬件</a></li>
+                                <li><a href="#">你懂的</a></li>
+                            </ul></li>
+                        <li>工程、材料<ul class="none">
+                                <li><a href="#">数据学</a></li>
+                                <li><a href="#">编程语言</a></li>
+                                <li><a href="#">网络</a></li>
+                                <li><a href="#">软件工程</a></li>
+                                <li><a href="#">Linux</a></li>
+                                <li><a href="#">嵌入式</a></li>
+                                <li><a href="#">web开发</a></li>
+                                <li><a href="#">移动开发</a></li>
+                                <li><a href="#">硬件</a></li>
+                                <li><a href="#">你懂的</a></li>
+                            </ul></li>
+                        <li>文史哲学<ul class="none">
+                                <li><a href="#">数据学</a></li>
+                                <li><a href="#">编程语言</a></li>
+                                <li><a href="#">网络</a></li>
+                                <li><a href="#">软件工程</a></li>
+                                <li><a href="#">Linux</a></li>
+                                <li><a href="#">嵌入式</a></li>
+                                <li><a href="#">web开发</a></li>
+                                <li><a href="#">移动开发</a></li>
+                                <li><a href="#">硬件</a></li>
+                                <li><a href="#">你懂的</a></li>
+                            </ul></li>
                     </ul>
                 </li>
                 <li><a href="#">二手市场</a></li>
@@ -78,6 +144,12 @@ require(['jquery','components'], function ($){
     }).mouseout(function(){
         $(this).find('#header-top-nav-hover').addClass('none');
         $(this).find('#header-top-nav-subnav').addClass('none');
+    });
+
+    $('#header-top-nav-subnav li').mouseover(function(){
+        $(this).find('ul').removeClass('none');
+    }).mouseout(function(){
+        $(this).find('ul').addClass('none');
     });
 });
 </script>
