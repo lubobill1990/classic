@@ -1,17 +1,13 @@
-<footer id='footer'>
+<div id="footer">
     <div class="w960 bc">
 
-        <div id="footer-left" class="fl">
-            <span>版权信息</span>
-        </div>
+        <p id="footer-left" class="fl">版权信息</p>
 
-        <div id="footer-right" class="fr">
-            <ul>
-                <li><a href="#">FAQ</a></li>
-                <li><a href="#">关于我们</a></li>
-                <li><a href="#">捐赠ClassIC</a></li>
-            </ul>
-        </div>
+        <ul id="footer-right" class="fr">
+            <li><a href="#">FAQ</a></li>
+            <li><a href="#">关于我们</a></li>
+            <li><a href="#">捐赠ClassIC</a></li>
+        </ul>
 
     </div>
-</footer>
+</div>

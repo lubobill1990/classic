@@ -762,7 +762,7 @@ body #header #header-logged {
   box-shadow: 0 1px 3px #aaa;
 }
 /* line 33, ../sass/common/_common.scss */
-body #header #header-logged #header-search {
+body #header #header-logged #header-logged-search {
   width: 640px;
   height: 40px;
   background: #fff;
@@ -776,7 +776,7 @@ body #header #header-logged #header-search {
   border-radius: 2px;
 }
 /* line 37, ../sass/common/_common.scss */
-body #header #header-logged #header-search #header-search-input {
+body #header #header-logged #header-logged-search #header-logged-search-input {
   outline: none;
   border: none;
   width: 580px;
@@ -788,7 +788,7 @@ body #header #header-logged #header-search #header-search-input {
   color: #787a78;
 }
 /* line 42, ../sass/common/_common.scss */
-body #header #header-logged #header-search #header-search-button {
+body #header #header-logged #header-logged-search #header-logged-search-button {
   border: none;
   width: 24px;
   height: 24px;
@@ -799,7 +799,7 @@ body #header #header-logged #header-search #header-search-button {
 }
 /* line 50, ../sass/common/_common.scss */
 body #content {
-  min-height: 600px;
+  min-height: 500px;
 }
 /* line 54, ../sass/common/_common.scss */
 body #footer {
