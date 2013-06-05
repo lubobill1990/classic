@@ -14,7 +14,8 @@
 {include file='layouts/header.tpl'}
 
 <div id="content" class="w960 bc clearfix">
-    {block name=content}{/block}
+    <div id="content-left" class="fl">{block name=left}{/block}</div>
+    <div id="content-right" class="fr">{block name=right}{/block}</div>
 </div>
 
 {include file='layouts/footer.tpl'}
