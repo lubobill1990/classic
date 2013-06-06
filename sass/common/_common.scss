@@ -41,7 +41,7 @@ body{
               margin: 2px;padding-left: 12px;display: block;cursor: pointer;height: 28px;line-height: 28px;
 
               ul{
-                position: absolute;width: 292px;height:164px;background: #2e7720;z-index: 4;
+                position: absolute;width: 292px;height:170px;background: #2e7720;z-index: 4;
                 left: 126px;top: 0;padding: 8px 4px;
 
                 li{
@@ -55,11 +55,19 @@ body{
                     color: #fff;
                   }
                 }
+
+                .header-top-nav-subsubnav-footer{
+                  height: 4px;background: #296b1d;position: relative;top: 172px;width: 100%;
+                }
               }
 
               &:hover{
                 background: #e9e9e9;
               }
+            }
+
+            #header-top-nav-subnav-footer{
+              height: 4px;background: #e9e9e9;
             }
           }
         }
