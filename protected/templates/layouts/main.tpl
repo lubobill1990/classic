@@ -92,7 +92,7 @@
                                 <li><a href="#">web开发</a></li>
                                 <li><a href="#">移动开发</a></li>
                                 <li><a href="#">硬件</a></li>
-                                <li><a href="#">你懂的</a>
+                                <li><a href="#">你懂的</a></li>
                                 <div class="header-top-nav-subsubnav-footer"></div>
                             </ul>
                         </li>

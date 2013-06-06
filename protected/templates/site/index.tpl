@@ -25,12 +25,36 @@
 <form id="index-login" class="clearfix">
     <div class="form-item">
         <label for="index-login-username">用户名</label><input type="text" name="username" id="index-login-username" />
-        <div class="form-item-clear none"></div>
+        {*<div class="form-item-clear none"></div>*}
     </div>
     <div class="form-item">
         <label for="index-login-password">密码</label><input type="password" name="password" id="index-login-password" />
-        <div class="form-item-clear none"></div>
+        {*<div class="form-item-clear none"></div>*}
     </div>
     <input type="submit" value="登录" id="index-login-submit" class="btn fr" />
 </form>
 {/block}
+
+{block name=js}
+    <script type="text/javascript">
+        require(['jquery'], function ($){
+            $('.form-item').focusin(function(){
+//                console.log("parent in");
+//                $(this).find('.form-item-clear').removeClass('none');
+                $(this).find('label').addClass('label-focus');
+                return true;
+            }).focusout(function(){
+//                console.log("parent out");
+//                $(this).find('.form-item-clear').addClass('none');
+                $(this).find('label').removeClass('label-focus');
+                return true;
+            })/*on('click','.form-item-clear',function(){
+                console.log("click");
+                $(this).prev().val('');
+                return true;
+            })*/;
+        });
+    </script>
+{/block}
+
+
