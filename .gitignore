@@ -6,9 +6,7 @@ assets
 
 upload
 !upload/README
-<<<<<<< HEAD
+
 protected/runtime/*
-=======
 
 *.tpl.php
->>>>>>> master
