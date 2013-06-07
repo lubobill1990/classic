@@ -1,0 +1,2349 @@
+2013/05/30 23:49:13 [error] [exception.CException] exception 'CException' with message 'CMemCache requires PHP memcache extension to be loaded.' in /home/lubo2/public_html/yii-framework/caching/CMemCache.php:116
+Stack trace:
+#0 /home/lubo2/public_html/yii-framework/caching/CMemCache.php(89): CMemCache->getMemCache()
+#1 /home/lubo2/public_html/yii-framework/base/CModule.php(387): CMemCache->init()
+#2 /home/lubo2/public_html/yii-framework/web/CUrlManager.php(216): CModule->getComponent('cache')
+#3 /home/lubo2/public_html/yii-framework/web/CUrlManager.php(206): CUrlManager->processRules()
+#4 /home/lubo2/public_html/yii-framework/base/CModule.php(387): CUrlManager->init()
+#5 /home/lubo2/public_html/yii-framework/base/CApplication.php(510): CModule->getComponent('urlManager')
+#6 /home/lubo2/public_html/yii-framework/web/CWebApplication.php(140): CApplication->getUrlManager()
+#7 /home/lubo2/public_html/yii-framework/base/CApplication.php(169): CWebApplication->processRequest()
+#8 /home/lubo2/public_html/index.php(13): CApplication->run()
+#9 {main}
+REQUEST_URI=/
+---
+2013/05/30 23:49:13 [error] [exception.CException] exception 'CException' with message 'CMemCache requires PHP memcache extension to be loaded.' in /home/lubo2/public_html/yii-framework/caching/CMemCache.php:116
+Stack trace:
+#0 /home/lubo2/public_html/yii-framework/caching/CMemCache.php(89): CMemCache->getMemCache()
+#1 /home/lubo2/public_html/yii-framework/base/CModule.php(387): CMemCache->init()
+#2 /home/lubo2/public_html/yii-framework/web/CUrlManager.php(216): CModule->getComponent('cache')
+#3 /home/lubo2/public_html/yii-framework/web/CUrlManager.php(206): CUrlManager->processRules()
+#4 /home/lubo2/public_html/yii-framework/base/CModule.php(387): CUrlManager->init()
+#5 /home/lubo2/public_html/yii-framework/base/CApplication.php(510): CModule->getComponent('urlManager')
+#6 /home/lubo2/public_html/yii-framework/web/CWebApplication.php(140): CApplication->getUrlManager()
+#7 /home/lubo2/public_html/yii-framework/base/CApplication.php(169): CWebApplication->processRequest()
+#8 /home/lubo2/public_html/index.php(13): CApplication->run()
+#9 {main}
+REQUEST_URI=/favicon.ico
+---
+2013/05/30 23:49:43 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection: SQLSTATE[28000] [1045] Access denied for user 'root'@'localhost' (using password: YES)' in /home/lubo2/public_html/yii-framework/db/CDbConnection.php:381
+Stack trace:
+#0 /home/lubo2/public_html/yii-framework/db/CDbConnection.php(330): CDbConnection->open()
+#1 /home/lubo2/public_html/yii-framework/db/CDbConnection.php(308): CDbConnection->setActive(true)
+#2 /home/lubo2/public_html/yii-framework/base/CModule.php(387): CDbConnection->init()
+#3 /home/lubo2/public_html/yii-framework/base/CApplication.php(438): CModule->getComponent('db')
+#4 /home/lubo2/public_html/yii-framework/db/ar/CActiveRecord.php(623): CApplication->getDb()
+#5 /home/lubo2/public_html/yii-framework/db/ar/CActiveRecord.php(2309): CActiveRecord->getDbConnection()
+#6 /home/lubo2/public_html/yii-framework/db/ar/CActiveRecord.php(387): CActiveRecordMetaData->__construct(Object(User))
+#7 /home/lubo2/public_html/protected/models/User.php(29): CActiveRecord::model('User')
+#8 /home/lubo2/public_html/protected/components/WebUser.php(13): User::model()
+#9 /home/lubo2/public_html/yii-framework/base/CComponent.php(111): WebUser->getUser()
+#10 /home/lubo2/public_html/yii-framework/web/auth/CWebUser.php(140): CComponent->__get('user')
+#11 /home/lubo2/public_html/protected/components/Controller.php(31): CWebUser->__get('user')
+#12 /home/lubo2/public_html/yii-framework/web/CWebApplication.php(281): Controller->init()
+#13 /home/lubo2/public_html/yii-framework/web/CWebApplication.php(141): CWebApplication->runController('')
+#14 /home/lubo2/public_html/yii-framework/base/CApplication.php(169): CWebApplication->processRequest()
+#15 /home/lubo2/public_html/index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/
+---
+2013/05/30 23:49:43 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/lubo2/public_html/yii-framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/lubo2/public_html/yii-framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /home/lubo2/public_html/yii-framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /home/lubo2/public_html/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2013/05/30 23:49:44 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection: SQLSTATE[28000] [1045] Access denied for user 'root'@'localhost' (using password: YES)' in /home/lubo2/public_html/yii-framework/db/CDbConnection.php:381
+Stack trace:
+#0 /home/lubo2/public_html/yii-framework/db/CDbConnection.php(330): CDbConnection->open()
+#1 /home/lubo2/public_html/yii-framework/db/CDbConnection.php(308): CDbConnection->setActive(true)
+#2 /home/lubo2/public_html/yii-framework/base/CModule.php(387): CDbConnection->init()
+#3 /home/lubo2/public_html/yii-framework/base/CApplication.php(438): CModule->getComponent('db')
+#4 /home/lubo2/public_html/yii-framework/db/ar/CActiveRecord.php(623): CApplication->getDb()
+#5 /home/lubo2/public_html/yii-framework/db/ar/CActiveRecord.php(2309): CActiveRecord->getDbConnection()
+#6 /home/lubo2/public_html/yii-framework/db/ar/CActiveRecord.php(387): CActiveRecordMetaData->__construct(Object(User))
+#7 /home/lubo2/public_html/protected/models/User.php(29): CActiveRecord::model('User')
+#8 /home/lubo2/public_html/protected/components/WebUser.php(13): User::model()
+#9 /home/lubo2/public_html/yii-framework/base/CComponent.php(111): WebUser->getUser()
+#10 /home/lubo2/public_html/yii-framework/web/auth/CWebUser.php(140): CComponent->__get('user')
+#11 /home/lubo2/public_html/protected/components/Controller.php(31): CWebUser->__get('user')
+#12 /home/lubo2/public_html/yii-framework/web/CWebApplication.php(281): Controller->init()
+#13 /home/lubo2/public_html/yii-framework/web/CWebApplication.php(141): CWebApplication->runController('')
+#14 /home/lubo2/public_html/yii-framework/base/CApplication.php(169): CWebApplication->processRequest()
+#15 /home/lubo2/public_html/index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/
+---
+2013/05/30 23:49:44 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/lubo2/public_html/yii-framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/lubo2/public_html/yii-framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /home/lubo2/public_html/yii-framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /home/lubo2/public_html/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2013/05/30 23:59:39 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection: SQLSTATE[28000] [1045] Access denied for user 'root'@'localhost' (using password: YES)' in /home/lubo2/public_html/yii-framework/db/CDbConnection.php:381
+Stack trace:
+#0 /home/lubo2/public_html/yii-framework/db/CDbConnection.php(330): CDbConnection->open()
+#1 /home/lubo2/public_html/yii-framework/db/CDbConnection.php(308): CDbConnection->setActive(true)
+#2 /home/lubo2/public_html/yii-framework/base/CModule.php(387): CDbConnection->init()
+#3 /home/lubo2/public_html/yii-framework/base/CApplication.php(438): CModule->getComponent('db')
+#4 /home/lubo2/public_html/yii-framework/db/ar/CActiveRecord.php(623): CApplication->getDb()
+#5 /home/lubo2/public_html/yii-framework/db/ar/CActiveRecord.php(2309): CActiveRecord->getDbConnection()
+#6 /home/lubo2/public_html/yii-framework/db/ar/CActiveRecord.php(387): CActiveRecordMetaData->__construct(Object(User))
+#7 /home/lubo2/public_html/protected/models/User.php(29): CActiveRecord::model('User')
+#8 /home/lubo2/public_html/protected/components/WebUser.php(13): User::model()
+#9 /home/lubo2/public_html/yii-framework/base/CComponent.php(111): WebUser->getUser()
+#10 /home/lubo2/public_html/yii-framework/web/auth/CWebUser.php(140): CComponent->__get('user')
+#11 /home/lubo2/public_html/protected/components/Controller.php(31): CWebUser->__get('user')
+#12 /home/lubo2/public_html/yii-framework/web/CWebApplication.php(281): Controller->init()
+#13 /home/lubo2/public_html/yii-framework/web/CWebApplication.php(141): CWebApplication->runController('')
+#14 /home/lubo2/public_html/yii-framework/base/CApplication.php(169): CWebApplication->processRequest()
+#15 /home/lubo2/public_html/index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/
+---
+2013/05/30 23:59:40 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/lubo2/public_html/yii-framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/lubo2/public_html/yii-framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /home/lubo2/public_html/yii-framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /home/lubo2/public_html/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2013/05/31 12:49:21 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'devclassic.user' doesn't exist. The SQL statement executed was: SHOW FULL COLUMNS FROM `user`.
+in /home/lubo2/public_html/protected/models/User.php (29)
+in /home/lubo2/public_html/protected/components/WebUser.php (13)
+in /home/lubo2/public_html/protected/components/Controller.php (31)
+2013/05/31 12:49:21 [error] [exception.CDbException] exception 'CDbException' with message 'The table "user" for active record class "User" cannot be found in the database.' in /home/lubo2/public_html/yii-framework/db/ar/CActiveRecord.php:2310
+Stack trace:
+#0 /home/lubo2/public_html/yii-framework/db/ar/CActiveRecord.php(387): CActiveRecordMetaData->__construct(Object(User))
+#1 /home/lubo2/public_html/protected/models/User.php(29): CActiveRecord::model('User')
+#2 /home/lubo2/public_html/protected/components/WebUser.php(13): User::model()
+#3 /home/lubo2/public_html/yii-framework/base/CComponent.php(111): WebUser->getUser()
+#4 /home/lubo2/public_html/yii-framework/web/auth/CWebUser.php(140): CComponent->__get('user')
+#5 /home/lubo2/public_html/protected/components/Controller.php(31): CWebUser->__get('user')
+#6 /home/lubo2/public_html/yii-framework/web/CWebApplication.php(281): Controller->init()
+#7 /home/lubo2/public_html/yii-framework/web/CWebApplication.php(141): CWebApplication->runController('')
+#8 /home/lubo2/public_html/yii-framework/base/CApplication.php(169): CWebApplication->processRequest()
+#9 /home/lubo2/public_html/index.php(13): CApplication->run()
+#10 {main}
+REQUEST_URI=/
+---
+2013/05/31 12:49:21 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/lubo2/public_html/yii-framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/lubo2/public_html/yii-framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /home/lubo2/public_html/yii-framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /home/lubo2/public_html/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2013/05/31 12:49:21 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'devclassic.user' doesn't exist. The SQL statement executed was: SHOW FULL COLUMNS FROM `user`.
+in /home/lubo2/public_html/protected/models/User.php (29)
+in /home/lubo2/public_html/protected/components/WebUser.php (13)
+in /home/lubo2/public_html/protected/components/Controller.php (31)
+2013/05/31 12:53:39 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/lubo2/public_html/yii-framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/lubo2/public_html/yii-framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /home/lubo2/public_html/yii-framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /home/lubo2/public_html/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2013/05/31 12:55:19 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/lubo2/public_html/yii-framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/lubo2/public_html/yii-framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /home/lubo2/public_html/yii-framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /home/lubo2/public_html/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2013/05/31 12:55:22 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/lubo2/public_html/yii-framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/lubo2/public_html/yii-framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /home/lubo2/public_html/yii-framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /home/lubo2/public_html/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2013/05/31 12:55:29 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/lubo2/public_html/yii-framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/lubo2/public_html/yii-framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /home/lubo2/public_html/yii-framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /home/lubo2/public_html/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2013/05/31 12:56:02 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/lubo2/public_html/yii-framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/lubo2/public_html/yii-framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /home/lubo2/public_html/yii-framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /home/lubo2/public_html/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2013/05/31 12:56:26 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/lubo2/public_html/yii-framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/lubo2/public_html/yii-framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /home/lubo2/public_html/yii-framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /home/lubo2/public_html/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2013/05/31 12:56:38 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/lubo2/public_html/yii-framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/lubo2/public_html/yii-framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /home/lubo2/public_html/yii-framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /home/lubo2/public_html/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2013/05/31 12:56:45 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/lubo2/public_html/yii-framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/lubo2/public_html/yii-framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /home/lubo2/public_html/yii-framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /home/lubo2/public_html/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2013/05/31 12:56:48 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/lubo2/public_html/yii-framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/lubo2/public_html/yii-framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /home/lubo2/public_html/yii-framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /home/lubo2/public_html/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2013/05/31 12:56:52 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/lubo2/public_html/yii-framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/lubo2/public_html/yii-framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /home/lubo2/public_html/yii-framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /home/lubo2/public_html/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2013/05/31 12:56:54 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/lubo2/public_html/yii-framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/lubo2/public_html/yii-framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /home/lubo2/public_html/yii-framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /home/lubo2/public_html/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2013/05/31 12:57:26 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/lubo2/public_html/yii-framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/lubo2/public_html/yii-framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /home/lubo2/public_html/yii-framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /home/lubo2/public_html/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2013/05/31 12:57:26 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/lubo2/public_html/yii-framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/lubo2/public_html/yii-framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /home/lubo2/public_html/yii-framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /home/lubo2/public_html/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2013/05/31 12:57:26 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/lubo2/public_html/yii-framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/lubo2/public_html/yii-framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /home/lubo2/public_html/yii-framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /home/lubo2/public_html/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2013/05/31 13:16:13 [error] [php] preg_match(): Delimiter must not be alphanumeric or backslash (/home/lubo2/public_html/protected/controllers/UserController.php:75)
+Stack trace:
+#0 /home/lubo2/public_html/yii-framework/web/CController.php(308): CInlineAction->runWithParams()
+#1 /home/lubo2/public_html/yii-framework/web/CController.php(286): UserController->runAction()
+#2 /home/lubo2/public_html/yii-framework/web/CController.php(265): UserController->runActionWithFilters()
+#3 /home/lubo2/public_html/yii-framework/web/CWebApplication.php(282): UserController->run()
+#4 /home/lubo2/public_html/yii-framework/web/CWebApplication.php(141): CWebApplication->runController()
+#5 /home/lubo2/public_html/yii-framework/base/CApplication.php(169): CWebApplication->processRequest()
+#6 /home/lubo2/public_html/index.php(13): CWebApplication->run()
+REQUEST_URI=/login
+in /home/lubo2/public_html/protected/controllers/UserController.php (75)
+in /home/lubo2/public_html/index.php (13)
+2013/05/31 13:16:13 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/lubo2/public_html/yii-framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/lubo2/public_html/yii-framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /home/lubo2/public_html/yii-framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /home/lubo2/public_html/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2013/05/31 13:16:46 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/lubo2/public_html/yii-framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/lubo2/public_html/yii-framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /home/lubo2/public_html/yii-framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /home/lubo2/public_html/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2013/05/31 13:16:49 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/lubo2/public_html/yii-framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/lubo2/public_html/yii-framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /home/lubo2/public_html/yii-framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /home/lubo2/public_html/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2013/05/31 13:16:56 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/lubo2/public_html/yii-framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/lubo2/public_html/yii-framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /home/lubo2/public_html/yii-framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /home/lubo2/public_html/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2013/05/31 13:17:01 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "feedback/test".' in /home/lubo2/public_html/yii-framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/lubo2/public_html/yii-framework/web/CWebApplication.php(141): CWebApplication->runController('feedback/test')
+#1 /home/lubo2/public_html/yii-framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /home/lubo2/public_html/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/feedback/test
+---
+2013/05/31 13:17:01 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/lubo2/public_html/yii-framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/lubo2/public_html/yii-framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /home/lubo2/public_html/yii-framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /home/lubo2/public_html/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2013/05/31 13:17:03 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "feedback/index".' in /home/lubo2/public_html/yii-framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/lubo2/public_html/yii-framework/web/CWebApplication.php(141): CWebApplication->runController('feedback/index')
+#1 /home/lubo2/public_html/yii-framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /home/lubo2/public_html/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/feedback/
+---
+2013/05/31 13:17:03 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/lubo2/public_html/yii-framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/lubo2/public_html/yii-framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /home/lubo2/public_html/yii-framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /home/lubo2/public_html/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2013/05/31 13:17:09 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/lubo2/public_html/yii-framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/lubo2/public_html/yii-framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /home/lubo2/public_html/yii-framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /home/lubo2/public_html/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2013/05/31 13:17:09 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/lubo2/public_html/yii-framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/lubo2/public_html/yii-framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /home/lubo2/public_html/yii-framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /home/lubo2/public_html/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2013/05/31 13:17:09 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/lubo2/public_html/yii-framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/lubo2/public_html/yii-framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /home/lubo2/public_html/yii-framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /home/lubo2/public_html/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2013/05/31 13:47:56 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/lubo2/public_html/yii-framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/lubo2/public_html/yii-framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /home/lubo2/public_html/yii-framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /home/lubo2/public_html/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2013/05/31 13:48:13 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/lubo2/public_html/yii-framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/lubo2/public_html/yii-framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /home/lubo2/public_html/yii-framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /home/lubo2/public_html/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2013/05/31 13:48:15 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/lubo2/public_html/yii-framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/lubo2/public_html/yii-framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /home/lubo2/public_html/yii-framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /home/lubo2/public_html/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2013/05/31 13:48:15 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/lubo2/public_html/yii-framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/lubo2/public_html/yii-framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /home/lubo2/public_html/yii-framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /home/lubo2/public_html/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2013/05/31 13:55:47 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "javascripts/smart.js".' in /home/lubo2/public_html/yii-framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/lubo2/public_html/yii-framework/web/CWebApplication.php(141): CWebApplication->runController('javascripts/sma...')
+#1 /home/lubo2/public_html/yii-framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /home/lubo2/public_html/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/javascripts/smart.js
+HTTP_REFERER=http://lubo.u.lilystudio.org/
+---
+2013/05/31 13:56:45 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/lubo2/public_html/yii-framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/lubo2/public_html/yii-framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /home/lubo2/public_html/yii-framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /home/lubo2/public_html/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2013/05/31 13:56:46 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "javascripts/smart.js".' in /home/lubo2/public_html/yii-framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/lubo2/public_html/yii-framework/web/CWebApplication.php(141): CWebApplication->runController('javascripts/sma...')
+#1 /home/lubo2/public_html/yii-framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /home/lubo2/public_html/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/javascripts/smart.js
+HTTP_REFERER=http://lubo.u.lilystudio.org/
+---
+2013/05/31 13:56:47 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/lubo2/public_html/yii-framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/lubo2/public_html/yii-framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /home/lubo2/public_html/yii-framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /home/lubo2/public_html/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2013/05/31 13:57:02 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/lubo2/public_html/yii-framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/lubo2/public_html/yii-framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /home/lubo2/public_html/yii-framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /home/lubo2/public_html/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2013/05/31 13:57:03 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "javascripts/smart.js".' in /home/lubo2/public_html/yii-framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/lubo2/public_html/yii-framework/web/CWebApplication.php(141): CWebApplication->runController('javascripts/sma...')
+#1 /home/lubo2/public_html/yii-framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /home/lubo2/public_html/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/javascripts/smart.js
+HTTP_REFERER=http://lubo.u.lilystudio.org/
+---
+2013/05/31 13:57:03 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/lubo2/public_html/yii-framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/lubo2/public_html/yii-framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /home/lubo2/public_html/yii-framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /home/lubo2/public_html/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2013/05/31 13:57:05 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/lubo2/public_html/yii-framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/lubo2/public_html/yii-framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /home/lubo2/public_html/yii-framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /home/lubo2/public_html/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2013/05/31 14:12:50 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/lubo2/public_html/yii-framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/lubo2/public_html/yii-framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /home/lubo2/public_html/yii-framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /home/lubo2/public_html/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2013/05/31 14:12:52 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/lubo2/public_html/yii-framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/lubo2/public_html/yii-framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /home/lubo2/public_html/yii-framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /home/lubo2/public_html/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2013/05/31 14:15:37 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/lubo2/public_html/yii-framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/lubo2/public_html/yii-framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /home/lubo2/public_html/yii-framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /home/lubo2/public_html/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2013/05/31 19:49:49 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/lubo2/public_html/yii-framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/lubo2/public_html/yii-framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /home/lubo2/public_html/yii-framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /home/lubo2/public_html/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2013/05/31 23:06:22 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/lubo2/public_html/yii-framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/lubo2/public_html/yii-framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /home/lubo2/public_html/yii-framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /home/lubo2/public_html/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2013/06/03 17:12:24 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/lubo2/public_html/yii-framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/lubo2/public_html/yii-framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /home/lubo2/public_html/yii-framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /home/lubo2/public_html/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2013/06/03 17:12:24 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/lubo2/public_html/yii-framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/lubo2/public_html/yii-framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /home/lubo2/public_html/yii-framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /home/lubo2/public_html/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2013/06/03 17:12:24 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/lubo2/public_html/yii-framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/lubo2/public_html/yii-framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /home/lubo2/public_html/yii-framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /home/lubo2/public_html/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2013/06/03 17:12:28 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "gii/index".' in /home/lubo2/public_html/yii-framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/lubo2/public_html/yii-framework/web/CWebApplication.php(141): CWebApplication->runController('gii/index')
+#1 /home/lubo2/public_html/yii-framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /home/lubo2/public_html/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/gii
+---
+2013/06/03 17:13:15 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "gii/index".' in /home/lubo2/public_html/yii-framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/lubo2/public_html/yii-framework/web/CWebApplication.php(141): CWebApplication->runController('gii/index')
+#1 /home/lubo2/public_html/yii-framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /home/lubo2/public_html/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/gii
+---
+2013/06/03 18:26:47 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/lubo2/public_html/yii-framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/lubo2/public_html/yii-framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /home/lubo2/public_html/yii-framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /home/lubo2/public_html/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2013/06/03 18:26:50 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/lubo2/public_html/yii-framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/lubo2/public_html/yii-framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /home/lubo2/public_html/yii-framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /home/lubo2/public_html/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2013/06/03 18:30:10 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/lubo2/public_html/yii-framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/lubo2/public_html/yii-framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /home/lubo2/public_html/yii-framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /home/lubo2/public_html/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2013/06/03 18:30:11 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/lubo2/public_html/yii-framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/lubo2/public_html/yii-framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /home/lubo2/public_html/yii-framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /home/lubo2/public_html/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2013/06/03 18:30:12 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/lubo2/public_html/yii-framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/lubo2/public_html/yii-framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /home/lubo2/public_html/yii-framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /home/lubo2/public_html/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2013/06/03 18:30:12 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/lubo2/public_html/yii-framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/lubo2/public_html/yii-framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /home/lubo2/public_html/yii-framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /home/lubo2/public_html/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2013/06/03 18:30:13 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/lubo2/public_html/yii-framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/lubo2/public_html/yii-framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /home/lubo2/public_html/yii-framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /home/lubo2/public_html/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2013/06/03 18:31:02 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/lubo2/public_html/yii-framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/lubo2/public_html/yii-framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /home/lubo2/public_html/yii-framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /home/lubo2/public_html/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2013/06/03 18:31:17 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/lubo2/public_html/yii-framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/lubo2/public_html/yii-framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /home/lubo2/public_html/yii-framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /home/lubo2/public_html/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2013/06/03 18:31:18 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/lubo2/public_html/yii-framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/lubo2/public_html/yii-framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /home/lubo2/public_html/yii-framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /home/lubo2/public_html/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2013/06/03 18:31:49 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/lubo2/public_html/yii-framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/lubo2/public_html/yii-framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /home/lubo2/public_html/yii-framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /home/lubo2/public_html/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2013/06/03 18:32:27 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/lubo2/public_html/yii-framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/lubo2/public_html/yii-framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /home/lubo2/public_html/yii-framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /home/lubo2/public_html/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2013/06/03 18:32:37 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/lubo2/public_html/yii-framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/lubo2/public_html/yii-framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /home/lubo2/public_html/yii-framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /home/lubo2/public_html/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2013/06/03 19:24:42 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/lubo2/public_html/yii-framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/lubo2/public_html/yii-framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /home/lubo2/public_html/yii-framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /home/lubo2/public_html/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2013/06/03 21:15:46 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/lubo2/public_html/yii-framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/lubo2/public_html/yii-framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /home/lubo2/public_html/yii-framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /home/lubo2/public_html/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2013/06/03 21:30:43 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/lubo2/public_html/yii-framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/lubo2/public_html/yii-framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /home/lubo2/public_html/yii-framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /home/lubo2/public_html/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2013/06/03 21:30:52 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/lubo2/public_html/yii-framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/lubo2/public_html/yii-framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /home/lubo2/public_html/yii-framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /home/lubo2/public_html/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2013/06/03 21:30:52 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/lubo2/public_html/yii-framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/lubo2/public_html/yii-framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /home/lubo2/public_html/yii-framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /home/lubo2/public_html/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2013/06/03 21:30:52 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/lubo2/public_html/yii-framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/lubo2/public_html/yii-framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /home/lubo2/public_html/yii-framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /home/lubo2/public_html/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2013/06/03 21:30:55 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/lubo2/public_html/yii-framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/lubo2/public_html/yii-framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /home/lubo2/public_html/yii-framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /home/lubo2/public_html/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2013/06/03 21:30:55 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/lubo2/public_html/yii-framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/lubo2/public_html/yii-framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /home/lubo2/public_html/yii-framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /home/lubo2/public_html/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2013/06/03 21:30:56 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/lubo2/public_html/yii-framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/lubo2/public_html/yii-framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /home/lubo2/public_html/yii-framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /home/lubo2/public_html/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2013/06/03 21:30:56 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/lubo2/public_html/yii-framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/lubo2/public_html/yii-framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /home/lubo2/public_html/yii-framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /home/lubo2/public_html/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2013/06/03 21:30:57 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/lubo2/public_html/yii-framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/lubo2/public_html/yii-framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /home/lubo2/public_html/yii-framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /home/lubo2/public_html/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2013/06/03 21:30:57 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/lubo2/public_html/yii-framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/lubo2/public_html/yii-framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /home/lubo2/public_html/yii-framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /home/lubo2/public_html/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2013/06/03 21:30:58 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/lubo2/public_html/yii-framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/lubo2/public_html/yii-framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /home/lubo2/public_html/yii-framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /home/lubo2/public_html/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2013/06/03 21:30:59 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/lubo2/public_html/yii-framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/lubo2/public_html/yii-framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /home/lubo2/public_html/yii-framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /home/lubo2/public_html/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2013/06/03 21:31:00 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/lubo2/public_html/yii-framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/lubo2/public_html/yii-framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /home/lubo2/public_html/yii-framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /home/lubo2/public_html/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2013/06/03 21:31:00 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/lubo2/public_html/yii-framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/lubo2/public_html/yii-framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /home/lubo2/public_html/yii-framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /home/lubo2/public_html/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2013/06/03 21:31:01 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/lubo2/public_html/yii-framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/lubo2/public_html/yii-framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /home/lubo2/public_html/yii-framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /home/lubo2/public_html/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2013/06/03 21:31:01 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/lubo2/public_html/yii-framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/lubo2/public_html/yii-framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /home/lubo2/public_html/yii-framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /home/lubo2/public_html/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2013/06/03 21:31:01 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/lubo2/public_html/yii-framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/lubo2/public_html/yii-framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /home/lubo2/public_html/yii-framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /home/lubo2/public_html/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2013/06/03 21:31:02 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/lubo2/public_html/yii-framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/lubo2/public_html/yii-framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /home/lubo2/public_html/yii-framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /home/lubo2/public_html/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2013/06/03 21:31:03 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/lubo2/public_html/yii-framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/lubo2/public_html/yii-framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /home/lubo2/public_html/yii-framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /home/lubo2/public_html/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2013/06/03 21:31:04 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/lubo2/public_html/yii-framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/lubo2/public_html/yii-framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /home/lubo2/public_html/yii-framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /home/lubo2/public_html/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2013/06/03 21:31:05 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/lubo2/public_html/yii-framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/lubo2/public_html/yii-framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /home/lubo2/public_html/yii-framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /home/lubo2/public_html/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2013/06/03 21:31:06 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/lubo2/public_html/yii-framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/lubo2/public_html/yii-framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /home/lubo2/public_html/yii-framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /home/lubo2/public_html/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2013/06/03 21:31:07 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/lubo2/public_html/yii-framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/lubo2/public_html/yii-framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /home/lubo2/public_html/yii-framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /home/lubo2/public_html/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2013/06/03 21:31:07 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/lubo2/public_html/yii-framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/lubo2/public_html/yii-framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /home/lubo2/public_html/yii-framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /home/lubo2/public_html/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2013/06/03 21:31:08 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/lubo2/public_html/yii-framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/lubo2/public_html/yii-framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /home/lubo2/public_html/yii-framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /home/lubo2/public_html/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2013/06/03 21:31:08 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/lubo2/public_html/yii-framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/lubo2/public_html/yii-framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /home/lubo2/public_html/yii-framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /home/lubo2/public_html/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2013/06/03 21:31:08 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/lubo2/public_html/yii-framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/lubo2/public_html/yii-framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /home/lubo2/public_html/yii-framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /home/lubo2/public_html/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2013/06/03 21:31:09 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/lubo2/public_html/yii-framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/lubo2/public_html/yii-framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /home/lubo2/public_html/yii-framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /home/lubo2/public_html/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2013/06/03 21:31:10 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/lubo2/public_html/yii-framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/lubo2/public_html/yii-framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /home/lubo2/public_html/yii-framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /home/lubo2/public_html/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2013/06/03 21:31:11 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/lubo2/public_html/yii-framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/lubo2/public_html/yii-framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /home/lubo2/public_html/yii-framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /home/lubo2/public_html/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2013/06/03 21:31:12 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/lubo2/public_html/yii-framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/lubo2/public_html/yii-framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /home/lubo2/public_html/yii-framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /home/lubo2/public_html/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2013/06/03 21:31:12 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/lubo2/public_html/yii-framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/lubo2/public_html/yii-framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /home/lubo2/public_html/yii-framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /home/lubo2/public_html/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2013/06/03 21:31:12 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/lubo2/public_html/yii-framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/lubo2/public_html/yii-framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /home/lubo2/public_html/yii-framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /home/lubo2/public_html/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2013/06/03 21:31:12 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/lubo2/public_html/yii-framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/lubo2/public_html/yii-framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /home/lubo2/public_html/yii-framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /home/lubo2/public_html/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2013/06/03 21:31:13 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/lubo2/public_html/yii-framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/lubo2/public_html/yii-framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /home/lubo2/public_html/yii-framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /home/lubo2/public_html/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2013/06/03 21:31:14 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/lubo2/public_html/yii-framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/lubo2/public_html/yii-framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /home/lubo2/public_html/yii-framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /home/lubo2/public_html/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2013/06/03 21:31:14 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/lubo2/public_html/yii-framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/lubo2/public_html/yii-framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /home/lubo2/public_html/yii-framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /home/lubo2/public_html/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2013/06/03 21:31:18 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/lubo2/public_html/yii-framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/lubo2/public_html/yii-framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /home/lubo2/public_html/yii-framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /home/lubo2/public_html/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2013/06/03 21:31:27 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/lubo2/public_html/yii-framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/lubo2/public_html/yii-framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /home/lubo2/public_html/yii-framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /home/lubo2/public_html/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2013/06/03 21:32:06 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/lubo2/public_html/yii-framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/lubo2/public_html/yii-framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /home/lubo2/public_html/yii-framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /home/lubo2/public_html/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2013/06/03 21:32:06 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/lubo2/public_html/yii-framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/lubo2/public_html/yii-framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /home/lubo2/public_html/yii-framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /home/lubo2/public_html/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2013/06/03 21:54:47 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/lubo2/public_html/yii-framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/lubo2/public_html/yii-framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /home/lubo2/public_html/yii-framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /home/lubo2/public_html/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2013/06/03 21:54:51 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/lubo2/public_html/yii-framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/lubo2/public_html/yii-framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /home/lubo2/public_html/yii-framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /home/lubo2/public_html/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2013/06/03 21:54:55 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/lubo2/public_html/yii-framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/lubo2/public_html/yii-framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /home/lubo2/public_html/yii-framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /home/lubo2/public_html/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2013/06/03 21:54:56 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/lubo2/public_html/yii-framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/lubo2/public_html/yii-framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /home/lubo2/public_html/yii-framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /home/lubo2/public_html/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2013/06/03 21:54:58 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/lubo2/public_html/yii-framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/lubo2/public_html/yii-framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /home/lubo2/public_html/yii-framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /home/lubo2/public_html/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2013/06/03 21:54:58 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/lubo2/public_html/yii-framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/lubo2/public_html/yii-framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /home/lubo2/public_html/yii-framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /home/lubo2/public_html/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2013/06/03 21:55:00 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/lubo2/public_html/yii-framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/lubo2/public_html/yii-framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /home/lubo2/public_html/yii-framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /home/lubo2/public_html/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2013/06/03 21:55:00 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/lubo2/public_html/yii-framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/lubo2/public_html/yii-framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /home/lubo2/public_html/yii-framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /home/lubo2/public_html/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2013/06/03 21:55:13 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/lubo2/public_html/yii-framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/lubo2/public_html/yii-framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /home/lubo2/public_html/yii-framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /home/lubo2/public_html/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2013/06/03 21:55:15 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/lubo2/public_html/yii-framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/lubo2/public_html/yii-framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /home/lubo2/public_html/yii-framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /home/lubo2/public_html/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2013/06/03 21:55:15 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/lubo2/public_html/yii-framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/lubo2/public_html/yii-framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /home/lubo2/public_html/yii-framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /home/lubo2/public_html/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2013/06/03 21:55:23 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/lubo2/public_html/yii-framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/lubo2/public_html/yii-framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /home/lubo2/public_html/yii-framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /home/lubo2/public_html/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2013/06/03 21:55:23 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/lubo2/public_html/yii-framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/lubo2/public_html/yii-framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /home/lubo2/public_html/yii-framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /home/lubo2/public_html/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2013/06/03 21:55:27 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/lubo2/public_html/yii-framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/lubo2/public_html/yii-framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /home/lubo2/public_html/yii-framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /home/lubo2/public_html/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2013/06/03 21:55:39 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/lubo2/public_html/yii-framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/lubo2/public_html/yii-framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /home/lubo2/public_html/yii-framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /home/lubo2/public_html/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2013/06/03 21:55:39 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/lubo2/public_html/yii-framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/lubo2/public_html/yii-framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /home/lubo2/public_html/yii-framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /home/lubo2/public_html/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2013/06/03 21:55:40 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/lubo2/public_html/yii-framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/lubo2/public_html/yii-framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /home/lubo2/public_html/yii-framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /home/lubo2/public_html/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2013/06/03 21:55:48 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/lubo2/public_html/yii-framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/lubo2/public_html/yii-framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /home/lubo2/public_html/yii-framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /home/lubo2/public_html/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2013/06/03 21:55:48 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/lubo2/public_html/yii-framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/lubo2/public_html/yii-framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /home/lubo2/public_html/yii-framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /home/lubo2/public_html/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2013/06/03 21:55:48 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/lubo2/public_html/yii-framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/lubo2/public_html/yii-framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /home/lubo2/public_html/yii-framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /home/lubo2/public_html/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2013/06/03 21:55:48 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/lubo2/public_html/yii-framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/lubo2/public_html/yii-framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /home/lubo2/public_html/yii-framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /home/lubo2/public_html/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2013/06/03 21:55:48 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/lubo2/public_html/yii-framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/lubo2/public_html/yii-framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /home/lubo2/public_html/yii-framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /home/lubo2/public_html/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2013/06/03 21:55:50 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/lubo2/public_html/yii-framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/lubo2/public_html/yii-framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /home/lubo2/public_html/yii-framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /home/lubo2/public_html/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2013/06/03 21:55:50 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/lubo2/public_html/yii-framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/lubo2/public_html/yii-framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /home/lubo2/public_html/yii-framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /home/lubo2/public_html/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2013/06/03 21:55:50 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/lubo2/public_html/yii-framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/lubo2/public_html/yii-framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /home/lubo2/public_html/yii-framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /home/lubo2/public_html/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2013/06/03 21:55:53 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/lubo2/public_html/yii-framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/lubo2/public_html/yii-framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /home/lubo2/public_html/yii-framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /home/lubo2/public_html/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2013/06/03 21:56:07 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/lubo2/public_html/yii-framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/lubo2/public_html/yii-framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /home/lubo2/public_html/yii-framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /home/lubo2/public_html/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2013/06/03 21:56:24 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/lubo2/public_html/yii-framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/lubo2/public_html/yii-framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /home/lubo2/public_html/yii-framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /home/lubo2/public_html/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2013/06/03 21:56:29 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/lubo2/public_html/yii-framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/lubo2/public_html/yii-framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /home/lubo2/public_html/yii-framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /home/lubo2/public_html/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2013/06/03 21:56:31 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/lubo2/public_html/yii-framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/lubo2/public_html/yii-framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /home/lubo2/public_html/yii-framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /home/lubo2/public_html/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2013/06/03 21:56:34 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "about/default/index".' in /home/lubo2/public_html/yii-framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/lubo2/public_html/yii-framework/web/CWebApplication.php(141): CWebApplication->runController('about/default/i...')
+#1 /home/lubo2/public_html/yii-framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /home/lubo2/public_html/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/about
+HTTP_REFERER=http://lubo.u.lilystudio.org/feedback/default/index
+---
+2013/06/03 21:56:34 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/lubo2/public_html/yii-framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/lubo2/public_html/yii-framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /home/lubo2/public_html/yii-framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /home/lubo2/public_html/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2013/06/03 21:56:36 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/lubo2/public_html/yii-framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/lubo2/public_html/yii-framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /home/lubo2/public_html/yii-framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /home/lubo2/public_html/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2013/06/03 21:56:36 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/lubo2/public_html/yii-framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/lubo2/public_html/yii-framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /home/lubo2/public_html/yii-framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /home/lubo2/public_html/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2013/06/03 21:56:41 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/lubo2/public_html/yii-framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/lubo2/public_html/yii-framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /home/lubo2/public_html/yii-framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /home/lubo2/public_html/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2013/06/03 21:57:13 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/lubo2/public_html/yii-framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/lubo2/public_html/yii-framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /home/lubo2/public_html/yii-framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /home/lubo2/public_html/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2013/06/03 21:57:19 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/lubo2/public_html/yii-framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/lubo2/public_html/yii-framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /home/lubo2/public_html/yii-framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /home/lubo2/public_html/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2013/06/03 21:57:32 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/lubo2/public_html/yii-framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/lubo2/public_html/yii-framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /home/lubo2/public_html/yii-framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /home/lubo2/public_html/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2013/06/03 21:58:58 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/lubo2/public_html/yii-framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/lubo2/public_html/yii-framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /home/lubo2/public_html/yii-framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /home/lubo2/public_html/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2013/06/03 21:58:58 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/lubo2/public_html/yii-framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/lubo2/public_html/yii-framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /home/lubo2/public_html/yii-framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /home/lubo2/public_html/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2013/06/03 21:59:03 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/lubo2/public_html/yii-framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/lubo2/public_html/yii-framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /home/lubo2/public_html/yii-framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /home/lubo2/public_html/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2013/06/03 21:59:10 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/lubo2/public_html/yii-framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/lubo2/public_html/yii-framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /home/lubo2/public_html/yii-framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /home/lubo2/public_html/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2013/06/03 22:09:58 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/lubo2/public_html/yii-framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/lubo2/public_html/yii-framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /home/lubo2/public_html/yii-framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /home/lubo2/public_html/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2013/06/03 22:10:03 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/lubo2/public_html/yii-framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/lubo2/public_html/yii-framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /home/lubo2/public_html/yii-framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /home/lubo2/public_html/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2013/06/03 22:20:55 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/lubo2/public_html/yii-framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/lubo2/public_html/yii-framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /home/lubo2/public_html/yii-framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /home/lubo2/public_html/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2013/06/03 22:21:07 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/lubo2/public_html/yii-framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/lubo2/public_html/yii-framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /home/lubo2/public_html/yii-framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /home/lubo2/public_html/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2013/06/03 22:21:07 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/lubo2/public_html/yii-framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/lubo2/public_html/yii-framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /home/lubo2/public_html/yii-framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /home/lubo2/public_html/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2013/06/03 22:21:08 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/lubo2/public_html/yii-framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/lubo2/public_html/yii-framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /home/lubo2/public_html/yii-framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /home/lubo2/public_html/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2013/06/03 22:21:09 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/lubo2/public_html/yii-framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/lubo2/public_html/yii-framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /home/lubo2/public_html/yii-framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /home/lubo2/public_html/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2013/06/03 22:21:09 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/lubo2/public_html/yii-framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/lubo2/public_html/yii-framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /home/lubo2/public_html/yii-framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /home/lubo2/public_html/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2013/06/03 22:21:10 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/lubo2/public_html/yii-framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/lubo2/public_html/yii-framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /home/lubo2/public_html/yii-framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /home/lubo2/public_html/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2013/06/03 22:21:10 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/lubo2/public_html/yii-framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/lubo2/public_html/yii-framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /home/lubo2/public_html/yii-framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /home/lubo2/public_html/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2013/06/03 22:21:10 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/lubo2/public_html/yii-framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/lubo2/public_html/yii-framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /home/lubo2/public_html/yii-framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /home/lubo2/public_html/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2013/06/03 22:21:11 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/lubo2/public_html/yii-framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/lubo2/public_html/yii-framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /home/lubo2/public_html/yii-framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /home/lubo2/public_html/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2013/06/03 22:21:11 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/lubo2/public_html/yii-framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/lubo2/public_html/yii-framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /home/lubo2/public_html/yii-framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /home/lubo2/public_html/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2013/06/03 22:21:11 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/lubo2/public_html/yii-framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/lubo2/public_html/yii-framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /home/lubo2/public_html/yii-framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /home/lubo2/public_html/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2013/06/03 22:21:11 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/lubo2/public_html/yii-framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/lubo2/public_html/yii-framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /home/lubo2/public_html/yii-framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /home/lubo2/public_html/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2013/06/03 22:21:12 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/lubo2/public_html/yii-framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/lubo2/public_html/yii-framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /home/lubo2/public_html/yii-framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /home/lubo2/public_html/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2013/06/03 22:21:12 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/lubo2/public_html/yii-framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/lubo2/public_html/yii-framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /home/lubo2/public_html/yii-framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /home/lubo2/public_html/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2013/06/03 22:21:12 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/lubo2/public_html/yii-framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/lubo2/public_html/yii-framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /home/lubo2/public_html/yii-framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /home/lubo2/public_html/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2013/06/03 22:21:16 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/lubo2/public_html/yii-framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/lubo2/public_html/yii-framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /home/lubo2/public_html/yii-framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /home/lubo2/public_html/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2013/06/03 22:21:21 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/lubo2/public_html/yii-framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/lubo2/public_html/yii-framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /home/lubo2/public_html/yii-framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /home/lubo2/public_html/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2013/06/03 22:21:50 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/lubo2/public_html/yii-framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/lubo2/public_html/yii-framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /home/lubo2/public_html/yii-framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /home/lubo2/public_html/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2013/06/03 22:21:53 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/lubo2/public_html/yii-framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/lubo2/public_html/yii-framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /home/lubo2/public_html/yii-framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /home/lubo2/public_html/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2013/06/03 22:22:00 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/lubo2/public_html/yii-framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/lubo2/public_html/yii-framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /home/lubo2/public_html/yii-framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /home/lubo2/public_html/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2013/06/03 22:22:08 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/lubo2/public_html/yii-framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/lubo2/public_html/yii-framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /home/lubo2/public_html/yii-framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /home/lubo2/public_html/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2013/06/03 22:22:10 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/lubo2/public_html/yii-framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/lubo2/public_html/yii-framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /home/lubo2/public_html/yii-framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /home/lubo2/public_html/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2013/06/03 22:22:11 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/lubo2/public_html/yii-framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/lubo2/public_html/yii-framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /home/lubo2/public_html/yii-framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /home/lubo2/public_html/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2013/06/03 22:22:12 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/lubo2/public_html/yii-framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/lubo2/public_html/yii-framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /home/lubo2/public_html/yii-framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /home/lubo2/public_html/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2013/06/03 22:22:19 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/lubo2/public_html/yii-framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/lubo2/public_html/yii-framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /home/lubo2/public_html/yii-framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /home/lubo2/public_html/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2013/06/03 22:22:24 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/lubo2/public_html/yii-framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/lubo2/public_html/yii-framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /home/lubo2/public_html/yii-framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /home/lubo2/public_html/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2013/06/03 22:22:25 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/lubo2/public_html/yii-framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/lubo2/public_html/yii-framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /home/lubo2/public_html/yii-framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /home/lubo2/public_html/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2013/06/03 22:22:27 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/lubo2/public_html/yii-framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/lubo2/public_html/yii-framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /home/lubo2/public_html/yii-framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /home/lubo2/public_html/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2013/06/03 22:22:35 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/lubo2/public_html/yii-framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/lubo2/public_html/yii-framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /home/lubo2/public_html/yii-framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /home/lubo2/public_html/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2013/06/03 22:23:09 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/lubo2/public_html/yii-framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/lubo2/public_html/yii-framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /home/lubo2/public_html/yii-framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /home/lubo2/public_html/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2013/06/03 22:23:10 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/lubo2/public_html/yii-framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/lubo2/public_html/yii-framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /home/lubo2/public_html/yii-framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /home/lubo2/public_html/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2013/06/03 22:23:10 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/lubo2/public_html/yii-framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/lubo2/public_html/yii-framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /home/lubo2/public_html/yii-framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /home/lubo2/public_html/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2013/06/03 22:23:11 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/lubo2/public_html/yii-framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/lubo2/public_html/yii-framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /home/lubo2/public_html/yii-framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /home/lubo2/public_html/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2013/06/03 22:23:11 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/lubo2/public_html/yii-framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/lubo2/public_html/yii-framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /home/lubo2/public_html/yii-framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /home/lubo2/public_html/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2013/06/03 22:23:12 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/lubo2/public_html/yii-framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/lubo2/public_html/yii-framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /home/lubo2/public_html/yii-framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /home/lubo2/public_html/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2013/06/03 22:23:13 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/lubo2/public_html/yii-framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/lubo2/public_html/yii-framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /home/lubo2/public_html/yii-framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /home/lubo2/public_html/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2013/06/03 22:23:13 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/lubo2/public_html/yii-framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/lubo2/public_html/yii-framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /home/lubo2/public_html/yii-framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /home/lubo2/public_html/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2013/06/03 22:23:14 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/lubo2/public_html/yii-framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/lubo2/public_html/yii-framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /home/lubo2/public_html/yii-framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /home/lubo2/public_html/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2013/06/03 22:23:14 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/lubo2/public_html/yii-framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/lubo2/public_html/yii-framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /home/lubo2/public_html/yii-framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /home/lubo2/public_html/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2013/06/03 22:23:15 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/lubo2/public_html/yii-framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/lubo2/public_html/yii-framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /home/lubo2/public_html/yii-framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /home/lubo2/public_html/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2013/06/03 22:23:15 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/lubo2/public_html/yii-framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/lubo2/public_html/yii-framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /home/lubo2/public_html/yii-framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /home/lubo2/public_html/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2013/06/03 22:23:16 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/lubo2/public_html/yii-framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/lubo2/public_html/yii-framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /home/lubo2/public_html/yii-framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /home/lubo2/public_html/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2013/06/03 22:23:17 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/lubo2/public_html/yii-framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/lubo2/public_html/yii-framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /home/lubo2/public_html/yii-framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /home/lubo2/public_html/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2013/06/03 22:23:17 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/lubo2/public_html/yii-framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/lubo2/public_html/yii-framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /home/lubo2/public_html/yii-framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /home/lubo2/public_html/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2013/06/03 22:23:17 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/lubo2/public_html/yii-framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/lubo2/public_html/yii-framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /home/lubo2/public_html/yii-framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /home/lubo2/public_html/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2013/06/03 22:23:18 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/lubo2/public_html/yii-framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/lubo2/public_html/yii-framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /home/lubo2/public_html/yii-framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /home/lubo2/public_html/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2013/06/03 22:23:18 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/lubo2/public_html/yii-framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/lubo2/public_html/yii-framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /home/lubo2/public_html/yii-framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /home/lubo2/public_html/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2013/06/03 22:23:20 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/lubo2/public_html/yii-framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/lubo2/public_html/yii-framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /home/lubo2/public_html/yii-framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /home/lubo2/public_html/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2013/06/03 22:23:24 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/lubo2/public_html/yii-framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/lubo2/public_html/yii-framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /home/lubo2/public_html/yii-framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /home/lubo2/public_html/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2013/06/03 22:23:35 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/lubo2/public_html/yii-framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/lubo2/public_html/yii-framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /home/lubo2/public_html/yii-framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /home/lubo2/public_html/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2013/06/03 22:23:36 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/lubo2/public_html/yii-framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/lubo2/public_html/yii-framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /home/lubo2/public_html/yii-framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /home/lubo2/public_html/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2013/06/03 22:23:37 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/lubo2/public_html/yii-framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/lubo2/public_html/yii-framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /home/lubo2/public_html/yii-framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /home/lubo2/public_html/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2013/06/03 22:23:58 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/lubo2/public_html/yii-framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/lubo2/public_html/yii-framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /home/lubo2/public_html/yii-framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /home/lubo2/public_html/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2013/06/03 22:24:17 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/lubo2/public_html/yii-framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/lubo2/public_html/yii-framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /home/lubo2/public_html/yii-framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /home/lubo2/public_html/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2013/06/03 22:24:17 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/lubo2/public_html/yii-framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/lubo2/public_html/yii-framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /home/lubo2/public_html/yii-framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /home/lubo2/public_html/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2013/06/03 22:24:47 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/glyphicons-halflings-white.png".' in /home/lubo2/public_html/yii-framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/lubo2/public_html/yii-framework/web/CWebApplication.php(141): CWebApplication->runController('images/glyphico...')
+#1 /home/lubo2/public_html/yii-framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /home/lubo2/public_html/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/images/glyphicons-halflings-white.png?1369713035
+HTTP_REFERER=http://lubo.u.lilystudio.org/
+---
+2013/06/03 22:24:53 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/lubo2/public_html/yii-framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/lubo2/public_html/yii-framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /home/lubo2/public_html/yii-framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /home/lubo2/public_html/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2013/06/03 22:24:53 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/lubo2/public_html/yii-framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/lubo2/public_html/yii-framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /home/lubo2/public_html/yii-framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /home/lubo2/public_html/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2013/06/03 22:25:09 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/lubo2/public_html/yii-framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/lubo2/public_html/yii-framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /home/lubo2/public_html/yii-framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /home/lubo2/public_html/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2013/06/03 22:25:15 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/lubo2/public_html/yii-framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/lubo2/public_html/yii-framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /home/lubo2/public_html/yii-framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /home/lubo2/public_html/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2013/06/03 22:25:19 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/glyphicons-halflings-white.png".' in /home/lubo2/public_html/yii-framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/lubo2/public_html/yii-framework/web/CWebApplication.php(141): CWebApplication->runController('images/glyphico...')
+#1 /home/lubo2/public_html/yii-framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /home/lubo2/public_html/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/images/glyphicons-halflings-white.png?1369713035
+HTTP_REFERER=http://lubo.u.lilystudio.org/
+---
+2013/06/03 22:25:53 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/lubo2/public_html/yii-framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/lubo2/public_html/yii-framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /home/lubo2/public_html/yii-framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /home/lubo2/public_html/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2013/06/03 22:26:29 [error] [php] Undefined property: stdClass::$postfix (/home/lubo2/public_html/protected/controllers/FileUploadController.php:51)
+Stack trace:
+#0 /home/lubo2/public_html/yii-framework/web/filters/CFilterChain.php(133): FileUploadController->runAction()
+#1 /home/lubo2/public_html/yii-framework/web/filters/CFilter.php(40): CFilterChain->run()
+#2 /home/lubo2/public_html/yii-framework/web/CController.php(1145): CAccessControlFilter->filter()
+#3 /home/lubo2/public_html/yii-framework/web/filters/CInlineFilter.php(58): FileUploadController->filterAccessControl()
+#4 /home/lubo2/public_html/yii-framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#5 /home/lubo2/public_html/yii-framework/web/CController.php(291): CFilterChain->run()
+#6 /home/lubo2/public_html/yii-framework/web/CController.php(265): FileUploadController->runActionWithFilters()
+#7 /home/lubo2/public_html/yii-framework/web/CWebApplication.php(282): FileUploadController->run()
+#8 /home/lubo2/public_html/yii-framework/web/CWebApplication.php(141): CWebApplication->runController()
+#9 /home/lubo2/public_html/yii-framework/base/CApplication.php(169): CWebApplication->processRequest()
+#10 /home/lubo2/public_html/index.php(13): CWebApplication->run()
+REQUEST_URI=/fileUpload/create
+in /home/lubo2/public_html/protected/controllers/FileUploadController.php (51)
+in /home/lubo2/public_html/index.php (13)
+2013/06/03 22:26:30 [error] [php] Undefined property: stdClass::$object (/home/lubo2/public_html/protected/controllers/ImageController.php:41)
+Stack trace:
+#0 /home/lubo2/public_html/yii-framework/web/filters/CFilterChain.php(133): ImageController->runAction()
+#1 /home/lubo2/public_html/yii-framework/web/filters/CFilter.php(40): CFilterChain->run()
+#2 /home/lubo2/public_html/yii-framework/web/CController.php(1145): CAccessControlFilter->filter()
+#3 /home/lubo2/public_html/yii-framework/web/filters/CInlineFilter.php(58): ImageController->filterAccessControl()
+#4 /home/lubo2/public_html/yii-framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#5 /home/lubo2/public_html/yii-framework/web/CController.php(291): CFilterChain->run()
+#6 /home/lubo2/public_html/yii-framework/web/CController.php(265): ImageController->runActionWithFilters()
+#7 /home/lubo2/public_html/yii-framework/web/CWebApplication.php(282): ImageController->run()
+#8 /home/lubo2/public_html/yii-framework/web/CWebApplication.php(141): CWebApplication->runController()
+#9 /home/lubo2/public_html/yii-framework/base/CApplication.php(169): CWebApplication->processRequest()
+#10 /home/lubo2/public_html/index.php(13): CWebApplication->run()
+REQUEST_URI=/image/create
+in /home/lubo2/public_html/protected/controllers/ImageController.php (41)
+in /home/lubo2/public_html/index.php (13)
+2013/06/03 22:28:14 [error] [php] Undefined property: stdClass::$postfix (/home/lubo2/public_html/protected/controllers/FileUploadController.php:51)
+Stack trace:
+#0 /home/lubo2/public_html/yii-framework/web/filters/CFilterChain.php(133): FileUploadController->runAction()
+#1 /home/lubo2/public_html/yii-framework/web/filters/CFilter.php(40): CFilterChain->run()
+#2 /home/lubo2/public_html/yii-framework/web/CController.php(1145): CAccessControlFilter->filter()
+#3 /home/lubo2/public_html/yii-framework/web/filters/CInlineFilter.php(58): FileUploadController->filterAccessControl()
+#4 /home/lubo2/public_html/yii-framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#5 /home/lubo2/public_html/yii-framework/web/CController.php(291): CFilterChain->run()
+#6 /home/lubo2/public_html/yii-framework/web/CController.php(265): FileUploadController->runActionWithFilters()
+#7 /home/lubo2/public_html/yii-framework/web/CWebApplication.php(282): FileUploadController->run()
+#8 /home/lubo2/public_html/yii-framework/web/CWebApplication.php(141): CWebApplication->runController()
+#9 /home/lubo2/public_html/yii-framework/base/CApplication.php(169): CWebApplication->processRequest()
+#10 /home/lubo2/public_html/index.php(13): CWebApplication->run()
+REQUEST_URI=/fileUpload/create
+in /home/lubo2/public_html/protected/controllers/FileUploadController.php (51)
+in /home/lubo2/public_html/index.php (13)
+2013/06/03 22:28:15 [error] [php] Undefined property: stdClass::$object (/home/lubo2/public_html/protected/controllers/ImageController.php:41)
+Stack trace:
+#0 /home/lubo2/public_html/yii-framework/web/filters/CFilterChain.php(133): ImageController->runAction()
+#1 /home/lubo2/public_html/yii-framework/web/filters/CFilter.php(40): CFilterChain->run()
+#2 /home/lubo2/public_html/yii-framework/web/CController.php(1145): CAccessControlFilter->filter()
+#3 /home/lubo2/public_html/yii-framework/web/filters/CInlineFilter.php(58): ImageController->filterAccessControl()
+#4 /home/lubo2/public_html/yii-framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#5 /home/lubo2/public_html/yii-framework/web/CController.php(291): CFilterChain->run()
+#6 /home/lubo2/public_html/yii-framework/web/CController.php(265): ImageController->runActionWithFilters()
+#7 /home/lubo2/public_html/yii-framework/web/CWebApplication.php(282): ImageController->run()
+#8 /home/lubo2/public_html/yii-framework/web/CWebApplication.php(141): CWebApplication->runController()
+#9 /home/lubo2/public_html/yii-framework/base/CApplication.php(169): CWebApplication->processRequest()
+#10 /home/lubo2/public_html/index.php(13): CWebApplication->run()
+REQUEST_URI=/image/create
+in /home/lubo2/public_html/protected/controllers/ImageController.php (41)
+in /home/lubo2/public_html/index.php (13)
+2013/06/03 22:32:42 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/glyphicons-halflings-white.png".' in /home/lubo2/public_html/yii-framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/lubo2/public_html/yii-framework/web/CWebApplication.php(141): CWebApplication->runController('images/glyphico...')
+#1 /home/lubo2/public_html/yii-framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /home/lubo2/public_html/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/images/glyphicons-halflings-white.png?1369713035
+HTTP_REFERER=http://lubo.u.lilystudio.org/
+---
+2013/06/03 22:35:54 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/lubo2/public_html/yii-framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/lubo2/public_html/yii-framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /home/lubo2/public_html/yii-framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /home/lubo2/public_html/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2013/06/03 22:52:40 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/lubo2/public_html/yii-framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/lubo2/public_html/yii-framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /home/lubo2/public_html/yii-framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /home/lubo2/public_html/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2013/06/03 22:57:15 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/lubo2/public_html/yii-framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/lubo2/public_html/yii-framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /home/lubo2/public_html/yii-framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /home/lubo2/public_html/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2013/06/03 23:00:54 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/lubo2/public_html/yii-framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/lubo2/public_html/yii-framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /home/lubo2/public_html/yii-framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /home/lubo2/public_html/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2013/06/03 23:00:54 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/lubo2/public_html/yii-framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/lubo2/public_html/yii-framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /home/lubo2/public_html/yii-framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /home/lubo2/public_html/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2013/06/03 23:01:01 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/lubo2/public_html/yii-framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/lubo2/public_html/yii-framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /home/lubo2/public_html/yii-framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /home/lubo2/public_html/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2013/06/03 23:03:22 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "default".' in /home/lubo2/public_html/yii-framework/web/CController.php:483
+Stack trace:
+#0 /home/lubo2/public_html/yii-framework/web/CController.php(270): CController->missingAction('default')
+#1 /home/lubo2/public_html/yii-framework/web/CWebApplication.php(282): CController->run('default')
+#2 /home/lubo2/public_html/yii-framework/web/CWebApplication.php(141): CWebApplication->runController('courseResource/...')
+#3 /home/lubo2/public_html/yii-framework/base/CApplication.php(169): CWebApplication->processRequest()
+#4 /home/lubo2/public_html/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/courseResource
+---
+2013/06/03 23:03:22 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/lubo2/public_html/yii-framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/lubo2/public_html/yii-framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /home/lubo2/public_html/yii-framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /home/lubo2/public_html/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2013/06/03 23:03:34 [error] [system.db.CDbCommand] CDbCommand::() failed: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'GROUP BY file_id HAVING count(*)='0') AS t2 ON t2.file_id=t1.id' at line 1. The SQL statement executed was: SELECT * FROM upload_file AS t1 INNER JOIN (SELECT file_id FROM upload_file_group WHERE  GROUP BY file_id HAVING count(*)='0') AS t2 ON t2.file_id=t1.id.
+in /home/lubo2/public_html/protected/controllers/CourseResourceController.php (63)
+in /home/lubo2/public_html/protected/controllers/CourseResourceController.php (100)
+in /home/lubo2/public_html/index.php (13)
+2013/06/03 23:03:34 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'GROUP BY file_id HAVING count(*)='0') AS t2 ON t2.file_id=t1.id' at line 1. The SQL statement executed was: SELECT * FROM upload_file AS t1 INNER JOIN (SELECT file_id FROM upload_file_group WHERE  GROUP BY file_id HAVING count(*)='0') AS t2 ON t2.file_id=t1.id' in /home/lubo2/public_html/yii-framework/db/CDbCommand.php:541
+Stack trace:
+#0 /home/lubo2/public_html/yii-framework/db/CDbCommand.php(376): CDbCommand->queryInternal('', 0, Array)
+#1 /home/lubo2/public_html/protected/controllers/CourseResourceController.php(63): CDbCommand->query(Array)
+#2 /home/lubo2/public_html/protected/controllers/CourseResourceController.php(100): CourseResourceController->getList(Array)
+#3 /home/lubo2/public_html/yii-framework/web/actions/CInlineAction.php(49): CourseResourceController->actionList()
+#4 /home/lubo2/public_html/yii-framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#5 /home/lubo2/public_html/yii-framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 /home/lubo2/public_html/yii-framework/web/filters/CFilter.php(40): CFilterChain->run()
+#7 /home/lubo2/public_html/yii-framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 /home/lubo2/public_html/yii-framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 /home/lubo2/public_html/yii-framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 /home/lubo2/public_html/yii-framework/web/CController.php(291): CFilterChain->run()
+#11 /home/lubo2/public_html/yii-framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /home/lubo2/public_html/yii-framework/web/CWebApplication.php(282): CController->run('list')
+#13 /home/lubo2/public_html/yii-framework/web/CWebApplication.php(141): CWebApplication->runController('courseResource/...')
+#14 /home/lubo2/public_html/yii-framework/base/CApplication.php(169): CWebApplication->processRequest()
+#15 /home/lubo2/public_html/index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/courseResource/list
+---
+2013/06/03 23:03:34 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/lubo2/public_html/yii-framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/lubo2/public_html/yii-framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /home/lubo2/public_html/yii-framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /home/lubo2/public_html/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2013/06/04 13:23:42 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/lubo2/public_html/yii-framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/lubo2/public_html/yii-framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /home/lubo2/public_html/yii-framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /home/lubo2/public_html/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2013/06/04 15:03:42 [error] [php] Undefined index: captcha (/home/lubo2/public_html/protected/extensions/php-captcha/CPhpCaptcha.php:28)
+Stack trace:
+#0 /home/lubo2/public_html/yii-framework/web/CController.php(308): CInlineAction->runWithParams()
+#1 /home/lubo2/public_html/yii-framework/web/CController.php(286): TestController->runAction()
+#2 /home/lubo2/public_html/yii-framework/web/CController.php(265): TestController->runActionWithFilters()
+#3 /home/lubo2/public_html/yii-framework/web/CWebApplication.php(282): TestController->run()
+#4 /home/lubo2/public_html/yii-framework/web/CWebApplication.php(141): CWebApplication->runController()
+#5 /home/lubo2/public_html/yii-framework/base/CApplication.php(169): CWebApplication->processRequest()
+#6 /home/lubo2/public_html/index.php(13): CWebApplication->run()
+REQUEST_URI=/test/index
+in /home/lubo2/public_html/protected/extensions/php-captcha/CPhpCaptcha.php (28)
+in /home/lubo2/public_html/protected/controllers/TestController.php (13)
+in /home/lubo2/public_html/index.php (13)
+2013/06/04 15:03:42 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/lubo2/public_html/yii-framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/lubo2/public_html/yii-framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /home/lubo2/public_html/yii-framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /home/lubo2/public_html/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2013/06/04 15:04:29 [error] [php] Undefined index: captcha (/home/lubo2/public_html/protected/extensions/php-captcha/CPhpCaptcha.php:28)
+Stack trace:
+#0 /home/lubo2/public_html/yii-framework/web/CController.php(308): CInlineAction->runWithParams()
+#1 /home/lubo2/public_html/yii-framework/web/CController.php(286): TestController->runAction()
+#2 /home/lubo2/public_html/yii-framework/web/CController.php(265): TestController->runActionWithFilters()
+#3 /home/lubo2/public_html/yii-framework/web/CWebApplication.php(282): TestController->run()
+#4 /home/lubo2/public_html/yii-framework/web/CWebApplication.php(141): CWebApplication->runController()
+#5 /home/lubo2/public_html/yii-framework/base/CApplication.php(169): CWebApplication->processRequest()
+#6 /home/lubo2/public_html/index.php(13): CWebApplication->run()
+REQUEST_URI=/test/index
+in /home/lubo2/public_html/protected/extensions/php-captcha/CPhpCaptcha.php (28)
+in /home/lubo2/public_html/protected/controllers/TestController.php (13)
+in /home/lubo2/public_html/index.php (13)
+2013/06/04 15:04:29 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/lubo2/public_html/yii-framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/lubo2/public_html/yii-framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /home/lubo2/public_html/yii-framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /home/lubo2/public_html/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2013/06/04 15:04:46 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/lubo2/public_html/yii-framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/lubo2/public_html/yii-framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /home/lubo2/public_html/yii-framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /home/lubo2/public_html/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2013/06/04 15:04:54 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/glyphicons-halflings-white.png".' in /home/lubo2/public_html/yii-framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/lubo2/public_html/yii-framework/web/CWebApplication.php(141): CWebApplication->runController('images/glyphico...')
+#1 /home/lubo2/public_html/yii-framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /home/lubo2/public_html/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/images/glyphicons-halflings-white.png?1369713035
+HTTP_REFERER=http://lubo.u.lilystudio.org/
+---
+2013/06/04 15:05:41 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/lubo2/public_html/yii-framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/lubo2/public_html/yii-framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /home/lubo2/public_html/yii-framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /home/lubo2/public_html/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2013/06/04 15:05:46 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/lubo2/public_html/yii-framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/lubo2/public_html/yii-framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /home/lubo2/public_html/yii-framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /home/lubo2/public_html/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2013/06/04 15:05:50 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/glyphicons-halflings-white.png".' in /home/lubo2/public_html/yii-framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/lubo2/public_html/yii-framework/web/CWebApplication.php(141): CWebApplication->runController('images/glyphico...')
+#1 /home/lubo2/public_html/yii-framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /home/lubo2/public_html/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/images/glyphicons-halflings-white.png?1369713035
+HTTP_REFERER=http://lubo.u.lilystudio.org/
+---
+2013/06/04 15:06:09 [error] [php] Undefined property: stdClass::$object (/home/lubo2/public_html/protected/controllers/ImageController.php:41)
+Stack trace:
+#0 /home/lubo2/public_html/yii-framework/web/filters/CFilterChain.php(133): ImageController->runAction()
+#1 /home/lubo2/public_html/yii-framework/web/filters/CFilter.php(40): CFilterChain->run()
+#2 /home/lubo2/public_html/yii-framework/web/CController.php(1145): CAccessControlFilter->filter()
+#3 /home/lubo2/public_html/yii-framework/web/filters/CInlineFilter.php(58): ImageController->filterAccessControl()
+#4 /home/lubo2/public_html/yii-framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#5 /home/lubo2/public_html/yii-framework/web/CController.php(291): CFilterChain->run()
+#6 /home/lubo2/public_html/yii-framework/web/CController.php(265): ImageController->runActionWithFilters()
+#7 /home/lubo2/public_html/yii-framework/web/CWebApplication.php(282): ImageController->run()
+#8 /home/lubo2/public_html/yii-framework/web/CWebApplication.php(141): CWebApplication->runController()
+#9 /home/lubo2/public_html/yii-framework/base/CApplication.php(169): CWebApplication->processRequest()
+#10 /home/lubo2/public_html/index.php(13): CWebApplication->run()
+REQUEST_URI=/image/create
+in /home/lubo2/public_html/protected/controllers/ImageController.php (41)
+in /home/lubo2/public_html/index.php (13)
+2013/06/04 15:10:03 [error] [php] Undefined property: stdClass::$object (/home/lubo2/public_html/protected/controllers/ImageController.php:41)
+Stack trace:
+#0 /home/lubo2/public_html/yii-framework/web/filters/CFilterChain.php(133): ImageController->runAction()
+#1 /home/lubo2/public_html/yii-framework/web/filters/CFilter.php(40): CFilterChain->run()
+#2 /home/lubo2/public_html/yii-framework/web/CController.php(1145): CAccessControlFilter->filter()
+#3 /home/lubo2/public_html/yii-framework/web/filters/CInlineFilter.php(58): ImageController->filterAccessControl()
+#4 /home/lubo2/public_html/yii-framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#5 /home/lubo2/public_html/yii-framework/web/CController.php(291): CFilterChain->run()
+#6 /home/lubo2/public_html/yii-framework/web/CController.php(265): ImageController->runActionWithFilters()
+#7 /home/lubo2/public_html/yii-framework/web/CWebApplication.php(282): ImageController->run()
+#8 /home/lubo2/public_html/yii-framework/web/CWebApplication.php(141): CWebApplication->runController()
+#9 /home/lubo2/public_html/yii-framework/base/CApplication.php(169): CWebApplication->processRequest()
+#10 /home/lubo2/public_html/index.php(13): CWebApplication->run()
+REQUEST_URI=/image/create
+in /home/lubo2/public_html/protected/controllers/ImageController.php (41)
+in /home/lubo2/public_html/index.php (13)
+2013/06/04 15:10:28 [error] [php] Undefined property: stdClass::$object (/home/lubo2/public_html/protected/controllers/ImageController.php:41)
+Stack trace:
+#0 /home/lubo2/public_html/yii-framework/web/filters/CFilterChain.php(133): ImageController->runAction()
+#1 /home/lubo2/public_html/yii-framework/web/filters/CFilter.php(40): CFilterChain->run()
+#2 /home/lubo2/public_html/yii-framework/web/CController.php(1145): CAccessControlFilter->filter()
+#3 /home/lubo2/public_html/yii-framework/web/filters/CInlineFilter.php(58): ImageController->filterAccessControl()
+#4 /home/lubo2/public_html/yii-framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#5 /home/lubo2/public_html/yii-framework/web/CController.php(291): CFilterChain->run()
+#6 /home/lubo2/public_html/yii-framework/web/CController.php(265): ImageController->runActionWithFilters()
+#7 /home/lubo2/public_html/yii-framework/web/CWebApplication.php(282): ImageController->run()
+#8 /home/lubo2/public_html/yii-framework/web/CWebApplication.php(141): CWebApplication->runController()
+#9 /home/lubo2/public_html/yii-framework/base/CApplication.php(169): CWebApplication->processRequest()
+#10 /home/lubo2/public_html/index.php(13): CWebApplication->run()
+REQUEST_URI=/image/create
+in /home/lubo2/public_html/protected/controllers/ImageController.php (41)
+in /home/lubo2/public_html/index.php (13)
+2013/06/04 15:11:06 [error] [php] Undefined property: stdClass::$object (/home/lubo2/public_html/protected/controllers/ImageController.php:41)
+Stack trace:
+#0 /home/lubo2/public_html/yii-framework/web/filters/CFilterChain.php(133): ImageController->runAction()
+#1 /home/lubo2/public_html/yii-framework/web/filters/CFilter.php(40): CFilterChain->run()
+#2 /home/lubo2/public_html/yii-framework/web/CController.php(1145): CAccessControlFilter->filter()
+#3 /home/lubo2/public_html/yii-framework/web/filters/CInlineFilter.php(58): ImageController->filterAccessControl()
+#4 /home/lubo2/public_html/yii-framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#5 /home/lubo2/public_html/yii-framework/web/CController.php(291): CFilterChain->run()
+#6 /home/lubo2/public_html/yii-framework/web/CController.php(265): ImageController->runActionWithFilters()
+#7 /home/lubo2/public_html/yii-framework/web/CWebApplication.php(282): ImageController->run()
+#8 /home/lubo2/public_html/yii-framework/web/CWebApplication.php(141): CWebApplication->runController()
+#9 /home/lubo2/public_html/yii-framework/base/CApplication.php(169): CWebApplication->processRequest()
+#10 /home/lubo2/public_html/index.php(13): CWebApplication->run()
+REQUEST_URI=/image/create
+in /home/lubo2/public_html/protected/controllers/ImageController.php (41)
+in /home/lubo2/public_html/index.php (13)
+2013/06/04 15:19:23 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/lubo2/public_html/yii-framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/lubo2/public_html/yii-framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /home/lubo2/public_html/yii-framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /home/lubo2/public_html/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2013/06/04 15:19:27 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/glyphicons-halflings-white.png".' in /home/lubo2/public_html/yii-framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/lubo2/public_html/yii-framework/web/CWebApplication.php(141): CWebApplication->runController('images/glyphico...')
+#1 /home/lubo2/public_html/yii-framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /home/lubo2/public_html/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/images/glyphicons-halflings-white.png?1369713035
+HTTP_REFERER=http://lubo.u.lilystudio.org/
+---
+2013/06/04 15:20:31 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/lubo2/public_html/yii-framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/lubo2/public_html/yii-framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /home/lubo2/public_html/yii-framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /home/lubo2/public_html/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2013/06/04 15:24:04 [error] [php] Undefined property: stdClass::$object (/home/lubo2/public_html/protected/controllers/ImageController.php:41)
+Stack trace:
+#0 /home/lubo2/public_html/yii-framework/web/filters/CFilterChain.php(133): ImageController->runAction()
+#1 /home/lubo2/public_html/yii-framework/web/filters/CFilter.php(40): CFilterChain->run()
+#2 /home/lubo2/public_html/yii-framework/web/CController.php(1145): CAccessControlFilter->filter()
+#3 /home/lubo2/public_html/yii-framework/web/filters/CInlineFilter.php(58): ImageController->filterAccessControl()
+#4 /home/lubo2/public_html/yii-framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#5 /home/lubo2/public_html/yii-framework/web/CController.php(291): CFilterChain->run()
+#6 /home/lubo2/public_html/yii-framework/web/CController.php(265): ImageController->runActionWithFilters()
+#7 /home/lubo2/public_html/yii-framework/web/CWebApplication.php(282): ImageController->run()
+#8 /home/lubo2/public_html/yii-framework/web/CWebApplication.php(141): CWebApplication->runController()
+#9 /home/lubo2/public_html/yii-framework/base/CApplication.php(169): CWebApplication->processRequest()
+#10 /home/lubo2/public_html/index.php(13): CWebApplication->run()
+REQUEST_URI=/image/create
+in /home/lubo2/public_html/protected/controllers/ImageController.php (41)
+in /home/lubo2/public_html/index.php (13)
+2013/06/04 15:25:28 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/lubo2/public_html/yii-framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/lubo2/public_html/yii-framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /home/lubo2/public_html/yii-framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /home/lubo2/public_html/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2013/06/04 15:41:03 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/lubo2/public_html/yii-framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/lubo2/public_html/yii-framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /home/lubo2/public_html/yii-framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /home/lubo2/public_html/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2013/06/04 15:41:06 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/lubo2/public_html/yii-framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/lubo2/public_html/yii-framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /home/lubo2/public_html/yii-framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /home/lubo2/public_html/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2013/06/04 15:41:08 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/lubo2/public_html/yii-framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/lubo2/public_html/yii-framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /home/lubo2/public_html/yii-framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /home/lubo2/public_html/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2013/06/04 15:41:10 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/glyphicons-halflings-white.png".' in /home/lubo2/public_html/yii-framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/lubo2/public_html/yii-framework/web/CWebApplication.php(141): CWebApplication->runController('images/glyphico...')
+#1 /home/lubo2/public_html/yii-framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /home/lubo2/public_html/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/images/glyphicons-halflings-white.png?1369713035
+HTTP_REFERER=http://lubo.u.lilystudio.org/
+---
+2013/06/04 15:41:15 [error] [php] Undefined property: stdClass::$id (/home/lubo2/public_html/protected/extensions/jQueryFileUpload/JQueryFileUpload.php:196)
+Stack trace:
+#0 /home/lubo2/public_html/protected/controllers/ImageController.php(39): JQueryFileUpload->post()
+#1 /home/lubo2/public_html/yii-framework/web/actions/CInlineAction.php(49): ImageController->actionCreate()
+#2 /home/lubo2/public_html/yii-framework/web/CController.php(308): CInlineAction->runWithParams()
+#3 /home/lubo2/public_html/yii-framework/web/filters/CFilterChain.php(133): ImageController->runAction()
+#4 /home/lubo2/public_html/yii-framework/web/filters/CFilter.php(40): CFilterChain->run()
+#5 /home/lubo2/public_html/yii-framework/web/CController.php(1145): CAccessControlFilter->filter()
+#6 /home/lubo2/public_html/yii-framework/web/filters/CInlineFilter.php(58): ImageController->filterAccessControl()
+#7 /home/lubo2/public_html/yii-framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#8 /home/lubo2/public_html/yii-framework/web/CController.php(291): CFilterChain->run()
+#9 /home/lubo2/public_html/yii-framework/web/CController.php(265): ImageController->runActionWithFilters()
+#10 /home/lubo2/public_html/yii-framework/web/CWebApplication.php(282): ImageController->run()
+#11 /home/lubo2/public_html/yii-framework/web/CWebApplication.php(141): CWebApplication->runController()
+#12 /home/lubo2/public_html/yii-framework/base/CApplication.php(169): CWebApplication->processRequest()
+#13 /home/lubo2/public_html/index.php(13): CWebApplication->run()
+REQUEST_URI=/image/create
+in /home/lubo2/public_html/protected/extensions/jQueryFileUpload/JQueryFileUpload.php (196)
+in /home/lubo2/public_html/protected/extensions/jQueryFileUpload/JQueryFileUpload.php (628)
+in /home/lubo2/public_html/protected/extensions/jQueryFileUpload/JQueryFileUpload.php (822)
+2013/06/04 15:42:45 [error] [php] Undefined property: stdClass::$object (/home/lubo2/public_html/protected/controllers/ImageController.php:41)
+Stack trace:
+#0 /home/lubo2/public_html/yii-framework/web/filters/CFilterChain.php(133): ImageController->runAction()
+#1 /home/lubo2/public_html/yii-framework/web/filters/CFilter.php(40): CFilterChain->run()
+#2 /home/lubo2/public_html/yii-framework/web/CController.php(1145): CAccessControlFilter->filter()
+#3 /home/lubo2/public_html/yii-framework/web/filters/CInlineFilter.php(58): ImageController->filterAccessControl()
+#4 /home/lubo2/public_html/yii-framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#5 /home/lubo2/public_html/yii-framework/web/CController.php(291): CFilterChain->run()
+#6 /home/lubo2/public_html/yii-framework/web/CController.php(265): ImageController->runActionWithFilters()
+#7 /home/lubo2/public_html/yii-framework/web/CWebApplication.php(282): ImageController->run()
+#8 /home/lubo2/public_html/yii-framework/web/CWebApplication.php(141): CWebApplication->runController()
+#9 /home/lubo2/public_html/yii-framework/base/CApplication.php(169): CWebApplication->processRequest()
+#10 /home/lubo2/public_html/index.php(13): CWebApplication->run()
+REQUEST_URI=/image/create
+in /home/lubo2/public_html/protected/controllers/ImageController.php (41)
+in /home/lubo2/public_html/index.php (13)
+2013/06/04 15:43:17 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/lubo2/public_html/yii-framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/lubo2/public_html/yii-framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /home/lubo2/public_html/yii-framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /home/lubo2/public_html/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2013/06/04 15:43:19 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/glyphicons-halflings-white.png".' in /home/lubo2/public_html/yii-framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/lubo2/public_html/yii-framework/web/CWebApplication.php(141): CWebApplication->runController('images/glyphico...')
+#1 /home/lubo2/public_html/yii-framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /home/lubo2/public_html/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/images/glyphicons-halflings-white.png?1369713035
+HTTP_REFERER=http://lubo.u.lilystudio.org/
+---
+2013/06/04 15:43:24 [error] [php] Undefined offset: 0 (/home/lubo2/public_html/protected/extensions/jQueryFileUpload/JQueryFileUpload.php:660)
+Stack trace:
+#0 /home/lubo2/public_html/yii-framework/web/CController.php(308): CInlineAction->runWithParams()
+#1 /home/lubo2/public_html/yii-framework/web/filters/CFilterChain.php(133): ImageController->runAction()
+#2 /home/lubo2/public_html/yii-framework/web/filters/CFilter.php(40): CFilterChain->run()
+#3 /home/lubo2/public_html/yii-framework/web/CController.php(1145): CAccessControlFilter->filter()
+#4 /home/lubo2/public_html/yii-framework/web/filters/CInlineFilter.php(58): ImageController->filterAccessControl()
+#5 /home/lubo2/public_html/yii-framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#6 /home/lubo2/public_html/yii-framework/web/CController.php(291): CFilterChain->run()
+#7 /home/lubo2/public_html/yii-framework/web/CController.php(265): ImageController->runActionWithFilters()
+#8 /home/lubo2/public_html/yii-framework/web/CWebApplication.php(282): ImageController->run()
+#9 /home/lubo2/public_html/yii-framework/web/CWebApplication.php(141): CWebApplication->runController()
+#10 /home/lubo2/public_html/yii-framework/base/CApplication.php(169): CWebApplication->processRequest()
+#11 /home/lubo2/public_html/index.php(13): CWebApplication->run()
+REQUEST_URI=/image/create
+in /home/lubo2/public_html/protected/extensions/jQueryFileUpload/JQueryFileUpload.php (660)
+in /home/lubo2/public_html/protected/controllers/ImageController.php (65)
+in /home/lubo2/public_html/index.php (13)
+2013/06/04 15:52:56 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/lubo2/public_html/yii-framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/lubo2/public_html/yii-framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /home/lubo2/public_html/yii-framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /home/lubo2/public_html/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2013/06/04 15:52:56 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/lubo2/public_html/yii-framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/lubo2/public_html/yii-framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /home/lubo2/public_html/yii-framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /home/lubo2/public_html/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2013/06/04 15:53:03 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/lubo2/public_html/yii-framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/lubo2/public_html/yii-framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /home/lubo2/public_html/yii-framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /home/lubo2/public_html/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---

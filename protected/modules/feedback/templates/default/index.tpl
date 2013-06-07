@@ -8,6 +8,6 @@
         })
     })
 </script>
-<div id="comment_frame">
+<div id="comment_frame" style="width:500px;">
 
 </div>
