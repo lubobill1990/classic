@@ -10,8 +10,6 @@ class TestController extends Controller
 {
     function actionIndex()
     {
-        echo Common::getWebRootPath();
-        echo Common::getWebRootPath();
-        echo Common::getWebRootPath();
+        echo Yii::app()->captcha->text();
     }
 }

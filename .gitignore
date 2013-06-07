@@ -6,3 +6,5 @@ assets
 
 upload
 !upload/README
+
+*.tpl.php
