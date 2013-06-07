@@ -33,7 +33,6 @@
                                 <li><a href="#">移动开发</a></li>
                                 <li><a href="#">硬件</a></li>
                                 <li><a href="#">你懂的</a></li>
-                                <div class="header-top-nav-subsubnav-footer"></div>
                             </ul>
                         </li>
                         <li>生命、医学
@@ -48,7 +47,6 @@
                                 <li><a href="#">移动开发</a></li>
                                 <li><a href="#">硬件</a></li>
                                 <li><a href="#">你懂的</a></li>
-                                <div class="header-top-nav-subsubnav-footer"></div>
                             </ul>
                         </li>
                         <li>计算机
@@ -63,7 +61,6 @@
                                 <li><a href="#">移动开发</a></li>
                                 <li><a href="#">硬件</a></li>
                                 <li><a href="#">你懂的</a></li>
-                                <div class="header-top-nav-subsubnav-footer"></div>
                             </ul>
                         </li>
                         <li>经济、管理
@@ -78,7 +75,6 @@
                                 <li><a href="#">移动开发</a></li>
                                 <li><a href="#">硬件</a></li>
                                 <li><a href="#">你懂的</a></li>
-                                <div class="header-top-nav-subsubnav-footer"></div>
                             </ul>
                         </li>
                         <li>工程、材料
@@ -93,7 +89,6 @@
                                 <li><a href="#">移动开发</a></li>
                                 <li><a href="#">硬件</a></li>
                                 <li><a href="#">你懂的</a></li>
-                                <div class="header-top-nav-subsubnav-footer"></div>
                             </ul>
                         </li>
                         <li>文史哲学
@@ -108,10 +103,8 @@
                                 <li><a href="#">移动开发</a></li>
                                 <li><a href="#">硬件</a></li>
                                 <li><a href="#">你懂的</a></li>
-                                <div class="header-top-nav-subsubnav-footer"></div>
                             </ul>
                         </li>
-                        <div id="header-top-nav-subnav-footer"></div>
                     </ul>
                 </li>
                 <li><a href="#">二手市场</a></li>

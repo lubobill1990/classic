@@ -3,9 +3,10 @@
   font-size: 14px;
   color: #369;
   margin-bottom: 8px;
+  display: inline-block;
 }
-/* line 11, ../../../sass/special/site/index.scss */
-#index-courses ul li h3 .index-courses-subject-decorator {
+/* line 12, ../../../sass/special/site/index.scss */
+#index-courses ul li .index-courses-subject-decorator {
   width: 5px;
   height: 5px;
   background: #c0cdc0;

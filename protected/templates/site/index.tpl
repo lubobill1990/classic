@@ -29,11 +29,10 @@
     <h2>发现你的课程</h2>
     <ul>
         <li class="index-courses-subject">
-            <h3>数理科学
-                <div class="index-courses-subject-decorator"></div>
-                <div class="index-courses-subject-decorator"></div>
-                <div class="index-courses-subject-decorator"></div>
-            </h3>
+            <h3>数理科学</h3>
+            <div class="index-courses-subject-decorator"></div>
+            <div class="index-courses-subject-decorator"></div>
+            <div class="index-courses-subject-decorator"></div>
             <table>
                 <tr>
                     <td><a href="#">数据学</a></td>
@@ -56,11 +55,10 @@
             </table>
         </li>
         <li class="index-courses-subject">
-            <h3>数理科学
-                <div class="index-courses-subject-decorator"></div>
-                <div class="index-courses-subject-decorator"></div>
-                <div class="index-courses-subject-decorator"></div>
-            </h3>
+            <h3>数理科学</h3>
+            <div class="index-courses-subject-decorator"></div>
+            <div class="index-courses-subject-decorator"></div>
+            <div class="index-courses-subject-decorator"></div>
             <table>
                 <tr>
                     <td><a href="#">数据学</a></td>
@@ -83,11 +81,10 @@
             </table>
         </li>
         <li class="index-courses-subject">
-            <h3>数理科学
-                <div class="index-courses-subject-decorator"></div>
-                <div class="index-courses-subject-decorator"></div>
-                <div class="index-courses-subject-decorator"></div>
-            </h3>
+            <h3>数理科学</h3>
+            <div class="index-courses-subject-decorator"></div>
+            <div class="index-courses-subject-decorator"></div>
+            <div class="index-courses-subject-decorator"></div>
             <table>
                 <tr>
                     <td><a href="#">数据学</a></td>
@@ -110,11 +107,10 @@
             </table>
         </li>
         <li class="index-courses-subject">
-            <h3>数理科学
-                <div class="index-courses-subject-decorator"></div>
-                <div class="index-courses-subject-decorator"></div>
-                <div class="index-courses-subject-decorator"></div>
-            </h3>
+            <h3>数理科学</h3>
+            <div class="index-courses-subject-decorator"></div>
+            <div class="index-courses-subject-decorator"></div>
+            <div class="index-courses-subject-decorator"></div>
             <table>
                 <tr>
                     <td><a href="#">数据学</a></td>
@@ -137,38 +133,10 @@
             </table>
         </li>
         <li class="index-courses-subject">
-            <h3>数理科学
-                <div class="index-courses-subject-decorator"></div>
-                <div class="index-courses-subject-decorator"></div>
-                <div class="index-courses-subject-decorator"></div>
-            </h3>
-            <table>
-                <tr>
-                    <td><a href="#">数据学</a></td>
-                    <td><a href="#">网络</a></td>
-                    <td><a href="#">软件工程</a></td>
-                    <td><a href="#">硬件</a></td>
-                    <td><a href="#">编程语言</a></td>
-                </tr>
-                <tr>
-                    <td><a href="#">Linux</a></td>
-                    <td><a href="#">嵌入式</a></td>
-                    <td><a href="#">web开发</a></td>
-                    <td><a href="#">移动开发</a></td>
-                    <td><a href="#">你懂的</a></td>
-                </tr>
-                <tr>
-                    <td><a href="#">Linux</a></td>
-                    <td><a href="#">嵌入式</a></td>
-                </tr>
-            </table>
-        </li>
-        <li class="index-courses-subject">
-            <h3>数理科学
-                <div class="index-courses-subject-decorator"></div>
-                <div class="index-courses-subject-decorator"></div>
-                <div class="index-courses-subject-decorator"></div>
-            </h3>
+            <h3>数理科学</h3>
+            <div class="index-courses-subject-decorator"></div>
+            <div class="index-courses-subject-decorator"></div>
+            <div class="index-courses-subject-decorator"></div>
             <table>
                 <tr>
                     <td><a href="#">数据学</a></td>

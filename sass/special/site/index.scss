@@ -6,12 +6,12 @@
   ul{
     li{
       h3{
-        font-size: 14px;color: #369;margin-bottom: 8px;
+        font-size: 14px;color: #369;margin-bottom: 8px;display: inline-block;
+      }
 
-        .index-courses-subject-decorator{
-          width: 5px;height: 5px;background: #c0cdc0;@include border-radius(5px);display: inline-block;margin-left: 10px;
-          position: relative;top: -2px;
-        }
+      .index-courses-subject-decorator{
+        width: 5px;height: 5px;background: #c0cdc0;@include border-radius(5px);display: inline-block;margin-left: 10px;
+        position: relative;top: -2px;
       }
 
       table{
