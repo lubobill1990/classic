@@ -198,11 +198,11 @@
 {block name=right}
 <form id="index-login" class="clearfix">
     <div class="form-item">
-        <label for="index-login-username">用户名</label><input type="text" name="username" id="index-login-username" />
+        <label for="index-login-username">User</label><input type="text" name="username" id="index-login-username" />
         {*<div class="form-item-clear none"></div>*}
     </div>
     <div class="form-item">
-        <label for="index-login-password">密码</label><input type="password" name="password" id="index-login-password" />
+        <label for="index-login-password">Pass</label><input type="password" name="password" id="index-login-password" />
         {*<div class="form-item-clear none"></div>*}
     </div>
     <input type="submit" value="登录" id="index-login-submit" class="btn fr" />

@@ -1,11 +1,61 @@
-
+//向下箭头
+.arrow{
+  width: 6px;height: 3px;display: inline-block;margin-left: 5px;margin-bottom: 2px;
+  background: url('../../images/common/header-top-nav-arrow.png') no-repeat center;
+}
 //button
 .btn{
-  background: #358227;padding: 6px 24px;border: none;cursor: pointer;color: #fff;font-size: 16px;font-family: "Microsoft Yahei";
-  text-align: center;@include text-shadow(1px 1px 1px #bebebe);
-  @include box-shadow(0 1px 1px #000);@include border-radius(3px);
+  background: #358227;padding: 6px 24px;cursor: pointer;color: #cfe6cd;font-size: 16px;font-family: "Microsoft Yahei";
+  text-align: center;@include text-shadow(0 1px 1px rgba(0,0,0,0.7));
+  @include box-shadow(0 2px 3px rgba(0, 0, 0, 0.2), 0 1px 1px rgba(255,255,255,0.3) inset);@include border-radius(3px);
+  border: 1px solid #276b1a;border-color:{bottom: #2e7620;top: #1f5e13;}
 
   &:active{
     background: #286d1a;
+  }
+}
+
+.btn1{
+  background: #fdf1ed;padding: 4px 14px;color: #b3705b;cursor: pointer;border: 1px solid #e8b5a5;
+}
+
+//面包屑
+.crumb{
+  li{
+    position: relative;display: inline;
+
+    .crumb-li-hover{
+      position: absolute;width: 86px;height: 34px;background: #fff;top: -10px;left: -16px;z-index: 1;
+      @include box-shadow(-1px 0 1px -1px #aaa,0 -1px 1px -1px #aaa,1px 0 1px -1px #aaa);
+    }
+
+    a{
+      position:relative;z-index: 2;
+    }
+
+    .crumb-li-subnav{
+      position: absolute;width:120px;background: #fff;left: -16px;top: 24px;@include box-shadow(0 0 1px #aaa);
+
+      li{
+        margin: 2px;padding-left: 12px;display: block;cursor: pointer;height: 28px;line-height: 28px;
+
+        a{
+          color: #787a78;
+        }
+
+        &:hover{
+          background: #e9e9e9;
+        }
+
+      }
+
+      .crumb-li-subnav-footer{
+        height: 4px;background: #e9e9e9;position: relative;width: 100%;
+      }
+    }
+  }
+
+  .crumb-next{
+    margin:{left:14px;right: 16px;}display: inline;color: #aaa;
   }
 }

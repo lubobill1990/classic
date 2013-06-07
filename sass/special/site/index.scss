@@ -1,16 +1,7 @@
 //css3 mixin
 @import "compass/css3";
 
-#index-popular{
-  h2{
-    margin-bottom: 30px;color: #444;font-size: 16px;font-family: "Microsoft Yahei";
-  }
-}
-
 #index-courses{
-  h2{
-    margin-bottom: 30px;color: #444;font-size: 16px;font-family: "Microsoft Yahei";
-  }
 
   ul{
     li{
@@ -76,7 +67,7 @@
 
     label{
       background: #fafafa;display: inline-block;width:56px;text-align: center;color: #999;border-right:1px solid #f2f1f0;
-      @include border-radius(2px 0 0 2px);
+      @include border-radius(2px 0 0 2px);font-weight: bold ;font-family: arial;
     }
     .label-focus{
       background: #358227;color: #fff;
