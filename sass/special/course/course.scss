@@ -1,0 +1,64 @@
+//css3 mixin
+@import "compass/css3";
+
+#course-intro{
+  margin-top: 32px;
+
+  #course-intro-edit{
+    color: #ababab;margin-bottom: 22px;margin-top: 4px;
+
+    a{
+      margin-left: 8px;
+    }
+  }
+
+  #course-intro-follow{
+    width: 100px;margin-bottom: 22px;
+  }
+
+  #course-intro-cover{
+    width: 112px;height: 170px;margin-bottom: 8px;margin-right: 14px;
+  }
+
+  #course-intro-detail{
+    p{
+      margin-bottom: 5px;
+    }
+    .course-intro-detail-left{
+      color: #999;margin-right: 7px;
+    }
+
+    .course-intro-detail-right{
+      color: #444;
+    }
+  }
+
+  #course-intro-rating{
+    color: #787878;padding: 5px 0;
+
+    .star{
+      width: 20px;height: 17px;background: url("../../../images/common/star-off.png") no-repeat center;display: inline-block;
+      position: relative;top: 2px;cursor: pointer;
+    }
+
+    .star-on{
+      background: url("../../../images/common/star-on.png") no-repeat center;
+    }
+
+    .star:nth-child(1){
+      margin-left: 10px;
+    }
+  }
+}
+
+#course-class{
+  ul{
+    li{
+      border-bottom: 1px dotted #e5e5e5;color: #aeaeae;line-height: 24px;
+
+      a{
+        margin-right: 10px;
+      }
+    }
+  }
+}

@@ -1,0 +1,73 @@
+/* line 4, ../../../sass/special/course/course.scss */
+#course-intro {
+  margin-top: 32px;
+}
+/* line 7, ../../../sass/special/course/course.scss */
+#course-intro #course-intro-edit {
+  color: #ababab;
+  margin-bottom: 22px;
+  margin-top: 4px;
+}
+/* line 10, ../../../sass/special/course/course.scss */
+#course-intro #course-intro-edit a {
+  margin-left: 8px;
+}
+/* line 15, ../../../sass/special/course/course.scss */
+#course-intro #course-intro-follow {
+  width: 100px;
+  margin-bottom: 22px;
+}
+/* line 19, ../../../sass/special/course/course.scss */
+#course-intro #course-intro-cover {
+  width: 112px;
+  height: 170px;
+  margin-bottom: 8px;
+  margin-right: 14px;
+}
+/* line 24, ../../../sass/special/course/course.scss */
+#course-intro #course-intro-detail p {
+  margin-bottom: 5px;
+}
+/* line 27, ../../../sass/special/course/course.scss */
+#course-intro #course-intro-detail .course-intro-detail-left {
+  color: #999;
+  margin-right: 7px;
+}
+/* line 31, ../../../sass/special/course/course.scss */
+#course-intro #course-intro-detail .course-intro-detail-right {
+  color: #444;
+}
+/* line 36, ../../../sass/special/course/course.scss */
+#course-intro #course-intro-rating {
+  color: #787878;
+  padding: 5px 0;
+}
+/* line 39, ../../../sass/special/course/course.scss */
+#course-intro #course-intro-rating .star {
+  width: 20px;
+  height: 17px;
+  background: url("../../../images/common/star-off.png") no-repeat center;
+  display: inline-block;
+  position: relative;
+  top: 2px;
+  cursor: pointer;
+}
+/* line 44, ../../../sass/special/course/course.scss */
+#course-intro #course-intro-rating .star-on {
+  background: url("../../../images/common/star-on.png") no-repeat center;
+}
+/* line 48, ../../../sass/special/course/course.scss */
+#course-intro #course-intro-rating .star:nth-child(1) {
+  margin-left: 10px;
+}
+
+/* line 56, ../../../sass/special/course/course.scss */
+#course-class ul li {
+  border-bottom: 1px dotted #e5e5e5;
+  color: #aeaeae;
+  line-height: 24px;
+}
+/* line 59, ../../../sass/special/course/course.scss */
+#course-class ul li a {
+  margin-right: 10px;
+}

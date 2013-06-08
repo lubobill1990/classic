@@ -14,12 +14,12 @@
 <div id="header">
 
     <div id="header-top">
-        <div class="w960 bc">
+        <div class="w940 bc">
             <a href="" id="header-top-logo" class="fl"></a>
             <ul id="header-top-nav" class="fl">
                 <li>
                     <div id="header-top-nav-hover" class="none"></div>
-                    <a>课程分类<span class="header-top-nav-arrow"></span></a>
+                    <a>课程分类<span class="arrow"></span></a>
                     <ul id="header-top-nav-subnav" class="none">
                         <li>数理科学
                             <ul class="none">
@@ -134,13 +134,13 @@
 
 </div>
 
-<div id="content" class="w960 bc clearfix">
+<div id="content" class="w940 bc clearfix">
     <div id="content-left" class="fl">{block name=left}{/block}</div>
     <div id="content-right" class="fr">{block name=right}{/block}</div>
 </div>
 
-<div id="footer">
-    <div class="w960 bc">
+<div id="footer" class="w960 bc">
+    <div class="w940 bc">
 
         <p id="footer-left" class="fl">版权信息</p>
 

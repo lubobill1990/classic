@@ -2,14 +2,26 @@ body{
   position: relative;width: 100%;min-width:960px;min-height: 100%;background: #fff;
   font-family: Helvetica,Arial,sans-serif;font-size: 12px;
 
+  h1{
+    margin-top: -4px;margin-bottom: 26px;color: #444;font-size: 18px;font-family: "Microsoft Yahei";
+  }
+
+  h2{
+    margin-top: -4px;margin-bottom: 26px;color: #444;font-size: 16px;font-family: "Microsoft Yahei";
+  }
+
+  a{
+    color: #369;cursor: pointer;
+  }
+
   #header{
     min-width:960px;width: 100%;
 
     #header-top{
-      height: 40px;line-height: 40px;background: #f7f7f7;
+      height: 40px;line-height: 40px;background: url("../../images/common/header-top-bg.png") repeat-x center;
 
       #header-top-logo{
-        width: 95px;height: 22px;position: relative;top: 8px;display: block;
+        width: 95px;height: 22px;position: relative;top: 9px;display: block;
         background: url("../../images/common/header-top-logo.png") no-repeat center;
       }
 
@@ -26,11 +38,6 @@ body{
             color: #787a78;cursor: pointer;position: relative;z-index: 3;
             &:hover{
               color: #2e7720;
-            }
-
-            .header-top-nav-arrow{
-              width: 6px;height: 3px;display: inline-block;margin-left: 5px;margin-bottom: 2px;
-              background: url('../../images/common/header-top-nav-arrow.png') no-repeat center;
             }
           }
 
@@ -147,9 +154,8 @@ body{
   }
 
   #footer{
-    width: 100%;min-width:960px;height: 36px;line-height: 36px;position: relative;bottom: 20px;
-    border:{ top: 1px solid #e1e1e1;bottom: 1px solid #e1e1e1; }
-    padding: { left: 10px;right: 10px;}
+    min-width:960px;height: 36px;line-height: 36px;position: relative;bottom: 20px;
+    border:{ top: 1px solid #e1e1e1;bottom: 1px solid #e1e1e1; }margin-top: 40px;
 
     #footer-left{
         color: #999;
