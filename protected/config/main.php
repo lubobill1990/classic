@@ -80,7 +80,6 @@ return array(
 
             ),
         ),
-
         'db' => array(
             'connectionString' => 'mysql:host=localhost;dbname=devclassic',
             'emulatePrepare' => true,

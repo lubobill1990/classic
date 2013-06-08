@@ -10,6 +10,6 @@ class TestController extends Controller
 {
     function actionIndex()
     {
-        echo Yii::app()->captcha->text();
+        var_dump(explode(" ",' '));
     }
 }

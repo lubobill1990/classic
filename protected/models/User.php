@@ -16,6 +16,12 @@
  * @property Following[] $followers
  * @property Following[] $following
  * @property UserOperationKey $operationKeys
+ * @property CourseDocument[] $courseDocuments
+ * @property CourseResource[] $courseResources
+ * @property Course[] $courses
+ * @property Image[] $images
+ * @property Message[] $messages
+ * @property UploadFile[] $uploadFiles
  */
 class User extends CActiveRecord
 {
@@ -65,6 +71,12 @@ class User extends CActiveRecord
             'followers' => array(self::MANY_MANY, 'User', 'following(user_id,follow_user_id)'),
             'following' => array(self::MANY_MANY, 'User', 'following(follow_user_id,user_id)'),
             'operationKeys' => array(self::HAS_MANY, 'UserOperationKey', 'user_id'),
+            'courseDocuments' => array(self::HAS_MANY, 'CourseDocument', 'user_id'),
+            'courseResources' => array(self::HAS_MANY, 'CourseResource', 'user_id'),
+            'courses' => array(self::MANY_MANY, 'Course', 'follow_course(user_id, course_id)'),
+            'images' => array(self::HAS_MANY, 'Image', 'user_id'),
+            'messages' => array(self::HAS_MANY, 'Message', 'user_id'),
+            'uploadFiles' => array(self::HAS_MANY, 'UploadFile', 'user_id'),
         );
     }
 
