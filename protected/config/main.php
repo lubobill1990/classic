@@ -25,7 +25,6 @@ return array(
             'ipFilters' => array('127.0.0.1', '*'),
         ),
         'feedback'
-
     ),
 
     // application components
@@ -71,17 +70,16 @@ return array(
                 'rts_authorize_url' => "RTS/authorize",
                 'rts_get_user_id' => 'RTS/getUserId',
 
+                '<module:\w+>/<controller:\w+>/<action:\w+>' => '<module>/<controller>/<action>',
+                '<module:\w+>/<controller:\w+>' => '<module>/<controller>/index',
+                '<module:\w+>' => '<module>/default/index',
                 '<controller:\w+>/<id:\d+>' => '<controller>/view',
                 '<controller:\w+>/<action:\w+>/<id:\d+>' => '<controller>/<action>',
                 '<controller:\w+>/<action:\w+>' => '<controller>/<action>',
                 '<controller:\w+>' => '<controller>/index',
-                '<module:\w+>/<controller:\w+>/<action:\w+>' => '<module>/<controller>/<action>',
-                '<module:\w+>/<controller:\w+>' => '<module>/<controller>/index',
-                '<module:\w+>' => '<module>/default/index',
 
             ),
         ),
-
         'db' => array(
             'connectionString' => 'mysql:host=localhost;dbname=devclassic',
             'emulatePrepare' => true,

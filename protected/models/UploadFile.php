@@ -14,7 +14,10 @@
  * @property string $create_time
  *
  * The followings are the available model relations:
+ * @property CourseDocument[] $courseDocuments
+ * @property Image[] $images
  * @property User $user
+ * @property UploadFileGroup[] $uploadFileGroups
  */
 class UploadFile extends CActiveRecord
 {
@@ -65,6 +68,9 @@ class UploadFile extends CActiveRecord
         // class name for the relations automatically generated below.
         return array(
             'user' => array(self::BELONGS_TO, 'User', 'user_id'),
+            'courseDocuments' => array(self::HAS_MANY, 'CourseDocument', 'file_id'),
+            'images' => array(self::HAS_MANY, 'Image', 'file_id'),
+            'uploadFileGroups' => array(self::HAS_MANY, 'UploadFileGroup', 'file_id'),
         );
     }
 

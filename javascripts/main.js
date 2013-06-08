@@ -23,6 +23,8 @@ requirejs.config({
         "engine.io":'lib/engine.io',
         tinyscrollbar:'lib/jquery.tinyscrollbar.1.81',
         jSmart:'lib/smart-2.9.min',
+        jsmart:'lib/smart-2.9.min',
+        smart:'lib/smart-2.9.min',
         pagination:'lib/jquery.pagination',
         "rts.util":'rts/util',
         cssrefresh:'lib/cssrefresh',
@@ -187,6 +189,7 @@ require(['jquery'],
                 },
                 imageupload:function (callback, options) {
                     var default_options = {
+                        maxChunkSize: 1500000, // 10 MB
                         url:'/image/create',
                         modal_id:'image_upload_modal',
                         get_template_url:'/image/html'

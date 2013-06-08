@@ -1,20 +1,25 @@
 <?php
 
 /**
- * This is the model class for table "auth_code".
+ * This is the model class for table "teacher".
  *
- * The followings are the available columns in table 'auth_code':
- * @property string $code
- * @property string $user_id
- * @property string $create_time
- * @property string $expire_time
+ * The followings are the available columns in table 'teacher':
+ * @property string $id
+ * @property string $name
+ * @property string $gender
+ * @property string $introduction
+ *
+ * The followings are the available model relations:
+ * @property CourseDocument[] $courseDocuments
+ * @property CourseResource[] $courseResources
+ * @property Class[] $classes
  */
-class AuthCode extends CActiveRecord
+class Teacher extends CActiveRecord
 {
 	/**
 	 * Returns the static model of the specified AR class.
 	 * @param string $className active record class name.
-	 * @return AuthCode the static model class
+	 * @return Teacher the static model class
 	 */
 	public static function model($className=__CLASS__)
 	{
@@ -26,7 +31,7 @@ class AuthCode extends CActiveRecord
 	 */
 	public function tableName()
 	{
-		return 'auth_code';
+		return 'teacher';
 	}
 
 	/**
@@ -37,13 +42,13 @@ class AuthCode extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('code, user_id', 'required'),
-			array('code', 'length', 'max'=>40),
-			array('user_id', 'length', 'max'=>11),
-			array('create_time, expire_time', 'safe'),
+			array('name', 'required'),
+			array('name', 'length', 'max'=>32),
+			array('gender', 'length', 'max'=>6),
+			array('introduction', 'safe'),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
-			array('code, user_id, create_time, expire_time', 'safe', 'on'=>'search'),
+			array('id, name, gender, introduction', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -55,6 +60,9 @@ class AuthCode extends CActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
+			'courseDocuments' => array(self::HAS_MANY, 'CourseDocument', 'teacher_id'),
+			'courseResources' => array(self::HAS_MANY, 'CourseResource', 'teacher_id'),
+			'classes' => array(self::MANY_MANY, 'Class', 'teaching(teacher_id, class_id)'),
 		);
 	}
 
@@ -64,10 +72,10 @@ class AuthCode extends CActiveRecord
 	public function attributeLabels()
 	{
 		return array(
-			'code' => 'Code',
-			'user_id' => 'User',
-			'create_time' => 'Create Time',
-			'expire_time' => 'Expire Time',
+			'id' => 'ID',
+			'name' => 'Name',
+			'gender' => 'Gender',
+			'introduction' => 'Introduction',
 		);
 	}
 
@@ -82,10 +90,10 @@ class AuthCode extends CActiveRecord
 
 		$criteria=new CDbCriteria;
 
-		$criteria->compare('code',$this->code,true);
-		$criteria->compare('user_id',$this->user_id,true);
-		$criteria->compare('create_time',$this->create_time,true);
-		$criteria->compare('expire_time',$this->expire_time,true);
+		$criteria->compare('id',$this->id,true);
+		$criteria->compare('name',$this->name,true);
+		$criteria->compare('gender',$this->gender,true);
+		$criteria->compare('introduction',$this->introduction,true);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,

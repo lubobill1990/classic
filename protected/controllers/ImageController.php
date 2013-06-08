@@ -38,6 +38,9 @@ class ImageController extends Controller
             $ret_val = array();
             $files = Yii::app()->fileUpload->post();
             foreach ($files as $file) {
+                if(empty($file->object)){
+                    continue;
+                }
                 $upload_file = $file->object;
                 ImageUtil::orient_image(Yii::app()->fileUpload->upload_dir.$upload_file->path);
                 try{

@@ -1,20 +1,24 @@
 <?php
 
 /**
- * This is the model class for table "auth_code".
+ * This is the model class for table "major".
  *
- * The followings are the available columns in table 'auth_code':
- * @property string $code
- * @property string $user_id
- * @property string $create_time
- * @property string $expire_time
+ * The followings are the available columns in table 'major':
+ * @property string $id
+ * @property string $raw_id
+ * @property string $dep_id
+ * @property string $name
+ *
+ * The followings are the available model relations:
+ * @property Class[] $classes
+ * @property Department $dep
  */
-class AuthCode extends CActiveRecord
+class Major extends CActiveRecord
 {
 	/**
 	 * Returns the static model of the specified AR class.
 	 * @param string $className active record class name.
-	 * @return AuthCode the static model class
+	 * @return Major the static model class
 	 */
 	public static function model($className=__CLASS__)
 	{
@@ -26,7 +30,7 @@ class AuthCode extends CActiveRecord
 	 */
 	public function tableName()
 	{
-		return 'auth_code';
+		return 'major';
 	}
 
 	/**
@@ -37,13 +41,12 @@ class AuthCode extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('code, user_id', 'required'),
-			array('code', 'length', 'max'=>40),
-			array('user_id', 'length', 'max'=>11),
-			array('create_time, expire_time', 'safe'),
+			array('raw_id, dep_id, name', 'required'),
+			array('raw_id, dep_id', 'length', 'max'=>10),
+			array('name', 'length', 'max'=>45),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
-			array('code, user_id, create_time, expire_time', 'safe', 'on'=>'search'),
+			array('id, raw_id, dep_id, name', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -55,6 +58,8 @@ class AuthCode extends CActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
+			'classes' => array(self::HAS_MANY, 'Class', 'major_id'),
+			'dep' => array(self::BELONGS_TO, 'Department', 'dep_id'),
 		);
 	}
 
@@ -64,10 +69,10 @@ class AuthCode extends CActiveRecord
 	public function attributeLabels()
 	{
 		return array(
-			'code' => 'Code',
-			'user_id' => 'User',
-			'create_time' => 'Create Time',
-			'expire_time' => 'Expire Time',
+			'id' => 'ID',
+			'raw_id' => 'Raw',
+			'dep_id' => 'Dep',
+			'name' => 'Name',
 		);
 	}
 
@@ -82,10 +87,10 @@ class AuthCode extends CActiveRecord
 
 		$criteria=new CDbCriteria;
 
-		$criteria->compare('code',$this->code,true);
-		$criteria->compare('user_id',$this->user_id,true);
-		$criteria->compare('create_time',$this->create_time,true);
-		$criteria->compare('expire_time',$this->expire_time,true);
+		$criteria->compare('id',$this->id,true);
+		$criteria->compare('raw_id',$this->raw_id,true);
+		$criteria->compare('dep_id',$this->dep_id,true);
+		$criteria->compare('name',$this->name,true);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,

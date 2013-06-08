@@ -612,20 +612,20 @@ class JQueryFileUpload extends CComponent
                     }
                 }
                 $file->url = $this->get_download_url($upload_file_name, null, $file_dir_under_upload_dir);
+                $file->object = $upload_file;
+                $file->id = $upload_file->id;
 
+                $this->set_file_delete_properties($file);
             } else if (!$content_range && $this->options['discard_aborted_uploads']) {
                 //如果上传中途终止上传，则删除图片
                 unlink($file_path);
                 $file->error = 'abort';
             }
-            $file->postfix=strtolower(substr(strrchr($name, '.'), 1));
-            $file->name=$name;
-            $file->id = $upload_file->id;
+            $file->postfix = strtolower(substr(strrchr($name, '.'), 1));
+            $file->name = $name;
             $file->size = $file_size;
-            $file->object = $upload_file;
-            $file->delete_type=$this->options['delete_type'];
+            $file->delete_type = $this->options['delete_type'];
             //设置用什么url可以删除该图片
-            $this->set_file_delete_properties($file);
         }
         return $file;
     }
@@ -656,7 +656,7 @@ class JQueryFileUpload extends CComponent
                 return;
             }
             $this->head();
-            if (isset($_SERVER['HTTP_CONTENT_RANGE']) && is_array($content) &&
+            if (isset($_SERVER['HTTP_CONTENT_RANGE']) && is_array($content) && count($content) != 0 &&
                 is_object($content[0]) && $content[0]->size
             ) {
                 $this->header('Range: 0-' . ($this->fix_integer_overflow(intval($content[0]->size)) - 1));
