@@ -49,7 +49,7 @@ class CourseResource extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('course_id, create_time, title', 'required'),
+			array('course_id, title', 'required'),
 			array('user_id, course_id, class_id, teacher_id', 'length', 'max'=>10),
 			array('category', 'length', 'max'=>5),
 			array('title', 'length', 'max'=>255),

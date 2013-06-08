@@ -36,7 +36,7 @@ class FollowCourse extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('user_id, course_id, create_time', 'required'),
+			array('user_id, course_id', 'required'),
 			array('user_id, course_id', 'length', 'max'=>10),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
