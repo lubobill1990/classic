@@ -72,7 +72,7 @@
 }
 
 .slide{
-  margin-bottom: 50px;height: 150px;
+  margin-bottom: 50px;height: 148px;
 
   .slide-prev{
     float: left;width: 25px;height: 47px;margin-top: 50px;cursor: pointer;
@@ -93,14 +93,19 @@
   }
 
   .slide-main{
-      width: 512px;margin:0 auto;height: 100%;overflow: hidden;
+      width: 512px;margin:0 auto;height: 100%;overflow: hidden;position: relative;
+    .slide-ul-wrapper{
+      display: inline-block;position: absolute;width: 5000px;left: 0px;
 
-    ul{
-      li{
-        display: inline-block;cursor: pointer;
+      ul{
+        display: inline-block;
 
-        img{
-          width: 113px;height: 148px;margin-right: 6px;margin-left: 6px;
+        li{
+          display: inline-block;cursor: pointer;
+
+          img{
+            width: 113px;height: 148px;margin-right: 6px;margin-left: 6px;
+          }
         }
       }
     }

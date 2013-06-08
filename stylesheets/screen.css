@@ -739,7 +739,7 @@ body h1 {
 /* line 9, ../sass/common/_common.scss */
 body h2 {
   margin-top: -4px;
-  margin-bottom: 26px;
+  margin-bottom: 24px;
   color: #444;
   font-size: 16px;
   font-family: "Microsoft Yahei";
@@ -1145,7 +1145,7 @@ body #footer #footer-right li a {
 /* line 74, ../sass/common/_components.scss */
 .slide {
   margin-bottom: 50px;
-  height: 150px;
+  height: 148px;
 }
 /* line 77, ../sass/common/_components.scss */
 .slide .slide-prev {
@@ -1179,14 +1179,26 @@ body #footer #footer-right li a {
   margin: 0 auto;
   height: 100%;
   overflow: hidden;
+  position: relative;
 }
-/* line 99, ../sass/common/_components.scss */
-.slide .slide-main ul li {
+/* line 97, ../sass/common/_components.scss */
+.slide .slide-main .slide-ul-wrapper {
+  display: inline-block;
+  position: absolute;
+  width: 5000px;
+  left: 0px;
+}
+/* line 100, ../sass/common/_components.scss */
+.slide .slide-main .slide-ul-wrapper ul {
+  display: inline-block;
+}
+/* line 103, ../sass/common/_components.scss */
+.slide .slide-main .slide-ul-wrapper ul li {
   display: inline-block;
   cursor: pointer;
 }
-/* line 102, ../sass/common/_components.scss */
-.slide .slide-main ul li img {
+/* line 106, ../sass/common/_components.scss */
+.slide .slide-main .slide-ul-wrapper ul li img {
   width: 113px;
   height: 148px;
   margin-right: 6px;

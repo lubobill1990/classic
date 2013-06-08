@@ -23,40 +23,42 @@
 {block name=left}
 <div id="index-popular">
     <ul class="fr slide-prompt">
-        <li class="current"></li>
-        <li></li>
-        <li></li>
-        <li></li>
+        <li data-number="0" class="current"></li>
+        <li data-number="1"></li>
+        <li data-number="2"></li>
+        <li data-number="3"></li>
     </ul>
     <h2>课程推荐</h2>
     <div class="slide clearfix">
-        <div class="slide-prev"></div>
+        <div class="slide-prev off"></div>
         <div class="slide-next"></div>
         <div class="slide-main">
-            <ul>
-                <li><img src="" /></li>
-                <li><img src="" /></li>
-                <li><img src="" /></li>
-                <li><img src="" /></li>
-            </ul>
-            <ul>
-                <li><img src="" /></li>
-                <li><img src="" /></li>
-                <li><img src="" /></li>
-                <li><img src="" /></li>
-            </ul>
-            <ul>
-                <li><img src="" /></li>
-                <li><img src="" /></li>
-                <li><img src="" /></li>
-                <li><img src="" /></li>
-            </ul>
-            <ul>
-                <li><img src="" /></li>
-                <li><img src="" /></li>
-                <li><img src="" /></li>
-                <li><img src="" /></li>
-            </ul>
+            <div class="slide-ul-wrapper">
+                <ul>
+                    <li><img src="" /></li>
+                    <li><img src="" /></li>
+                    <li><img src="" /></li>
+                    <li><img src="" /></li>
+                </ul>
+                <ul>
+                    <li><img src="" /></li>
+                    <li><img src="" /></li>
+                    <li><img src="" /></li>
+                    <li><img src="" /></li>
+                </ul>
+                <ul>
+                    <li><img src="" /></li>
+                    <li><img src="" /></li>
+                    <li><img src="" /></li>
+                    <li><img src="" /></li>
+                </ul>
+                <ul>
+                    <li><img src="" /></li>
+                    <li><img src="" /></li>
+                    <li><img src="" /></li>
+                    <li><img src="" /></li>
+                </ul>
+            </div>
         </div>
     </div>
 </div>
