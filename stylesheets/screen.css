@@ -825,7 +825,7 @@ body #header #header-top #header-top-nav li #header-top-nav-subnav li {
 body #header #header-top #header-top-nav li #header-top-nav-subnav li ul {
   position: absolute;
   width: 292px;
-  height: 164px;
+  height: 166px;
   background: #2e7720;
   z-index: 4;
   left: 126px;
@@ -1127,4 +1127,68 @@ body #footer #footer-right li a {
   margin-right: 16px;
   display: inline;
   color: #aaa;
+}
+
+/* line 65, ../sass/common/_components.scss */
+.slide-prompt li {
+  display: inline-block;
+  width: 25px;
+  height: 5px;
+  background: #c0cdc0;
+  margin-right: 2px;
+}
+/* line 68, ../sass/common/_components.scss */
+.slide-prompt li.current {
+  background: #828282;
+}
+
+/* line 74, ../sass/common/_components.scss */
+.slide {
+  margin-bottom: 50px;
+  height: 150px;
+}
+/* line 77, ../sass/common/_components.scss */
+.slide .slide-prev {
+  float: left;
+  width: 25px;
+  height: 47px;
+  margin-top: 50px;
+  cursor: pointer;
+  background: url("../../images/common/slide-prev-on.png") no-repeat center;
+}
+/* line 81, ../sass/common/_components.scss */
+.slide .slide-prev.off {
+  background: url("../../images/common/slide-prev-off.png") no-repeat center;
+}
+/* line 86, ../sass/common/_components.scss */
+.slide .slide-next {
+  float: right;
+  width: 25px;
+  height: 47px;
+  margin-top: 50px;
+  cursor: pointer;
+  background: url("../../images/common/slide-next-on.png") no-repeat center;
+}
+/* line 90, ../sass/common/_components.scss */
+.slide .slide-next.off {
+  background: url("../../images/common/slide-next-off.png") no-repeat center;
+}
+/* line 95, ../sass/common/_components.scss */
+.slide .slide-main {
+  width: 512px;
+  margin: 0 auto;
+  height: 100%;
+  overflow: hidden;
+}
+/* line 99, ../sass/common/_components.scss */
+.slide .slide-main ul li {
+  display: inline-block;
+  cursor: pointer;
+}
+/* line 102, ../sass/common/_components.scss */
+.slide .slide-main ul li img {
+  width: 113px;
+  height: 148px;
+  margin-right: 6px;
+  margin-left: 6px;
 }

@@ -45,12 +45,14 @@
         <p><span class="course-intro-detail-left">教材:</span><span class="course-intro-detail-right"><a>微积分 - 南京大学出版社</a></span></p>
     </div>
     <a class="btn fr cr" id="course-intro-follow">关注此课程</a>
-    <p class="fr cr" id="course-intro-rating">评分:
+    <p title="评个分吧" class="fr cr" id="course-intro-rating">当前平均分:
         <span class="star"></span><span class="star"></span><span class="star"></span><span class="star"></span><span class="star"></span>
     </p>
     <a class="btn1 cl fl">给它换个封面</a>
 
 </div>
+
+<div id="course-book"></div>
 {/block}
 
 {block name=right}
@@ -74,20 +76,17 @@
                 for(var i=0;i<star_num;i++){
                     $('.star').eq(i).addClass('star-on');
                 }
+                for(var i=star_num;i<5;i++){
+                    $('.star').eq(i).removeClass('star-on');
+                }
             }
 
             $('.star').mouseover(function(){
                 $(this).prevAll('.star').add($(this)).addClass('star-on');
+                $(this).nextAll('.star').removeClass('star-on');
                 return true;
             }).mouseout(function(){
-                $(this).prevAll('.star').add($(this)).removeClass('star-on');
-                return true;
-            });
-
-            $('#course-intro-rating').mouseout(function(e){
-                if(!$(e.target).hasClass('star')){
-                    init_star();
-                }
+                init_star();
                 return true;
             });
 

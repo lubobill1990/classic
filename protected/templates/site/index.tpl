@@ -22,7 +22,43 @@
 
 {block name=left}
 <div id="index-popular">
+    <ul class="fr slide-prompt">
+        <li class="current"></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
     <h2>课程推荐</h2>
+    <div class="slide clearfix">
+        <div class="slide-prev"></div>
+        <div class="slide-next"></div>
+        <div class="slide-main">
+            <ul>
+                <li><img src="" /></li>
+                <li><img src="" /></li>
+                <li><img src="" /></li>
+                <li><img src="" /></li>
+            </ul>
+            <ul>
+                <li><img src="" /></li>
+                <li><img src="" /></li>
+                <li><img src="" /></li>
+                <li><img src="" /></li>
+            </ul>
+            <ul>
+                <li><img src="" /></li>
+                <li><img src="" /></li>
+                <li><img src="" /></li>
+                <li><img src="" /></li>
+            </ul>
+            <ul>
+                <li><img src="" /></li>
+                <li><img src="" /></li>
+                <li><img src="" /></li>
+                <li><img src="" /></li>
+            </ul>
+        </div>
+    </div>
 </div>
 
 <div id="index-courses">
