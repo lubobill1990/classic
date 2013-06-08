@@ -35,28 +35,108 @@
         <div class="slide-main">
             <div class="slide-ul-wrapper">
                 <ul>
-                    <li><img src="" /></li>
-                    <li><img src="" /></li>
-                    <li><img src="" /></li>
-                    <li><img src="" /></li>
+                    <li>
+                        <img src="" />
+                        <div class="slide-popup none">
+                            <div class="slide-popup-left"></div>
+                        </div>
+                    </li>
+                    <li>
+                        <img src="" />
+                        <div class="slide-popup none">
+                            <div class="slide-popup-left"></div>
+                        </div>
+                    </li>
+                    <li>
+                        <img src="" />
+                        <div class="slide-popup none">
+                            <div class="slide-popup-left"></div>
+                        </div>
+                    </li>
+                    <li>
+                        <img src="" />
+                        <div class="slide-popup none">
+                            <div class="slide-popup-left"></div>
+                        </div>
+                    </li>
                 </ul>
                 <ul>
-                    <li><img src="" /></li>
-                    <li><img src="" /></li>
-                    <li><img src="" /></li>
-                    <li><img src="" /></li>
+                    <li>
+                        <img src="" />
+                        <div class="slide-popup none">
+                            <div class="slide-popup-left"></div>
+                        </div>
+                    </li>
+                    <li>
+                        <img src="" />
+                        <div class="slide-popup none">
+                            <div class="slide-popup-left"></div>
+                        </div>
+                    </li>
+                    <li>
+                        <img src="" />
+                        <div class="slide-popup none">
+                            <div class="slide-popup-left"></div>
+                        </div>
+                    </li>
+                    <li>
+                        <img src="" />
+                        <div class="slide-popup none">
+                            <div class="slide-popup-left"></div>
+                        </div>
+                    </li>
                 </ul>
                 <ul>
-                    <li><img src="" /></li>
-                    <li><img src="" /></li>
-                    <li><img src="" /></li>
-                    <li><img src="" /></li>
+                    <li>
+                        <img src="" />
+                        <div class="slide-popup none">
+                            <div class="slide-popup-left"></div>
+                        </div>
+                    </li>
+                    <li>
+                        <img src="" />
+                        <div class="slide-popup none">
+                            <div class="slide-popup-left"></div>
+                        </div>
+                    </li>
+                    <li>
+                        <img src="" />
+                        <div class="slide-popup none">
+                            <div class="slide-popup-left"></div>
+                        </div>
+                    </li>
+                    <li>
+                        <img src="" />
+                        <div class="slide-popup none">
+                            <div class="slide-popup-left"></div>
+                        </div>
+                    </li>
                 </ul>
                 <ul>
-                    <li><img src="" /></li>
-                    <li><img src="" /></li>
-                    <li><img src="" /></li>
-                    <li><img src="" /></li>
+                    <li>
+                        <img src="" />
+                        <div class="slide-popup none">
+                            <div class="slide-popup-left"></div>
+                        </div>
+                    </li>
+                    <li>
+                        <img src="" />
+                        <div class="slide-popup none">
+                            <div class="slide-popup-left"></div>
+                        </div>
+                    </li>
+                    <li>
+                        <img src="" />
+                        <div class="slide-popup none">
+                            <div class="slide-popup-left"></div>
+                        </div>
+                    </li>
+                    <li>
+                        <img src="" />
+                        <div class="slide-popup none">
+                            <div class="slide-popup-left"></div>
+                        </div>
+                    </li>
                 </ul>
             </div>
         </div>

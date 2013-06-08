@@ -825,7 +825,7 @@ body #header #header-top #header-top-nav li #header-top-nav-subnav li {
 body #header #header-top #header-top-nav li #header-top-nav-subnav li ul {
   position: absolute;
   width: 292px;
-  height: 166px;
+  height: 164px;
   background: #2e7720;
   z-index: 4;
   left: 126px;
@@ -1178,29 +1178,52 @@ body #footer #footer-right li a {
   width: 512px;
   margin: 0 auto;
   height: 100%;
-  overflow: hidden;
   position: relative;
+  overflow: hidden;
 }
-/* line 97, ../sass/common/_components.scss */
+/* line 98, ../sass/common/_components.scss */
 .slide .slide-main .slide-ul-wrapper {
   display: inline-block;
   position: absolute;
   width: 5000px;
   left: 0px;
 }
-/* line 100, ../sass/common/_components.scss */
+/* line 101, ../sass/common/_components.scss */
 .slide .slide-main .slide-ul-wrapper ul {
   display: inline-block;
 }
-/* line 103, ../sass/common/_components.scss */
+/* line 104, ../sass/common/_components.scss */
 .slide .slide-main .slide-ul-wrapper ul li {
   display: inline-block;
   cursor: pointer;
+  position: relative;
 }
-/* line 106, ../sass/common/_components.scss */
+/* line 107, ../sass/common/_components.scss */
 .slide .slide-main .slide-ul-wrapper ul li img {
   width: 113px;
   height: 148px;
   margin-right: 6px;
   margin-left: 6px;
+}
+/* line 111, ../sass/common/_components.scss */
+.slide .slide-main .slide-ul-wrapper ul li .slide-popup {
+  width: 240px;
+  height: 130px;
+  position: absolute;
+  background: rgba(252, 252, 252, 0.9);
+  -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+  left: 128px;
+  top: 1px;
+  z-index: 100;
+}
+/* line 115, ../sass/common/_components.scss */
+.slide .slide-main .slide-ul-wrapper ul li .slide-popup .slide-popup-left {
+  width: 6px;
+  height: 18px;
+  background: url("../../images/common/slide-popup-left.png") no-repeat center;
+  position: absolute;
+  left: -6px;
+  top: 20px;
 }

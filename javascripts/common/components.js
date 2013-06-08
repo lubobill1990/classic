@@ -8,6 +8,19 @@ $('.crumb li').mouseover(function(){
 });
 
 //slide
+$('.slide-main ul li').mouseover(function(){
+    $(this).find('.slide-popup').removeClass('none');
+}).mouseout(function(){
+    $(this).find('.slide-popup').addClass('none');
+});
+
+//防止弹出窗口冒泡
+$('.slide-popup').mouseover(function(){
+    return false;
+}).mouseout(function(){
+    return false;
+});
+
 $('.slide-prev').click(function(){
     var current_prompt = $('.slide-prompt').find('.current');
     var current_num = current_prompt.data('number');
