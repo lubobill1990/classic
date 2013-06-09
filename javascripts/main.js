@@ -46,7 +46,8 @@ requirejs.config({
         'jquery.ui.widget':'lib/jquery.ui.widget',
         'load-image':'fileupload/load-image',
         'canvas-to-blob':'fileupload/canvas-to-blob',
-        'components':'common/components'
+        'components':'common/components',
+        notty:'lib/jquery.classynotty'
     },
     shim:{
         components:{
@@ -110,6 +111,7 @@ requirejs.config({
 });
 require(['jquery'],
     function () {
+        var jSmartTemplateCache = [];
         (function ($) {
             function init_upload_form(options, callback) {
                 require(['fileupload', 'bootstrap/modal'], function () {
@@ -152,6 +154,7 @@ require(['jquery'],
                         callback(uploaded_files);
                         uploaded_files=[];
                         this_div.modal('hide');
+                        $(this).parents('.modal-footer').siblings('.modal-body').find('tbody.files').html('')
                     })
                     finish_button.attr("disabled", true);
 
@@ -228,16 +231,34 @@ require(['jquery'],
                     }
 
                     $.WJ('imageupload', callback, opt);
+                },
+                notify:function (opt) {
+                    $.extend(opt, {
+                        showTime:false,
+                        timeout:5000,
+                        title:'提醒'
+                    })
+                    require(['notty'], function () {
+                        $.ClassyNotty(opt);
+                    })
                 }
             }
             var methods = {
                 pagination:function (total_count, items_per_page, pageSelectCallback, opts) {
                     return $.WJ('pagination', $(this), total_count, items_per_page, pageSelectCallback, opts);
                 },
-                fileupload:function (options, callback) {
-                    $(this).modal({
-                        backdrop:false
-                    });
+                jSmartFetch:function (data, callback) {
+                    var this_ele = $(this);
+                    require(['jsmart'], function () {
+                        jSmart.prototype.getTemplate = function (name) {
+                            return $("#" + name).html();
+                        }
+                        var selectorString = this_ele.selector;
+                        if (jSmartTemplateCache[selectorString] == undefined) {
+                            jSmartTemplateCache[selectorString] = new jSmart(this_ele.html())
+                        }
+                        callback(jSmartTemplateCache[selectorString].fetch(data));
+                    })
                 }
 
             }

@@ -71,9 +71,9 @@ class AjaxResponse
         }
     }
 
-    static function resourceNotFound()
+    static function resourceNotFound($info=null)
     {
-        self::send(self::RESOURCE_NOT_FOUND);
+        self::send(self::RESOURCE_NOT_FOUND,$info);
     }
 
     static function success($data=NULL)
@@ -81,9 +81,9 @@ class AjaxResponse
         self::send(self::SUCCESS,$data);
     }
 
-    static function forbidden()
+    static function forbidden($info=null)
     {
-        self::send(self::OPERATION_FORBIDDEN);
+        self::send(self::OPERATION_FORBIDDEN,$info);
     }
 
     static function methodNotAllowed()
@@ -91,13 +91,13 @@ class AjaxResponse
         self::send(self::METHOD_NOT_ALLOWED);
     }
 
-    static function nothingChanged()
+    static function nothingChanged($info=null)
     {
-        self::send(self::NOTHING_CHANGED);
+        self::send(self::NOTHING_CHANGED,$info);
     }
 
-    static function missParam(){
-        self::send(self::MISSING_PARAM);
+    static function missParam($info=null){
+        self::send(self::MISSING_PARAM,$info);
     }
 
     static function invalidParam(){

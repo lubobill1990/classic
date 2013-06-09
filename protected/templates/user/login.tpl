@@ -1,3 +1,4 @@
+{block name=left}
 <form action="" method="post" id='login_form'>
     <input type="hidden" name="return_url" value="{$return_url}">
     <div>
@@ -32,3 +33,4 @@
         <input type="submit" value="登录">
     </div>
 </form>
+{/block}

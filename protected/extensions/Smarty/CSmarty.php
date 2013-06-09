@@ -113,22 +113,31 @@ class CSmarty extends Smarty
     }
 
 
+
+//    function renderAll($template = NULL, $array = array(), $layout = 'file:[0]layouts/main.tpl', $use_module_template_dir = true)
+//    {
+//        $this->assignValue($array);
+//        $template = $this->normalizeTemplate($template, $use_module_template_dir);
+//        $this->assign('script_tpl', $this->getScripts());
+//        $this->assign('content_tpl', parent::fetch($template));
+//        $this->display($layout);
+//    }
     /**
      * render template and put the content into layout
      * @param null $template
      * @param array $array
-     * @param string $layout
-     * @param bool $use_module_template_dir
+     * @param string $parent_tpl
+     * @param bool $use_module_dir
+     * @return void
+     * @internal param string $layout
+     * @internal param bool $use_module_template_dir
      */
-    function renderAll($template = NULL, $array = array(), $layout = 'file:[0]layouts/main.tpl', $use_module_template_dir = true)
-    {
+    public function renderAll($template=NULL,$array=array(),$parent_tpl="file:[0]layouts/main.tpl",$use_module_dir=true){
         $this->assignValue($array);
-        $template = $this->normalizeTemplate($template, $use_module_template_dir);
-        $this->assign('script_tpl', $this->getScripts());
-        $this->assign('content_tpl', parent::fetch($template));
-        $this->display($layout);
+        $template = $this->normalizeTemplate($template, $use_module_dir);
+        $template="extends:{$parent_tpl}|{$template}";
+        $this->display($template);
     }
-
     function fetchString($template = NULL, $array = array(), $use_module_template_dir = true)
     {
         $this->assignValue($array);

@@ -1,3 +1,5 @@
+{block name=left}
+
 <form action="" method="post" id='signup_form'>
     <div>
         <label for="user_email">电子邮箱</label>
@@ -26,3 +28,4 @@
     </div>
     <div><input type="submit" value="注册"><a href="/login" class="link-login">已有账号?</a></div>
 </form>
+{/block}

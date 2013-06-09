@@ -1,29 +1,4 @@
-<?php /* Smarty version Smarty-3.1.11, created on 2013-06-09 15:12:59
-         compiled from "/home/lubo2/public_html/protected/templates/layouts/header.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:44788819151a82cd32b8dd4-63341677%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
-$_valid = $_smarty_tpl->decodeProperties(array (
-  'file_dependency' => 
-  array (
-    '98feff338a58908084eea26181d9dba4243d65fd' => 
-    array (
-      0 => '/home/lubo2/public_html/protected/templates/layouts/header.tpl',
-      1 => 1370761957,
-      2 => 'file',
-    ),
-  ),
-  'nocache_hash' => '44788819151a82cd32b8dd4-63341677',
-  'function' => 
-  array (
-  ),
-  'version' => 'Smarty-3.1.11',
-  'unifunc' => 'content_51a82cd32bee80_31847773',
-  'variables' => 
-  array (
-    'login_user' => 0,
-  ),
-  'has_nocache_code' => false,
-),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_51a82cd32bee80_31847773')) {function content_51a82cd32bee80_31847773($_smarty_tpl) {?><div id="header">
+<div id="header">
 
     <div id="header-top">
         <div class="w940 bc">
@@ -130,27 +105,25 @@ $_valid = $_smarty_tpl->decodeProperties(array (
                 <li><a href="#">捐赠我们</a></li>
             </ul>
             <div id="header-top-info" class="fr">
-            <?php if ($_smarty_tpl->tpl_vars['login_user']->value){?>
-                你好，<?php echo $_smarty_tpl->tpl_vars['login_user']->value->username;?>
-
-                <?php }else{ ?>
+            {if $login_user}
+                你好，{$login_user->username}
+                {else}
                 <ul>
                     <li><a href="/login">登录</a></li>
                     <li><a href="/signup">注册</a></li>
                 </ul>
-            <?php }?>
+            {/if}
             </div>
         </div>
     </div>
 
-
+{block name=header_alter}
     <div id="header-normal">
         <form id="header-normal-search" class="bc">
             <input type="input" placeholder="发现，探索，学习" id="header-normal-search-input"/>
             <input type="submit" value="" id="header-normal-search-button"/>
         </form>
     </div>
-
+{/block}
 
 </div>
-<?php }} ?>
