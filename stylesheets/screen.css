@@ -1207,8 +1207,8 @@ body #footer #footer-right li a {
 }
 /* line 111, ../sass/common/_components.scss */
 .slide .slide-main .slide-ul-wrapper ul li .slide-popup {
-  width: 240px;
-  height: 130px;
+  width: 216px;
+  height: 106px;
   position: absolute;
   background: rgba(252, 252, 252, 0.9);
   -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
@@ -1217,6 +1217,7 @@ body #footer #footer-right li a {
   left: 128px;
   top: 1px;
   z-index: 100;
+  padding: 12px;
 }
 /* line 115, ../sass/common/_components.scss */
 .slide .slide-main .slide-ul-wrapper ul li .slide-popup .slide-popup-left {
@@ -1226,4 +1227,24 @@ body #footer #footer-right li a {
   position: absolute;
   left: -6px;
   top: 20px;
+}
+/* line 120, ../sass/common/_components.scss */
+.slide .slide-main .slide-ul-wrapper ul li .slide-popup h6 {
+  color: #369;
+  font-size: 14px;
+  margin-bottom: 7px;
+}
+/* line 124, ../sass/common/_components.scss */
+.slide .slide-main .slide-ul-wrapper ul li .slide-popup p {
+  color: #787a78;
+  line-height: 19px;
+}
+/* line 128, ../sass/common/_components.scss */
+.slide .slide-main .slide-ul-wrapper ul li .slide-popup.slide-popup-toLeft {
+  left: -240px;
+}
+/* line 131, ../sass/common/_components.scss */
+.slide .slide-main .slide-ul-wrapper ul li .slide-popup.slide-popup-toLeft .slide-popup-left {
+  background: url("../../images/common/slide-popup-right.png") no-repeat center;
+  left: 240px;
 }

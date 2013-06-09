@@ -39,50 +39,44 @@
                         <img src="" />
                         <div class="slide-popup none">
                             <div class="slide-popup-left"></div>
+                            <h6>微积分</h6>
+                            <p>微积分是大家都要上的一门让学霸痴狂学
+                                渣抓狂的公共课程，有好多老师，好多班
+                                级，好多习题和好多红灯，你能像学霸一
+                                样享受这门课。</p>
                         </div>
                     </li>
                     <li>
                         <img src="" />
                         <div class="slide-popup none">
                             <div class="slide-popup-left"></div>
+                            <h6>微积分</h6>
+                            <p>微积分是大家都要上的一门让学霸痴狂学
+                                渣抓狂的公共课程，有好多老师，好多班
+                                级，好多习题和好多红灯，你能像学霸一
+                                样享受这门课。</p>
                         </div>
                     </li>
                     <li>
                         <img src="" />
-                        <div class="slide-popup none">
+                        <div class="slide-popup slide-popup-toLeft none">
                             <div class="slide-popup-left"></div>
+                            <h6>微积分</h6>
+                            <p>微积分是大家都要上的一门让学霸痴狂学
+                                渣抓狂的公共课程，有好多老师，好多班
+                                级，好多习题和好多红灯，你能像学霸一
+                                样享受这门课。</p>
                         </div>
                     </li>
                     <li>
                         <img src="" />
-                        <div class="slide-popup none">
+                        <div class="slide-popup slide-popup-toLeft none">
                             <div class="slide-popup-left"></div>
-                        </div>
-                    </li>
-                </ul>
-                <ul>
-                    <li>
-                        <img src="" />
-                        <div class="slide-popup none">
-                            <div class="slide-popup-left"></div>
-                        </div>
-                    </li>
-                    <li>
-                        <img src="" />
-                        <div class="slide-popup none">
-                            <div class="slide-popup-left"></div>
-                        </div>
-                    </li>
-                    <li>
-                        <img src="" />
-                        <div class="slide-popup none">
-                            <div class="slide-popup-left"></div>
-                        </div>
-                    </li>
-                    <li>
-                        <img src="" />
-                        <div class="slide-popup none">
-                            <div class="slide-popup-left"></div>
+                            <h6>微积分</h6>
+                            <p>微积分是大家都要上的一门让学霸痴狂学
+                                渣抓狂的公共课程，有好多老师，好多班
+                                级，好多习题和好多红灯，你能像学霸一
+                                样享受这门课。</p>
                         </div>
                     </li>
                 </ul>
@@ -91,24 +85,44 @@
                         <img src="" />
                         <div class="slide-popup none">
                             <div class="slide-popup-left"></div>
+                            <h6>微积分</h6>
+                            <p>微积分是大家都要上的一门让学霸痴狂学
+                                渣抓狂的公共课程，有好多老师，好多班
+                                级，好多习题和好多红灯，你能像学霸一
+                                样享受这门课。</p>
                         </div>
                     </li>
                     <li>
                         <img src="" />
                         <div class="slide-popup none">
                             <div class="slide-popup-left"></div>
+                            <h6>微积分</h6>
+                            <p>微积分是大家都要上的一门让学霸痴狂学
+                                渣抓狂的公共课程，有好多老师，好多班
+                                级，好多习题和好多红灯，你能像学霸一
+                                样享受这门课。</p>
                         </div>
                     </li>
                     <li>
                         <img src="" />
-                        <div class="slide-popup none">
+                        <div class="slide-popup slide-popup-toLeft none">
                             <div class="slide-popup-left"></div>
+                            <h6>微积分</h6>
+                            <p>微积分是大家都要上的一门让学霸痴狂学
+                                渣抓狂的公共课程，有好多老师，好多班
+                                级，好多习题和好多红灯，你能像学霸一
+                                样享受这门课。</p>
                         </div>
                     </li>
                     <li>
                         <img src="" />
-                        <div class="slide-popup none">
+                        <div class="slide-popup slide-popup-toLeft none">
                             <div class="slide-popup-left"></div>
+                            <h6>微积分</h6>
+                            <p>微积分是大家都要上的一门让学霸痴狂学
+                                渣抓狂的公共课程，有好多老师，好多班
+                                级，好多习题和好多红灯，你能像学霸一
+                                样享受这门课。</p>
                         </div>
                     </li>
                 </ul>
@@ -117,24 +131,90 @@
                         <img src="" />
                         <div class="slide-popup none">
                             <div class="slide-popup-left"></div>
+                            <h6>微积分</h6>
+                            <p>微积分是大家都要上的一门让学霸痴狂学
+                                渣抓狂的公共课程，有好多老师，好多班
+                                级，好多习题和好多红灯，你能像学霸一
+                                样享受这门课。</p>
                         </div>
                     </li>
                     <li>
                         <img src="" />
                         <div class="slide-popup none">
                             <div class="slide-popup-left"></div>
+                            <h6>微积分</h6>
+                            <p>微积分是大家都要上的一门让学霸痴狂学
+                                渣抓狂的公共课程，有好多老师，好多班
+                                级，好多习题和好多红灯，你能像学霸一
+                                样享受这门课。</p>
+                        </div>
+                    </li>
+                    <li>
+                        <img src="" />
+                        <div class="slide-popup slide-popup-toLeft none">
+                            <div class="slide-popup-left"></div>
+                            <h6>微积分</h6>
+                            <p>微积分是大家都要上的一门让学霸痴狂学
+                                渣抓狂的公共课程，有好多老师，好多班
+                                级，好多习题和好多红灯，你能像学霸一
+                                样享受这门课。</p>
+                        </div>
+                    </li>
+                    <li>
+                        <img src="" />
+                        <div class="slide-popup slide-popup-toLeft none">
+                            <div class="slide-popup-left"></div>
+                            <h6>微积分</h6>
+                            <p>微积分是大家都要上的一门让学霸痴狂学
+                                渣抓狂的公共课程，有好多老师，好多班
+                                级，好多习题和好多红灯，你能像学霸一
+                                样享受这门课。</p>
+                        </div>
+                    </li>
+                </ul>
+                <ul>
+                    <li>
+                        <img src="" />
+                        <div class="slide-popup none">
+                            <div class="slide-popup-left"></div>
+                            <h6>微积分</h6>
+                            <p>微积分是大家都要上的一门让学霸痴狂学
+                                渣抓狂的公共课程，有好多老师，好多班
+                                级，好多习题和好多红灯，你能像学霸一
+                                样享受这门课。</p>
                         </div>
                     </li>
                     <li>
                         <img src="" />
                         <div class="slide-popup none">
                             <div class="slide-popup-left"></div>
+                            <h6>微积分</h6>
+                            <p>微积分是大家都要上的一门让学霸痴狂学
+                                渣抓狂的公共课程，有好多老师，好多班
+                                级，好多习题和好多红灯，你能像学霸一
+                                样享受这门课。</p>
                         </div>
                     </li>
                     <li>
                         <img src="" />
-                        <div class="slide-popup none">
+                        <div class="slide-popup slide-popup-toLeft none">
                             <div class="slide-popup-left"></div>
+                            <h6>微积分</h6>
+                            <p>微积分是大家都要上的一门让学霸痴狂学
+                                渣抓狂的公共课程，有好多老师，好多班
+                                级，好多习题和好多红灯，你能像学霸一
+                                样享受这门课。</p>
+                        </div>
+                    </li>
+                    <li>
+                        <img src="" />
+                        <div class="slide-popup slide-popup-toLeft none">
+                            <div class="slide-popup-left"></div>
+                            <h6>微积分</h6>
+                            <p>微积分是大家都要上的一门让学霸痴狂学
+                                渣抓狂的公共课程，有好多老师，好多班
+                                级，好多习题和好多红灯，你能像学霸一
+                                样享受这门课。</p>
                         </div>
                     </li>
                 </ul>
