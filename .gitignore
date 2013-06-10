@@ -6,4 +6,7 @@ assets
 
 upload
 !upload/README
+
 protected/runtime/*
+
+*.tpl.php

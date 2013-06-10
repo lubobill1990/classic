@@ -1,20 +1,19 @@
 <?php
 
 /**
- * This is the model class for table "auth_code".
+ * This is the model class for table "follow_course".
  *
- * The followings are the available columns in table 'auth_code':
- * @property string $code
+ * The followings are the available columns in table 'follow_course':
  * @property string $user_id
+ * @property string $course_id
  * @property string $create_time
- * @property string $expire_time
  */
-class AuthCode extends CActiveRecord
+class FollowCourse extends CActiveRecord
 {
 	/**
 	 * Returns the static model of the specified AR class.
 	 * @param string $className active record class name.
-	 * @return AuthCode the static model class
+	 * @return FollowCourse the static model class
 	 */
 	public static function model($className=__CLASS__)
 	{
@@ -26,7 +25,7 @@ class AuthCode extends CActiveRecord
 	 */
 	public function tableName()
 	{
-		return 'auth_code';
+		return 'follow_course';
 	}
 
 	/**
@@ -37,13 +36,11 @@ class AuthCode extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('code, user_id', 'required'),
-			array('code', 'length', 'max'=>40),
-			array('user_id', 'length', 'max'=>11),
-			array('create_time, expire_time', 'safe'),
+			array('user_id, course_id', 'required'),
+			array('user_id, course_id', 'length', 'max'=>10),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
-			array('code, user_id, create_time, expire_time', 'safe', 'on'=>'search'),
+			array('user_id, course_id, create_time', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -64,10 +61,9 @@ class AuthCode extends CActiveRecord
 	public function attributeLabels()
 	{
 		return array(
-			'code' => 'Code',
 			'user_id' => 'User',
+			'course_id' => 'Course',
 			'create_time' => 'Create Time',
-			'expire_time' => 'Expire Time',
 		);
 	}
 
@@ -82,10 +78,9 @@ class AuthCode extends CActiveRecord
 
 		$criteria=new CDbCriteria;
 
-		$criteria->compare('code',$this->code,true);
 		$criteria->compare('user_id',$this->user_id,true);
+		$criteria->compare('course_id',$this->course_id,true);
 		$criteria->compare('create_time',$this->create_time,true);
-		$criteria->compare('expire_time',$this->expire_time,true);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,

@@ -1,20 +1,18 @@
 <?php
 
 /**
- * This is the model class for table "auth_code".
+ * This is the model class for table "course_category_map".
  *
- * The followings are the available columns in table 'auth_code':
- * @property string $code
- * @property string $user_id
- * @property string $create_time
- * @property string $expire_time
+ * The followings are the available columns in table 'course_category_map':
+ * @property string $category
+ * @property string $course_id
  */
-class AuthCode extends CActiveRecord
+class CourseCategoryMap extends CActiveRecord
 {
 	/**
 	 * Returns the static model of the specified AR class.
 	 * @param string $className active record class name.
-	 * @return AuthCode the static model class
+	 * @return CourseCategoryMap the static model class
 	 */
 	public static function model($className=__CLASS__)
 	{
@@ -26,7 +24,7 @@ class AuthCode extends CActiveRecord
 	 */
 	public function tableName()
 	{
-		return 'auth_code';
+		return 'course_category_map';
 	}
 
 	/**
@@ -37,13 +35,11 @@ class AuthCode extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('code, user_id', 'required'),
-			array('code', 'length', 'max'=>40),
-			array('user_id', 'length', 'max'=>11),
-			array('create_time, expire_time', 'safe'),
+			array('category, course_id', 'required'),
+			array('category, course_id', 'length', 'max'=>10),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
-			array('code, user_id, create_time, expire_time', 'safe', 'on'=>'search'),
+			array('category, course_id', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -64,10 +60,8 @@ class AuthCode extends CActiveRecord
 	public function attributeLabels()
 	{
 		return array(
-			'code' => 'Code',
-			'user_id' => 'User',
-			'create_time' => 'Create Time',
-			'expire_time' => 'Expire Time',
+			'category' => 'Category',
+			'course_id' => 'Course',
 		);
 	}
 
@@ -82,10 +76,8 @@ class AuthCode extends CActiveRecord
 
 		$criteria=new CDbCriteria;
 
-		$criteria->compare('code',$this->code,true);
-		$criteria->compare('user_id',$this->user_id,true);
-		$criteria->compare('create_time',$this->create_time,true);
-		$criteria->compare('expire_time',$this->expire_time,true);
+		$criteria->compare('category',$this->category,true);
+		$criteria->compare('course_id',$this->course_id,true);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,
