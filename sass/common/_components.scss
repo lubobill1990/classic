@@ -104,16 +104,16 @@
       width: 512px;margin:0 auto;height: 100%;position: relative;overflow: hidden;
 
     .slide-ul-wrapper{
-      display: inline-block;position: absolute;width: 5000px;left: 0px;
+      display: inline-block;position: absolute;width: 5000px;left: 0px;height: 100%;
 
       ul{
-        display: inline-block;
+        display: inline-block;height: 100%;
 
         li{
-          display: inline-block;cursor: pointer;position: relative;
+          display: inline-block;cursor: pointer;position: relative;height: 100%;width: 125px;
 
           img{
-            width: 113px;height: 148px;margin-right: 6px;margin-left: 6px;
+            width: 113px;height: 148px;margin-left: 6px;margin-right: 6px;
           }
 
           .slide-popup{

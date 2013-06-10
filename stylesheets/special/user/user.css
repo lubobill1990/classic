@@ -1,0 +1,29 @@
+/* line 1, ../../../sass/special/user/user.scss */
+#signup_form, #login_form {
+  width: 500px;
+}
+/* line 3, ../../../sass/special/user/user.scss */
+#signup_form label, #login_form label {
+  display: inline-block;
+  width: 74px;
+}
+/* line 8, ../../../sass/special/user/user.scss */
+#signup_form div, #login_form div {
+  margin: 5px 0;
+}
+
+/* line 14, ../../../sass/special/user/user.scss */
+#login_form .link-retrieve-password, #login_form .link-signup {
+  margin-left: 15px;
+}
+
+/* line 22, ../../../sass/special/user/user.scss */
+#signup_form .link-login {
+  margin-left: 27px;
+}
+
+/* line 27, ../../../sass/special/user/user.scss */
+.validate-error {
+  display: none;
+  color: #fe2617;
+}

@@ -1,11 +1,8 @@
-{block name=css}
     <link rel="stylesheet" href="/stylesheets/special/courseDocument/list.css">
-{/block}
 
-{block name=left}
 
 {*<div class="upload-toolbar">*}
-    {*<div class="tool_bar_wrap" style="position: relative; top: 0px; left: auto; z-index: auto;">*}
+    {*<div class="tool_bar_wrap clearfix" style="position: relative; top: 0px; left: auto; z-index: auto;">*}
         {*<button class="btn" id="course_document_upload">上传文件</button>*}
         {*<button class="btn" id="course_document_refresh">刷新</button>*}
     {*</div>*}
@@ -58,8 +55,6 @@
 
     {/literal}
 
-{/block}
-{block name=js}
     {literal}
     <script type="text/javascript">
     require(['jquery', 'jsmart','bootstrap/modal'], function () {
@@ -165,4 +160,3 @@
     {/literal}
 </script>
 
-{/block}

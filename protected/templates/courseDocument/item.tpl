@@ -9,16 +9,16 @@
                 <div class="title" title="{$doc->description}">
                 {$doc->title}
                 </div>
-                <div class="file-tool">
-                    <a target="_blank" href="{$file->url}">下载</a>
-                    <a name="" onclick="">分享</a>
-                </div>
             </div>
         </div>
     </td>
     <td class="file-size">{$file->getFormattedSize()}</td>
     <td class="file-timpstamp">{$file->create_time|date_format:"%Y-%m-%d %H:%M"}</td>
     <td class="file-operation">
+        <div class="file-tool">
+            <a target="_blank" href="{$file->url}">下载</a>
+            {*<a name="" onclick="">分享</a>*}
+        </div>
     {if $login_user and $doc->user_id==$login_user->id}
         <button class="btn btn-warning delete-doc">删除</button>
         <button class="btn btn-primary modify-doc">更改名称</button>

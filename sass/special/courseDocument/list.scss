@@ -1,4 +1,6 @@
-@import "file_upload";
+@import "settings";
+@import "partials/file_upload";
+
 .modal-container{
   @import "bootstrap";
 }
@@ -7,7 +9,11 @@
 }
 .upload-toolbar {
   .tool_bar_wrap{
-    float:left;
+    float:right;
+  }
+
+  .mysearch_wrap{
+    float:right;margin-right: 10px;
   }
   form{
     float:right;
@@ -24,10 +30,18 @@
     }
   }
   .file-intro{
-    margin-left: 37px;
+    margin-left: 37px;;
+
+    .title{
+      top: 8px;position: relative;
+    }
+  }
+
+  .file-tool{
+    display: inline;
   }
   table{
-    width:550px;
+    width:600px;
     thead{
       .name{
         width:200px;

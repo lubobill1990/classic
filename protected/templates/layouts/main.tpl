@@ -7,6 +7,8 @@
 
     <link rel="stylesheet" href="/stylesheets/screen.css">
     {block name=css}{/block}
+    <script type="text/javascript" src='/javascripts/require.2.1.5.js'></script>
+    <script type="text/javascript" src='/javascripts/main.js'></script>
 </head>
 
 <body>
@@ -161,8 +163,7 @@
     </div>
 </div>
 
-<script type="text/javascript" src='/javascripts/require.2.1.5.js'></script>
-<script type="text/javascript" src='/javascripts/main.js'></script>
+
 <script type="text/javascript">
 require(['jquery','components'], function ($){
     $('#header-top-nav li').eq(0).mouseover(function(){
