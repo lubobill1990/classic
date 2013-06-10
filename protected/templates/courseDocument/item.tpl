@@ -20,8 +20,8 @@
             {*<a name="" onclick="">分享</a>*}
         </div>
     {if $login_user and $doc->user_id==$login_user->id}
-        <button class="btn btn-warning delete-doc">删除</button>
-        <button class="btn btn-primary modify-doc">更改名称</button>
+        <a class="delete-doc">删除</a>
+        <a class="modify-doc">更改</a>
     {/if}
     </td>
 </tr>

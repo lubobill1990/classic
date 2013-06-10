@@ -40,6 +40,11 @@
   .file-tool{
     display: inline;
   }
+
+    a{
+      margin-right: 6px;
+    }
+
   table{
     width:600px;
     thead{
@@ -47,5 +52,11 @@
         width:200px;
       }
     }
+  }
+}
+
+.modal-header{
+  h3{
+    color: #444;font-family: "SimSun";font-weight: normal;font-size: 16px;
   }
 }
