@@ -1,0 +1,37 @@
+@import "file_upload";
+.modal-container{
+  @import "bootstrap";
+}
+.table-container{
+  @import "foundation/components/tables";
+}
+.upload-toolbar {
+  .tool_bar_wrap{
+    float:left;
+  }
+  form{
+    float:right;
+  }
+}
+#subject_docs{
+  @import "foundation/components/global"; // *always required
+  @import "foundation/components/buttons";
+  .file-icon {
+    float: left;
+    img{
+      width:27px;
+      height:27px;
+    }
+  }
+  .file-intro{
+    margin-left: 37px;
+  }
+  table{
+    width:550px;
+    thead{
+      .name{
+        width:200px;
+      }
+    }
+  }
+}

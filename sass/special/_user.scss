@@ -1,0 +1,30 @@
+#signup_form, #login_form {
+  width: 500px;
+  label {
+    display: inline-block;
+    width: 74px;
+    //line-height: 25px;
+  }
+  div{
+    margin:5px 0;
+  }
+}
+
+#login_form {
+  .link-retrieve-password ,.link-signup{
+    margin-left: 15px;
+  }
+  .link-signup{
+
+  }
+}
+#signup_form{
+  .link-login{
+    margin-left: 27px;
+  }
+}
+
+.validate-error {
+  display: none;
+  color: #fe2617;
+}

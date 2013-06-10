@@ -1,3 +1,5 @@
+{block name=left}
+
 <form action="" method="post">
     <div>
         <label for="retrieve_email">电子邮箱：</label>
@@ -12,3 +14,4 @@
         </ul>
     </div>
 </form>
+{/block}

@@ -1,3 +1,4 @@
+{block name=left}
 <div class="row">
     <article class="span8">
         <div class="comment-list">
@@ -59,8 +60,12 @@
 
     </aside>
 </div>
+{/block}
+{block name=js}
+
 <script type="text/javascript">
     require(['feedback/comment'],function(){
 
     })
 </script>
+{/block}
