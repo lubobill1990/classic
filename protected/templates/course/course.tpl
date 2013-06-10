@@ -29,7 +29,7 @@
     </li>
 </ul>
 
-<div id="course-intro">
+<div id="course-intro" class="clearfix">
     <h1 class="fl">微积分1（第一层次）</h1>
     <p class="fr" id="course-intro-edit">信息有误?<a>点此编辑</a></p>
     <img src="" id="course-intro-cover" class="fl cl"/>
@@ -49,10 +49,196 @@
         <span class="star"></span><span class="star"></span><span class="star"></span><span class="star"></span><span class="star"></span>
     </p>
     <a class="btn1 cl fl">给它换个封面</a>
-
 </div>
 
-<div id="course-book"></div>
+<div id="course-book">
+    <div class="clearfix">
+        <ul class="fr slide-prompt">
+            <li data-number="0" class="current"></li>
+            <li data-number="1"></li>
+            <li data-number="2"></li>
+            <li data-number="3"></li>
+        </ul>
+        <h2 class="fl">相关书籍</h2>
+        <a class="btn2 fl">我来推荐书籍</a>
+    </div>
+
+    <div class="slide clearfix">
+        <div class="slide-prev off"></div>
+        <div class="slide-next"></div>
+        <div class="slide-main">
+            <div class="slide-ul-wrapper">
+                <ul>
+                    <li>
+                        <img src="" />
+                        <div class="slide-popup none">
+                            <div class="slide-popup-left"></div>
+                            <h6>电动力学（第二版）</h6>
+                            <p>推荐人：释小龙</p>
+                            <p>推荐理由：This is f**king awesome</p>
+                        </div>
+                    </li>
+                    <li>
+                        <img src="" />
+                        <div class="slide-popup none">
+                            <div class="slide-popup-left"></div>
+                            <h6>电动力学（第二版）</h6>
+                            <p>推荐人：释小龙</p>
+                            <p>推荐理由：This is f**king awesome</p>
+                        </div>
+                    </li>
+                    <li>
+                        <img src="" />
+                        <div class="slide-popup slide-popup-toLeft none">
+                            <div class="slide-popup-left"></div>
+                            <h6>电动力学（第二版）</h6>
+                            <p>推荐人：释小龙</p>
+                            <p>推荐理由：This is f**king awesome</p>
+                        </div>
+                    </li>
+                    <li>
+                        <img src="" />
+                        <div class="slide-popup slide-popup-toLeft none">
+                            <div class="slide-popup-left"></div>
+                            <h6>电动力学（第二版）</h6>
+                            <p>推荐人：释小龙</p>
+                            <p>推荐理由：This is f**king awesome</p>
+                        </div>
+                    </li>
+                </ul>
+                <ul>
+                    <li>
+                        <img src="" />
+                        <div class="slide-popup none">
+                            <div class="slide-popup-left"></div>
+                            <h6>电动力学（第二版）</h6>
+                            <p>推荐人：释小龙</p>
+                            <p>推荐理由：This is f**king awesome</p>
+                        </div>
+                    </li>
+                    <li>
+                        <img src="" />
+                        <div class="slide-popup none">
+                            <div class="slide-popup-left"></div>
+                            <h6>电动力学（第二版）</h6>
+                            <p>推荐人：释小龙</p>
+                            <p>推荐理由：This is f**king awesome</p>
+                        </div>
+                    </li>
+                    <li>
+                        <img src="" />
+                        <div class="slide-popup slide-popup-toLeft none">
+                            <div class="slide-popup-left"></div>
+                            <h6>电动力学（第二版）</h6>
+                            <p>推荐人：释小龙</p>
+                            <p>推荐理由：This is f**king awesome</p>
+                        </div>
+                    </li>
+                    <li>
+                        <img src="" />
+                        <div class="slide-popup slide-popup-toLeft none">
+                            <div class="slide-popup-left"></div>
+                            <h6>电动力学（第二版）</h6>
+                            <p>推荐人：释小龙</p>
+                            <p>推荐理由：This is f**king awesome</p>
+                        </div>
+                    </li>
+                </ul>
+                <ul>
+                    <li>
+                        <img src="" />
+                        <div class="slide-popup none">
+                            <div class="slide-popup-left"></div>
+                            <h6>电动力学（第二版）</h6>
+                            <p>推荐人：释小龙</p>
+                            <p>推荐理由：This is f**king awesome</p>
+                        </div>
+                    </li>
+                    <li>
+                        <img src="" />
+                        <div class="slide-popup none">
+                            <div class="slide-popup-left"></div>
+                            <h6>电动力学（第二版）</h6>
+                            <p>推荐人：释小龙</p>
+                            <p>推荐理由：This is f**king awesome</p>
+                        </div>
+                    </li>
+                    <li>
+                        <img src="" />
+                        <div class="slide-popup slide-popup-toLeft none">
+                            <div class="slide-popup-left"></div>
+                            <h6>电动力学（第二版）</h6>
+                            <p>推荐人：释小龙</p>
+                            <p>推荐理由：This is f**king awesome</p>
+                        </div>
+                    </li>
+                    <li>
+                        <img src="" />
+                        <div class="slide-popup slide-popup-toLeft none">
+                            <div class="slide-popup-left"></div>
+                            <h6>电动力学（第二版）</h6>
+                            <p>推荐人：释小龙</p>
+                            <p>推荐理由：This is f**king awesome</p>
+                        </div>
+                    </li>
+                </ul>
+                <ul>
+                    <li>
+                        <img src="" />
+                        <div class="slide-popup none">
+                            <div class="slide-popup-left"></div>
+                            <h6>电动力学（第二版）</h6>
+                            <p>推荐人：释小龙</p>
+                            <p>推荐理由：This is f**king awesome</p>
+                        </div>
+                    </li>
+                    <li>
+                        <img src="" />
+                        <div class="slide-popup none">
+                            <div class="slide-popup-left"></div>
+                            <h6>电动力学（第二版）</h6>
+                            <p>推荐人：释小龙</p>
+                            <p>推荐理由：This is f**king awesome</p>
+                        </div>
+                    </li>
+                    <li>
+                        <img src="" />
+                        <div class="slide-popup slide-popup-toLeft none">
+                            <div class="slide-popup-left"></div>
+                            <h6>电动力学（第二版）</h6>
+                            <p>推荐人：释小龙</p>
+                            <p>推荐理由：This is f**king awesome</p>
+                        </div>
+                    </li>
+                    <li>
+                        <img src="" />
+                        <div class="slide-popup slide-popup-toLeft none">
+                            <div class="slide-popup-left"></div>
+                            <h6>电动力学（第二版）</h6>
+                            <p>推荐人：释小龙</p>
+                            <p>推荐理由：This is f**king awesome</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="course-resource">
+    <div class="clearfix">
+        <h2 class="fl">相关书籍</h2>
+        <a class="btn2 fl">我来推荐资源</a>
+    </div>
+    <div class="item">
+        <p><span class="item-1">[ 文档 ]</span><a>微积分课件</a><span class="item-2">顶+10</span><span class="item-2">踩-3</span></p>
+        <p>推荐人：<a>释小龙</a>推荐理由：无</p>
+    </div>
+    <div class="item">
+        <p><span class="item-1">[ 视频 ]</span><a>Coursra微积分教程</a><span class="item-2">顶+10</span><span class="item-2">踩-3</span></p>
+        <p>推荐人：<a>释小龙</a>推荐理由：呵呵，呵呵，和呵呵呵呵呵呵~</p>
+    </div>
+</div>
 {/block}
 
 {block name=right}

@@ -2,7 +2,7 @@
 @import "compass/css3";
 
 #course-intro{
-  margin-top: 32px;
+  margin-top: 32px;margin-bottom: 40px;
 
   #course-intro-edit{
     color: #ababab;margin-bottom: 22px;margin-top: 4px;
@@ -47,6 +47,52 @@
 
     .star:nth-child(1){
       margin-left: 10px;
+    }
+  }
+
+  .btn1{
+    margin-left: 5px;
+  }
+}
+
+#course-book{
+  .btn2{
+    margin-left: 18px;margin-top: -2px;
+  }
+}
+
+#course-resource{
+  margin-bottom: 60px;
+
+  .btn2{
+    margin-left: 18px;margin-top: -2px;
+  }
+
+  .item{
+    height: 56px;padding: 4px 16px;padding-top: 16px;border-bottom: 1px dotted #e5e5e5;
+
+    p:nth-child(1){
+      line-height: 24px;
+
+      .item-1{
+        display: inline;color: #444;
+      }
+
+      a{
+        margin-left: 12px;margin-right: 38px;
+      }
+
+      .item-2{
+        color: #ba7d25 ;margin-right: 34px;
+      }
+    }
+
+    p:nth-child(2){
+      line-height: 24px;color: #787878;padding-left: 46px;
+
+      a{
+        margin-right: 16px;
+      }
     }
   }
 }

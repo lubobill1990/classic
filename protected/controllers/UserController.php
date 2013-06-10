@@ -201,4 +201,14 @@ class UserController extends Controller
             $this->smarty->renderAll('block_fail', array('message' => '冻结账户的链接已过期或不可用'));
         }
     }
+
+    public function actionActivate1()
+    {
+        $this->smarty->render('activate');
+    }
+
+    public function actionChoose()
+    {
+        $this->smarty->render('choose');
+    }
 }

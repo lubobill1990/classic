@@ -128,6 +128,7 @@
 </div>
 
 <div id="content" class="w940 bc clearfix">
+    {block name=middle}{/block}
     <div id="content-left" class="fl">{block name=left}{/block}</div>
     <div id="content-right" class="fr">{block name=right}{/block}</div>
 </div>

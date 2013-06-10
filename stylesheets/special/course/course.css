@@ -1,6 +1,7 @@
 /* line 4, ../../../sass/special/course/course.scss */
 #course-intro {
   margin-top: 32px;
+  margin-bottom: 40px;
 }
 /* line 7, ../../../sass/special/course/course.scss */
 #course-intro #course-intro-edit {
@@ -59,14 +60,70 @@
 #course-intro #course-intro-rating .star:nth-child(1) {
   margin-left: 10px;
 }
+/* line 53, ../../../sass/special/course/course.scss */
+#course-intro .btn1 {
+  margin-left: 5px;
+}
 
-/* line 56, ../../../sass/special/course/course.scss */
+/* line 59, ../../../sass/special/course/course.scss */
+#course-book .btn2 {
+  margin-left: 18px;
+  margin-top: -2px;
+}
+
+/* line 64, ../../../sass/special/course/course.scss */
+#course-resource {
+  margin-bottom: 60px;
+}
+/* line 67, ../../../sass/special/course/course.scss */
+#course-resource .btn2 {
+  margin-left: 18px;
+  margin-top: -2px;
+}
+/* line 71, ../../../sass/special/course/course.scss */
+#course-resource .item {
+  height: 56px;
+  padding: 4px 16px;
+  padding-top: 16px;
+  border-bottom: 1px dotted #e5e5e5;
+}
+/* line 74, ../../../sass/special/course/course.scss */
+#course-resource .item p:nth-child(1) {
+  line-height: 24px;
+}
+/* line 77, ../../../sass/special/course/course.scss */
+#course-resource .item p:nth-child(1) .item-1 {
+  display: inline;
+  color: #444;
+}
+/* line 81, ../../../sass/special/course/course.scss */
+#course-resource .item p:nth-child(1) a {
+  margin-left: 12px;
+  margin-right: 38px;
+}
+/* line 85, ../../../sass/special/course/course.scss */
+#course-resource .item p:nth-child(1) .item-2 {
+  color: #ba7d25;
+  margin-right: 34px;
+}
+/* line 90, ../../../sass/special/course/course.scss */
+#course-resource .item p:nth-child(2) {
+  line-height: 24px;
+  color: #787878;
+  padding-left: 46px;
+}
+/* line 93, ../../../sass/special/course/course.scss */
+#course-resource .item p:nth-child(2) a {
+  margin-right: 16px;
+}
+
+/* line 102, ../../../sass/special/course/course.scss */
 #course-class ul li {
   border-bottom: 1px dotted #e5e5e5;
   color: #aeaeae;
   line-height: 24px;
 }
-/* line 59, ../../../sass/special/course/course.scss */
+/* line 105, ../../../sass/special/course/course.scss */
 #course-class ul li a {
   margin-right: 10px;
 }

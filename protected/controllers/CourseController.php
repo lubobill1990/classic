@@ -7,6 +7,9 @@ class CourseController extends Controller
         $this->smarty->render('course');
     }
 
-
+    public function actionSearch()
+    {
+        $this->smarty->render('search');
+    }
 
 }

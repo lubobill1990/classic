@@ -16,7 +16,15 @@
 }
 
 .btn1{
-  background: #fdf1ed;padding: 4px 14px;color: #b3705b;cursor: pointer;border: 1px solid #e8b5a5;
+  background: #fdf1ed;padding: 4px 14px;color: #b3705b;cursor: pointer;border: 1px solid #e8b5a5;@include border-radius(1px);
+}
+
+.btn2{
+  background: #dbf1dc;padding: 1px 8px;color: #377439;cursor: pointer;border: 1px solid #83b284;@include border-radius(1px);
+
+  &:active{
+    background: #91b893;
+  }
 }
 
 //面包屑
