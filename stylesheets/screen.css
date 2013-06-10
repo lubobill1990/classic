@@ -739,7 +739,7 @@ body h1 {
 /* line 9, ../sass/common/_common.scss */
 body h2 {
   margin-top: -4px;
-  margin-bottom: 26px;
+  margin-bottom: 24px;
   color: #444;
   font-size: 16px;
   font-family: "Microsoft Yahei";
@@ -810,8 +810,9 @@ body #header #header-top #header-top-nav li #header-top-nav-subnav {
   -webkit-box-shadow: 0 0 1px #aaaaaa;
   -moz-box-shadow: 0 0 1px #aaaaaa;
   box-shadow: 0 0 1px #aaaaaa;
+  border-bottom: 4px solid #e9e9e9;
 }
-/* line 47, ../sass/common/_common.scss */
+/* line 48, ../sass/common/_common.scss */
 body #header #header-top #header-top-nav li #header-top-nav-subnav li {
   margin: 2px;
   padding-left: 12px;
@@ -820,49 +821,37 @@ body #header #header-top #header-top-nav li #header-top-nav-subnav li {
   height: 28px;
   line-height: 28px;
 }
-/* line 50, ../sass/common/_common.scss */
+/* line 51, ../sass/common/_common.scss */
 body #header #header-top #header-top-nav li #header-top-nav-subnav li ul {
   position: absolute;
   width: 292px;
-  height: 169px;
+  height: 164px;
   background: #2e7720;
   z-index: 4;
   left: 126px;
   top: 0;
   padding: 8px 4px;
+  border-bottom: 4px solid #296b1d;
 }
-/* line 54, ../sass/common/_common.scss */
+/* line 55, ../sass/common/_common.scss */
 body #header #header-top #header-top-nav li #header-top-nav-subnav li ul li {
   float: left;
   width: 80px;
   height: 30px;
 }
-/* line 57, ../sass/common/_common.scss */
+/* line 58, ../sass/common/_common.scss */
 body #header #header-top #header-top-nav li #header-top-nav-subnav li ul li:hover {
   background: #58924d;
 }
-/* line 61, ../sass/common/_common.scss */
+/* line 62, ../sass/common/_common.scss */
 body #header #header-top #header-top-nav li #header-top-nav-subnav li ul li a {
   color: #fff;
 }
-/* line 66, ../sass/common/_common.scss */
-body #header #header-top #header-top-nav li #header-top-nav-subnav li ul .header-top-nav-subsubnav-footer {
-  height: 4px;
-  background: #296b1d;
-  position: relative;
-  top: 171px;
-  width: 100%;
-}
-/* line 71, ../sass/common/_common.scss */
+/* line 68, ../sass/common/_common.scss */
 body #header #header-top #header-top-nav li #header-top-nav-subnav li:hover {
   background: #e9e9e9;
 }
-/* line 76, ../sass/common/_common.scss */
-body #header #header-top #header-top-nav li #header-top-nav-subnav #header-top-nav-subnav-footer {
-  height: 4px;
-  background: #e9e9e9;
-}
-/* line 84, ../sass/common/_common.scss */
+/* line 77, ../sass/common/_common.scss */
 body #header #header-normal {
   height: 60px;
   background: #edede7;
@@ -870,7 +859,7 @@ body #header #header-normal {
   -moz-box-shadow: 0 1px 3px #aaaaaa;
   box-shadow: 0 1px 3px #aaaaaa;
 }
-/* line 87, ../sass/common/_common.scss */
+/* line 80, ../sass/common/_common.scss */
 body #header #header-normal #header-normal-search {
   width: 640px;
   height: 40px;
@@ -886,7 +875,7 @@ body #header #header-normal #header-normal-search {
   -moz-box-shadow: 0 0 1px #aaaaaa;
   box-shadow: 0 0 1px #aaaaaa;
 }
-/* line 91, ../sass/common/_common.scss */
+/* line 84, ../sass/common/_common.scss */
 body #header #header-normal #header-normal-search #header-normal-search-input {
   outline: none;
   border: none;
@@ -898,7 +887,7 @@ body #header #header-normal #header-normal-search #header-normal-search-input {
   top: 2px;
   color: #787a78;
 }
-/* line 96, ../sass/common/_common.scss */
+/* line 89, ../sass/common/_common.scss */
 body #header #header-normal #header-normal-search #header-normal-search-button {
   border: none;
   width: 24px;
@@ -908,7 +897,7 @@ body #header #header-normal #header-normal-search #header-normal-search-button {
   cursor: pointer;
   background: url("../../images/common/header-search-button.png") no-repeat center;
 }
-/* line 103, ../sass/common/_common.scss */
+/* line 96, ../sass/common/_common.scss */
 body #header #header-index {
   height: 258px;
   background: url("../../images/common/header-index-bg.png");
@@ -920,20 +909,20 @@ body #header #header-index {
   -moz-box-shadow: 0 0 50px black inset;
   box-shadow: 0 0 50px black inset;
 }
-/* line 107, ../sass/common/_common.scss */
+/* line 100, ../sass/common/_common.scss */
 body #header #header-index #header-index-content {
   width: 500px;
   position: relative;
   top: 40px;
 }
-/* line 110, ../sass/common/_common.scss */
+/* line 103, ../sass/common/_common.scss */
 body #header #header-index #header-index-content #header-index-content-slogan {
   font-size: 60px;
   font-weight: bold;
   color: #fff;
   text-shadow: 3px 6px 5px #7d7d7d;
 }
-/* line 114, ../sass/common/_common.scss */
+/* line 107, ../sass/common/_common.scss */
 body #header #header-index #header-index-content #header-index-content-search-wrapper {
   background: rgba(211, 211, 211, 0.4);
   width: 380px;
@@ -949,13 +938,13 @@ body #header #header-index #header-index-content #header-index-content-search-wr
   -moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.4);
   box-shadow: 0 1px 4px rgba(0, 0, 0, 0.4);
 }
-/* line 118, ../sass/common/_common.scss */
+/* line 111, ../sass/common/_common.scss */
 body #header #header-index #header-index-content #header-index-content-search-wrapper #header-index-content-search {
   width: 380px;
   height: 40px;
   background: #fff;
 }
-/* line 121, ../sass/common/_common.scss */
+/* line 114, ../sass/common/_common.scss */
 body #header #header-index #header-index-content #header-index-content-search-wrapper #header-index-content-search #header-index-content-search-input {
   outline: none;
   border: none;
@@ -967,7 +956,7 @@ body #header #header-index #header-index-content #header-index-content-search-wr
   top: 2px;
   color: #787a78;
 }
-/* line 126, ../sass/common/_common.scss */
+/* line 119, ../sass/common/_common.scss */
 body #header #header-index #header-index-content #header-index-content-search-wrapper #header-index-content-search #header-index-content-search-button {
   border: none;
   width: 24px;
@@ -977,33 +966,33 @@ body #header #header-index #header-index-content #header-index-content-search-wr
   cursor: pointer;
   background: url("../../images/common/header-search-button.png") no-repeat center;
 }
-/* line 133, ../sass/common/_common.scss */
+/* line 126, ../sass/common/_common.scss */
 body #header #header-index #header-index-content #header-index-content-detail {
   position: relative;
   top: 40px;
   font-size: 22px;
   color: #fff;
 }
-/* line 136, ../sass/common/_common.scss */
+/* line 129, ../sass/common/_common.scss */
 body #header #header-index #header-index-content #header-index-content-detail a {
   margin-left: 14px;
   color: #ffff00;
   text-decoration: underline;
 }
-/* line 144, ../sass/common/_common.scss */
+/* line 137, ../sass/common/_common.scss */
 body #content {
   min-height: 500px;
   margin-top: 50px;
 }
-/* line 147, ../sass/common/_common.scss */
+/* line 140, ../sass/common/_common.scss */
 body #content #content-left {
   width: 600px;
 }
-/* line 151, ../sass/common/_common.scss */
+/* line 144, ../sass/common/_common.scss */
 body #content #content-right {
   width: 300px;
 }
-/* line 156, ../sass/common/_common.scss */
+/* line 149, ../sass/common/_common.scss */
 body #footer {
   min-width: 960px;
   height: 36px;
@@ -1014,16 +1003,16 @@ body #footer {
   border-bottom: 1px solid #e1e1e1;
   margin-top: 40px;
 }
-/* line 160, ../sass/common/_common.scss */
+/* line 153, ../sass/common/_common.scss */
 body #footer #footer-left {
   color: #999;
 }
-/* line 165, ../sass/common/_common.scss */
+/* line 158, ../sass/common/_common.scss */
 body #footer #footer-right li {
   display: inline;
   margin-left: 34px;
 }
-/* line 168, ../sass/common/_common.scss */
+/* line 161, ../sass/common/_common.scss */
 body #footer #footer-right li a {
   color: #336699;
 }
@@ -1072,14 +1061,37 @@ body #footer #footer-right li a {
   color: #b3705b;
   cursor: pointer;
   border: 1px solid #e8b5a5;
+  -webkit-border-radius: 1px;
+  -moz-border-radius: 1px;
+  -ms-border-radius: 1px;
+  -o-border-radius: 1px;
+  border-radius: 1px;
 }
 
-/* line 24, ../sass/common/_components.scss */
+/* line 22, ../sass/common/_components.scss */
+.btn2 {
+  background: #dbf1dc;
+  padding: 1px 8px;
+  color: #377439;
+  cursor: pointer;
+  border: 1px solid #83b284;
+  -webkit-border-radius: 1px;
+  -moz-border-radius: 1px;
+  -ms-border-radius: 1px;
+  -o-border-radius: 1px;
+  border-radius: 1px;
+}
+/* line 25, ../sass/common/_components.scss */
+.btn2:active {
+  background: #91b893;
+}
+
+/* line 32, ../sass/common/_components.scss */
 .crumb li {
   position: relative;
   display: inline;
 }
-/* line 27, ../sass/common/_components.scss */
+/* line 35, ../sass/common/_components.scss */
 .crumb li .crumb-li-hover {
   position: absolute;
   width: 86px;
@@ -1092,12 +1104,12 @@ body #footer #footer-right li a {
   -moz-box-shadow: -1px 0 1px -1px #aaaaaa, 0 -1px 1px -1px #aaaaaa, 1px 0 1px -1px #aaaaaa;
   box-shadow: -1px 0 1px -1px #aaaaaa, 0 -1px 1px -1px #aaaaaa, 1px 0 1px -1px #aaaaaa;
 }
-/* line 32, ../sass/common/_components.scss */
+/* line 40, ../sass/common/_components.scss */
 .crumb li a {
   position: relative;
   z-index: 2;
 }
-/* line 36, ../sass/common/_components.scss */
+/* line 44, ../sass/common/_components.scss */
 .crumb li .crumb-li-subnav {
   position: absolute;
   width: 120px;
@@ -1108,7 +1120,7 @@ body #footer #footer-right li a {
   -moz-box-shadow: 0 0 1px #aaaaaa;
   box-shadow: 0 0 1px #aaaaaa;
 }
-/* line 39, ../sass/common/_components.scss */
+/* line 47, ../sass/common/_components.scss */
 .crumb li .crumb-li-subnav li {
   margin: 2px;
   padding-left: 12px;
@@ -1117,27 +1129,147 @@ body #footer #footer-right li a {
   height: 28px;
   line-height: 28px;
 }
-/* line 42, ../sass/common/_components.scss */
+/* line 50, ../sass/common/_components.scss */
 .crumb li .crumb-li-subnav li a {
   color: #787a78;
 }
-/* line 46, ../sass/common/_components.scss */
+/* line 54, ../sass/common/_components.scss */
 .crumb li .crumb-li-subnav li:hover {
   background: #e9e9e9;
 }
-/* line 52, ../sass/common/_components.scss */
+/* line 60, ../sass/common/_components.scss */
 .crumb li .crumb-li-subnav .crumb-li-subnav-footer {
   height: 4px;
   background: #e9e9e9;
   position: relative;
   width: 100%;
 }
-/* line 58, ../sass/common/_components.scss */
+/* line 66, ../sass/common/_components.scss */
 .crumb .crumb-next {
   margin-left: 14px;
   margin-right: 16px;
   display: inline;
   color: #aaa;
+}
+
+/* line 73, ../sass/common/_components.scss */
+.slide-prompt li {
+  display: inline-block;
+  width: 25px;
+  height: 5px;
+  background: #c0cdc0;
+  margin-right: 2px;
+}
+/* line 76, ../sass/common/_components.scss */
+.slide-prompt li.current {
+  background: #828282;
+}
+
+/* line 82, ../sass/common/_components.scss */
+.slide {
+  margin-bottom: 50px;
+  height: 148px;
+}
+/* line 85, ../sass/common/_components.scss */
+.slide .slide-prev {
+  float: left;
+  width: 25px;
+  height: 47px;
+  margin-top: 50px;
+  cursor: pointer;
+  background: url("../../images/common/slide-prev-on.png") no-repeat center;
+}
+/* line 89, ../sass/common/_components.scss */
+.slide .slide-prev.off {
+  background: url("../../images/common/slide-prev-off.png") no-repeat center;
+}
+/* line 94, ../sass/common/_components.scss */
+.slide .slide-next {
+  float: right;
+  width: 25px;
+  height: 47px;
+  margin-top: 50px;
+  cursor: pointer;
+  background: url("../../images/common/slide-next-on.png") no-repeat center;
+}
+/* line 98, ../sass/common/_components.scss */
+.slide .slide-next.off {
+  background: url("../../images/common/slide-next-off.png") no-repeat center;
+}
+/* line 103, ../sass/common/_components.scss */
+.slide .slide-main {
+  width: 512px;
+  margin: 0 auto;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+}
+/* line 106, ../sass/common/_components.scss */
+.slide .slide-main .slide-ul-wrapper {
+  display: inline-block;
+  position: absolute;
+  width: 5000px;
+  left: 0px;
+}
+/* line 109, ../sass/common/_components.scss */
+.slide .slide-main .slide-ul-wrapper ul {
+  display: inline-block;
+}
+/* line 112, ../sass/common/_components.scss */
+.slide .slide-main .slide-ul-wrapper ul li {
+  display: inline-block;
+  cursor: pointer;
+  position: relative;
+}
+/* line 115, ../sass/common/_components.scss */
+.slide .slide-main .slide-ul-wrapper ul li img {
+  width: 113px;
+  height: 148px;
+  margin-right: 6px;
+  margin-left: 6px;
+}
+/* line 119, ../sass/common/_components.scss */
+.slide .slide-main .slide-ul-wrapper ul li .slide-popup {
+  width: 216px;
+  height: 106px;
+  position: absolute;
+  background: rgba(252, 252, 252, 0.9);
+  -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+  left: 128px;
+  top: 1px;
+  z-index: 100;
+  padding: 12px;
+}
+/* line 123, ../sass/common/_components.scss */
+.slide .slide-main .slide-ul-wrapper ul li .slide-popup .slide-popup-left {
+  width: 6px;
+  height: 18px;
+  background: url("../../images/common/slide-popup-left.png") no-repeat center;
+  position: absolute;
+  left: -6px;
+  top: 20px;
+}
+/* line 128, ../sass/common/_components.scss */
+.slide .slide-main .slide-ul-wrapper ul li .slide-popup h6 {
+  color: #369;
+  font-size: 14px;
+  margin-bottom: 7px;
+}
+/* line 132, ../sass/common/_components.scss */
+.slide .slide-main .slide-ul-wrapper ul li .slide-popup p {
+  color: #787a78;
+  line-height: 19px;
+}
+/* line 136, ../sass/common/_components.scss */
+.slide .slide-main .slide-ul-wrapper ul li .slide-popup.slide-popup-toLeft {
+  left: -240px;
+}
+/* line 139, ../sass/common/_components.scss */
+.slide .slide-main .slide-ul-wrapper ul li .slide-popup.slide-popup-toLeft .slide-popup-left {
+  background: url("../../images/common/slide-popup-right.png") no-repeat center;
+  left: 240px;
 }
 
 /*

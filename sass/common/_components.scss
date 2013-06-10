@@ -16,7 +16,15 @@
 }
 
 .btn1{
-  background: #fdf1ed;padding: 4px 14px;color: #b3705b;cursor: pointer;border: 1px solid #e8b5a5;
+  background: #fdf1ed;padding: 4px 14px;color: #b3705b;cursor: pointer;border: 1px solid #e8b5a5;@include border-radius(1px);
+}
+
+.btn2{
+  background: #dbf1dc;padding: 1px 8px;color: #377439;cursor: pointer;border: 1px solid #83b284;@include border-radius(1px);
+
+  &:active{
+    background: #91b893;
+  }
 }
 
 //面包屑
@@ -57,5 +65,84 @@
 
   .crumb-next{
     margin:{left:14px;right: 16px;}display: inline;color: #aaa;
+  }
+}
+
+//slide
+.slide-prompt{
+  li{
+    display: inline-block;width: 25px;height: 5px;background: #c0cdc0;margin-right: 2px;
+
+    &.current{
+      background: #828282;
+    }
+  }
+}
+
+.slide{
+  margin-bottom: 50px;height: 148px;
+
+  .slide-prev{
+    float: left;width: 25px;height: 47px;margin-top: 50px;cursor: pointer;
+    background: url("../../images/common/slide-prev-on.png") no-repeat center;
+
+    &.off{
+      background: url("../../images/common/slide-prev-off.png") no-repeat center;
+    }
+  }
+
+  .slide-next{
+    float: right;width: 25px;height: 47px;margin-top: 50px;cursor: pointer;
+    background:  url("../../images/common/slide-next-on.png") no-repeat center;
+
+    &.off{
+      background: url("../../images/common/slide-next-off.png") no-repeat center;
+    }
+  }
+
+  .slide-main{
+      width: 512px;margin:0 auto;height: 100%;position: relative;overflow: hidden;
+
+    .slide-ul-wrapper{
+      display: inline-block;position: absolute;width: 5000px;left: 0px;
+
+      ul{
+        display: inline-block;
+
+        li{
+          display: inline-block;cursor: pointer;position: relative;
+
+          img{
+            width: 113px;height: 148px;margin-right: 6px;margin-left: 6px;
+          }
+
+          .slide-popup{
+            width: 216px;height: 106px;position: absolute;background: rgba(252,252,252,0.9);@include box-shadow(0 1px 3px rgba(0,0,0,0.3));
+            left: 128px;top: 1px;z-index: 100;padding: 12px;
+
+            .slide-popup-left{
+              width: 6px;height: 18px;background: url("../../images/common/slide-popup-left.png") no-repeat center;
+              position: absolute;left: -6px;top: 20px;
+            }
+
+            h6{
+              color: #369;font-size: 14px;margin-bottom: 7px;
+            }
+
+            p{
+              color: #787a78;line-height: 19px;
+            }
+
+            &.slide-popup-toLeft{
+              left: -240px;
+
+              .slide-popup-left{
+                background: url("../../images/common/slide-popup-right.png") no-repeat center;left: 240px;
+              }
+            }
+          }
+        }
+      }
+    }
   }
 }

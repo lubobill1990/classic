@@ -1,0 +1,62 @@
+//css3 mixin
+@import "compass/css3";
+
+#search-container{
+  margin-bottom:64px;
+
+  #search-header{
+    border-bottom: 1px solid #ccc;padding-bottom: 8px;
+
+    h3{
+      color: #369;font-size: 14px;
+    }
+
+    span{
+      color: #369;
+    }
+  }
+
+  .item{
+    padding: 24px 0;border-bottom: 1px solid #e5e5e5;
+
+    img{
+      width: 112px;height: 170px;margin-bottom: 8px;margin-right: 18px;
+    }
+
+    .item-detail{
+      margin-top: 10px;
+
+      h2{
+        margin-bottom: 12px;
+      }
+
+      p{
+        margin-bottom: 8px;
+
+        .star{
+          width: 20px;height: 17px;background: url("../../../images/common/star-off.png") no-repeat center;display: inline-block;
+          position: relative;top: 2px;
+        }
+
+        .star-on{
+          background: url("../../../images/common/star-on.png") no-repeat center;
+        }
+
+        .item-detail-left{
+          color: #999;margin-right: 7px;
+        }
+
+        .item-detail-right{
+          color: #444;
+        }
+
+        &.stars{
+          margin-bottom: 12px;
+        }
+      }
+    }
+  }
+}
+
+
+
