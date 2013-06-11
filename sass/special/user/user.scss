@@ -28,7 +28,7 @@ form .validate-error {
 
       .input-wrapper{
         width: 230px;height: 28px;line-height: 28px;background: #fff;border: 1px solid #d6d6d6;@include border-radius(4px);
-        position: relative;
+        position: relative;display: inline-block;
 
         &.input-wrapper-hover{
           box-shadow: 0 0 5px rgba(36, 218, 1, 0.5);
@@ -57,6 +57,10 @@ form .validate-error {
         img{
           width: 230px;margin-bottom: 10px;
         }
+      }
+
+      .validate-error{
+        color: #fe2617;position: relative;top: -10px;left: 10px;
       }
     }
 

@@ -57,6 +57,7 @@ form .validate-error {
   -o-border-radius: 4px;
   border-radius: 4px;
   position: relative;
+  display: inline-block;
 }
 /* line 33, ../../../sass/special/user/user.scss */
 #user-main .user-form .form-item .input-wrapper.input-wrapper-hover {
@@ -99,12 +100,19 @@ form .validate-error {
   width: 230px;
   margin-bottom: 10px;
 }
-/* line 63, ../../../sass/special/user/user.scss */
+/* line 62, ../../../sass/special/user/user.scss */
+#user-main .user-form .form-item .validate-error {
+  color: #fe2617;
+  position: relative;
+  top: -10px;
+  left: 10px;
+}
+/* line 67, ../../../sass/special/user/user.scss */
 #user-main .user-form .pwd-more {
   color: #666;
   margin-bottom: 16px;
 }
-/* line 67, ../../../sass/special/user/user.scss */
+/* line 71, ../../../sass/special/user/user.scss */
 #user-main .user-form #user-submit {
   width: 230px;
   height: 28px;

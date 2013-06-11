@@ -13,8 +13,8 @@
                 <div class="input-wrapper">
                     <div class="input-decorator-user"></div>
                     <input type="text" name="LoginForm[username]" id='login_username' value="{$model->username}">
-                    <span class="validate-error" {if $errors['username']|default:false}style="display: inline;"{/if}>邮箱/用户名或密码错误</span>
                 </div>
+                <span class="validate-error" {if $errors['username']|default:false}style="display: inline;"{/if}>邮箱/用户名或密码错误</span>
             </div>
             <div class="form-item">
                 <label for="login_password">密码</label>
@@ -42,7 +42,6 @@
                 <input type="checkbox" name="LoginForm[rememberMe]" {if $model->rememberMe }checked {/if} id='remember_me'
                        value="1">
                 <label for="remember_me">记住密码？</label>|
-
                 <a href="/account/retrieve_password" class="link-retrieve-password">忘记密码了</a>
             </div>
             <input type="submit" value="登录" id="user-submit" class="btn" />
