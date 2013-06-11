@@ -122,4 +122,12 @@ class ActualClass extends CActiveRecord
 			'criteria'=>$criteria,
 		));
 	}
+
+    public function getCampus(){
+        $time_sites=$this->timeSites;
+        if(!empty($time_sites)){
+            return $time_sites[0]['campus'];
+        }
+        return '';
+    }
 }

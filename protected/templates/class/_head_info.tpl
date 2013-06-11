@@ -21,6 +21,7 @@
         {$split}{$time_site->classroom}
         {$split=", "}
     {/foreach}
+    ({$class->campus})
     </span></p>
 <p><span class="course-intro-detail-left">课程类型:</span><span
         class="course-intro-detail-right">{$class->course_type}</span></p>

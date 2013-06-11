@@ -330,7 +330,7 @@
     <h2>本学期开课班级</h2>
     <ul>
         {foreach $course->classes as $class}
-            <li><a href="/class/{$class->id}">进入</a>{$class->major->dep->name} - {$class->major->name} -
+            <li><a href="/class/{$class->id}">进入</a>{$class->major->dep->name} - {$class->major->name} - ({$class->campus})
                 {foreach $class->timeSites as $time_site}
                     <ul>
                         <li>{$time_site->getTimeString()} {$time_site->classroom}</li>

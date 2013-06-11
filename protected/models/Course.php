@@ -8,6 +8,7 @@
  * @property string $raw_id
  * @property string $name
  * @property string $category
+ * @property double $score
  *
  * The followings are the available model relations:
  * @property Class[] $classes
@@ -47,6 +48,7 @@ class Course extends CActiveRecord
         return array(
             array('raw_id, name', 'required'),
             array('raw_id, category', 'length', 'max' => 10),
+            array('score', 'numerical'),
             array('name', 'length', 'max' => 255),
             // The following rule is used by search().
             // Please remove those attributes that should not be searched.
@@ -68,6 +70,7 @@ class Course extends CActiveRecord
             'courseResources' => array(self::HAS_MANY, 'CourseResource', 'course_id'),
             'courseTags' => array(self::MANY_MANY, 'CourseTag', 'course_tag_map(course_id, tag_id)'),
             'users' => array(self::MANY_MANY, 'User', 'follow_course(course_id, user_id)'),
+            'averageScore' => array(self::STAT, 'CourseScore', 'course_id', 'select' => 'AVG(score)',),
         );
     }
 
@@ -80,7 +83,8 @@ class Course extends CActiveRecord
             'id' => 'ID',
             'raw_id' => 'Raw',
             'name' => 'Name',
-            'category'=>"Category"
+            'category' => "Category",
+            'score' => "Score"
         );
     }
 
@@ -98,7 +102,8 @@ class Course extends CActiveRecord
         $criteria->compare('id', $this->id, true);
         $criteria->compare('raw_id', $this->raw_id, true);
         $criteria->compare('name', $this->name, true);
-        $criteria->compare('category',$this->category,true);
+        $criteria->compare('category', $this->category, true);
+        $criteria->compare('score', $this->score, true);
 
         return new CActiveDataProvider($this, array(
             'criteria' => $criteria,

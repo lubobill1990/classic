@@ -253,7 +253,7 @@
     <h2>{$class->major->dep->name}-{$class->major->name}-{$class->grade}其他班级</h2>
     <ul>
         {foreach $other_classes as $other_class}
-        <li><a href="/class/{$other_class->id}">进入</a> {$other_class->course->name}
+        <li><a href="/class/{$other_class->id}">进入</a> {$other_class->course->name} ({$other_class->campus})
             {foreach $other_class->timeSites as $time_site}
                 <ul>
                     <li>{$time_site->getTimeString()} {$time_site->classroom}</li>
