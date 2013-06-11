@@ -77,6 +77,10 @@ body{
         li{
           display: inline;
         }
+
+        a{
+          margin-left: 10px;
+        }
       }
     }
 
@@ -108,6 +112,7 @@ body{
 
         #header-index-content-slogan{
           font-size: 60px;font-weight: bold;color: #fff;@include text-shadow(3px 6px 5px #7d7d7d);
+          text-align: left;
         }
 
         #header-index-content-search-wrapper{
@@ -115,16 +120,16 @@ body{
           @include border-radius(4px);@include box-shadow(0 1px 4px rgba(0,0,0,0.4));
 
           #header-index-content-search{
-            width: 380px;height: 40px;background: #fff;
+            width: 380px;height: 40px;background: #fff;position: relative;line-height: 40px;
 
             #header-index-content-search-input{
               outline: none;border: none;width: 310px;height: 30px;font-size: 18px;margin-left: 20px;
-              position: relative;top: 2px;color: #787a78;
+              position: relative;color: #787a78;display: inline-block;top: 2px;
             }
 
             #header-index-content-search-button{
-              border: none;width: 24px;height: 24px;position: relative;top: 10px;cursor: pointer;
-              background: url("../../images/common/header-search-button.png") no-repeat center;
+              border: none;width: 24px;height: 24px;position: absolute;cursor: pointer;
+              background: url("../../images/common/header-search-button.png") no-repeat center;top: 10px;
             }
           }
         }

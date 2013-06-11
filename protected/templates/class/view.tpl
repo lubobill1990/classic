@@ -218,11 +218,19 @@
 
 <div id="course-resource">
     <div class="clearfix">
-        <h2 class="fl">相关书籍</h2>
-        <a class="btn2 fl">我来推荐资源</a>
+        <h2 class="fl">相关资源</h2>
+        <a class="btn2 fl" id="course_document_upload">我来推荐资源</a>
+    </div>
+    {include file='file:[0]courseDocument/_list.tpl' documents=$documents course_or_class='course' course_or_class_id='1'}
+</div>
+
+<div id="course-link">
+    <div class="clearfix">
+        <h2 class="fl">相关链接</h2>
+        <a class="btn2 fl">我来推荐链接</a>
     </div>
     <div class="item">
-        <p><span class="item-1">[ 文档 ]</span><a>微积分课件</a><span class="item-2">顶+10</span><span class="item-2">踩-3</span></p>
+        <p><span class="item-1">[ 视频 ]</span><a>微积分课件</a><span class="item-2">顶+10</span><span class="item-2">踩-3</span></p>
         <p>推荐人：<a>释小龙</a>推荐理由：无</p>
     </div>
     <div class="item">

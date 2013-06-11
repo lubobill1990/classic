@@ -1,16 +1,22 @@
+
+form .validate-error {
+  display: none;
+  color: #fe2617;
+}
+
 //css3 mixin
 @import "compass/css3";
 
-#activate-main{
-  margin-top: 64px;margin-bottom: 50px;width: 562px;height: 390px;padding: 25px 44px 60px 44px;background: #f8fbf8;
+#user-main{
+  margin-top: 64px;margin-bottom: 50px;width: 562px;min-height: 390px;padding: 25px 44px 60px 44px;background: #f8fbf8;
   border: 1px solid rgba(0,0,0,0.15);@include box-shadow(0 1px 3px rgba(0,0,0,0.1));position: relative;
 
-  #actiavte-cloud{
+  #user-cloud{
     width: 173px;height: 117px;background: url("../../../images/common/activate-cloud.png") no-repeat center;
     position: absolute;right: 48px;bottom: 52px;
   }
 
-  #activate-form{
+  .user-form{
     border-top: 1px solid #e6e9e6;padding: 36px 24px;
 
     .form-item{
@@ -22,7 +28,7 @@
 
       .input-wrapper{
         width: 230px;height: 28px;line-height: 28px;background: #fff;border: 1px solid #d6d6d6;@include border-radius(4px);
-        position: relative;
+        position: relative;display: inline-block;
 
         &.input-wrapper-hover{
           box-shadow: 0 0 5px rgba(36, 218, 1, 0.5);
@@ -46,9 +52,23 @@
           }
         }
       }
+
+      .captcha{
+        img{
+          width: 230px;margin-bottom: 10px;
+        }
+      }
+
+      .validate-error{
+        color: #fe2617;position: relative;top: -10px;left: 10px;
+      }
     }
 
-    #activate-submit{
+    .pwd-more{
+      color: #666;margin-bottom: 16px;
+    }
+
+    #user-submit{
       width: 230px;height: 28px;padding: 0 0;font-size: 12px;margin-top: 10px;
     }
   }

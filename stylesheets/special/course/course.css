@@ -80,50 +80,60 @@
   margin-left: 18px;
   margin-top: -2px;
 }
-/* line 71, ../../../sass/special/course/course.scss */
-#course-resource .item {
+
+/* line 72, ../../../sass/special/course/course.scss */
+#course-link {
+  margin-bottom: 60px;
+}
+/* line 75, ../../../sass/special/course/course.scss */
+#course-link .btn2 {
+  margin-left: 18px;
+  margin-top: -2px;
+}
+/* line 79, ../../../sass/special/course/course.scss */
+#course-link .item {
   height: 56px;
   padding: 4px 16px;
   padding-top: 16px;
   border-bottom: 1px dotted #e5e5e5;
 }
-/* line 74, ../../../sass/special/course/course.scss */
-#course-resource .item p:nth-child(1) {
+/* line 82, ../../../sass/special/course/course.scss */
+#course-link .item p:nth-child(1) {
   line-height: 24px;
 }
-/* line 77, ../../../sass/special/course/course.scss */
-#course-resource .item p:nth-child(1) .item-1 {
+/* line 85, ../../../sass/special/course/course.scss */
+#course-link .item p:nth-child(1) .item-1 {
   display: inline;
   color: #444;
 }
-/* line 81, ../../../sass/special/course/course.scss */
-#course-resource .item p:nth-child(1) a {
+/* line 89, ../../../sass/special/course/course.scss */
+#course-link .item p:nth-child(1) a {
   margin-left: 12px;
   margin-right: 38px;
 }
-/* line 85, ../../../sass/special/course/course.scss */
-#course-resource .item p:nth-child(1) .item-2 {
+/* line 93, ../../../sass/special/course/course.scss */
+#course-link .item p:nth-child(1) .item-2 {
   color: #ba7d25;
   margin-right: 34px;
 }
-/* line 90, ../../../sass/special/course/course.scss */
-#course-resource .item p:nth-child(2) {
+/* line 98, ../../../sass/special/course/course.scss */
+#course-link .item p:nth-child(2) {
   line-height: 24px;
   color: #787878;
   padding-left: 46px;
 }
-/* line 93, ../../../sass/special/course/course.scss */
-#course-resource .item p:nth-child(2) a {
+/* line 101, ../../../sass/special/course/course.scss */
+#course-link .item p:nth-child(2) a {
   margin-right: 16px;
 }
 
-/* line 102, ../../../sass/special/course/course.scss */
+/* line 110, ../../../sass/special/course/course.scss */
 #course-class ul li {
   border-bottom: 1px dotted #e5e5e5;
   color: #aeaeae;
   line-height: 24px;
 }
-/* line 105, ../../../sass/special/course/course.scss */
+/* line 113, ../../../sass/special/course/course.scss */
 #course-class ul li a {
   margin-right: 10px;
 }

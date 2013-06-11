@@ -7,6 +7,8 @@
 
     <link rel="stylesheet" href="/stylesheets/screen.css">
     {block name=css}{/block}
+    <script type="text/javascript" src='/javascripts/require.2.1.5.js'></script>
+    <script type="text/javascript" src='/javascripts/main.js'></script>
 </head>
 
 <body>
@@ -120,6 +122,7 @@
             <div id="header-top-info" class="fr">
                 {if $login_user}
                     你好，{$login_user->username}
+                    <a href="/logout">退出</a>
                 {else}
                     <ul>
                         <li><a href="/login">登录</a></li>
@@ -161,8 +164,7 @@
     </div>
 </div>
 
-<script type="text/javascript" src='/javascripts/require.2.1.5.js'></script>
-<script type="text/javascript" src='/javascripts/main.js'></script>
+
 <script type="text/javascript">
 require(['jquery','components'], function ($){
     $('#header-top-nav li').eq(0).mouseover(function(){

@@ -2,12 +2,15 @@
 
 class CourseController extends Controller
 {
-    public function filters(){
+    public function filters()
+    {
         return array(
             'accessControl'
         );
     }
-    public function accessRules(){
+
+    public function accessRules()
+    {
         return array(
             array('allow',
                 'actions' => array('search', 'view')
@@ -22,10 +25,12 @@ class CourseController extends Controller
             )
         );
     }
+
     public function actionView($id)
     {
         $course = Course::model()->findByPk($id);
-        $this->smarty->renderAll('view', array('course' => $course));
+        $document_list = CourseDocument::model()->findAllByAttributes(array("course_id" => 1));
+        $this->smarty->render('view', array('course' => $course, 'documents' => $document_list));
     }
 
     public function actionSearch()

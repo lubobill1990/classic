@@ -3,7 +3,7 @@
     <div id="file_upload_modal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
          aria-hidden="true" data-backdrop="false">
         <div class="modal-header">
-            <h3 id="myModalLabel">上传文件</h3>
+            <h3 id="myModalLabel">上传资源</h3>
         </div>
         <div class="modal-body">
 
