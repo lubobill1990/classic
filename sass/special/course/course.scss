@@ -37,13 +37,28 @@
     color: #787878;
 
     .star{
-      width: 20px;height: 17px;background: url("../../../images/common/star-off.png") no-repeat center;display: inline-block;
-      position: relative;top: 2px;cursor: pointer;
+      width: 100px;height: 17px; position: relative;top: 2px;cursor: pointer;display: inline-block;
+
+      .star-off{
+        background: url("../../../images/common/star-off.png") no-repeat center;width: 100%;height: 100%;display: inline-block;
+        position: absolute;
+      }
+
+      .star-on{
+        background: url("../../../images/common/star-on.png") no-repeat ;width: 0% ;height: 100%;display: inline-block;
+        position: absolute;
+      }
+
+      .star-select{
+        position: absolute;width: 100px;height: 100%;
+
+        span{
+          width: 18px;height: 20px;display: inline-block;margin-left: -1px;
+        }
+      }
     }
 
-    .star-on{
-      background: url("../../../images/common/star-on.png") no-repeat center;
-    }
+
 
     .star:nth-child(1){
       margin-left: 10px;
@@ -106,8 +121,10 @@
 }
 
 #course-class{
+  margin-left: 60px;
+
   ul{
-    li{
+    .course-class-item{
       border-bottom: 1px dotted #e5e5e5;color: #aeaeae;line-height: 24px;
 
       a{

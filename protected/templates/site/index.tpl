@@ -9,8 +9,8 @@
     <div id="header-index-content" class="bc">
         <p id="header-index-content-slogan">ClassIC</p>
         <div id="header-index-content-search-wrapper">
-            <form id="header-index-content-search">
-                <input type="input" placeholder="发现，探索，学习" name="search-q" id="header-index-content-search-input"  />
+            <form action="/course/search" method='get' id="header-index-content-search">
+                <input type="input" placeholder="发现，探索，学习" name="keyword" id="header-index-content-search-input"  />
                 <input type="submit" value="" id="header-index-content-search-button"/>
             </form>
         </div>

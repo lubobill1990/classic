@@ -784,7 +784,7 @@ body #header #header-top #header-top-nav li #header-top-nav-hover {
   background: #fff;
   top: 6px;
   left: -14px;
-  z-index: 2;
+  z-index: 4;
   -webkit-box-shadow: -1px 0 1px -1px #aaaaaa, 0 -1px 1px -1px #aaaaaa, 1px 0 1px -1px #aaaaaa;
   -moz-box-shadow: -1px 0 1px -1px #aaaaaa, 0 -1px 1px -1px #aaaaaa, 1px 0 1px -1px #aaaaaa;
   box-shadow: -1px 0 1px -1px #aaaaaa, 0 -1px 1px -1px #aaaaaa, 1px 0 1px -1px #aaaaaa;
@@ -794,7 +794,7 @@ body #header #header-top #header-top-nav li a {
   color: #787a78;
   cursor: pointer;
   position: relative;
-  z-index: 3;
+  z-index: 5;
 }
 /* line 39, ../sass/common/_common.scss */
 body #header #header-top #header-top-nav li a:hover {
@@ -806,7 +806,7 @@ body #header #header-top #header-top-nav li #header-top-nav-subnav {
   width: 128px;
   background: #fff;
   left: -14px;
-  z-index: 1;
+  z-index: 3;
   -webkit-box-shadow: 0 0 1px #aaaaaa;
   -moz-box-shadow: 0 0 1px #aaaaaa;
   box-shadow: 0 0 1px #aaaaaa;
@@ -827,7 +827,7 @@ body #header #header-top #header-top-nav li #header-top-nav-subnav li ul {
   width: 292px;
   height: 164px;
   background: #2e7720;
-  z-index: 4;
+  z-index: 6;
   left: 126px;
   top: 0;
   padding: 8px 4px;
@@ -871,6 +871,7 @@ body #header #header-normal {
 body #header #header-normal #header-normal-search {
   width: 640px;
   height: 40px;
+  line-height: 40px;
   background: #fff;
   position: relative;
   top: 10px;
@@ -900,7 +901,7 @@ body #header #header-normal #header-normal-search #header-normal-search-button {
   border: none;
   width: 24px;
   height: 24px;
-  position: relative;
+  position: absolute;
   top: 10px;
   cursor: pointer;
   background: url("../../images/common/header-search-button.png") no-repeat center;

@@ -70,9 +70,18 @@
         <a class="btn fr cr" id="course-intro-unfollow" course_id="{$course->id}" style="display: none">取消关注</a>
         <a class="btn fr cr" id="course-intro-follow" course_id="{$course->id}">关注此课程</a>
     {/if}
-    <p title="评个分吧" class="fr cr" id="course-intro-rating">当前平均分:
-        <span class="star"></span><span class="star"></span><span class="star"></span><span class="star"></span><span
-                class="star"></span>
+    <p title="评个分吧" class="fr cr" id="course-intro-rating">评分:
+        <span class="star">
+            <span class="star-off"><span class="star-on"></span></span>
+            <span class="star-select">
+                <span data-num="1"></span>
+                <span data-num="2"></span>
+                <span data-num="3"></span>
+                <span data-num="4"></span>
+                <span data-num="5"></span>
+            </span>
+
+        </span>
     </p>
     <a class="btn1 cl fl">给它换个封面</a>
 </div>
@@ -330,7 +339,7 @@
     <h2>本学期开课班级</h2>
     <ul>
         {foreach $course->classes as $class}
-            <li><a href="/class/{$class->id}">进入</a>{$class->major->dep->name} - {$class->major->name} - ({$class->campus})
+            <li class="course-class-item"><a href="/class/{$class->id}">{$class->major->dep->name} - {$class->major->name} </a> ({$class->campus})
                 {foreach $class->timeSites as $time_site}
                     <ul>
                         <li>{$time_site->getTimeString()} {$time_site->classroom}</li>
@@ -345,29 +354,32 @@
 {block name=js}
 <script type="text/javascript">
     require(['jquery'], function ($) {
-        var star_num = 3;
+        var star_num = 3.5;
 
         function init_star() {
-            for (var i = 0; i < star_num; i++) {
-                $('.star').eq(i).addClass('star-on');
-            }
-            for (var i = star_num; i < 5; i++) {
-                $('.star').eq(i).removeClass('star-on');
-            }
+            $('.star-on').css('width',star_num*20+"%");
         }
 
-        $('.star').mouseover(function () {
-            $(this).prevAll('.star').add($(this)).addClass('star-on');
-            $(this).nextAll('.star').removeClass('star-on');
+        $('.star-select span').mouseover(function () {
+            $('.star-on').css('width',$(this).data('num')*20+"%");
             return true;
         }).mouseout(function () {
-                    init_star();
-                    return true;
-                });
+            init_star();
+            return true;
+        }).click(function(){
+            $.post('/course/setScore?course_id='+$('#course-intro').attr('course_id')+'&score='+$(this).data('num'), function (data) {
+                if (data.code == 200) {
+
+                } else {
+
+                }
+            }, 'json');
+        });
 
         $(document).ready(function () {
             init_star();
         });
+
         $('#course-intro-follow').click(function () {
             if ($("#course-intro").attr('user_id') == 0) {
                 $.WJ('notify', {
@@ -386,7 +398,7 @@
                     })
                 }
             }, 'json')
-        })
+        });
         $('#course-intro-unfollow').click(function () {
             $.post('/course/unfollow?id=' + $('#course-intro').attr('course_id'), function (data) {
                 if (data.code == 200) {
@@ -398,10 +410,11 @@
                     })
                 }
             }, 'json')
-        })
+
+        });
         $('#recommend-resource').click(function () {
 
-        })
+        });
     });
 </script>
 {/block}
