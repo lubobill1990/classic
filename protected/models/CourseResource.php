@@ -70,7 +70,7 @@ class CourseResource extends CActiveRecord
 		return array(
 			'course' => array(self::BELONGS_TO, 'Course', 'course_id'),
 			'user' => array(self::BELONGS_TO, 'User', 'user_id'),
-			'class' => array(self::BELONGS_TO, 'Class', 'class_id'),
+			'class' => array(self::BELONGS_TO, 'ActualClass', 'class_id'),
 			'teacher' => array(self::BELONGS_TO, 'Teacher', 'teacher_id'),
 		);
 	}

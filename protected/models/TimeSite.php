@@ -68,7 +68,7 @@ class TimeSite extends CActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
-			'class' => array(self::BELONGS_TO, 'Class', 'class_id'),
+			'class' => array(self::BELONGS_TO, 'ActualClass', 'class_id'),
 		);
 	}
 

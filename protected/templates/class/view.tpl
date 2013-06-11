@@ -221,7 +221,7 @@
         <h2 class="fl">相关资源</h2>
         <a class="btn2 fl" id="course_document_upload">我来推荐资源</a>
     </div>
-    {include file='file:[0]courseDocument/_list.tpl' documents=$documents course_or_class='course' course_or_class_id='1'}
+    {include file='file:[0]courseDocument/_list.tpl' documents=$documents course_or_class='class' course_or_class_id=$class->id}
 </div>
 
 <div id="course-link">
@@ -242,12 +242,18 @@
 
 {block name=right}
 <div id="course-class">
-    <h2>本学期开课班级</h2>
+    <h2>本专业其他班级</h2>
     <ul>
-        <li><a>微积分1</a>商学院 - 李一 - 图书馆222 - 周二1-2节</li>
-        <li><a>微积分1</a>商学院 - 李二 - 图书馆222 - 周二3-4节</li>
-        <li><a>微积分1</a>商学院 - 李三 - 图书馆222 - 周二5-6节</li>
-        <li><a>微积分1</a>商学院 - 李四 - 图书馆222 - 周二7-8节</li>
+        {foreach $other_classes as $other_class}
+        {if $other_class->id != $class->id}
+        <li><a href="/class/{$other_class->id}">进入</a> {$other_class->course->name}</li>
+            {foreach $other_class->timeSites as $time_site}
+                <ul>
+                    <li>{$time_site->getTimeString()} {$time_site->classroom}</li>
+                </ul>
+            {/foreach}
+        {/if}
+        {/foreach}
     </ul>
 </div>
 {/block}

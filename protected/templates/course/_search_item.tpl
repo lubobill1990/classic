@@ -2,7 +2,7 @@
     <img src="" class="fl"/>
 
     <div class="item-detail" class="fl">
-        <h2><a href="/course/{$course->id}">{$course->name}</a></h2>
+        <h2><a target="_blank" href="/course/{$course->id}">{$course->name}</a></h2>
 
         <p class="stars">
             <span class="item-detail-left">评分:</span>

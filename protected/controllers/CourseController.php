@@ -29,13 +29,16 @@ class CourseController extends Controller
     public function actionView($id)
     {
         $course = Course::model()->findByPk($id);
-        $document_list = CourseDocument::model()->findAllByAttributes(array("course_id" => 1));
+        if(empty($course)){
+            throw new CHttpException(404);
+        }
+        $document_list = CourseDocument::model()->findAllByAttributes(array("course_id" => $id));
         $this->smarty->render('view', array('course' => $course, 'documents' => $document_list));
     }
 
     public function actionSearch()
     {
-        if (Yii::app()->request->isPostRequest) {
+        if (isset($_REQUEST['keyword'])) {
             $keyword = addcslashes($_REQUEST['keyword'], '%_'); // escape LIKE's special characters
             //TODO 用like的方式搜索的效率很低，如果数据量比较大，可能需要考虑其他方法
             $q = new CDbCriteria(array(

@@ -135,7 +135,7 @@
 
     {block name=header_alter}
         <div id="header-normal">
-            <form id="header-normal-search" class="bc" action="/course/search" method='POST'>
+            <form id="header-normal-search" class="bc" action="/course/search" method='get'>
                 <input type="input" placeholder="发现，探索，学习" name="keyword" id="header-normal-search-input"/>
                 <input type="submit" value="" id="header-normal-search-button"/>
             </form>
