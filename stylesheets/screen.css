@@ -871,6 +871,7 @@ body #header #header-normal {
 body #header #header-normal #header-normal-search {
   width: 640px;
   height: 40px;
+  line-height: 40px;
   background: #fff;
   position: relative;
   top: 10px;
@@ -900,7 +901,7 @@ body #header #header-normal #header-normal-search #header-normal-search-button {
   border: none;
   width: 24px;
   height: 24px;
-  position: relative;
+  position: absolute;
   top: 10px;
   cursor: pointer;
   background: url("../../images/common/header-search-button.png") no-repeat center;

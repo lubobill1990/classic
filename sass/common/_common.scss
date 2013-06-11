@@ -88,7 +88,7 @@ body{
       height: 60px;background: #edede7;@include box-shadow(0 1px 3px #aaa);
 
       #header-normal-search{
-        width: 640px;height: 40px;background: #fff;position: relative;top: 10px;
+        width: 640px;height: 40px;line-height: 40px;background: #fff;position: relative;top: 10px;
         @include border-radius(2px);@include box-shadow(0 0 1px #aaa) ;
 
         #header-normal-search-input{
@@ -97,7 +97,7 @@ body{
         }
 
         #header-normal-search-button{
-          border: none;width: 24px;height: 24px;position: relative;top: 10px;cursor: pointer;
+          border: none;width: 24px;height: 24px;position: absolute ;top: 10px;cursor: pointer;
           background: url("../../images/common/header-search-button.png") no-repeat center;
         }
       }
