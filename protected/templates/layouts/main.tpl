@@ -17,7 +17,7 @@
 
     <div id="header-top">
         <div class="w940 bc">
-            <a href="" id="header-top-logo" class="fl"></a>
+            <a href="/" id="header-top-logo" class="fl"></a>
             <ul id="header-top-nav" class="fl">
                 <li>
                     <div id="header-top-nav-hover" class="none"></div>

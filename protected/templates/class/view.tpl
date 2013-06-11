@@ -246,12 +246,13 @@
     <ul>
         {foreach $other_classes as $other_class}
         {if $other_class->id != $class->id}
-        <li><a href="/class/{$other_class->id}">进入</a> {$other_class->course->name}</li>
+        <li class="course-class-item"><a href="/class/{$other_class->id}">{$other_class->course->name}</a>
             {foreach $other_class->timeSites as $time_site}
                 <ul>
                     <li>{$time_site->getTimeString()} {$time_site->classroom}</li>
                 </ul>
             {/foreach}
+        </li>
         {/if}
         {/foreach}
     </ul>

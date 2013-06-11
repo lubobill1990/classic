@@ -127,13 +127,17 @@
   margin-right: 16px;
 }
 
-/* line 110, ../../../sass/special/course/course.scss */
-#course-class ul li {
+/* line 108, ../../../sass/special/course/course.scss */
+#course-class {
+  margin-left: 60px;
+}
+/* line 112, ../../../sass/special/course/course.scss */
+#course-class ul .course-class-item {
   border-bottom: 1px dotted #e5e5e5;
   color: #aeaeae;
   line-height: 24px;
 }
-/* line 113, ../../../sass/special/course/course.scss */
-#course-class ul li a {
+/* line 115, ../../../sass/special/course/course.scss */
+#course-class ul .course-class-item a {
   margin-right: 10px;
 }

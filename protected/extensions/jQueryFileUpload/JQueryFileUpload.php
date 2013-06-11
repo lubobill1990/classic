@@ -193,7 +193,6 @@ class JQueryFileUpload extends CComponent
 
     protected function set_file_delete_properties($file)
     {
-        Common::log($file->id);
         $file->delete_url = $this->options['delete_url']
             . '?id=' . rawurlencode($file->id);
         $file->delete_type = $this->options['delete_type'];

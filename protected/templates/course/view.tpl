@@ -322,7 +322,7 @@
     <h2>本学期开课班级</h2>
     <ul>
         {foreach $course->classes as $class}
-            <li><a href="/class/{$class->id}">进入</a>{$class->major->dep->name} - {$class->major->name} -
+            <li class="course-class-item"><a href="/class/{$class->id}">{$class->major->dep->name} - {$class->major->name} </a>
                 {foreach $class->timeSites as $time_site}
                     <ul>
                         <li>{$time_site->getTimeString()} {$time_site->classroom}</li>
@@ -378,7 +378,7 @@
                     })
                 }
             }, 'json')
-        })
+        });
         $('#course-intro-unfollow').click(function () {
             $.post('/course/unfollow?id=' + $('#course-intro').attr('course_id'), function (data) {
                 if (data.code == 200) {
@@ -390,10 +390,10 @@
                     })
                 }
             }, 'json')
-        })
-        $.('#recommend-resource').click(function () {
+        });
+        $('#recommend-resource').click(function () {
 
-        })
+        });
     });
 </script>
 {/block}
