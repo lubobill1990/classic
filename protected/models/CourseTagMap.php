@@ -1,21 +1,18 @@
 <?php
 
 /**
- * This is the model class for table "course_category".
+ * This is the model class for table "course_tag_map".
  *
- * The followings are the available columns in table 'course_category':
- * @property string $id
- * @property string $name
- *
- * The followings are the available model relations:
- * @property Course[] $courses
+ * The followings are the available columns in table 'course_tag_map':
+ * @property string $course_id
+ * @property string $tag_id
  */
-class CourseCategory extends CActiveRecord
+class CourseTagMap extends CActiveRecord
 {
 	/**
 	 * Returns the static model of the specified AR class.
 	 * @param string $className active record class name.
-	 * @return CourseCategory the static model class
+	 * @return CourseTagMap the static model class
 	 */
 	public static function model($className=__CLASS__)
 	{
@@ -27,7 +24,7 @@ class CourseCategory extends CActiveRecord
 	 */
 	public function tableName()
 	{
-		return 'course_category';
+		return 'course_tag_map';
 	}
 
 	/**
@@ -38,11 +35,11 @@ class CourseCategory extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('name', 'required'),
-			array('name', 'length', 'max'=>40),
+			array('course_id, tag_id', 'required'),
+			array('course_id, tag_id', 'length', 'max'=>10),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
-			array('id, name', 'safe', 'on'=>'search'),
+			array('course_id, tag_id', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -54,7 +51,6 @@ class CourseCategory extends CActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
-            'courses' => array(self::HAS_MANY, 'Course', 'category'),
 		);
 	}
 
@@ -64,8 +60,8 @@ class CourseCategory extends CActiveRecord
 	public function attributeLabels()
 	{
 		return array(
-			'id' => 'ID',
-			'name' => 'Name',
+			'course_id' => 'Course',
+			'tag_id' => 'Tag',
 		);
 	}
 
@@ -80,8 +76,8 @@ class CourseCategory extends CActiveRecord
 
 		$criteria=new CDbCriteria;
 
-		$criteria->compare('id',$this->id,true);
-		$criteria->compare('name',$this->name,true);
+		$criteria->compare('course_id',$this->course_id,true);
+		$criteria->compare('tag_id',$this->tag_id,true);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,

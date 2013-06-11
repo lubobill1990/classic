@@ -152,7 +152,7 @@ require(['jquery'],
                         })
                     finish_button.click(function () {
                         callback(uploaded_files);
-                        uploaded_files=[];
+                        uploaded_files = [];
                         this_div.modal('hide');
                         $(this).parents('.modal-footer').siblings('.modal-body').find('tbody.files').html('')
                     })
@@ -192,7 +192,7 @@ require(['jquery'],
                 },
                 imageupload:function (callback, options) {
                     var default_options = {
-                        maxChunkSize: 1500000, // 10 MB
+                        maxChunkSize:1500000, // 10 MB
                         url:'/image/create',
                         modal_id:'image_upload_modal',
                         get_template_url:'/image/html'
@@ -233,11 +233,11 @@ require(['jquery'],
                     $.WJ('imageupload', callback, opt);
                 },
                 notify:function (opt) {
-                    $.extend(opt, {
+                    opt = $.extend({
                         showTime:false,
                         timeout:5000,
                         title:'提醒'
-                    })
+                    }, opt)
                     require(['notty'], function () {
                         $.ClassyNotty(opt);
                     })

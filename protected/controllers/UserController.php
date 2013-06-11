@@ -8,6 +8,30 @@
  */
 class UserController extends Controller
 {
+    public function filters()
+    {
+        return array(
+            'accessControl'
+        );
+    }
+
+    public function accessRules()
+    {
+        return array(
+            array('allow',
+                'actions' => array('signup', 'login', 'activate', 'resetPassword', 'retrievePassword', 'block', 'choose')
+            ),
+            array('allow',
+                'actions' => array('index', 'view'),
+                'users' => array('@')
+            ),
+            array(
+                'deny',
+                'users' => array('*')
+            )
+        );
+    }
+
     public function actionSignup()
     {
         $user = new User();
@@ -17,7 +41,7 @@ class UserController extends Controller
 
             if ($_REQUEST['captcha'] != Yii::app()->captcha->text()) {
                 $error['captcha'] = 1;
-            }else{
+            } else {
 
                 $transaction = Yii::app()->db->beginTransaction();
                 try {
@@ -47,7 +71,7 @@ class UserController extends Controller
                     }
                 }
             }
-            $user->password=$_POST['User']['password'];
+            $user->password = $_POST['User']['password'];
         }
         $this->smarty->renderAll('signup', array('user' => $user, 'error' => $error));
 
@@ -56,29 +80,28 @@ class UserController extends Controller
     public function actionLogin()
     {
         $model = new LoginForm;
-        $errors=array();
-        $show_captcha=false;
+        $errors = array();
+        $show_captcha = false;
 
         // collect user input data
         if (isset($_POST['LoginForm'])) {
             $model->attributes = $_POST['LoginForm'];
             //查询这个用户名在一段时间内登陆错误的次数
-            $res=Yii::app()->db->createCommand("SELECT count(*) AS count FROM user_login_log WHERE user_login_id=:login_id AND timestamp>:timestamp AND success='no'")->query(array('login_id'=>$model->username,'timestamp'=>strftime("%Y-%m-%d %H:%M:%S",time()-30)))->read();
-            if($res['count']>3){
-                $show_captcha=true;
+            $res = Yii::app()->db->createCommand("SELECT count(*) AS count FROM user_login_log WHERE user_login_id=:login_id AND timestamp>:timestamp AND success='no'")->query(array('login_id' => $model->username, 'timestamp' => strftime("%Y-%m-%d %H:%M:%S", time() - 30)))->read();
+            if ($res['count'] > 3) {
+                $show_captcha = true;
             }
-            if($show_captcha&&(!isset($_POST['captcha'])||$_POST['captcha']!=Yii::app()->captcha->text())){
-                $errors['captcha']=1;
-            }
-            // validate user input and redirect to the previous page if valid
-            elseif ($model->validate()&& $model->login()) {
-                $this->redirect(isset($_REQUEST['return_url'])&&!preg_match('/signup/',$_REQUEST['return_url'])?$_REQUEST['return_url']:"/");
-            }else{
-                $errors['username']=1;
+            if ($show_captcha && (!isset($_POST['captcha']) || $_POST['captcha'] != Yii::app()->captcha->text())) {
+                $errors['captcha'] = 1;
+            } // validate user input and redirect to the previous page if valid
+            elseif ($model->validate() && $model->login()) {
+                $this->redirect(isset($_REQUEST['return_url']) && !preg_match('/signup|login/', $_REQUEST['return_url']) ? $_REQUEST['return_url'] : "/");
+            } else {
+                $errors['username'] = 1;
             }
         }
         // display the login form
-        $this->smarty->renderAll('login', array('model' => $model,'show_captcha'=>$show_captcha,'errors'=>$errors,'return_url'=>isset($_SERVER["HTTP_REFERER"])?$_SERVER["HTTP_REFERER"]:'/'));
+        $this->smarty->renderAll('login', array('model' => $model, 'show_captcha' => $show_captcha, 'errors' => $errors, 'return_url' => isset($_SERVER["HTTP_REFERER"]) ? $_SERVER["HTTP_REFERER"] : '/'));
     }
 
     /**
@@ -106,7 +129,7 @@ class UserController extends Controller
                             $user->has_been_activated = 'yes';
                             if ($user->save()) {
                                 $activate_code->delete();
-                                Yii::app()->mailer->send($user->email, "账户 $user->email 激活成功", $this->smarty->fetchString('activate_success_email',array('user'=>$user)));
+                                Yii::app()->mailer->send($user->email, "账户 $user->email 激活成功", $this->smarty->fetchString('activate_success_email', array('user' => $user)));
                                 $this->smarty->renderAll('activate_success', array('message' => '账户激活成功'));
                             }
                         } else {
@@ -159,27 +182,33 @@ class UserController extends Controller
 
     public function actionRetrievePassword()
     {
-        $messages = array();
+        $error = array();
         $email = '';
-        if (Yii::app()->request->isPostRequest && isset($_POST['email'])) {
+        if (Yii::app()->request->isPostRequest && isset($_POST['email']) && isset($_POST['captcha'])) {
             $email = $_POST['email'];
-            $user = User::model()->find("email=:email", array('email' => $_POST['email'],));
-            if (!empty($user)) {
-                $change_password_key = $user->generateOperationKey('change_password');
 
-                Yii::app()->mailer->send($user->email, '修改密码链接',
-                    $this->smarty->fetchString('retrieve_password_email',
-                        array(
-                            'user' => $user,
-                            'key' => $change_password_key
-                        )));
-                $messages[] = '重置密码的链接已经发送到您的邮箱，请打开邮箱查看';
+            if($_POST['captcha']!=Yii::app()->captcha->text()){
+                $error['captcha']='验证码输入错误';
+            }else{
+                $user = User::model()->find("email=:email", array('email' => $_POST['email'],));
+                if (!empty($user)) {
+                    $change_password_key = $user->generateOperationKey('change_password');
 
-            } else {
-                $messages[] = '用户不存在，请确认邮箱没有拼写错误';
+                    Yii::app()->mailer->send($user->email, '修改密码链接',
+                        $this->smarty->fetchString('retrieve_password_email',
+                            array(
+                                'user' => $user,
+                                'key' => $change_password_key
+                            )));
+                    $this->smarty->renderAll('retrieve_password_success',array());
+                    Yii::app()->end();
+                } else {
+                    $error['user'] = '用户不存在，请确认邮箱没有拼写错误';
+                }
             }
+
         }
-        $this->smarty->renderAll('retrieve_password_form', array('messages' => $messages, 'email' => $email));
+        $this->smarty->renderAll('retrieve_password_form', array('error' => $error, 'email' => $email));
 
     }
 
@@ -210,5 +239,15 @@ class UserController extends Controller
     public function actionChoose()
     {
         $this->smarty->render('choose');
+    }
+
+    public function actionIndex()
+    {
+        $this->smarty->renderAll('index', array());
+    }
+
+    public function actionView($id)
+    {
+        $this->smarty->renderAll('view', array('user' => User::model()->findByPk($id)));
     }
 }

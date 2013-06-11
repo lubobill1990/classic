@@ -11,9 +11,6 @@
 
 <body>
 
-<<<<<<< HEAD
-{include file="file:[0]layouts/header.tpl"}
-=======
 <div id="header">
 
     <div id="header-top">
@@ -36,6 +33,7 @@
                                 <li><a href="#">移动开发</a></li>
                                 <li><a href="#">硬件</a></li>
                                 <li><a href="#">你懂的</a></li>
+                                <div class="header-top-nav-subsubnav-footer"></div>
                             </ul>
                         </li>
                         <li>生命、医学
@@ -50,6 +48,7 @@
                                 <li><a href="#">移动开发</a></li>
                                 <li><a href="#">硬件</a></li>
                                 <li><a href="#">你懂的</a></li>
+                                <div class="header-top-nav-subsubnav-footer"></div>
                             </ul>
                         </li>
                         <li>计算机
@@ -64,6 +63,7 @@
                                 <li><a href="#">移动开发</a></li>
                                 <li><a href="#">硬件</a></li>
                                 <li><a href="#">你懂的</a></li>
+                                <div class="header-top-nav-subsubnav-footer"></div>
                             </ul>
                         </li>
                         <li>经济、管理
@@ -78,6 +78,7 @@
                                 <li><a href="#">移动开发</a></li>
                                 <li><a href="#">硬件</a></li>
                                 <li><a href="#">你懂的</a></li>
+                                <div class="header-top-nav-subsubnav-footer"></div>
                             </ul>
                         </li>
                         <li>工程、材料
@@ -92,6 +93,7 @@
                                 <li><a href="#">移动开发</a></li>
                                 <li><a href="#">硬件</a></li>
                                 <li><a href="#">你懂的</a></li>
+                                <div class="header-top-nav-subsubnav-footer"></div>
                             </ul>
                         </li>
                         <li>文史哲学
@@ -106,30 +108,38 @@
                                 <li><a href="#">移动开发</a></li>
                                 <li><a href="#">硬件</a></li>
                                 <li><a href="#">你懂的</a></li>
+                                <div class="header-top-nav-subsubnav-footer"></div>
                             </ul>
                         </li>
+                        <div id="header-top-nav-subnav-footer"></div>
                     </ul>
                 </li>
                 <li><a href="#">二手市场</a></li>
                 <li><a href="#">捐赠我们</a></li>
             </ul>
             <div id="header-top-info" class="fr">
-                你好，呵呵呵
+                {if $login_user}
+                    你好，{$login_user->username}
+                {else}
+                    <ul>
+                        <li><a href="/login">登录</a></li>
+                        <li><a href="/signup">注册</a></li>
+                    </ul>
+                {/if}
             </div>
         </div>
     </div>
 
     {block name=header_alter}
         <div id="header-normal">
-            <form id="header-normal-search" class="bc">
-                <input type="input" placeholder="发现，探索，学习" id="header-normal-search-input"  />
+            <form id="header-normal-search" class="bc" action="/course/search" method='POST'>
+                <input type="input" placeholder="发现，探索，学习" name="keyword" id="header-normal-search-input"/>
                 <input type="submit" value="" id="header-normal-search-button"/>
             </form>
         </div>
     {/block}
 
 </div>
->>>>>>> 7f2d6c8596fff6d247d2045acb714a3a27b4c138
 
 <div id="content" class="w940 bc clearfix">
     {block name=middle}{/block}

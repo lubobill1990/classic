@@ -1,5 +1,3 @@
-{extends file='layouts/main.tpl'}
-
 {block name=css}
     <link rel="stylesheet" href="/stylesheets/special/course/course.css">
 {/block}
@@ -25,24 +23,17 @@
     </li>
     <div class="crumb-next">&gt;</div>
     <li>
-        <a>微积分1</a>
+        <a href="/course/{$class->course->id}">{$class->course->name}</a>
     </li>
+    <div class="crumb-next">&gt;</div>
 </ul>
 
 <div id="course-intro" class="clearfix">
-    <h1 class="fl">微积分1（第一层次）</h1>
+    <h1 class="fl">{$class->course->name}</h1>
     <p class="fr" id="course-intro-edit">信息有误?<a>点此编辑</a></p>
     <img src="" id="course-intro-cover" class="fl cl"/>
     <div id="course-intro-detail" class="fl">
-        <p><span class="course-intro-detail-left">开课院系:</span><span class="course-intro-detail-right">商学院</span></p>
-        <p><span class="course-intro-detail-left">年级:</span><span class="course-intro-detail-right">大一</span></p>
-        <p><span class="course-intro-detail-left">教师:</span><span class="course-intro-detail-right">李四</span></p>
-        <p><span class="course-intro-detail-left">时间:</span><span class="course-intro-detail-right">周二 1-2节</span></p>
-        <p><span class="course-intro-detail-left">地点:</span><span class="course-intro-detail-right">宿舍</span></p>
-        <p><span class="course-intro-detail-left">课程类型:</span><span class="course-intro-detail-right">通修</span></p>
-        <p><span class="course-intro-detail-left">学分:</span><span class="course-intro-detail-right">5</span></p>
-        <p><span class="course-intro-detail-left">课程网站:</span><span class="course-intro-detail-right">暂无</span></p>
-        <p><span class="course-intro-detail-left">教材:</span><span class="course-intro-detail-right"><a>微积分 - 南京大学出版社</a></span></p>
+        {include file="file:[0]class/_head_info.tpl"}
     </div>
     <a class="btn fr cr" id="course-intro-follow">关注此课程</a>
     <p title="评个分吧" class="fr cr" id="course-intro-rating">当前平均分:

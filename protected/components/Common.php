@@ -3,6 +3,18 @@
 
 class Common
 {
+    private static $day_of_week=array(
+        1=>'周一',
+        2=>'周二',
+        3=>'周三',
+        4=>'周四',
+        5=>'周五',
+        6=>'周六',
+        7=>'周日',
+    );
+    public static function dayOfWeek($num){
+        return self::$day_of_week[$num];
+    }
     public static function requireRequests($fields)
     {
         foreach ($fields as $field) {

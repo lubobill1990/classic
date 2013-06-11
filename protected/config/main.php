@@ -24,7 +24,8 @@ return array(
             // If removed, Gii defaults to localhost only. Edit carefully to taste.
             'ipFilters' => array('127.0.0.1', '*'),
         ),
-        'feedback'
+        'feedback',
+        'admin',
     ),
 
     // application components
@@ -70,10 +71,10 @@ return array(
                 'rts_authorize_url' => "RTS/authorize",
                 'rts_get_user_id' => 'RTS/getUserId',
 
+                '<controller:\w+>/<id:\d+>' => '<controller>/view',
                 '<module:\w+>/<controller:\w+>/<action:\w+>' => '<module>/<controller>/<action>',
                 '<module:\w+>/<controller:\w+>' => '<module>/<controller>/index',
                 '<module:\w+>' => '<module>/default/index',
-                '<controller:\w+>/<id:\d+>' => '<controller>/view',
                 '<controller:\w+>/<action:\w+>/<id:\d+>' => '<controller>/<action>',
                 '<controller:\w+>/<action:\w+>' => '<controller>/<action>',
                 '<controller:\w+>' => '<controller>/index',
