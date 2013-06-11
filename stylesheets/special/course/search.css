@@ -31,6 +31,8 @@
 /* line 26, ../../../sass/special/course/search.scss */
 #search-container .item .item-detail {
   margin-top: 10px;
+  overflow-y: auto;
+  height: 160px;
 }
 /* line 29, ../../../sass/special/course/search.scss */
 #search-container .item .item-detail h2 {
