@@ -122,6 +122,7 @@
             <div id="header-top-info" class="fr">
                 {if $login_user}
                     你好，{$login_user->username}
+                    <a href="/logout">退出</a>
                 {else}
                     <ul>
                         <li><a href="/login">登录</a></li>

@@ -1,29 +1,114 @@
-/* line 1, ../../../sass/special/user/user.scss */
-#signup_form, #login_form {
-  width: 500px;
-}
-/* line 3, ../../../sass/special/user/user.scss */
-#signup_form label, #login_form label {
-  display: inline-block;
-  width: 74px;
-}
-/* line 8, ../../../sass/special/user/user.scss */
-#signup_form div, #login_form div {
-  margin: 5px 0;
-}
-
-/* line 14, ../../../sass/special/user/user.scss */
-#login_form .link-retrieve-password, #login_form .link-signup {
-  margin-left: 15px;
-}
-
-/* line 22, ../../../sass/special/user/user.scss */
-#signup_form .link-login {
-  margin-left: 27px;
-}
-
-/* line 27, ../../../sass/special/user/user.scss */
-.validate-error {
+/* line 2, ../../../sass/special/user/user.scss */
+form .validate-error {
   display: none;
   color: #fe2617;
+}
+
+/* line 10, ../../../sass/special/user/user.scss */
+#user-main {
+  margin-top: 64px;
+  margin-bottom: 50px;
+  width: 562px;
+  min-height: 390px;
+  padding: 25px 44px 60px 44px;
+  background: #f8fbf8;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+/* line 14, ../../../sass/special/user/user.scss */
+#user-main #user-cloud {
+  width: 173px;
+  height: 117px;
+  background: url("../../../images/common/activate-cloud.png") no-repeat center;
+  position: absolute;
+  right: 48px;
+  bottom: 52px;
+}
+/* line 19, ../../../sass/special/user/user.scss */
+#user-main .user-form {
+  border-top: 1px solid #e6e9e6;
+  padding: 36px 24px;
+}
+/* line 22, ../../../sass/special/user/user.scss */
+#user-main .user-form .form-item {
+  margin-bottom: 36px;
+}
+/* line 25, ../../../sass/special/user/user.scss */
+#user-main .user-form .form-item label {
+  display: block;
+  margin-bottom: 8px;
+  color: #369;
+  font-family: "microsoft yahei";
+  font-size: 14px;
+}
+/* line 29, ../../../sass/special/user/user.scss */
+#user-main .user-form .form-item .input-wrapper {
+  width: 230px;
+  height: 28px;
+  line-height: 28px;
+  background: #fff;
+  border: 1px solid #d6d6d6;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+  border-radius: 4px;
+  position: relative;
+}
+/* line 33, ../../../sass/special/user/user.scss */
+#user-main .user-form .form-item .input-wrapper.input-wrapper-hover {
+  box-shadow: 0 0 5px rgba(36, 218, 1, 0.5);
+}
+/* line 37, ../../../sass/special/user/user.scss */
+#user-main .user-form .form-item .input-wrapper .input-decorator-user {
+  width: 12px;
+  height: 100%;
+  margin: 0 5px;
+  background: url("../../../images/common/form-user.png") no-repeat center;
+  display: inline-block;
+}
+/* line 42, ../../../sass/special/user/user.scss */
+#user-main .user-form .form-item .input-wrapper .input-decorator-lock {
+  width: 12px;
+  height: 100%;
+  margin: 0 5px;
+  background: url("../../../images/common/form-lock.png") no-repeat center;
+  display: inline-block;
+}
+/* line 47, ../../../sass/special/user/user.scss */
+#user-main .user-form .form-item .input-wrapper input {
+  background: #fff;
+  outline: none;
+  border: none;
+  position: relative;
+  top: -9px;
+  width: 190px;
+  margin-left: 6px;
+}
+/* line 50, ../../../sass/special/user/user.scss */
+#user-main .user-form .form-item .input-wrapper input:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0px 1000px white inset;
+  -moz-box-shadow: 0 0 0px 1000px white inset;
+  box-shadow: 0 0 0px 1000px white inset;
+}
+/* line 57, ../../../sass/special/user/user.scss */
+#user-main .user-form .form-item .captcha img {
+  width: 230px;
+  margin-bottom: 10px;
+}
+/* line 63, ../../../sass/special/user/user.scss */
+#user-main .user-form .pwd-more {
+  color: #666;
+  margin-bottom: 16px;
+}
+/* line 67, ../../../sass/special/user/user.scss */
+#user-main .user-form #user-submit {
+  width: 230px;
+  height: 28px;
+  padding: 0 0;
+  font-size: 12px;
+  margin-top: 10px;
 }

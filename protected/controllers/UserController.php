@@ -202,13 +202,4 @@ class UserController extends Controller
         }
     }
 
-    public function actionActivate1()
-    {
-        $this->smarty->render('activate');
-    }
-
-    public function actionChoose()
-    {
-        $this->smarty->render('choose');
-    }
 }

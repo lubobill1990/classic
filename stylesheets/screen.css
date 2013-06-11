@@ -855,7 +855,11 @@ body #header #header-top #header-top-nav li #header-top-nav-subnav li:hover {
 body #header #header-top #header-top-info li {
   display: inline;
 }
-/* line 83, ../sass/common/_common.scss */
+/* line 81, ../sass/common/_common.scss */
+body #header #header-top #header-top-info a {
+  margin-left: 10px;
+}
+/* line 87, ../sass/common/_common.scss */
 body #header #header-normal {
   height: 60px;
   background: #edede7;
@@ -863,7 +867,7 @@ body #header #header-normal {
   -moz-box-shadow: 0 1px 3px #aaaaaa;
   box-shadow: 0 1px 3px #aaaaaa;
 }
-/* line 86, ../sass/common/_common.scss */
+/* line 90, ../sass/common/_common.scss */
 body #header #header-normal #header-normal-search {
   width: 640px;
   height: 40px;
@@ -879,7 +883,7 @@ body #header #header-normal #header-normal-search {
   -moz-box-shadow: 0 0 1px #aaaaaa;
   box-shadow: 0 0 1px #aaaaaa;
 }
-/* line 90, ../sass/common/_common.scss */
+/* line 94, ../sass/common/_common.scss */
 body #header #header-normal #header-normal-search #header-normal-search-input {
   outline: none;
   border: none;
@@ -891,7 +895,7 @@ body #header #header-normal #header-normal-search #header-normal-search-input {
   top: 2px;
   color: #787a78;
 }
-/* line 95, ../sass/common/_common.scss */
+/* line 99, ../sass/common/_common.scss */
 body #header #header-normal #header-normal-search #header-normal-search-button {
   border: none;
   width: 24px;
@@ -901,7 +905,7 @@ body #header #header-normal #header-normal-search #header-normal-search-button {
   cursor: pointer;
   background: url("../../images/common/header-search-button.png") no-repeat center;
 }
-/* line 102, ../sass/common/_common.scss */
+/* line 106, ../sass/common/_common.scss */
 body #header #header-index {
   height: 258px;
   background: url("../../images/common/header-index-bg.png");
@@ -913,13 +917,13 @@ body #header #header-index {
   -moz-box-shadow: 0 0 50px black inset;
   box-shadow: 0 0 50px black inset;
 }
-/* line 106, ../sass/common/_common.scss */
+/* line 110, ../sass/common/_common.scss */
 body #header #header-index #header-index-content {
   width: 500px;
   position: relative;
   top: 40px;
 }
-/* line 109, ../sass/common/_common.scss */
+/* line 113, ../sass/common/_common.scss */
 body #header #header-index #header-index-content #header-index-content-slogan {
   font-size: 60px;
   font-weight: bold;
@@ -927,7 +931,7 @@ body #header #header-index #header-index-content #header-index-content-slogan {
   text-shadow: 3px 6px 5px #7d7d7d;
   text-align: left;
 }
-/* line 114, ../sass/common/_common.scss */
+/* line 118, ../sass/common/_common.scss */
 body #header #header-index #header-index-content #header-index-content-search-wrapper {
   background: rgba(211, 211, 211, 0.4);
   width: 380px;
@@ -943,7 +947,7 @@ body #header #header-index #header-index-content #header-index-content-search-wr
   -moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.4);
   box-shadow: 0 1px 4px rgba(0, 0, 0, 0.4);
 }
-/* line 118, ../sass/common/_common.scss */
+/* line 122, ../sass/common/_common.scss */
 body #header #header-index #header-index-content #header-index-content-search-wrapper #header-index-content-search {
   width: 380px;
   height: 40px;
@@ -951,7 +955,7 @@ body #header #header-index #header-index-content #header-index-content-search-wr
   position: relative;
   line-height: 40px;
 }
-/* line 121, ../sass/common/_common.scss */
+/* line 125, ../sass/common/_common.scss */
 body #header #header-index #header-index-content #header-index-content-search-wrapper #header-index-content-search #header-index-content-search-input {
   outline: none;
   border: none;
@@ -964,7 +968,7 @@ body #header #header-index #header-index-content #header-index-content-search-wr
   display: inline-block;
   top: 2px;
 }
-/* line 126, ../sass/common/_common.scss */
+/* line 130, ../sass/common/_common.scss */
 body #header #header-index #header-index-content #header-index-content-search-wrapper #header-index-content-search #header-index-content-search-button {
   border: none;
   width: 24px;
@@ -974,33 +978,33 @@ body #header #header-index #header-index-content #header-index-content-search-wr
   background: url("../../images/common/header-search-button.png") no-repeat center;
   top: 10px;
 }
-/* line 133, ../sass/common/_common.scss */
+/* line 137, ../sass/common/_common.scss */
 body #header #header-index #header-index-content #header-index-content-detail {
   position: relative;
   top: 40px;
   font-size: 22px;
   color: #fff;
 }
-/* line 136, ../sass/common/_common.scss */
+/* line 140, ../sass/common/_common.scss */
 body #header #header-index #header-index-content #header-index-content-detail a {
   margin-left: 14px;
   color: #ffff00;
   text-decoration: underline;
 }
-/* line 144, ../sass/common/_common.scss */
+/* line 148, ../sass/common/_common.scss */
 body #content {
   min-height: 500px;
   margin-top: 50px;
 }
-/* line 147, ../sass/common/_common.scss */
+/* line 151, ../sass/common/_common.scss */
 body #content #content-left {
   width: 600px;
 }
-/* line 151, ../sass/common/_common.scss */
+/* line 155, ../sass/common/_common.scss */
 body #content #content-right {
   width: 300px;
 }
-/* line 156, ../sass/common/_common.scss */
+/* line 160, ../sass/common/_common.scss */
 body #footer {
   min-width: 960px;
   height: 36px;
@@ -1011,16 +1015,16 @@ body #footer {
   border-bottom: 1px solid #e1e1e1;
   margin-top: 40px;
 }
-/* line 160, ../sass/common/_common.scss */
+/* line 164, ../sass/common/_common.scss */
 body #footer #footer-left {
   color: #999;
 }
-/* line 165, ../sass/common/_common.scss */
+/* line 169, ../sass/common/_common.scss */
 body #footer #footer-right li {
   display: inline;
   margin-left: 34px;
 }
-/* line 168, ../sass/common/_common.scss */
+/* line 172, ../sass/common/_common.scss */
 body #footer #footer-right li a {
   color: #336699;
 }
