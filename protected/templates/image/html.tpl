@@ -26,14 +26,14 @@
         </form>
     </div>
     <div class="modal-footer">
-        <button class="btn cancel-all" data-dismiss="modal" aria-hidden="true">取消</button>
+        <button class="btn cancel-all cancel-all-uploads" data-dismiss="modal" aria-hidden="true">取消</button>
         <button class="btn btn-primary finish">完成</button>
     </div>
 </div>
 {literal}
 <script id="template-upload" type="text/x-tmpl">
     {% for (var i=0, file; file=o.files[i]; i++) { %}
-    <tr class="template-upload fade">
+    <tr class="template-upload fade" file_id="{%=file.id%}">
         <td>
             <span class="preview"></span>
         </td>
@@ -69,7 +69,7 @@
 
 <script id="template-download" type="text/x-tmpl">
     {% for (var i=0, file; file=o.files[i]; i++) { %}
-    <tr class="template-download fade">
+    <tr class="template-download fade" file_id="{%=file.id%}">
         <td>
             <span class="preview">
                 {% if (file.thumbnail_url) { %}

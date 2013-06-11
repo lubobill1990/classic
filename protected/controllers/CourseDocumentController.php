@@ -93,6 +93,9 @@ class CourseDocumentController extends Controller
             AjaxResponse::invalidParam();
         }
         $class_name = Common::getClassName($type);
+        if($class_name=="Class"){
+            $class_name="ActualClass";
+        }
         $obj = $class_name::model()->findByPk($id);
         if (empty($obj)) {
             AjaxResponse::resourceNotFound();

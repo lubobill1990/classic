@@ -163,11 +163,18 @@ class User extends CActiveRecord
         return Common::getGravatar($this->email, $size);
     }
 
-    public function getUrl(){
-        return '/u/'.$this->username;
+    public function getUrl()
+    {
+        return '/u/' . $this->username;
     }
 
-    public function hasPrivilege($privilege){
+    public function hasPrivilege($privilege)
+    {
         return false;
+    }
+
+    public function hasFollowCourse($course_id)
+    {
+        return FollowCourse::model()->exists("user_id=:u AND course_id=:c", array('u' => $this->id, 'c' => $course_id));
     }
 }

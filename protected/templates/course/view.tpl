@@ -63,9 +63,13 @@
                     class="course-intro-detail-right"><a>详情请查看班级</a></span></p>
         {/if}
     </div>
-    <a class="btn fr cr" id="course-intro-follow">关注此课程</a>
-    <a class="btn fr cr" id="course-intro-unfollow" style="display: none">取消关注</a>
-
+    {if $login_user and $login_user->hasFollowCourse($course->id)}
+        <a class="btn fr cr" id="course-intro-unfollow" course_id="{$course->id}">取消关注</a>
+        <a class="btn fr cr" id="course-intro-follow" course_id="{$course->id}" style="display: none">关注此课程</a>
+        {else}
+        <a class="btn fr cr" id="course-intro-unfollow" course_id="{$course->id}" style="display: none">取消关注</a>
+        <a class="btn fr cr" id="course-intro-follow" course_id="{$course->id}">关注此课程</a>
+    {/if}
     <p title="评个分吧" class="fr cr" id="course-intro-rating">当前平均分:
         <span class="star"></span><span class="star"></span><span class="star"></span><span class="star"></span><span
                 class="star"></span>
@@ -307,11 +311,15 @@
         <a class="btn2 fl">我来推荐链接</a>
     </div>
     <div class="item">
-        <p><span class="item-1">[ 视频 ]</span><a>微积分课件</a><span class="item-2">顶+10</span><span class="item-2">踩-3</span></p>
+        <p><span class="item-1">[ 视频 ]</span><a>微积分课件</a><span class="item-2">顶+10</span><span class="item-2">踩-3</span>
+        </p>
+
         <p>推荐人：<a>释小龙</a>推荐理由：无</p>
     </div>
     <div class="item">
-        <p><span class="item-1">[ 视频 ]</span><a>Coursra微积分教程</a><span class="item-2">顶+10</span><span class="item-2">踩-3</span></p>
+        <p><span class="item-1">[ 视频 ]</span><a>Coursra微积分教程</a><span class="item-2">顶+10</span><span
+                class="item-2">踩-3</span></p>
+
         <p>推荐人：<a>释小龙</a>推荐理由：呵呵，呵呵，和呵呵呵呵呵呵~</p>
     </div>
 </div>
@@ -390,6 +398,7 @@
                     })
                 }
             }, 'json')
+
         });
         $('#recommend-resource').click(function () {
 
