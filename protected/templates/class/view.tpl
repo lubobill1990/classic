@@ -28,14 +28,22 @@
     <div class="crumb-next">&gt;</div>
 </ul>
 
-<div id="course-intro" class="clearfix">
+<div id="course-intro" class="clearfix"  course_id="{$class->course->id}" user_id="{$login_user->id|default:0}">
     <h1 class="fl">{$class->course->name}</h1>
     <p class="fr" id="course-intro-edit">信息有误?<a>点此编辑</a></p>
     <img src="" id="course-intro-cover" class="fl cl"/>
     <div id="course-intro-detail" class="fl">
         {include file="file:[0]class/_head_info.tpl"}
     </div>
-    <a class="btn fr cr" id="course-intro-follow">关注此课程</a>
+
+    {if $login_user and $login_user->hasFollowCourse($class->course->id)}
+        <a class="btn fr cr" id="course-intro-unfollow" course_id="{$class->course->id}" >取消关注</a>
+        <a class="btn fr cr" id="course-intro-follow" course_id="{$class->course->id}" style="display: none">关注此课程</a>
+        {else}
+        <a class="btn fr cr" id="course-intro-unfollow" course_id="{$class->course->id}" style="display: none">取消关注</a>
+        <a class="btn fr cr" id="course-intro-follow" course_id="{$class->course->id}">关注此课程</a>
+    {/if}
+
     <p title="评个分吧" class="fr cr" id="course-intro-rating">当前平均分:
         <span class="star"></span><span class="star"></span><span class="star"></span><span class="star"></span><span class="star"></span>
     </p>
@@ -242,17 +250,16 @@
 
 {block name=right}
 <div id="course-class">
-    <h2>本专业其他班级</h2>
+    <h2>{$class->major->dep->name}-{$class->major->name}-{$class->grade}其他班级</h2>
     <ul>
         {foreach $other_classes as $other_class}
-        {if $other_class->id != $class->id}
-        <li><a href="/class/{$other_class->id}">进入</a> {$other_class->course->name}</li>
+        <li><a href="/class/{$other_class->id}">进入</a> {$other_class->course->name}
             {foreach $other_class->timeSites as $time_site}
                 <ul>
                     <li>{$time_site->getTimeString()} {$time_site->classroom}</li>
                 </ul>
             {/foreach}
-        {/if}
+        </li>
         {/foreach}
     </ul>
 </div>
@@ -284,7 +291,37 @@
             $(document).ready(function(){
                 init_star();
             });
-
+            $('#course-intro-follow').click(function () {
+                if ($("#course-intro").attr('user_id') == 0) {
+                    $.WJ('notify', {
+                        title:"请先登录",
+                        content:"要关注该课程，您需要先点此<a href='/login'>登录</a>"
+                    })
+                    return false;
+                }
+                $.post('/course/follow?id=' + $('#course-intro').attr('course_id'), function (data) {
+                    if (data.code == 200) {
+                        $('#course-intro-follow').hide();
+                        $('#course-intro-unfollow').show();
+                    } else {
+                        $.WJ('notify', {
+                            content:data.data
+                        })
+                    }
+                }, 'json')
+            })
+            $('#course-intro-unfollow').click(function () {
+                $.post('/course/unfollow?id=' + $('#course-intro').attr('course_id'), function (data) {
+                    if (data.code == 200) {
+                        $('#course-intro-unfollow').hide();
+                        $('#course-intro-follow').show();
+                    } else {
+                        $.WJ('notify', {
+                            content:data.data
+                        })
+                    }
+                }, 'json')
+            })
         });
     </script>
 {/block}

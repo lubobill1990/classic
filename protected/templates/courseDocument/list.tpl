@@ -106,6 +106,7 @@
                                     })
                                 }
                             },
+                            type:'POST',
                             beforeSubmit:function () {
                                 $('#document_title_setting').modal('hide')
                             }
@@ -152,6 +153,7 @@
                                         })
                                     }
                                 },
+                                type:"POST",
                                 beforeSubmit:function () {
                                     $('#document_title_setting').modal('hide')
                                 }

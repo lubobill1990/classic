@@ -157,7 +157,19 @@ require(['jquery'],
                         $(this).parents('.modal-footer').siblings('.modal-body').find('tbody.files').html('')
                     })
                     finish_button.attr("disabled", true);
-
+                    $(document).on('click', 'form.fileupload .delete',function () {
+                        var this_delete_button = $(this);
+                        var file_id = this_delete_button.parents('tr').attr('file_id')
+                        for (var i = 0; i < uploaded_files.length; ++i) {
+                            if (uploaded_files[i].id == file_id) {
+                                delete uploaded_files[i];
+                            }
+                        }
+                        this_delete_button.parents('tr').remove();
+                    }).on('click', ".cancel-all-uploads", function () {
+                            uploaded_files = [];
+                            $(this).parents('.modal-footer').siblings('.modal-body').find('tbody.files').html('')
+                        })
                 })
 
             }

@@ -1,4 +1,5 @@
 <?php
+ini_set('display_errors',1);
 date_default_timezone_set('Asia/Chongqing');
 // change the following paths if necessary
 $yii=dirname(__FILE__).'/yii-framework/yii.php';

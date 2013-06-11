@@ -13,3 +13,7 @@
         {/foreach}
     </tbody>
 </table>
+
+{if $documents|count==0}
+<div>还没有分享的文件，来分享第一份文件吧~</div>
+{/if}
