@@ -13,6 +13,8 @@ class ClassController extends Controller
         if(empty($class)){
             throw new CHttpException(404);
         }
-        $this->smarty->renderAll('view',array('class'=>$class));
+        $document_list = CourseDocument::model()->findAllByAttributes(array("class_id" => $id));
+        $classes=$class->major->classes;
+        $this->smarty->renderAll('view',array('class'=>$class,'documents'=>$document_list,'other_classes'=>$classes));
     }
 }

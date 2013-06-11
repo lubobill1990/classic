@@ -22,7 +22,7 @@ class UserController extends Controller
                 'actions' => array('signup', 'login', 'activate', 'resetPassword', 'retrievePassword', 'block', 'choose')
             ),
             array('allow',
-                'actions' => array('index', 'view'),
+                'actions' => array('index', 'view','logout'),
                 'users' => array('@')
             ),
             array(

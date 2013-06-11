@@ -62,7 +62,7 @@ class Teacher extends CActiveRecord
 		return array(
 			'courseDocuments' => array(self::HAS_MANY, 'CourseDocument', 'teacher_id'),
 			'courseResources' => array(self::HAS_MANY, 'CourseResource', 'teacher_id'),
-			'classes' => array(self::MANY_MANY, 'Class', 'teaching(teacher_id, class_id)'),
+			'classes' => array(self::MANY_MANY, 'ActualClass', 'teaching(teacher_id, class_id)'),
 		);
 	}
 

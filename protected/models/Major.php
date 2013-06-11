@@ -58,7 +58,7 @@ class Major extends CActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
-			'classes' => array(self::HAS_MANY, 'Class', 'major_id'),
+			'classes' => array(self::HAS_MANY, 'ActualClass', 'major_id'),
 			'dep' => array(self::BELONGS_TO, 'Department', 'dep_id'),
 		);
 	}
