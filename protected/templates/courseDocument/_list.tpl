@@ -71,14 +71,14 @@
             $.get('/courseDocument/table?type='+$('#subject_docs').attr('subject_type')+"&id="+$('#subject_docs').attr('subject_id'),function(data){
                 $('#subject_docs').html(data)
             })
-        })
+        });
         require(['form'],function(){
             $('#search_form').ajaxForm({
                 success:function(data){
                     $('#subject_docs').html(data)
                 }
             })
-        })
+        });
         $('#course_document_upload').click(function () {
             $.WJ('fileupload', function (data) {
                 $('#document_title_form_tmpl').WJ('jSmartFetch', {
@@ -108,12 +108,12 @@
                     })
                 })
             })
-        })
+        });
         $(document).on('click', '#document_title_setting .save',function () {
             $('#document_title_setting form').submit();
         }).on('click', '.doc-item .delete-doc',function () {
                     var this_doc_item = $(this).parents('.doc-item');
-                    var doc_id = this_doc_item.attr('doc_id')
+                    var doc_id = this_doc_item.attr('doc_id');
                     $.post('/courseDocument/delete?doc_id=' + doc_id, function (data) {
                         if (data.code == 200) {
                             this_doc_item.remove();
@@ -156,7 +156,7 @@
                 })
 
 
-    })
+    });
     {/literal}
 </script>
 
