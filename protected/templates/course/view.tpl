@@ -318,7 +318,11 @@
         <h2 class="fl">相关链接</h2>
         <a class="btn2 fl" id="recommend-link">我来推荐链接</a>
     </div>
+    {if $resources|count==0}
+    <p>还没有资料，来上传第一份资料吧~</p>
+    {else}
     {include file="file:[0]courseResource/list.tpl" resources=$resources}
+    {/if}
 </div>
 {/block}
 
