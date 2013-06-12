@@ -345,18 +345,21 @@
             <h3>推荐链接</h3>
         </div>
         <div class="modal-body">
-            <form action="/courseResource/recommend">
+            <form action="/courseResource/recommend" method="post">
+                <label for="recommend-link-name">链接名称</label>
+                <input type="text" id="recommend-link-name" name="title" />
                 <label for="recommend-link-url">链接地址</label>
                 <input type="text" id="recommend-link-url" name="url" />
                 <label for="recommend-link-reason">推荐理由</label>
-                <textarea id="recommend-link-reason" name="reason"></textarea>
+                <textarea id="recommend-link-reason" name="description"></textarea>
                 <br/><br/>
-                这是一个？视频：<input type="radio" checked="checked" name="type" value="video" />
-                其他：<input type="radio" name="type" value="other" />
+                这是一个？<input type="radio" checked="checked" name="category" value="video" />视频
+                <input type="radio" name="category" value="link" />其他
+                <input type="hidden" name="course_id" value="{$course->id}"/>
             </form>
         </div>
         <div class="modal-footer">
-            <a href="javascript:void(0);" class="btn btn-primary save">保存</a>
+            <a  class="btn btn-primary save">保存</a>
         </div>
     </div>
 </div>
@@ -390,7 +393,7 @@
 
         </div>
         <div class="modal-footer">
-            <a href="javascript:void(0);" class="btn btn-primary save">保存</a>
+            <a class="btn btn-primary save">保存</a>
         </div>
     </div>
 </div>
@@ -465,7 +468,7 @@
             $('#recommend-book-form').modal();
         });
         require(['form'], function () {
-            $('#recommend-link-form .save').ajaxForm({
+            $('#recommend-link-form form').ajaxForm({
                 dataType:'json',
                 success:function (data) {
                     if (data['code'] == 200) {
@@ -481,6 +484,12 @@
                     $('#recommend-link-form').modal('hide')
                 }
             });
+
+            $('#recommend-link-form .save').click(function(){
+                console.log('111');
+                $('#recommend-link-form form').submit();
+            });
+
             $('#recommend-book-form .save').ajaxForm({
                 dataType:'json',
                 success:function (data) {
