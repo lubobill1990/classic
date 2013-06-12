@@ -16,8 +16,10 @@
  * @property Following[] $followers
  * @property Following[] $following
  * @property UserOperationKey $operationKeys
+ * @property UserOperationKey $activateKeys
  * @property CourseDocument[] $courseDocuments
  * @property CourseResource[] $courseResources
+ * @property CourseBook[] $courseBooks
  * @property Course[] $courses
  * @property Image[] $images
  * @property Message[] $messages
@@ -51,6 +53,7 @@ class User extends CActiveRecord
         // NOTE: you should only define rules for those attributes that
         // will receive user inputs.
         return array(
+            array('email', 'filter', 'filter' => array(Yii::app()->htmlPurifier, 'purify')),
             array('email', 'length', 'max' => 255),
             array('password, salt,username', 'length', 'max' => 40),
             array('has_been_activated, blocked', 'length', 'max' => 3),
@@ -71,8 +74,10 @@ class User extends CActiveRecord
             'followers' => array(self::MANY_MANY, 'User', 'following(user_id,follow_user_id)'),
             'following' => array(self::MANY_MANY, 'User', 'following(follow_user_id,user_id)'),
             'operationKeys' => array(self::HAS_MANY, 'UserOperationKey', 'user_id'),
+            'activateKeys' => array(self::HAS_MANY, 'UserOperationKey', 'user_id', 'condition' => "operation='activate'"),
             'courseDocuments' => array(self::HAS_MANY, 'CourseDocument', 'user_id'),
             'courseResources' => array(self::HAS_MANY, 'CourseResource', 'user_id'),
+            'courseBooks' => array(self::HAS_MANY, 'CourseBook', 'user_id'),
             'courses' => array(self::MANY_MANY, 'Course', 'follow_course(user_id, course_id)'),
             'images' => array(self::HAS_MANY, 'Image', 'user_id'),
             'messages' => array(self::HAS_MANY, 'Message', 'user_id'),

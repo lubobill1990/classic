@@ -19,10 +19,10 @@ class UserController extends Controller
     {
         return array(
             array('allow',
-                'actions' => array('signup', 'login', 'activate', 'resetPassword', 'retrievePassword', 'block', 'choose')
+                'actions' => array('signup', 'login', 'activate', 'resetPassword', 'retrievePassword', 'block', 'choose', 'resendActivateCode')
             ),
             array('allow',
-                'actions' => array('index', 'view','logout'),
+                'actions' => array('index', 'view', 'logout'),
                 'users' => array('@')
             ),
             array(
@@ -113,6 +113,38 @@ class UserController extends Controller
         $this->redirect(Yii::app()->homeUrl);
     }
 
+    public function actionResendActivateCode()
+    {
+        $errors = array();
+        try {
+            if (Yii::app()->request->isPostRequest && $this->requireValues($_POST, 'captcha', 'email')) {
+                if ($_REQUEST['captcha'] != Yii::app()->captcha->text()) {
+                    $this->throwMessage('captcha', "验证码错误");
+                }
+                $user = User::model()->findByAttributes(array('email' => $_POST['email']));
+                if (empty($user)||$user->has_been_activated=='yes') {
+                    $this->throwMessage('user', "该邮箱用户不存在或者已激活");
+                }
+                $activate_code = $user->generateOperationKey('activate');
+
+                Yii::app()->mailer->send(
+                    $user->email,
+                    '账户完成注册，请激活',
+                    $this->smarty->fetchString('signup_email',
+                        array('user' => $user, 'activate_code' => $activate_code)));
+                $this->smarty->renderAll("activate_code_email_success");
+                Yii::app()->end();
+            }
+        } catch (Exception $e) {
+            $errors = $this->getThrownMessage();
+        }
+
+        $this->smarty->renderAll('resend_activate_code', array(
+            'errors' => $errors
+        ));
+
+    }
+
     public function actionActivate()
     {
         if (isset($_REQUEST['code']) && isset($_REQUEST['user_id'])) {
@@ -187,9 +219,9 @@ class UserController extends Controller
         if (Yii::app()->request->isPostRequest && isset($_POST['email']) && isset($_POST['captcha'])) {
             $email = $_POST['email'];
 
-            if($_POST['captcha']!=Yii::app()->captcha->text()){
-                $error['captcha']='验证码输入错误';
-            }else{
+            if ($_POST['captcha'] != Yii::app()->captcha->text()) {
+                $error['captcha'] = '验证码输入错误';
+            } else {
                 $user = User::model()->find("email=:email", array('email' => $_POST['email'],));
                 if (!empty($user)) {
                     $change_password_key = $user->generateOperationKey('change_password');
@@ -200,7 +232,7 @@ class UserController extends Controller
                                 'user' => $user,
                                 'key' => $change_password_key
                             )));
-                    $this->smarty->renderAll('retrieve_password_success',array());
+                    $this->smarty->renderAll('retrieve_password_success', array());
                     Yii::app()->end();
                 } else {
                     $error['user'] = '用户不存在，请确认邮箱没有拼写错误';

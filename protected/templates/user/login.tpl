@@ -14,7 +14,8 @@
                     <div class="input-decorator-user"></div>
                     <input type="text" name="LoginForm[username]" id='login_username' value="{$model->username}">
                 </div>
-                <span class="validate-error" {if $errors['username']|default:false}style="display: inline;"{/if}>邮箱/用户名或密码错误</span>
+                <span class="validate-error" {if $errors['username']|default:false}style="display: inline;"{/if}>邮箱/用户名或密码错误，或者用户未激活 <a
+                        href="/account/resend_activate_code" title="发送新的激活码到您的邮箱">点击</a></span>
             </div>
             <div class="form-item">
                 <label for="login_password">密码</label>
@@ -27,7 +28,7 @@
             <div class="form-item">
                 <div class="captcha">
                     <label for="login_captcha_text">输入上图单词</label>
-                    <img class="captcha" src="/captcha" alt="">
+                    <img class="captcha captcha-img" src="/captcha" alt="">
                 </div>
                 <div>
                     <div class="input-wrapper">

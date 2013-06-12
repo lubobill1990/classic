@@ -34,7 +34,7 @@
             <div class="form-item">
                 <div class="captcha">
                     <label for="captcha_text">输入上图单词</label>
-                    <img class="captcha" src="/captcha" alt="">
+                    <img class="captcha captcha-img" src="/captcha" alt="">
                 </div>
                 <div class="input-wrapper">
                     <div class="input-decorator-lock"></div>

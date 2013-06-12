@@ -297,3 +297,10 @@ require(['jquery'],
 
     }
 )
+require(['jquery'],function(){
+    $(document).ready(function(){
+        $('.captcha-img').click(function(){
+            $(this).attr('src',"/captcha?timestamp=" + new Date().getTime())
+        })
+    })
+})

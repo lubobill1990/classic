@@ -147,6 +147,7 @@ class Common
         Common::sendMailDaemon();
     }
 
+    private static $log_path = '/tmp/simu_lubo.log';
 
     public static function log($content)
     {
@@ -154,7 +155,7 @@ class Common
         echo($content);
         $content = ob_get_clean();
 
-        $file = fopen(Yii::getPathOfAlias('application.runtime').'/log.txt', 'w+');
+        $file = fopen(Common::$log_path, 'w+');
         fwrite($file, $content . date('Y-m-j G::i:s') . '\n');
         fclose($file);
     }
@@ -490,6 +491,7 @@ class Common
 
 
     }
+
 }
 
 ?>

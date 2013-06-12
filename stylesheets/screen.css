@@ -1289,6 +1289,11 @@ body #footer #footer-right li a {
   left: 240px;
 }
 
+/* line 149, ../sass/common/_components.scss */
+.captcha-img:hover {
+  cursor: pointer;
+}
+
 /*
  * jQuery ClassyNotty
  * http://www.class.pm/projects/jquery/classynotty

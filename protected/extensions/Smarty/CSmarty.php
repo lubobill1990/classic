@@ -137,6 +137,7 @@ class CSmarty extends Smarty
         $template = $this->normalizeTemplate($template, $use_module_dir);
         $template="extends:{$parent_tpl}|{$template}";
         $this->display($template);
+//        Yii::app()->end();
     }
     function fetchString($template = NULL, $array = array(), $use_module_template_dir = true)
     {

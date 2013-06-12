@@ -7,7 +7,7 @@
 // CWebApplication properties can be configured here.
 return array(
     'basePath' => dirname(__FILE__) . DIRECTORY_SEPARATOR . '..',
-    'name' => 'client of real-time server',
+    'name' => 'ClassIC',
     'homeUrl' => '/',
     // preloading 'log' component
     'preload' => array('log'),
@@ -65,6 +65,7 @@ return array(
                 'login' => 'User/login',
                 'logout' => 'User/logout',
                 'account/activate' => "User/activate",
+                'account/resend_activate_code' => "User/resendActivateCode",
                 'account/retrieve_password' => 'User/retrievePassword',
                 'account/reset_password' => 'User/resetPassword',
                 'account/block' => 'User/block',
@@ -99,6 +100,9 @@ return array(
 //                array('host' => '127.0.0.1', 'port' => 11211),
 //            ),
 //        ),
+        'htmlPurifier' => array(
+            'class' => 'system.web.widgets.CHtmlPurifier'
+        ),
         'fileUpload' => array(
             'class' => 'ext.jQueryFileUpload.JQueryFileUpload',
             'upload_dir' => realpath(dirname(__FILE__) . '/../../upload') . '/',
@@ -134,7 +138,7 @@ return array(
         'adminEmail' => 'lubobill1990@163.com',
         'useRedis' => false,
         'page_title' => array(
-            'default' => 'RTS-Client'
+            'default' => 'ClassIC'
         ),
         'feedback' => array(
             'short_comment_content_length' => 60

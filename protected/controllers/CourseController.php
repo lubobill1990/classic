@@ -5,7 +5,8 @@ class CourseController extends Controller
     public function filters()
     {
         return array(
-            'accessControl'
+            'accessControl',
+            'postOnly + recommendBook'
         );
     }
 
@@ -13,10 +14,10 @@ class CourseController extends Controller
     {
         return array(
             array('allow',
-                'actions' => array('search', 'view','test')
+                'actions' => array('search', 'view', 'test')
             ),
             array('allow',
-                'actions' => array('follow', 'unfollow', 'setScore'),
+                'actions' => array('follow', 'unfollow', 'setScore', 'recommendBook'),
                 'users' => array('@')
             ),
             array(
@@ -32,13 +33,15 @@ class CourseController extends Controller
         if (empty($course)) {
             throw new CHttpException(404);
         }
+        $this->setPageTitle($course->name, '课程');
         $document_list = CourseDocument::model()->findAllByAttributes(array("course_id" => $id));
         $this->smarty->render('view', array('course' => $course, 'documents' => $document_list));
     }
 
     public function actionSearch()
     {
-        if (isset($_REQUEST['keyword'])) {
+        $this->setPageTitle('搜索');
+        if (isset($_REQUEST['keyword']) && mb_strlen($_REQUEST['keyword']) > 0) {
             $keyword = addcslashes($_REQUEST['keyword'], '%_'); // escape LIKE's special characters
             //TODO 用like的方式搜索的效率很低，如果数据量比较大，可能需要考虑其他方法
             $q = new CDbCriteria(array(
@@ -110,13 +113,30 @@ class CourseController extends Controller
             'score' => $score
         );
         if ($course_score->save()) {
-            $course->score=$course->averageScore;
-            $course_score->save();
-            AjaxResponse::success($course->score);
+            $course->score = $course->averageScore;
+            if($course->save()){
+                AjaxResponse::success($course->score);
+            }else{
+                AjaxResponse::saveError($course->errors);
+            }
         }
         AjaxResponse::saveError($course_score->errors);
 
     }
-    public function actionTest(){
+
+    public function actionRecommendBook()
+    {
+        $course_book=new CourseBook();
+        $course_book->attributes=$_POST;
+        $course_book->user_id=Yii::app()->user->id;
+        if($course_book->save()){
+            AjaxResponse::success();
+        }else{
+            AjaxResponse::saveError($course_book->errors);
+        }
+    }
+
+    public function actionTest()
+    {
     }
 }

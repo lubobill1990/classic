@@ -136,7 +136,7 @@
     {block name=header_alter}
         <div id="header-normal">
             <form id="header-normal-search" class="bc" action="/course/search" method='get'>
-                <input type="input" placeholder="发现，探索，学习" name="keyword" id="header-normal-search-input"/>
+                <input type="input" placeholder="发现，探索，学习" name="keyword" id="header-normal-search-input" {if $search_keyword|default:false}value="{$search_keyword}"{/if}/>
                 <input type="submit" value="" id="header-normal-search-button"/>
             </form>
         </div>

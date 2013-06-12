@@ -14,6 +14,8 @@ class ClassController extends Controller
         if (empty($class)) {
             throw new CHttpException(404);
         }
+        $this->setPageTitle($class->course->name,'课程');
+
         $document_list = CourseDocument::model()->findAllByAttributes(array("class_id" => $id));
         $classes = $class->major->classes(
             array('alias'=>'c52',
