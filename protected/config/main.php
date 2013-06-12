@@ -54,6 +54,9 @@ return array(
             'smtpPort' => 25,
             'fromName' => "Real-time Server"
         ),
+        'dom'=>array(
+            'class'=>'ext.simple-html-dom.CSimpleHtmlDom'
+        ),
         'request' => array(
             'baseUrl' => '',
         ),

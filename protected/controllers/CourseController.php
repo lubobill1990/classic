@@ -34,8 +34,9 @@ class CourseController extends Controller
             throw new CHttpException(404);
         }
         $this->setPageTitle($course->name, '课程');
-        $document_list = CourseDocument::model()->findAllByAttributes(array("course_id" => $id));
-        $this->smarty->render('view', array('course' => $course, 'documents' => $document_list));
+        $document_list = $course->courseDocuments(array('with'=>'user'));
+        $resources=$course->courseResources(array('with'=>'user'));
+        $this->smarty->render('view', array('course' => $course, 'documents' => $document_list,'resources'=>$resources));
     }
 
     public function actionSearch()

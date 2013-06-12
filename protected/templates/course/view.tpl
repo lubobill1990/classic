@@ -318,18 +318,7 @@
         <h2 class="fl">相关链接</h2>
         <a class="btn2 fl" id="recommend-link">我来推荐链接</a>
     </div>
-    <div class="item">
-        <p><span class="item-1">[ 视频 ]</span><a>微积分课件</a><span class="item-2">顶+10</span><span class="item-2">踩-3</span>
-        </p>
-
-        <p>推荐人：<a>释小龙</a>推荐理由：无</p>
-    </div>
-    <div class="item">
-        <p><span class="item-1">[ 视频 ]</span><a>Coursra微积分教程</a><span class="item-2">顶+10</span><span
-                class="item-2">踩-3</span></p>
-
-        <p>推荐人：<a>释小龙</a>推荐理由：呵呵，呵呵，和呵呵呵呵呵呵~</p>
-    </div>
+    {include file="file:[0]courseResource/list.tpl" resources=$resources}
 </div>
 {/block}
 
