@@ -8,25 +8,69 @@
  */
 class CourseResourceController extends Controller
 {
-    public function actionList($type,$id,$category){
+    public function filters()
+    {
+        return array(
+            'accessControl',
+            'postOnly+recommend,delete',
+            'ajaxOnly+recommend,delete'
+        );
+    }
+
+    public function accessRules()
+    {
+        return array(
+            array(
+                'allow',
+                'actions' => array('recommend','delete'),
+                'users' =>array("@")
+            ),
+            array(
+                'deny',
+                'users' => array("*")
+            )
+        );
+    }
+
+    public function actionList($type, $id, $category)
+    {
 
     }
-    public function actionRecommendBook($type,$id){
 
+    /**
+     * required key/value in post
+     * course_id
+     * title
+     * description
+     * url
+     * category(video,link)
+     */
+    public function actionRecommend()
+    {
+        $course_resource = new CourseResource();
+        $course_resource->attributes = array_merge($_POST, array(
+            'user_id' => Yii::app()->user->id,
+        ));
+        if ($course_resource->save()) {
+            AjaxResponse::success($this->smarty->fetchString('item',array('resource'=>$course_resource)));
+        } else {
+            AjaxResponse::success($course_resource->errors);
+        }
     }
-    public function actionDeleteBook(){
 
-    }
-    public function actionRecommendVideo(){
-
-    }
-    public function actionDeleteVideo(){
-
-    }
-    public function actionShareLink(){
-
-    }
-    public function actionDeleteLink(){
-
+    /**
+     * required key/value in post
+     * id
+     */
+    public function actionDelete()
+    {
+        if (!$this->requireValues($_POST, "id")) {
+            AjaxResponse::missParam("id in post is required");
+        }
+        if (CourseResource::model()->deleteByPk($_POST['id'], "user_id=:u", array('u' => Yii::app()->user->id))) {
+            AjaxResponse::success();
+        } else {
+            AjaxResponse::resourceNotFound();
+        }
     }
 }

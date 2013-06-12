@@ -69,8 +69,8 @@ class Course extends CActiveRecord
         return array(
             'classes' => array(self::HAS_MANY, 'ActualClass', 'course_id'),
             'cat' => array(self::BELONGS_TO, 'CourseCategory', 'category'),
-            'courseDocuments' => array(self::HAS_MANY, 'CourseDocument', 'course_id'),
-            'courseResources' => array(self::HAS_MANY, 'CourseResource', 'course_id'),
+            'courseDocuments' => array(self::HAS_MANY, 'CourseDocument', 'course_id','order'=>'create_time ASC'),
+            'courseResources' => array(self::HAS_MANY, 'CourseResource', 'course_id','order'=>'create_time ASC'),
             'courseBooks' => array(self::HAS_MANY, 'CourseBook', 'course_id'),
             'textBooks' => array(self::HAS_MANY, 'CourseBook', 'course_id','condition'=>""),
             'courseTags' => array(self::MANY_MANY, 'CourseTag', 'course_tag_map(course_id, tag_id)'),
