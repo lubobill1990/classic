@@ -379,7 +379,7 @@
             <h3>推荐链接</h3>
         </div>
         <div class="modal-body">
-            <form action="/courseBook/recommend">
+            <form action="/courseBook/recommend" class=fl>
                 <label for="recommend-book-name">书名</label>
                 <input type="text" id="recommend-book-name" name="name" />
                 <label for="recommend-book-author">作者</label>
@@ -392,6 +392,13 @@
                 <textarea id="recommend-book-reason" name="reason"></textarea>
                 <input type="hidden" name="pic" />
             </form>
+            <div id="book-recommend-douban" class="fl">
+                <img src="http://img4.douban.com/mpic/s26653858.jpg" class="fl">
+                <img src="http://img4.douban.com/mpic/s26653858.jpg" class="fl">
+                <img src="http://img4.douban.com/mpic/s26653858.jpg" class="fl">
+                <img src="http://img4.douban.com/mpic/s26653858.jpg" class="fl">
+            </div>
+
         </div>
         <div class="modal-footer">
             <a href="javascript:void(0);" class="btn btn-primary save">保存</a>
