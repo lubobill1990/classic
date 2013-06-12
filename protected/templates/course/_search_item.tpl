@@ -4,10 +4,11 @@
     <div class="item-detail" class="fl">
         <h2><a target="_blank" href="/course/{$course->id}">{$course->name}</a></h2>
 
-        <p class="stars">
+        <p class="stars" data-rating="{$course->score}">
             <span class="item-detail-left">评分:</span>
-            <span class="star star-on"></span><span class="star"></span><span class="star"></span><span
-                class="star"></span><span class="star"></span>
+            <span class="star">
+                <span class="star-off"><span class="star-on"></span></span>
+            </span>
         </p>
     {if $course->classes|count==1}
         {$class=$course->classes[0]}

@@ -70,7 +70,7 @@
         <a class="btn fr cr" id="course-intro-unfollow" course_id="{$course->id}" style="display: none">取消关注</a>
         <a class="btn fr cr" id="course-intro-follow" course_id="{$course->id}">关注此课程</a>
     {/if}
-    <p title="评个分吧" class="fr cr" id="course-intro-rating">评分:
+    <p title="评个分吧" class="fr cr" id="course-intro-rating" data-rating="{$course->score}">评分:
         <span class="star">
             <span class="star-off"><span class="star-on"></span></span>
             <span class="star-select">
@@ -80,7 +80,6 @@
                 <span data-num="4"></span>
                 <span data-num="5"></span>
             </span>
-
         </span>
     </p>
     <a class="btn1 cl fl">给它换个封面</a>
@@ -339,7 +338,7 @@
     <h2>本学期开课班级</h2>
     <ul>
         {foreach $course->classes as $class}
-            <li class="course-class-item"><a href="/class/{$class->id}">{$class->major->dep->name} - {$class->major->name} </a> ({$class->campus})
+            <li class="course-class-item"><a href="/class/{$class->id}">{$class->major->dep->name} - {$class->major->name} </a>
                 {foreach $class->timeSites as $time_site}
                     <ul>
                         <li>{$time_site->getTimeString()} {$time_site->classroom}</li>
@@ -354,10 +353,9 @@
 {block name=js}
 <script type="text/javascript">
     require(['jquery'], function ($) {
-        var star_num = 3.5;
 
         function init_star() {
-            $('.star-on').css('width',star_num*20+"%");
+            $('.star-on').css('width',$('#course-intro-rating').data('rating')*20+"%");
         }
 
         $('.star-select span').mouseover(function () {
@@ -369,9 +367,9 @@
         }).click(function(){
             $.post('/course/setScore?course_id='+$('#course-intro').attr('course_id')+'&score='+$(this).data('num'), function (data) {
                 if (data.code == 200) {
-
+                    $('#course-intro-rating').data('rating',parseInt(data.data)) ;
                 } else {
-
+                    alert(data);
                 }
             }, 'json');
         });

@@ -32,7 +32,7 @@
 #search-container .item .item-detail {
   margin-top: 10px;
   overflow-y: auto;
-  height: 160px;
+  height: 165px;
 }
 /* line 29, ../../../sass/special/course/search.scss */
 #search-container .item .item-detail h2 {
@@ -44,27 +44,39 @@
 }
 /* line 36, ../../../sass/special/course/search.scss */
 #search-container .item .item-detail p .star {
-  width: 20px;
+  width: 100px;
   height: 17px;
-  background: url("../../../images/common/star-off.png") no-repeat center;
-  display: inline-block;
   position: relative;
   top: 2px;
+  cursor: pointer;
+  display: inline-block;
 }
-/* line 41, ../../../sass/special/course/search.scss */
-#search-container .item .item-detail p .star-on {
-  background: url("../../../images/common/star-on.png") no-repeat center;
+/* line 39, ../../../sass/special/course/search.scss */
+#search-container .item .item-detail p .star .star-off {
+  background: url("../../../images/common/star-off.png") no-repeat center;
+  width: 100%;
+  height: 100%;
+  display: inline-block;
+  position: absolute;
 }
-/* line 45, ../../../sass/special/course/search.scss */
+/* line 44, ../../../sass/special/course/search.scss */
+#search-container .item .item-detail p .star .star-on {
+  background: url("../../../images/common/star-on.png") no-repeat;
+  width: 0%;
+  height: 100%;
+  display: inline-block;
+  position: absolute;
+}
+/* line 50, ../../../sass/special/course/search.scss */
 #search-container .item .item-detail p .item-detail-left {
   color: #999;
   margin-right: 7px;
 }
-/* line 49, ../../../sass/special/course/search.scss */
+/* line 54, ../../../sass/special/course/search.scss */
 #search-container .item .item-detail p .item-detail-right {
   color: #444;
 }
-/* line 53, ../../../sass/special/course/search.scss */
+/* line 58, ../../../sass/special/course/search.scss */
 #search-container .item .item-detail p.stars {
   margin-bottom: 12px;
 }
