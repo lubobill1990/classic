@@ -18,13 +18,13 @@
         require(['jquery'], function ($){
             function init_star() {
                 $('.stars').each(function(){
-                    $(this).find('.star-on').css('width',$('this').data('rating')*20+"%");
-                }
+                    $(this).find('.star-on').css('width',$(this).data('rating')*20+"%");
+                });
             }
 
             $(document).ready(function () {
                 init_star();
             });
-
+        });
     </script>
 {/block}

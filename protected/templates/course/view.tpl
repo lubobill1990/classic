@@ -94,7 +94,7 @@
         <li data-number="3"></li>
     </ul>
     <h2 class="fl">相关书籍</h2>
-    <a class="btn2 fl">我来推荐书籍</a>
+    <a class="btn2 fl" id="recommend-book">我来推荐书籍</a>
 </div>
 
 <div class="slide clearfix">
@@ -316,7 +316,7 @@
 <div id="course-link">
     <div class="clearfix">
         <h2 class="fl">相关链接</h2>
-        <a class="btn2 fl">我来推荐链接</a>
+        <a class="btn2 fl" id="recommend-link">我来推荐链接</a>
     </div>
     <div class="item">
         <p><span class="item-1">[ 视频 ]</span><a>微积分课件</a><span class="item-2">顶+10</span><span class="item-2">踩-3</span>
@@ -347,6 +347,56 @@
             </li>
         {/foreach}
     </ul>
+</div>
+
+<div class="modal-container">
+    <div id="recommend-link-form" class="modal hide fade">
+        <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+            <h3>推荐链接</h3>
+        </div>
+        <div class="modal-body">
+            <form action="/courseResource/recommend">
+                <label for="recommend-link-url">链接地址</label>
+                <input type="text" id="recommend-link-url" name="url" />
+                <label for="recommend-link-reason">推荐理由</label>
+                <textarea id="recommend-link-reason" name="reason"></textarea>
+                <br/><br/>
+                这是一个？视频：<input type="radio" checked="checked" name="type" value="video" />
+                其他：<input type="radio" name="type" value="other" />
+            </form>
+        </div>
+        <div class="modal-footer">
+            <a href="javascript:void(0);" class="btn btn-primary save">保存</a>
+        </div>
+    </div>
+</div>
+
+<div class="modal-container">
+    <div id="recommend-book-form" class="modal hide fade">
+        <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+            <h3>推荐链接</h3>
+        </div>
+        <div class="modal-body">
+            <form action="/courseBook/recommend">
+                <label for="recommend-book-name">书名</label>
+                <input type="text" id="recommend-book-name" name="name" />
+                <label for="recommend-book-author">作者</label>
+                <input type="text" id="recommend-book-author" name="author" />
+                <label for="recommend-book-isbn">isbn</label>
+                <input type="text" id="recommend-book-isbn" name="isbn" />
+                <label for="recommend-book-url">豆瓣链接</label>
+                <input type="text" id="recommend-book-url" name="url" />
+                <label for="recommend-book-reason">推荐理由</label>
+                <textarea id="recommend-book-reason" name="reason"></textarea>
+                <input type="hidden" name="pic" />
+            </form>
+        </div>
+        <div class="modal-footer">
+            <a href="javascript:void(0);" class="btn btn-primary save">保存</a>
+        </div>
+    </div>
 </div>
 {/block}
 
@@ -410,8 +460,47 @@
             }, 'json')
 
         });
-        $('#recommend-resource').click(function () {
-
+    });
+    require(['jquery','bootstrap/modal'], function () {
+        $('#recommend-link').click(function () {
+            $('#recommend-link-form').modal();
+        });
+        $('#recommend-book').click(function () {
+            $('#recommend-book-form').modal();
+        });
+        require(['form'], function () {
+            $('#recommend-link-form .save').ajaxForm({
+                dataType:'json',
+                success:function (data) {
+                    if (data['code'] == 200) {
+                        $('#course-link').append(data['data']);
+                    } else {
+                        $.WJ('notty', {
+                            content:data['data'],
+                            title:'推荐失败'
+                        })
+                    }
+                },
+                beforeSubmit:function () {
+                    $('#recommend-link-form').modal('hide')
+                }
+            });
+            $('#recommend-book-form .save').ajaxForm({
+                dataType:'json',
+                success:function (data) {
+                    if (data['code'] == 200) {
+                        parent.location.reload();
+                    } else {
+                        $.WJ('notty', {
+                            content:data['data'],
+                            title:'推荐失败'
+                        })
+                    }
+                },
+                beforeSubmit:function () {
+                    $('#recommend-book-form').modal('hide')
+                }
+            });
         });
     });
 </script>
