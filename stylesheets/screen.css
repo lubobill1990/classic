@@ -1030,6 +1030,23 @@ body #footer #footer-right li a {
   color: #336699;
 }
 
+/* line 180, ../sass/common/_common.scss */
+.back-to-top {
+  left: 1200px;
+  position: fixed;
+  bottom: -20px;
+  display: block;
+  z-index: 9999;
+}
+/* line 183, ../sass/common/_common.scss */
+.back-to-top:hover {
+  background: #37a;
+}
+/* line 186, ../sass/common/_common.scss */
+.back-to-top:hover a {
+  color: #fff;
+}
+
 /* line 2, ../sass/common/_components.scss */
 .arrow {
   width: 6px;
@@ -1304,7 +1321,7 @@ body #footer #footer-right li a {
  * Version 1.1.1
  *
  */
-/* line 11, ../sass/partials/_classynotty.scss */
+/* line 16, ../sass/partials/_classynotty.scss */
 #nottys {
   position: fixed;
   top: 20px;
@@ -1313,25 +1330,22 @@ body #footer #footer-right li a {
   z-index: 999;
 }
 
-/* line 19, ../sass/partials/_classynotty.scss */
+/* line 24, ../sass/partials/_classynotty.scss */
 #nottys .notty {
   padding: 10px;
   margin-bottom: 20px;
-  background: black;
-  background: rgba(0, 0, 0, 0.8);
-  color: white;
-  text-shadow: black 0px 1px 2px;
-  font: normal 12px/17px Helvetica;
-  border: 1px solid black;
-  border: 1px solid rgba(0, 0, 0, 0.7);
-  background: -webkit-linear-gradient(transparent, rgba(0, 0, 0, 0.9)), -webkit-linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.7));
-  background: -moz-linear-gradient(0% 100% 90deg, rgba(0, 0, 0, 0.9), transparent), -moz-linear-gradient(0% 100% 90deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.4));
+  background: rgba(255, 255, 255, 0.8);
+  color: #999;
+  font: normal 12px/17px;
   -webkit-border-radius: 6px;
   -moz-border-radius: 6px;
+  -ms-border-radius: 6px;
+  -o-border-radius: 6px;
   border-radius: 6px;
-  -webkit-box-shadow: rgba(0, 0, 0, 0.8) 0px 2px 13px, rgba(0, 0, 0, 0.6) 0px -3px 13px, rgba(255, 255, 255, 0.5) 0px 1px 0px inset;
-  -moz-box-shadow: rgba(0, 0, 0, 0.8) 0px 2px 13px, rgba(0, 0, 0, 0.6) 0px -3px 13px, rgba(255, 255, 255, 0.5) 0px 1px 0px inset;
-  box-shadow: rgba(0, 0, 0, 0.8) 0px 2px 13px, rgba(0, 0, 0, 0.6) 0px -3px 13px, rgba(255, 255, 255, 0.5) 0px 1px 0px inset;
+  -webkit-box-shadow: 0 1px 1px #dddddd;
+  -moz-box-shadow: 0 1px 1px #dddddd;
+  box-shadow: 0 1px 1px #dddddd;
+  border: 1px solid #ddd;
   position: relative;
   cursor: default;
   -webkit-user-select: none;
@@ -1339,6 +1353,13 @@ body #footer #footer-right li a {
   overflow: hidden;
   _overflow: visible;
   _zoom: 1;
+}
+/* line 41, ../sass/partials/_classynotty.scss */
+#nottys .notty h2 {
+  color: #444;
+  font-size: 16px;
+  font-family: "Microsoft Yahei";
+  margin: 0 0 5px 0;
 }
 
 /* line 46, ../sass/partials/_classynotty.scss */
@@ -1369,64 +1390,60 @@ body #footer #footer-right li a {
   font-weight: bold;
   line-height: 20px;
   height: 20px;
-  background: black;
+  background: #fff;
   right: 0px;
   top: 0px;
   padding: 5px;
   padding-right: 15px;
   padding-left: 15px;
-  background: -webkit-linear-gradient(rgba(0, 0, 0, 0.7), black);
-  background: -moz-linear-gradient(0% 100% 90deg, black, rgba(0, 0, 0, 0.7));
   -webkit-border-top-right-radius: 6px;
   -webkit-border-bottom-left-radius: 6px;
   -moz-border-radius-bottomleft: 6px;
   -moz-border-radius-topright: 6px;
-  -webkit-box-shadow: rgba(255, 255, 255, 0.5) 0px -1px 0px inset, rgba(255, 255, 255, 0.5) 0px 1px 0px inset, black 0px 5px 6px;
-  -moz-box-shadow: rgba(255, 255, 255, 0.5) 0px -1px 0px inset, rgba(255, 255, 255, 0.5) 0px 1px 0px inset, black 0px 5px 6px;
-  box-shadow: rgba(255, 255, 255, 0.5) 0px -1px 0px inset, rgba(255, 255, 255, 0.5) 0px 1px 0px inset, black 0px 5px 6px;
   border-left: 1px solid rgba(255, 255, 255, 0.5);
   cursor: pointer;
   display: none;
+  color: #369;
 }
 
-/* line 90, ../sass/partials/_classynotty.scss */
+/* line 86, ../sass/partials/_classynotty.scss */
 #nottys .notty .hide:hover {
   background: white;
   background: -webkit-linear-gradient(white, rgba(255, 255, 255, 0.9));
   background: -moz-linear-gradient(0% 100% 90deg, rgba(255, 255, 255, 0.9), white);
-  color: black;
+  color: #369;
   text-shadow: none;
 }
 
-/* line 98, ../sass/partials/_classynotty.scss */
+/* line 94, ../sass/partials/_classynotty.scss */
 #nottys .notty .right, #nottys .notty .left {
   width: 79%;
   height: 100%;
   float: left;
 }
 
-/* line 104, ../sass/partials/_classynotty.scss */
+/* line 100, ../sass/partials/_classynotty.scss */
 #nottys .notty .time {
   font-size: 9px;
   position: relative;
 }
 
-/* line 109, ../sass/partials/_classynotty.scss */
+/* line 105, ../sass/partials/_classynotty.scss */
 #nottys .notty .right .time {
   margin-left: 19px;
 }
 
-/* line 113, ../sass/partials/_classynotty.scss */
+/* line 109, ../sass/partials/_classynotty.scss */
 #nottys .notty .left {
   width: 20%;
 }
 
-/* line 121, ../sass/partials/_classynotty.scss */
+/* line 117, ../sass/partials/_classynotty.scss */
 #nottys .notty .right .inner {
   padding-left: 19px;
 }
 
-/* line 125, ../sass/partials/_classynotty.scss */
+/* line 121, ../sass/partials/_classynotty.scss */
 #nottys .notty .left .img:after {
   content: '';
   background: white;
@@ -1438,7 +1455,7 @@ body #footer #footer-right li a {
   right: -10px;
 }
 
-/* line 136, ../sass/partials/_classynotty.scss */
+/* line 132, ../sass/partials/_classynotty.scss */
 #nottys .notty .left .img {
   width: 100%;
   background-size: auto 100%;
@@ -1451,7 +1468,7 @@ body #footer #footer-right li a {
   position: relative;
 }
 
-/* line 148, ../sass/partials/_classynotty.scss */
+/* line 144, ../sass/partials/_classynotty.scss */
 #nottys .notty:after {
   content: ".";
   visibility: hidden;
@@ -1461,40 +1478,32 @@ body #footer #footer-right li a {
   font-size: 0;
 }
 
-/* line 157, ../sass/partials/_classynotty.scss */
-#nottys .notty h2 {
-  margin: 0px 0px 5px 0px;
-  font-size: 14px;
-  text-shadow: black 0px 2px 4px;
-  color: #fff;
-}
-
 @-webkit-keyframes pop {
-  /* line 165, ../sass/partials/_classynotty.scss */
+  /* line 155, ../sass/partials/_classynotty.scss */
   from {
     -webkit-transform: scale(0.1);
     opacity: 0;
   }
 
-  /* line 169, ../sass/partials/_classynotty.scss */
+  /* line 159, ../sass/partials/_classynotty.scss */
   80% {
     -webkit-transform: scale(1.05);
     opacity: 1;
   }
 
-  /* line 173, ../sass/partials/_classynotty.scss */
+  /* line 163, ../sass/partials/_classynotty.scss */
   to {
     -webkit-transform: scale(1);
   }
 }
 
 @-webkit-keyframes remove {
-  /* line 179, ../sass/partials/_classynotty.scss */
+  /* line 169, ../sass/partials/_classynotty.scss */
   0% {
     opacity: 1;
   }
 
-  /* line 182, ../sass/partials/_classynotty.scss */
+  /* line 172, ../sass/partials/_classynotty.scss */
   100% {
     right: -223px;
     opacity: 0;

@@ -419,6 +419,13 @@
             init_star();
             return true;
         }).click(function(){
+            if ($("#course-intro").attr('user_id') == 0) {
+                $.WJ('notify', {
+                    title:"请先登录",
+                    content:"此操作需要登录，是不是还没有<a href='/login'>登录</a>？"
+                })
+                return false;
+            }
             $.post('/course/setScore?course_id='+$('#course-intro').attr('course_id')+'&score='+$(this).data('num'), function (data) {
                 if (data.code == 200) {
                     $('#course-intro-rating').data('rating',parseInt(data.data)) ;
@@ -436,7 +443,7 @@
             if ($("#course-intro").attr('user_id') == 0) {
                 $.WJ('notify', {
                     title:"请先登录",
-                    content:"要关注该课程，您需要先点此<a href='/login'>登录</a>"
+                    content:"此操作需要登录，是不是还没有<a href='/login'>登录</a>？"
                 })
                 return false;
             }
@@ -467,9 +474,23 @@
     });
     require(['jquery','bootstrap/modal'], function () {
         $('#recommend-link').click(function () {
+            if ($("#course-intro").attr('user_id') == 0) {
+                $.WJ('notify', {
+                    title:"请先登录",
+                    content:"此操作需要登录，是不是还没有<a href='/login'>登录</a>？"
+                })
+                return false;
+            }
             $('#recommend-link-form').modal();
         });
         $('#recommend-book').click(function () {
+            if ($("#course-intro").attr('user_id') == 0) {
+                $.WJ('notify', {
+                    title:"请先登录",
+                    content:"此操作需要登录，是不是还没有<a href='/login'>登录</a>？"
+                })
+                return false;
+            }
             $('#recommend-book-form').modal();
         });
         require(['form'], function () {
@@ -479,6 +500,7 @@
                     if (data['code'] == 200) {
                         $('#course-link').append($(data['data']));
                     } else {
+                        alert('推荐失败');
                         $.WJ('notty', {
                             content:data['data'],
                             title:'推荐失败'
@@ -491,6 +513,18 @@
             });
 
             $('#recommend-link-form .save').click(function(){
+                url = $('#recommend-link-form input[name="url"]').val();
+                {literal}
+                var strRegex = "^((https|http|ftp|rtsp|mms)://)[a-z0-9A-Z]{3}\.[a-z0-9A-Z][a-z0-9A-Z]{0,61}?[a-z0-9A-Z]\.com|net|cn|cc (:s[0-9]{1-4})?/$";
+                {/literal}
+                var re = new RegExp(strRegex);
+                if(!re.test(url)){
+                    $.WJ('notify', {
+                        title:"链接弄错了？",
+                        content:"链接要求填写完整的有效路径"
+                    })
+                    return false;
+                }
                 $('#recommend-link-form form').submit();
             });
 
