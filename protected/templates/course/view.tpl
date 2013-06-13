@@ -372,27 +372,28 @@
     <div id="recommend-book-form" class="modal hide fade">
         <div class="modal-header">
             <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-            <h3>推荐链接</h3>
+            <h3>推荐书籍</h3>
         </div>
         <div class="modal-body">
-            <form action="/courseBook/recommend" class=fl>
+            <form action="/courseBook/recommend"  method="post" class="fl">
                 <label for="recommend-book-name">书名</label>
                 <input type="text" id="recommend-book-name" name="name" />
                 <label for="recommend-book-author">作者</label>
                 <input type="text" id="recommend-book-author" name="author" />
-                <label for="recommend-book-isbn">isbn</label>
-                <input type="text" id="recommend-book-isbn" name="isbn" />
+                {*<label for="recommend-book-isbn">isbn</label>*}
+                {*<input type="text" id="recommend-book-isbn" name="isbn" />*}
                 <label for="recommend-book-url">豆瓣链接</label>
                 <input type="text" id="recommend-book-url" name="url" />
                 <label for="recommend-book-reason">推荐理由</label>
-                <textarea id="recommend-book-reason" name="reason"></textarea>
-                <input type="hidden" name="pic" />
+                <textarea id="recommend-book-reason" name="comment"></textarea><br/>
+                这是一本？<input type="radio" checked="checked" name="type" value="textbook" />教材
+                <input type="radio" name="type" value="reference" />参考书
+                <input type="radio" name="type" value="expand" />拓展阅读
+                <input type="hidden" name="thumbnail_url" />
+                <input type="hidden" name="course_id" value="{$course->id}" />
             </form>
             <div id="book-recommend-douban" class="fl">
-                <img src="http://img4.douban.com/mpic/s26653858.jpg" class="fl">
-                <img src="http://img4.douban.com/mpic/s26653858.jpg" class="fl">
-                <img src="http://img4.douban.com/mpic/s26653858.jpg" class="fl">
-                <img src="http://img4.douban.com/mpic/s26653858.jpg" class="fl">
+                <img src="" class="fl none" />
             </div>
 
         </div>
@@ -476,7 +477,7 @@
                 dataType:'json',
                 success:function (data) {
                     if (data['code'] == 200) {
-                        $('#course-link').append(data['data']);
+                        $('#course-link').append($(data['data']));
                     } else {
                         $.WJ('notty', {
                             content:data['data'],
@@ -490,11 +491,10 @@
             });
 
             $('#recommend-link-form .save').click(function(){
-                console.log('111');
                 $('#recommend-link-form form').submit();
             });
 
-            $('#recommend-book-form .save').ajaxForm({
+            $('#recommend-book-form form').ajaxForm({
                 dataType:'json',
                 success:function (data) {
                     if (data['code'] == 200) {
@@ -509,6 +509,35 @@
                 beforeSubmit:function () {
                     $('#recommend-book-form').modal('hide')
                 }
+            });
+
+            $('#recommend-book-form .save').click(function(){
+                $('#recommend-book-form form').submit();
+            });
+
+            $('#recommend-book-form input[name="name"]').focusout(function(){
+                var val = $(this).val();
+                if(val.length!=0){
+                    $.post('/courseBook/getBookInfo?name=' + val, function (data) {
+                        $('#book-recommend-douban').children().not('.none').remove();
+                        for (var i in data){
+                            if(i==0){
+                                $('#recommend-book-form input[name="url"]').val(data[i].url);
+                                $('#recommend-book-form input[name="author"]').val(data[i].author);
+                                $('#recommend-book-form input[name="thumbnail_url"]').val(data[i].thumbnail_url);
+                            }
+                            var newNode = $('#book-recommend-douban').find('.none').clone().removeClass('none')
+                            newNode.attr('src',data[i].thumbnail_url).data('name',data[i].name).data('url',data[i].url).data('thumbnail_url',data[i].thumbnail_url).data('author',data[i].author);
+                            $('#book-recommend-douban').append(newNode);
+                        }
+                    }, 'json')
+                }
+            });
+
+            $('#book-recommend-douban').on('click','img',function(){
+                $('#recommend-book-form input[name="url"]').val($(this).data('url'));
+                $('#recommend-book-form input[name="author"]').val($(this).data('author'));
+                $('#recommend-book-form input[name="thumbnail_url"]').val($(this).data('thumbnail_url'));
             });
         });
     });
