@@ -13,6 +13,10 @@
 
 <body>
 
+<div class="back-to-top">
+    <a href="#">&#8593;回顶部</a>
+</div>
+
 <div id="header">
 
     <div id="header-top">
@@ -180,6 +184,20 @@ require(['jquery','components'], function ($){
     }).mouseout(function(){
         $(this).find('ul').addClass('none');
     });
+
+    {literal}
+    $(window).scroll(function () {
+        if($(window).scrollTop()>1000){
+            if($('.back-to-top').css('bottom')=='-20px'){
+                $('.back-to-top').animate({bottom:"48px"});
+            }
+        }else{
+            if($('.back-to-top').css('bottom')!='-20px'){
+                $('.back-to-top').css({bottom:'-20px'});
+            }
+        }
+    });
+    {/literal}
 });
 </script>
 {block name=js}{/block}

@@ -136,27 +136,30 @@
     <div id="recommend-book-form" class="modal hide fade">
         <div class="modal-header">
             <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-            <h3>推荐链接</h3>
+            <h3>推荐书籍</h3>
         </div>
         <div class="modal-body">
-            <form action="/courseBook/recommend" class=fl>
+            <form action="/courseBook/recommend"  method="post" class="fl">
                 <label for="recommend-book-name">书名</label>
                 <input type="text" id="recommend-book-name" name="name"/>
                 <label for="recommend-book-author">作者</label>
-                <input type="text" id="recommend-book-author" name="author"/>
-                <label for="recommend-book-isbn">isbn</label>
-                <input type="text" id="recommend-book-isbn" name="isbn"/>
+
+                <input type="text" id="recommend-book-author" name="author" />
+                {*<label for="recommend-book-isbn">isbn</label>*}
+                {*<input type="text" id="recommend-book-isbn" name="isbn" />*}
                 <label for="recommend-book-url">豆瓣链接</label>
                 <input type="text" id="recommend-book-url" name="url"/>
                 <label for="recommend-book-reason">推荐理由</label>
-                <textarea id="recommend-book-reason" name="reason"></textarea>
-                <input type="hidden" name="pic"/>
+
+                <textarea id="recommend-book-reason" name="comment"></textarea><br/>
+                这是一本？<input type="radio" checked="checked" name="type" value="textbook" />教材
+                <input type="radio" name="type" value="reference" />参考书
+                <input type="radio" name="type" value="expand" />拓展阅读
+                <input type="hidden" name="thumbnail_url" />
+                <input type="hidden" name="course_id" value="{$course->id}" />
             </form>
             <div id="book-recommend-douban" class="fl">
-                <img src="http://img4.douban.com/mpic/s26653858.jpg" class="fl">
-                <img src="http://img4.douban.com/mpic/s26653858.jpg" class="fl">
-                <img src="http://img4.douban.com/mpic/s26653858.jpg" class="fl">
-                <img src="http://img4.douban.com/mpic/s26653858.jpg" class="fl">
+                <img src="" class="fl none" />
             </div>
 
         </div>
@@ -179,17 +182,25 @@
             $('.star-on').css('width', $(this).data('num') * 20 + "%");
             return true;
         }).mouseout(function () {
-                    init_star();
-                    return true;
-                }).click(function () {
-                    $.post('/course/setScore?course_id=' + $('#course-intro').attr('course_id') + '&score=' + $(this).data('num'), function (data) {
-                        if (data.code == 200) {
-                            $('#course-intro-rating').data('rating', parseInt(data.data));
-                        } else {
-                            alert(data);
-                        }
-                    }, 'json');
-                });
+
+            init_star();
+            return true;
+        }).click(function(){
+            if ($("#course-intro").attr('user_id') == 0) {
+                $.WJ('notify', {
+                    title:"请先登录",
+                    content:"此操作需要登录，是不是还没有<a href='/login'>登录</a>？"
+                })
+                return false;
+            }
+            $.post('/course/setScore?course_id='+$('#course-intro').attr('course_id')+'&score='+$(this).data('num'), function (data) {
+                if (data.code == 200) {
+                    $('#course-intro-rating').data('rating',parseInt(data.data)) ;
+                } else {
+                    alert(data);
+                }
+            }, 'json');
+        });
 
         $(document).ready(function () {
             init_star();
@@ -199,7 +210,7 @@
             if ($("#course-intro").attr('user_id') == 0) {
                 $.WJ('notify', {
                     title:"请先登录",
-                    content:"要关注该课程，您需要先点此<a href='/login'>登录</a>"
+                    content:"此操作需要登录，是不是还没有<a href='/login'>登录</a>？"
                 })
                 return false;
             }
@@ -228,23 +239,108 @@
 
         });
     });
-    require(['jquery', 'bootstrap/modal', 'form'], function () {
 
-        $('#recommend-book-form .save').ajaxForm({
-            dataType:'json',
-            success:function (data) {
-                if (data['code'] == 200) {
-                    parent.location.reload();
-                } else {
-                    $.WJ('notty', {
-                        content:data['data'],
-                        title:'推荐失败'
-                    })
-                }
-            },
-            beforeSubmit:function () {
-                $('#recommend-book-form').modal('hide')
+    require(['jquery','bootstrap/modal'], function () {
+        $('#recommend-link').click(function () {
+            if ($("#course-intro").attr('user_id') == 0) {
+                $.WJ('notify', {
+                    title:"请先登录",
+                    content:"此操作需要登录，是不是还没有<a href='/login'>登录</a>？"
+                })
+                return false;
             }
+            $('#recommend-link-form').modal();
+        });
+        $('#recommend-book').click(function () {
+            if ($("#course-intro").attr('user_id') == 0) {
+                $.WJ('notify', {
+                    title:"请先登录",
+                    content:"此操作需要登录，是不是还没有<a href='/login'>登录</a>？"
+                })
+                return false;
+            }
+            $('#recommend-book-form').modal();
+        });
+        require(['form'], function () {
+            $('#recommend-link-form form').ajaxForm({
+                dataType:'json',
+                success:function (data) {
+                    if (data['code'] == 200) {
+                        $('#course-link').append($(data['data']));
+                    } else {
+                        alert('推荐失败');
+                        $.WJ('notty', {
+                            content:data['data'],
+                            title:'推荐失败'
+                        })
+                    }
+                },
+                beforeSubmit:function () {
+                    $('#recommend-link-form').modal('hide')
+                }
+            });
+
+            $('#recommend-link-form .save').click(function(){
+                url = $('#recommend-link-form input[name="url"]').val();
+                {literal}
+                var strRegex = "^((https|http|ftp|rtsp|mms)://)[a-z0-9A-Z]{3}\.[a-z0-9A-Z][a-z0-9A-Z]{0,61}?[a-z0-9A-Z]\.com|net|cn|cc (:s[0-9]{1-4})?/$";
+                {/literal}
+                var re = new RegExp(strRegex);
+                if(!re.test(url)){
+                    $.WJ('notify', {
+                        title:"链接弄错了？",
+                        content:"链接要求填写完整的有效路径"
+                    })
+                    return false;
+                }
+                $('#recommend-link-form form').submit();
+            });
+
+            $('#recommend-book-form form').ajaxForm({
+                dataType:'json',
+                success:function (data) {
+                    if (data['code'] == 200) {
+                        parent.location.reload();
+                    } else {
+                        $.WJ('notty', {
+                            content:data['data'],
+                            title:'推荐失败'
+                        })
+                    }
+                },
+                beforeSubmit:function () {
+                    $('#recommend-book-form').modal('hide')
+                }
+            });
+
+            $('#recommend-book-form .save').click(function(){
+                $('#recommend-book-form form').submit();
+            });
+
+            $('#recommend-book-form input[name="name"]').focusout(function(){
+                var val = $(this).val();
+                if(val.length!=0){
+                    $.post('/courseBook/getBookInfo?name=' + val, function (data) {
+                        $('#book-recommend-douban').children().not('.none').remove();
+                        for (var i in data){
+                            if(i==0){
+                                $('#recommend-book-form input[name="url"]').val(data[i].url);
+                                $('#recommend-book-form input[name="author"]').val(data[i].author);
+                                $('#recommend-book-form input[name="thumbnail_url"]').val(data[i].thumbnail_url);
+                            }
+                            var newNode = $('#book-recommend-douban').find('.none').clone().removeClass('none')
+                            newNode.attr('src',data[i].thumbnail_url).data('name',data[i].name).data('url',data[i].url).data('thumbnail_url',data[i].thumbnail_url).data('author',data[i].author);
+                            $('#book-recommend-douban').append(newNode);
+                        }
+                    }, 'json')
+                }
+            });
+
+            $('#book-recommend-douban').on('click','img',function(){
+                $('#recommend-book-form input[name="url"]').val($(this).data('url'));
+                $('#recommend-book-form input[name="author"]').val($(this).data('author'));
+                $('#recommend-book-form input[name="thumbnail_url"]').val($(this).data('thumbnail_url'));
+            });
         });
     });
 </script>

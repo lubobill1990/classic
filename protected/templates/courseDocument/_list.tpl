@@ -80,6 +80,13 @@
             })
         });
         $('#course_document_upload').click(function () {
+            if ($("#course-intro").attr('user_id') == 0) {
+                $.WJ('notify', {
+                    title:"请先登录",
+                    content:"此操作需要登录，是不是还没有<a href='/login'>登录</a>？"
+                })
+                return false;
+            }
             $.WJ('fileupload', function (data) {
                 $('#document_title_form_tmpl').WJ('jSmartFetch', {
                     data:data,

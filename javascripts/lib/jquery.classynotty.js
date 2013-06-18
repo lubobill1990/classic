@@ -36,7 +36,7 @@
             }
         });
         hide.addClass("hide");
-        hide.html("Hide notification");
+        hide.html("我知道了");
         if (settings.img != undefined) {
             image = $("<div>", {
                 style:"background: url('" + settings.img + "')"

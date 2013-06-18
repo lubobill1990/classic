@@ -89,7 +89,7 @@ class CourseBookController extends Controller
                 unset($_POST['class_id']);
             }
         }
-        $course_book->attributes = array_merge($_POST, array('user_id' => Yii::app()->uesr->id));
+        $course_book->attributes = array_merge($_POST, array('user_id' => Yii::app()->user->id));
         if ($course_book->save()) {
             AjaxResponse::success();
         } else {

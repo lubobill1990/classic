@@ -177,3 +177,15 @@ body{
   }
 }
 
+.back-to-top{
+  left: 1200px;position: fixed;bottom: -20px;display: block;z-index: 9999;
+
+  &:hover{
+    background: #37a;
+
+    a{
+      color: #fff;
+    }
+  }
+}
+
