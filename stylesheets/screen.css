@@ -1294,6 +1294,23 @@ body #footer #footer-right li a {
   cursor: pointer;
 }
 
+/* line 1, ../sass/partials/_pagination.scss */
+.pagination {
+  font: 14px/150% Arial,Helvetica,sans-serif;
+  text-align: center;
+  margin: 20px 0;
+  line-height: 150%;
+}
+/* line 6, ../sass/partials/_pagination.scss */
+.pagination span, .pagination a {
+  padding: 0 4px;
+  margin: 2px;
+}
+/* line 13, ../sass/partials/_pagination.scss */
+.pagination .current {
+  color: #AAAAAA;
+}
+
 /*
  * jQuery ClassyNotty
  * http://www.class.pm/projects/jquery/classynotty

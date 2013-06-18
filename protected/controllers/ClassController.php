@@ -16,12 +16,20 @@ class ClassController extends Controller
         }
         $this->setPageTitle($class->course->name,'课程');
 
-        $document_list = CourseDocument::model()->findAllByAttributes(array("class_id" => $id));
+        $document_list = $class->courseDocuments(array('with'=>'user'));
         $classes = $class->major->classes(
             array('alias'=>'c52',
                 'condition'=>"c52.grade=$class->grade AND c52.term=$class->term AND c52.id<>$class->id",
 //                'order'=>'c52.credit DESC'
             ));
-        $this->smarty->renderAll('view', array('class' => $class, 'documents' => $document_list, 'other_classes' => $classes));
+        $resources = $class->courseResources(array('with' => 'user', 'limit' => Pagination::$items_per_page_map['courseResource']));
+
+        $this->smarty->renderAll('view', array(
+            'class' => $class,
+            'documents' => $document_list,
+            'other_classes' => $classes,
+            'resources'=>$resources,
+            'resource_items_per_page'=>Pagination::$items_per_page_map['courseResource'],
+        ));
     }
 }

@@ -15,6 +15,7 @@
  * @property CourseCategory $cat
  * @property CourseDocument[] $courseDocuments
  * @property CourseResource[] $courseResources
+ * @property int $courseResourceCount
  * @property CourseTag[] $courseTags
  * @property User[] $users
  * @property CourseBook[] $courseBooks
@@ -71,8 +72,9 @@ class Course extends CActiveRecord
             'cat' => array(self::BELONGS_TO, 'CourseCategory', 'category'),
             'courseDocuments' => array(self::HAS_MANY, 'CourseDocument', 'course_id','order'=>'create_time ASC'),
             'courseResources' => array(self::HAS_MANY, 'CourseResource', 'course_id','order'=>'create_time ASC'),
+            'courseResourceCount'=>array(self::STAT,'CourseResource','course_id','select'=>"COUNT(*)"),
             'courseBooks' => array(self::HAS_MANY, 'CourseBook', 'course_id'),
-            'textBooks' => array(self::HAS_MANY, 'CourseBook', 'course_id','condition'=>""),
+            'textBooks' => array(self::HAS_MANY, 'CourseBook', 'course_id','condition'=>"type='textbook'"),
             'courseTags' => array(self::MANY_MANY, 'CourseTag', 'course_tag_map(course_id, tag_id)'),
             'users' => array(self::MANY_MANY, 'User', 'follow_course(course_id, user_id)'),
             'averageScore' => array(self::STAT, 'CourseScore', 'course_id', 'select' => 'AVG(score)',),

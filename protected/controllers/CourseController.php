@@ -34,9 +34,16 @@ class CourseController extends Controller
             throw new CHttpException(404);
         }
         $this->setPageTitle($course->name, '课程');
-        $document_list = $course->courseDocuments(array('with'=>'user'));
-        $resources=$course->courseResources(array('with'=>'user'));
-        $this->smarty->render('view', array('course' => $course, 'documents' => $document_list,'resources'=>$resources));
+        $document_list = $course->courseDocuments(array('with' => 'user'));
+        $resources = $course->courseResources(array('with' => 'user', 'limit' => Pagination::$items_per_page_map['courseResource']));
+        $books = $course->courseBooks(array('with' => 'user'));
+        $this->smarty->render('view', array(
+            'course' => $course,
+            'documents' => $document_list,
+            'resources' => $resources,
+            'books' => $books,
+            'resource_items_per_page'=>Pagination::$items_per_page_map['courseResource']
+        ));
     }
 
     public function actionSearch()
@@ -115,9 +122,9 @@ class CourseController extends Controller
         );
         if ($course_score->save()) {
             $course->score = $course->averageScore;
-            if($course->save()){
+            if ($course->save()) {
                 AjaxResponse::success($course->score);
-            }else{
+            } else {
                 AjaxResponse::saveError($course->errors);
             }
         }
@@ -127,12 +134,12 @@ class CourseController extends Controller
 
     public function actionRecommendBook()
     {
-        $course_book=new CourseBook();
-        $course_book->attributes=$_POST;
-        $course_book->user_id=Yii::app()->user->id;
-        if($course_book->save()){
+        $course_book = new CourseBook();
+        $course_book->attributes = $_POST;
+        $course_book->user_id = Yii::app()->user->id;
+        if ($course_book->save()) {
             AjaxResponse::success();
-        }else{
+        } else {
             AjaxResponse::saveError($course_book->errors);
         }
     }
