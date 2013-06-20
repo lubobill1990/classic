@@ -44,7 +44,8 @@ $('.slide-prev').click(function(){
 $('.slide-next').click(function(){
     var current_prompt = $('.slide-prompt').find('.current');
     var current_num = current_prompt.data('number');
-    if(current_num<3){
+//    console.log($('.slide-prompt ').length);
+    if(current_num<$('.slide-prompt li').length-1){
         //更新右上角提示符
         current_prompt.removeClass('current');
         current_prompt.next().addClass('current');
@@ -57,7 +58,7 @@ $('.slide-next').click(function(){
     //重置按钮
     $('.slide-next').removeClass('off');
     $('.slide-prev').removeClass('off');
-    if(current_num>=2){
+    if(current_num>=$('.slide-prompt li').length-2){
         $(this).addClass('off');
     }
 });

@@ -112,6 +112,16 @@
         li{
           display: inline-block;cursor: pointer;position: relative;height: 100%;width: 125px;
 
+          &:nth-child(3),&:nth-child(4){
+            .slide-popup{
+              left: -240px;
+
+              .slide-popup-left{
+                background: url("../../images/common/slide-popup-right.png") no-repeat center;left: 240px;
+              }
+            }
+          }
+
           img{
             width: 113px;height: 148px;margin-left: 6px;margin-right: 6px;
           }
