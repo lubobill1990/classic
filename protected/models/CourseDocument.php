@@ -49,7 +49,8 @@ class CourseDocument extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('file_id, course_id, title', 'required'),
+            array('title, description', 'filter', 'filter' => array(Yii::app()->htmlPurifier, 'purify')),
+            array('file_id, course_id, title', 'required'),
 			array('user_id, file_id, course_id, class_id, teacher_id', 'length', 'max'=>10),
 			array('title', 'length', 'max'=>255),
 			array('description', 'safe'),
@@ -70,7 +71,7 @@ class CourseDocument extends CActiveRecord
 			'file' => array(self::BELONGS_TO, 'UploadFile', 'file_id'),
 			'user' => array(self::BELONGS_TO, 'User', 'user_id'),
 			'course' => array(self::BELONGS_TO, 'Course', 'course_id'),
-			'class' => array(self::BELONGS_TO, 'Class', 'class_id'),
+			'class' => array(self::BELONGS_TO, 'ActualClass', 'class_id'),
 			'teacher' => array(self::BELONGS_TO, 'Teacher', 'teacher_id'),
 		);
 	}

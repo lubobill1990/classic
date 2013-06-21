@@ -27,6 +27,7 @@ class SiteController extends Controller
      */
     public function actionIndex()
     {
+        $this->setPageTitle('首页');
         // renders the view file 'protected/views/site/index.php'
         // using the default layout 'protected/views/layouts/main.php'
         $this->smarty->render('index');
@@ -37,6 +38,7 @@ class SiteController extends Controller
      */
     public function actionError()
     {
+        $this->setPageTitle('找不到页面');
 
         $this->smarty->render('error');
     }
@@ -64,16 +66,5 @@ class SiteController extends Controller
         }
         $this->render('contact', array('model' => $model));
     }
-
-
-    /**
-     * Logs out the current user and redirect to homepage.
-     */
-    public function actionLogout()
-    {
-        Yii::app()->user->logout();
-        $this->redirect(Yii::app()->homeUrl);
-    }
-
 
 }

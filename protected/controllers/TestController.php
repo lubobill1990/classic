@@ -10,6 +10,7 @@ class TestController extends Controller
 {
     function actionIndex()
     {
-        var_dump(explode(" ",' '));
+        $type = 'Teacher';
+        var_dump($type::model());
     }
 }

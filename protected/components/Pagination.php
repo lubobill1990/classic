@@ -9,7 +9,7 @@
 class Pagination
 {
     public static $items_per_page_map=array(
-        'member_list'=>10,
+        'courseResource'=>7,
         'comment'=>4,
         'article_slot'=>5,
         'article_list'=>20,

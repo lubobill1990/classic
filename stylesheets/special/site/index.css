@@ -3,9 +3,10 @@
   font-size: 14px;
   color: #369;
   margin-bottom: 8px;
+  display: inline-block;
 }
-/* line 11, ../../../sass/special/site/index.scss */
-#index-courses ul li h3 .index-courses-subject-decorator {
+/* line 12, ../../../sass/special/site/index.scss */
+#index-courses ul li .index-courses-subject-decorator {
   width: 5px;
   height: 5px;
   background: #c0cdc0;
@@ -100,7 +101,7 @@
 
 /* line 61, ../../../sass/special/site/index.scss */
 #index-login {
-  padding: 22px 34px;
+  padding: 26px 34px;
   background: #f3f3f3;
   -webkit-box-shadow: 0 0 1px #888888;
   -moz-box-shadow: 0 0 1px #888888;

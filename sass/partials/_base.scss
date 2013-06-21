@@ -1,0 +1,118 @@
+// Here is where you can define your constants for your application and to configure the blueprint framework.
+// Feel free to delete these if you want keep the defaults:
+
+$blueprint-grid-columns: 24;
+$blueprint-container-size: 950px;
+$blueprint-grid-margin: 10px;
+
+// Use this to calculate the width based on the total width.
+// Or you can set $blueprint-grid-width to a fixed value and unset $blueprint-container-size -- it will be calculated for you.
+$blueprint-grid-width: ($blueprint-container-size + $blueprint-grid-margin) / $blueprint-grid-columns - $blueprint-grid-margin;
+body {
+  font: 12px Helvetica, Arial, sans-serif;
+}
+
+.fleft {
+  float: left;
+}
+
+.fright {
+  float: right;
+}
+.container {
+  width: $blueprint-container-size;
+  margin: 0 auto;
+  position: relative;
+}
+
+#page_header {
+  height: 48px;
+  width: 100%;
+  z-index: 20;
+  color: #d5d5d5;
+  height: 28px;
+  background-color: #545652;
+  min-width: 950px;
+  a:active, a:link, a:visited {
+    color: #d5d5d5;
+  }
+  a:hover {
+    color: #ffffff;
+  }
+  .top-nav-profile {
+    min-width: 120px;
+    position: absolute;
+    right: 0;
+    top: 1px;
+    z-index: 10;
+  }
+  .top-nav-profile {
+
+  }
+  .top-nav-info {
+    float: right;
+    margin: 0 12px 0 0;
+    line-height: 28px;
+    a {
+      display: inline-block;
+      zoom: 1;
+      margin: 0;
+      padding: 0 12px;
+      height: 28px;
+    }
+  }
+  .global-nav-items {
+    font-size: 0;
+    a {
+      display: inline-block;
+      zoom: 1;
+      padding: 0 12px;
+      height: 28px;
+    }
+  }
+  ul {
+    list-style-type: none;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+  li {
+    display: inline-block;
+    zoom: 1;
+    line-height: 28px;
+    font-size: 12px;
+    vertical-align: baseline;
+  }
+}
+
+#page_wrapper {
+  margin-top: 10px;
+  min-height: 400px;
+}
+
+#page_footer {
+  a {
+    color: #669;
+    text-decoration: none;
+  }
+  .container {
+    border-top: 1px solid #CCCCCC;
+    padding: 20px 15px;
+
+    color: #999;
+    padding-top: 6px;
+    margin-top: 40px;
+    overflow: hidden;
+    zoom: 1;
+    border-top: 1px dashed #ddd;
+  }
+}
+
+.zg-left {
+  float: left;
+}
+
+a {
+  text-decoration: none;
+}
+

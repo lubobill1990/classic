@@ -42,7 +42,8 @@ class Message extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('from_user_id, user_id', 'required'),
+            array('content, ', 'filter', 'filter' => array(Yii::app()->htmlPurifier, 'purify')),
+            array('from_user_id, user_id', 'required'),
 			array('from_user_id, user_id', 'length', 'max'=>11),
 			array('has_read', 'length', 'max'=>3),
 			array('content', 'length', 'max'=>255),

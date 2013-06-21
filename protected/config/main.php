@@ -7,7 +7,7 @@
 // CWebApplication properties can be configured here.
 return array(
     'basePath' => dirname(__FILE__) . DIRECTORY_SEPARATOR . '..',
-    'name' => 'client of real-time server',
+    'name' => 'ClassIC',
     'homeUrl' => '/',
     // preloading 'log' component
     'preload' => array('log'),
@@ -24,7 +24,8 @@ return array(
             // If removed, Gii defaults to localhost only. Edit carefully to taste.
             'ipFilters' => array('127.0.0.1', '*'),
         ),
-        'feedback'
+        'feedback',
+        'admin',
     ),
 
     // application components
@@ -53,6 +54,9 @@ return array(
             'smtpPort' => 25,
             'fromName' => "Real-time Server"
         ),
+        'dom'=>array(
+            'class'=>'ext.simple-html-dom.CSimpleHtmlDom'
+        ),
         'request' => array(
             'baseUrl' => '',
         ),
@@ -64,16 +68,17 @@ return array(
                 'login' => 'User/login',
                 'logout' => 'User/logout',
                 'account/activate' => "User/activate",
+                'account/resend_activate_code' => "User/resendActivateCode",
                 'account/retrieve_password' => 'User/retrievePassword',
                 'account/reset_password' => 'User/resetPassword',
                 'account/block' => 'User/block',
                 'rts_authorize_url' => "RTS/authorize",
                 'rts_get_user_id' => 'RTS/getUserId',
 
+                '<controller:\w+>/<id:\d+>' => '<controller>/view',
                 '<module:\w+>/<controller:\w+>/<action:\w+>' => '<module>/<controller>/<action>',
                 '<module:\w+>/<controller:\w+>' => '<module>/<controller>/index',
                 '<module:\w+>' => '<module>/default/index',
-                '<controller:\w+>/<id:\d+>' => '<controller>/view',
                 '<controller:\w+>/<action:\w+>/<id:\d+>' => '<controller>/<action>',
                 '<controller:\w+>/<action:\w+>' => '<controller>/<action>',
                 '<controller:\w+>' => '<controller>/index',
@@ -98,6 +103,9 @@ return array(
 //                array('host' => '127.0.0.1', 'port' => 11211),
 //            ),
 //        ),
+        'htmlPurifier' => array(
+            'class' => 'system.web.widgets.CHtmlPurifier'
+        ),
         'fileUpload' => array(
             'class' => 'ext.jQueryFileUpload.JQueryFileUpload',
             'upload_dir' => realpath(dirname(__FILE__) . '/../../upload') . '/',
@@ -133,7 +141,7 @@ return array(
         'adminEmail' => 'lubobill1990@163.com',
         'useRedis' => false,
         'page_title' => array(
-            'default' => 'RTS-Client'
+            'default' => 'ClassIC'
         ),
         'feedback' => array(
             'short_comment_content_length' => 60

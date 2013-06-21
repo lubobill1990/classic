@@ -1,1 +1,3 @@
-{$message}
+{block name=left}
+    {$message}
+{/block}

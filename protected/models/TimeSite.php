@@ -68,7 +68,7 @@ class TimeSite extends CActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
-			'class' => array(self::BELONGS_TO, 'Class', 'class_id'),
+			'class' => array(self::BELONGS_TO, 'ActualClass', 'class_id'),
 		);
 	}
 
@@ -121,4 +121,9 @@ class TimeSite extends CActiveRecord
 			'criteria'=>$criteria,
 		));
 	}
+
+    public function getTimeString(){
+
+        return Common::dayOfWeek($this->day_of_week)." {$this->begin_time}-{$this->end_time}节";
+    }
 }

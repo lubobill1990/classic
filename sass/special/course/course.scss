@@ -2,7 +2,7 @@
 @import "compass/css3";
 
 #course-intro{
-  margin-top: 32px;
+  margin-top: 32px;margin-bottom: 40px;
 
   #course-intro-edit{
     color: #ababab;margin-bottom: 22px;margin-top: 4px;
@@ -12,7 +12,7 @@
     }
   }
 
-  #course-intro-follow{
+  #course-intro-follow,#course-intro-unfollow{
     width: 100px;margin-bottom: 22px;
   }
 
@@ -34,31 +34,110 @@
   }
 
   #course-intro-rating{
-    color: #787878;padding: 5px 0;
+    color: #787878;
 
     .star{
-      width: 20px;height: 17px;background: url("../../../images/common/star-off.png") no-repeat center;display: inline-block;
-      position: relative;top: 2px;cursor: pointer;
+      width: 100px;height: 17px; position: relative;top: 2px;cursor: pointer;display: inline-block;
+
+      .star-off{
+        background: url("../../../images/common/star-off.png") no-repeat center;width: 100%;height: 100%;display: inline-block;
+        position: absolute;
+      }
+
+      .star-on{
+        background: url("../../../images/common/star-on.png") no-repeat ;width: 0% ;height: 100%;display: inline-block;
+        position: absolute;
+      }
+
+      .star-select{
+        position: absolute;width: 100px;height: 100%;
+
+        span{
+          width: 18px;height: 20px;display: inline-block;margin-left: -1px;
+        }
+      }
     }
 
-    .star-on{
-      background: url("../../../images/common/star-on.png") no-repeat center;
-    }
+
 
     .star:nth-child(1){
       margin-left: 10px;
     }
   }
+
+  .btn1{
+    margin-left: 5px;
+  }
+}
+
+#course-book{
+  .btn2{
+    margin-left: 18px;margin-top: -2px;
+  }
+}
+
+#course-resource{
+  margin-bottom: 60px;
+
+  .btn2{
+    margin-left: 18px;margin-top: -2px;
+  }
+}
+
+#course-link{
+  margin-bottom: 60px;
+
+  .btn2{
+    margin-left: 18px;margin-top: -2px;
+  }
+
+  .item{
+    height: 56px;padding: 4px 16px;padding-top: 16px;border-bottom: 1px dotted #e5e5e5;
+
+    p:nth-child(1){
+      line-height: 24px;
+
+      .item-1{
+        display: inline;color: #444;
+      }
+
+      a{
+        margin-left: 12px;margin-right: 38px;
+      }
+
+      .item-2{
+        color: #ba7d25 ;margin-right: 34px;
+      }
+    }
+
+    p:nth-child(2){
+      line-height: 24px;color: #787878;padding-left: 46px;
+
+      a{
+        margin-right: 16px;
+      }
+    }
+  }
 }
 
 #course-class{
+  margin-left: 60px;
+
   ul{
-    li{
+    .course-class-item{
       border-bottom: 1px dotted #e5e5e5;color: #aeaeae;line-height: 24px;
 
       a{
         margin-right: 10px;
       }
     }
+  }
+}
+
+#book-recommend-douban{
+  margin-left: 20px;width: 280px;
+
+  img{
+    width: 112px;height: 170px;margin-right: 20px;margin-bottom: 10px;cursor: pointer;
   }
 }

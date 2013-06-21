@@ -1,1 +1,3 @@
-{$error}
+{block name=left}
+    {$error}
+{/block}

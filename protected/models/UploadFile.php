@@ -47,6 +47,7 @@ class UploadFile extends CActiveRecord
         // NOTE: you should only define rules for those attributes that
         // will receive user inputs.
         return array(
+            array('title, description, name', 'filter', 'filter' => array(Yii::app()->htmlPurifier, 'purify')),
 //			array('path, name', 'required'),
             array('size', 'numerical', 'integerOnly' => true),
             array('user_id', 'length', 'max' => 10),

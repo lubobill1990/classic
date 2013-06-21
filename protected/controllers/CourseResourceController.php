@@ -2,8 +2,8 @@
 /**
  * Created by JetBrains PhpStorm.
  * User: 勃
- * Date: 13-5-30
- * Time: 下午2:38
+ * Date: 13-6-8
+ * Time: 下午10:54
  * To change this template use File | Settings | File Templates.
  */
 class CourseResourceController extends Controller
@@ -11,94 +11,87 @@ class CourseResourceController extends Controller
     public function filters()
     {
         return array(
-            'accessControl'
+            'accessControl',
+            'postOnly+recommend,delete',
+            'ajaxOnly+recommend,delete'
         );
     }
 
     public function accessRules()
     {
         return array(
-            array('allow',
-                'actions' => array('test', 'list', 'html', 'groupList')
+            array(
+                'allow',
+                'actions' => array('list'),
+                'users' => array("*")
             ),
-            array('allow',
-                'actions' => array('index', 'delete', 'modify'),
-                'users' => array('@')
+            array(
+                'allow',
+                'actions' => array('recommend', 'delete'),
+                'users' => array("@")
             ),
             array(
                 'deny',
-                'users' => array('*')
+                'users' => array("*")
             )
         );
     }
 
-    protected function getList($options)
+    /**
+     * page_no should be in the $_REQUEST, or it will be regarded as 0
+     * @param $id
+     * @param string $category
+     */
+    public function actionList($id,$type='course', $category = 'all')
     {
-        $count = 0;
-        $or = ' ';
-        $sql = "SELECT file_id FROM " . UploadFileGroup::model()->tableName() . " WHERE ";
-        $query_data = array();
-
-        if (isset($options['course_id']) && !empty($options['course_id'])) {
-            $count++;
-            $sql .= "{$or} (subject_type='course' AND subject_id=:course_id) ";
-            $or = 'OR';
-            $query_data['course_id'] = $options['course_id'];
+        if(!in_array($type,array('course','class'))){
+            return;
         }
-        if (isset($options['teacher_id']) && !empty($options['teacher_id'])) {
-            $count++;
-            $sql .= "{$or} (subject_type='teacher' AND subject_id=:teacher_id) ";
-            $or = 'OR';
-            $query_data['teacher_id'] = $options['teacher_id'];
-        }
-        if (isset($options['major_id']) && !empty($options['major_id'])) {
-            $count++;
-            $sql .= "{$or} (subject_type='major' AND subject_id=:major_id) ";
-            $or = 'OR';
-            $query_data['major_id'] = $options['major_id'];
-        }
-
-        $sql .= " GROUP BY file_id HAVING count(*)='{$count}'";
-        $full_sql = "SELECT * FROM upload_file AS t1 INNER JOIN ({$sql}) AS t2 ON t2.file_id=t1.id";
-        $res = Yii::app()->db->createCommand($full_sql)->query($query_data)->readAll();
-        $ret_val=array();
-        foreach ($res as &$file) {
-            $file_obj=new UploadFile();
-            $file_obj->attributes=$file;
-            if (empty($file_obj->title)) {
-                $file_obj->title = $file_obj->name;
-            }
-            $ret_val[]=$file_obj;
-        }
-        return $ret_val;
+        $pagination_param=Pagination::getParamsFromRequest('courseResource',$_REQUEST);
+        $resources=CourseResource::model()->findAll(array(
+            'limit' => $pagination_param['items_per_page'],
+            'offset' => $pagination_param['start'],
+            'condition'=>"{$type}_id=:cid",
+            'params'=>array(':cid'=>$id),
+            'order'=>"create_time ASC"
+        ));
+        $this->smarty->render('list',array('resources'=>$resources));
     }
 
-    public function actionModify($file_id)
+    /**
+     * required key/value in post
+     * course_id
+     * title
+     * description
+     * url
+     * category(video,link)
+     */
+    public function actionRecommend()
     {
-        $file = UploadFile::model()->findByPk($file_id);
-        if (empty($file)) {
-            AjaxResponse::resourceNotFound();
+        $course_resource = new CourseResource();
+        $course_resource->attributes = array_merge($_POST, array(
+            'user_id' => Yii::app()->user->id,
+        ));
+        if ($course_resource->save()) {
+            AjaxResponse::success($this->smarty->fetchString('item', array('resource' => $course_resource)));
+        } else {
+            AjaxResponse::success($course_resource->errors);
         }
-        if ($file->user_id != Yii::app()->user->id) {
-            AjaxResponse::forbidden();
+    }
+
+    /**
+     * required key/value in post
+     * id
+     */
+    public function actionDelete()
+    {
+        if (!$this->requireValues($_POST, "id")) {
+            AjaxResponse::missParam("id in post is required");
         }
-        if (!isset($_REQUEST['title'])) {
-            AjaxResponse::missParam();
-        }
-        $file->title = $_REQUEST['title'];
-        $file->description = isset($_REQUEST['description']) ? $_REQUEST['description'] : '';
-        if ($file->save()) {
+        if (CourseResource::model()->deleteByPk($_POST['id'], "user_id=:u", array('u' => Yii::app()->user->id))) {
             AjaxResponse::success();
         } else {
-            AjaxResponse::saveError($file->errors);
+            AjaxResponse::resourceNotFound();
         }
-
-    }
-
-    public function actionList()
-    {
-        $files = $this->getList($_REQUEST);
-
-        $this->smarty->renderAll('list', array('files' => $files));
     }
 }

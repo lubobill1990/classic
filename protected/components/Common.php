@@ -3,8 +3,18 @@
 
 class Common
 {
-    public static $npeasyPostSecret = "5199DED1ECBBF664AD4376306FD45F19";
-
+    private static $day_of_week=array(
+        1=>'周一',
+        2=>'周二',
+        3=>'周三',
+        4=>'周四',
+        5=>'周五',
+        6=>'周六',
+        7=>'周日',
+    );
+    public static function dayOfWeek($num){
+        return self::$day_of_week[$num];
+    }
     public static function requireRequests($fields)
     {
         foreach ($fields as $field) {
@@ -170,10 +180,21 @@ class Common
         return strftime("%Y-%m-%d %H:%M:%S");
     }
 
+    public static function getClassName($subject_type){
+        $tmp=explode('_',$subject_type);
+        $subject_class='';
+        foreach($tmp as $word){
+            if(empty($word)){
+                continue;
+            }
+            $subject_class.=ucfirst($word);
+        }
+        return $subject_class;
+    }
+
     public static function getSubjectObject($subject_type, $subject_id)
     {
-        //TODO 更多的判断
-        $subject_class = ucfirst($subject_type);
+        $subject_class=self::getClassName($subject_type);
         if (!class_exists($subject_class)) {
             throw new Exception("class $subject_class not exists");
         }
@@ -470,6 +491,7 @@ class Common
 
 
     }
+
 }
 
 ?>

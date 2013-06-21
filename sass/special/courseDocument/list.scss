@@ -1,0 +1,62 @@
+@import "settings";
+@import "partials/file_upload";
+
+.modal-container{
+  @import "bootstrap";
+}
+.table-container{
+  @import "foundation/components/tables";
+}
+.upload-toolbar {
+  .tool_bar_wrap{
+    float:right;
+  }
+
+  .mysearch_wrap{
+    float:right;margin-right: 10px;
+  }
+  form{
+    float:right;
+  }
+}
+#subject_docs{
+  @import "foundation/components/global"; // *always required
+  @import "foundation/components/buttons";
+  .file-icon {
+    float: left;
+    img{
+      width:27px;
+      height:27px;
+    }
+  }
+  .file-intro{
+    margin-left: 37px;;
+
+    .title{
+      top: 8px;position: relative;
+    }
+  }
+
+  .file-tool{
+    display: inline;
+  }
+
+    a{
+      margin-right: 6px;
+    }
+
+  table{
+    width:600px;
+    thead{
+      .name{
+        width:200px;
+      }
+    }
+  }
+}
+
+.modal-header{
+  h3{
+    color: #444;font-family: "SimSun";font-weight: normal;font-size: 16px;
+  }
+}

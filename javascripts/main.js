@@ -46,7 +46,8 @@ requirejs.config({
         'jquery.ui.widget':'lib/jquery.ui.widget',
         'load-image':'fileupload/load-image',
         'canvas-to-blob':'fileupload/canvas-to-blob',
-        'components':'common/components'
+        'components':'common/components',
+        notty:'lib/jquery.classynotty'
     },
     shim:{
         components:{
@@ -110,6 +111,7 @@ requirejs.config({
 });
 require(['jquery'],
     function () {
+        var jSmartTemplateCache = [];
         (function ($) {
             function init_upload_form(options, callback) {
                 require(['fileupload', 'bootstrap/modal'], function () {
@@ -150,11 +152,24 @@ require(['jquery'],
                         })
                     finish_button.click(function () {
                         callback(uploaded_files);
-                        uploaded_files=[];
+                        uploaded_files = [];
                         this_div.modal('hide');
+                        $(this).parents('.modal-footer').siblings('.modal-body').find('tbody.files').html('')
                     })
                     finish_button.attr("disabled", true);
-
+                    $(document).on('click', 'form.fileupload .delete',function () {
+                        var this_delete_button = $(this);
+                        var file_id = this_delete_button.parents('tr').attr('file_id')
+                        for (var i = 0; i < uploaded_files.length; ++i) {
+                            if (uploaded_files[i].id == file_id) {
+                                delete uploaded_files[i];
+                            }
+                        }
+                        this_delete_button.parents('tr').remove();
+                    }).on('click', ".cancel-all-uploads", function () {
+                            uploaded_files = [];
+                            $(this).parents('.modal-footer').siblings('.modal-body').find('tbody.files').html('')
+                        })
                 })
 
             }
@@ -189,7 +204,7 @@ require(['jquery'],
                 },
                 imageupload:function (callback, options) {
                     var default_options = {
-                        maxChunkSize: 1500000, // 10 MB
+                        maxChunkSize:1500000, // 10 MB
                         url:'/image/create',
                         modal_id:'image_upload_modal',
                         get_template_url:'/image/html'
@@ -228,16 +243,34 @@ require(['jquery'],
                     }
 
                     $.WJ('imageupload', callback, opt);
+                },
+                notify:function (opt) {
+                    opt = $.extend({
+                        showTime:false,
+                        timeout:5000,
+                        title:'提醒'
+                    }, opt)
+                    require(['notty'], function () {
+                        $.ClassyNotty(opt);
+                    })
                 }
             }
             var methods = {
                 pagination:function (total_count, items_per_page, pageSelectCallback, opts) {
                     return $.WJ('pagination', $(this), total_count, items_per_page, pageSelectCallback, opts);
                 },
-                fileupload:function (options, callback) {
-                    $(this).modal({
-                        backdrop:false
-                    });
+                jSmartFetch:function (data, callback) {
+                    var this_ele = $(this);
+                    require(['jsmart'], function () {
+                        jSmart.prototype.getTemplate = function (name) {
+                            return $("#" + name).html();
+                        }
+                        var selectorString = this_ele.selector;
+                        if (jSmartTemplateCache[selectorString] == undefined) {
+                            jSmartTemplateCache[selectorString] = new jSmart(this_ele.html())
+                        }
+                        callback(jSmartTemplateCache[selectorString].fetch(data));
+                    })
                 }
 
             }
@@ -264,3 +297,10 @@ require(['jquery'],
 
     }
 )
+require(['jquery'],function(){
+    $(document).ready(function(){
+        $('.captcha-img').click(function(){
+            $(this).attr('src',"/captcha?timestamp=" + new Date().getTime())
+        })
+    })
+})

@@ -8,6 +8,7 @@
 class UserIdentity extends CUserIdentity
 {
     private $user_id;
+    const HAS_NOT_BEEN_ACTIVATED=5;
 
     public function getId()
     {
@@ -34,7 +35,9 @@ class UserIdentity extends CUserIdentity
         } else {
             $this->user_id = $user->id;
 
-            if ($user->authorizePassword($this->password)) {
+            if($user->has_been_activated=='no'){
+                $this->errorCode=self::HAS_NOT_BEEN_ACTIVATED;
+            }elseif ($user->authorizePassword($this->password)) {
                 $this->errorCode = self::ERROR_NONE;
                 $login_log=new LoginLog();
                 $login_log->attributes = array('user_login_id' =>$this->username, 'ip' => Common::getClientIp(), 'is_real_user' => 'yes', 'success' => 'yes');

@@ -1,6 +1,7 @@
 /* line 4, ../../../sass/special/course/course.scss */
 #course-intro {
   margin-top: 32px;
+  margin-bottom: 40px;
 }
 /* line 7, ../../../sass/special/course/course.scss */
 #course-intro #course-intro-edit {
@@ -13,7 +14,7 @@
   margin-left: 8px;
 }
 /* line 15, ../../../sass/special/course/course.scss */
-#course-intro #course-intro-follow {
+#course-intro #course-intro-follow, #course-intro #course-intro-unfollow {
   width: 100px;
   margin-bottom: 22px;
 }
@@ -40,34 +41,141 @@
 /* line 36, ../../../sass/special/course/course.scss */
 #course-intro #course-intro-rating {
   color: #787878;
-  padding: 5px 0;
 }
 /* line 39, ../../../sass/special/course/course.scss */
 #course-intro #course-intro-rating .star {
-  width: 20px;
+  width: 100px;
   height: 17px;
-  background: url("../../../images/common/star-off.png") no-repeat center;
-  display: inline-block;
   position: relative;
   top: 2px;
   cursor: pointer;
+  display: inline-block;
 }
-/* line 44, ../../../sass/special/course/course.scss */
-#course-intro #course-intro-rating .star-on {
-  background: url("../../../images/common/star-on.png") no-repeat center;
+/* line 42, ../../../sass/special/course/course.scss */
+#course-intro #course-intro-rating .star .star-off {
+  background: url("../../../images/common/star-off.png") no-repeat center;
+  width: 100%;
+  height: 100%;
+  display: inline-block;
+  position: absolute;
 }
-/* line 48, ../../../sass/special/course/course.scss */
+/* line 47, ../../../sass/special/course/course.scss */
+#course-intro #course-intro-rating .star .star-on {
+  background: url("../../../images/common/star-on.png") no-repeat;
+  width: 0%;
+  height: 100%;
+  display: inline-block;
+  position: absolute;
+}
+/* line 52, ../../../sass/special/course/course.scss */
+#course-intro #course-intro-rating .star .star-select {
+  position: absolute;
+  width: 100px;
+  height: 100%;
+}
+/* line 55, ../../../sass/special/course/course.scss */
+#course-intro #course-intro-rating .star .star-select span {
+  width: 18px;
+  height: 20px;
+  display: inline-block;
+  margin-left: -1px;
+}
+/* line 63, ../../../sass/special/course/course.scss */
 #course-intro #course-intro-rating .star:nth-child(1) {
   margin-left: 10px;
 }
+/* line 68, ../../../sass/special/course/course.scss */
+#course-intro .btn1 {
+  margin-left: 5px;
+}
 
-/* line 56, ../../../sass/special/course/course.scss */
-#course-class ul li {
+/* line 74, ../../../sass/special/course/course.scss */
+#course-book .btn2 {
+  margin-left: 18px;
+  margin-top: -2px;
+}
+
+/* line 79, ../../../sass/special/course/course.scss */
+#course-resource {
+  margin-bottom: 60px;
+}
+/* line 82, ../../../sass/special/course/course.scss */
+#course-resource .btn2 {
+  margin-left: 18px;
+  margin-top: -2px;
+}
+
+/* line 87, ../../../sass/special/course/course.scss */
+#course-link {
+  margin-bottom: 60px;
+}
+/* line 90, ../../../sass/special/course/course.scss */
+#course-link .btn2 {
+  margin-left: 18px;
+  margin-top: -2px;
+}
+/* line 94, ../../../sass/special/course/course.scss */
+#course-link .item {
+  height: 56px;
+  padding: 4px 16px;
+  padding-top: 16px;
+  border-bottom: 1px dotted #e5e5e5;
+}
+/* line 97, ../../../sass/special/course/course.scss */
+#course-link .item p:nth-child(1) {
+  line-height: 24px;
+}
+/* line 100, ../../../sass/special/course/course.scss */
+#course-link .item p:nth-child(1) .item-1 {
+  display: inline;
+  color: #444;
+}
+/* line 104, ../../../sass/special/course/course.scss */
+#course-link .item p:nth-child(1) a {
+  margin-left: 12px;
+  margin-right: 38px;
+}
+/* line 108, ../../../sass/special/course/course.scss */
+#course-link .item p:nth-child(1) .item-2 {
+  color: #ba7d25;
+  margin-right: 34px;
+}
+/* line 113, ../../../sass/special/course/course.scss */
+#course-link .item p:nth-child(2) {
+  line-height: 24px;
+  color: #787878;
+  padding-left: 46px;
+}
+/* line 116, ../../../sass/special/course/course.scss */
+#course-link .item p:nth-child(2) a {
+  margin-right: 16px;
+}
+
+/* line 123, ../../../sass/special/course/course.scss */
+#course-class {
+  margin-left: 60px;
+}
+/* line 127, ../../../sass/special/course/course.scss */
+#course-class ul .course-class-item {
   border-bottom: 1px dotted #e5e5e5;
   color: #aeaeae;
   line-height: 24px;
 }
-/* line 59, ../../../sass/special/course/course.scss */
-#course-class ul li a {
+/* line 130, ../../../sass/special/course/course.scss */
+#course-class ul .course-class-item a {
   margin-right: 10px;
+}
+
+/* line 137, ../../../sass/special/course/course.scss */
+#book-recommend-douban {
+  margin-left: 20px;
+  width: 280px;
+}
+/* line 140, ../../../sass/special/course/course.scss */
+#book-recommend-douban img {
+  width: 112px;
+  height: 170px;
+  margin-right: 20px;
+  margin-bottom: 10px;
+  cursor: pointer;
 }

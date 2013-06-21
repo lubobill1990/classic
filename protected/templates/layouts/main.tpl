@@ -7,15 +7,21 @@
 
     <link rel="stylesheet" href="/stylesheets/screen.css">
     {block name=css}{/block}
+    <script type="text/javascript" src='/javascripts/require.2.1.5.js'></script>
+    <script type="text/javascript" src='/javascripts/main.js'></script>
 </head>
 
 <body>
+
+<div class="back-to-top">
+    <a href="#">&#8593;回顶部</a>
+</div>
 
 <div id="header">
 
     <div id="header-top">
         <div class="w940 bc">
-            <a href="" id="header-top-logo" class="fl"></a>
+            <a href="/" id="header-top-logo" class="fl"></a>
             <ul id="header-top-nav" class="fl">
                 <li>
                     <div id="header-top-nav-hover" class="none"></div>
@@ -118,15 +124,23 @@
                 <li><a href="#">捐赠我们</a></li>
             </ul>
             <div id="header-top-info" class="fr">
-                你好，呵呵呵
+                {if $login_user}
+                    你好，{$login_user->username}
+                    <a href="/logout">退出</a>
+                {else}
+                    <ul>
+                        <li><a href="/login">登录</a></li>
+                        <li><a href="/signup">注册</a></li>
+                    </ul>
+                {/if}
             </div>
         </div>
     </div>
 
     {block name=header_alter}
         <div id="header-normal">
-            <form id="header-normal-search" class="bc">
-                <input type="input" placeholder="发现，探索，学习" id="header-normal-search-input"  />
+            <form id="header-normal-search" class="bc" action="/course/search" method='get'>
+                <input type="input" placeholder="发现，探索，学习" name="keyword" id="header-normal-search-input" {if $search_keyword|default:false}value="{$search_keyword}"{/if}/>
                 <input type="submit" value="" id="header-normal-search-button"/>
             </form>
         </div>
@@ -135,6 +149,7 @@
 </div>
 
 <div id="content" class="w940 bc clearfix">
+    {block name=middle}{/block}
     <div id="content-left" class="fl">{block name=left}{/block}</div>
     <div id="content-right" class="fr">{block name=right}{/block}</div>
 </div>
@@ -153,8 +168,7 @@
     </div>
 </div>
 
-<script type="text/javascript" src='/javascripts/require.2.1.5.js'></script>
-<script type="text/javascript" src='/javascripts/main.js'></script>
+
 <script type="text/javascript">
 require(['jquery','components'], function ($){
     $('#header-top-nav li').eq(0).mouseover(function(){
@@ -170,6 +184,20 @@ require(['jquery','components'], function ($){
     }).mouseout(function(){
         $(this).find('ul').addClass('none');
     });
+
+    {literal}
+    $(window).scroll(function () {
+        if($(window).scrollTop()>1000){
+            if($('.back-to-top').css('bottom')=='-20px'){
+                $('.back-to-top').animate({bottom:"48px"});
+            }
+        }else{
+            if($('.back-to-top').css('bottom')!='-20px'){
+                $('.back-to-top').css({bottom:'-20px'});
+            }
+        }
+    });
+    {/literal}
 });
 </script>
 {block name=js}{/block}

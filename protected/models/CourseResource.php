@@ -14,6 +14,7 @@
  * @property string $detail
  * @property string $title
  * @property string $description
+ * @property string $url
  *
  * The followings are the available model relations:
  * @property Course $course
@@ -49,11 +50,11 @@ class CourseResource extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('course_id, title', 'required'),
+            array('title, description, url, detail', 'filter', 'filter' => array(Yii::app()->htmlPurifier, 'purify')),
+            array('course_id, title', 'required'),
 			array('user_id, course_id, class_id, teacher_id', 'length', 'max'=>10),
 			array('category', 'length', 'max'=>5),
 			array('title', 'length', 'max'=>255),
-			array('detail, description', 'safe'),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
 			array('id, user_id, course_id, class_id, teacher_id, create_time, category, detail, title, description', 'safe', 'on'=>'search'),
@@ -70,7 +71,7 @@ class CourseResource extends CActiveRecord
 		return array(
 			'course' => array(self::BELONGS_TO, 'Course', 'course_id'),
 			'user' => array(self::BELONGS_TO, 'User', 'user_id'),
-			'class' => array(self::BELONGS_TO, 'Class', 'class_id'),
+			'class' => array(self::BELONGS_TO, 'ActualClass', 'class_id'),
 			'teacher' => array(self::BELONGS_TO, 'Teacher', 'teacher_id'),
 		);
 	}
@@ -91,6 +92,7 @@ class CourseResource extends CActiveRecord
 			'detail' => 'Detail',
 			'title' => 'Title',
 			'description' => 'Description',
+            'url'=>'URL',
 		);
 	}
 
@@ -114,7 +116,8 @@ class CourseResource extends CActiveRecord
 		$criteria->compare('category',$this->category,true);
 		$criteria->compare('detail',$this->detail,true);
 		$criteria->compare('title',$this->title,true);
-		$criteria->compare('description',$this->description,true);
+        $criteria->compare('description',$this->description,true);
+        $criteria->compare('url',$this->description,true);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,
