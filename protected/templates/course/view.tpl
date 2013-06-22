@@ -28,9 +28,9 @@
 <div id="course-intro" class="clearfix" course_id="{$course->id}" user_id="{$login_user->id|default:0}">
     <h1 class="fl">{$course->name}</h1>
 
-    <p class="fr" id="course-intro-edit">信息有误?<a>点此编辑</a></p>
+    {*<p class="fr" id="course-intro-edit">信息有误?<a>点此编辑</a></p>*}
     {$course_textbook_cover=$course->textBooks[0]|default:false}
-    <img src="{$course_textbook_cover->thumbnail_url|default:''}" id="course-intro-cover" class="fl cl"/>
+    <img src="{$textbooks[0]->thumbnail_url|default:'/images/common/default.png'}" id="course-intro-cover" class="fl cl"/>
 
     <div id="course-intro-detail" class="fl">
         {if $course->classes|count==1}
@@ -83,7 +83,7 @@
             </span>
         </span>
     </p>
-    <a class="btn1 cl fl">给它换个封面</a>
+    {*<a class="btn1 cl fl">给它换个封面</a>*}
 </div>
 
 <div id="course-book">
@@ -112,6 +112,31 @@
 <div id="course-link">
 {include file="file:[0]courseResource/container.tpl" id=$course->id type="course" count=$course->courseResourceCount items_per_page=$resource_items_per_page}
 </div>
+    <div class="modal-container">
+        <div id="recommend-link-form" class="modal hide fade">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h3>推荐链接</h3>
+            </div>
+            <div class="modal-body">
+                <form action="/courseResource/recommend" method="post">
+                    <label for="recommend-link-name">链接名称</label>
+                    <input type="text" id="recommend-link-name" name="title"/>
+                    <label for="recommend-link-url">链接地址</label>
+                    <input type="text" id="recommend-link-url" name="url"/>
+                    <label for="recommend-link-reason">推荐理由</label>
+                    <textarea id="recommend-link-reason" name="description"></textarea>
+                    <br/><br/>
+                    这是一个？<input type="radio" checked="checked" name="category" value="video"/>视频
+                    <input type="radio" name="category" value="link"/>其他
+                    <input type="hidden" name="course_id" value="{$course->id}"/>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <a class="btn btn-primary save">保存</a>
+            </div>
+        </div>
+    </div>
 {/block}
 
 {block name=right}
@@ -266,7 +291,7 @@
                 dataType:'json',
                 success:function (data) {
                     if (data['code'] == 200) {
-                        $('#course-link').append($(data['data']));
+                        $('#course_resource_list').append($(data['data']));
                     } else {
                         alert('推荐失败');
                         $.WJ('notty', {
@@ -289,7 +314,7 @@
                 if(!re.test(url)){
                     $.WJ('notify', {
                         title:"链接弄错了？",
-                        content:"链接要求填写完整的有效路径"
+                        content:"请填写完整有效的路径"
                     })
                     return false;
                 }

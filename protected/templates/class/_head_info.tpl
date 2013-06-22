@@ -27,5 +27,11 @@
         class="course-intro-detail-right">{$class->course_type}</span></p>
 <p><span class="course-intro-detail-left">学分:</span><span class="course-intro-detail-right">{$class->credit}</span></p>
 <p><span class="course-intro-detail-left">课程网站:</span><span class="course-intro-detail-right">暂无</span></p>
-<p><span class="course-intro-detail-left">教材:</span><span class="course-intro-detail-right"><a>微积分 - 南京大学出版社</a></span>
+<p><span class="course-intro-detail-left">教材:</span><span class="course-intro-detail-right">
+        {if $textbooks}
+        <a target="_blank" href="{$textbooks[0]->url|default:'#'}">{$textbooks[0]->name|default:'暂无'}</a>
+        {else}
+        暂无
+        {/if}
+    </span>
 </p>

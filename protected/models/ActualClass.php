@@ -76,6 +76,7 @@ class ActualClass extends CActiveRecord
 			'courseDocuments' => array(self::HAS_MANY, 'CourseDocument', 'class_id'),
 			'courseResources' => array(self::HAS_MANY, 'CourseResource', 'class_id'),
             'courseBooks' => array(self::HAS_MANY, 'CourseBook', 'class_id'),
+            'textBooks' => array(self::HAS_MANY, 'CourseBook', 'class_id','condition'=>"type='textbook'"),
             'courseResourceCount'=>array(self::STAT,'CourseResource','class_id','select'=>"COUNT(*)"),
 			'teachers' => array(self::MANY_MANY, 'Teacher', 'teaching(class_id, teacher_id)'),
 			'timeSites' => array(self::HAS_MANY, 'TimeSite', 'class_id'),

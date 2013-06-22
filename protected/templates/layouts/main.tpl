@@ -120,8 +120,8 @@
                         <div id="header-top-nav-subnav-footer"></div>
                     </ul>
                 </li>
-                <li><a href="#">二手市场</a></li>
-                <li><a href="#">捐赠我们</a></li>
+                {*<li><a href="#">二手市场</a></li>*}
+                {*<li><a href="#">捐赠我们</a></li>*}
             </ul>
             <div id="header-top-info" class="fr">
                 {if $login_user}
@@ -140,7 +140,7 @@
     {block name=header_alter}
         <div id="header-normal">
             <form id="header-normal-search" class="bc" action="/course/search" method='get'>
-                <input type="input" placeholder="发现，探索，学习" name="keyword" id="header-normal-search-input" {if $search_keyword|default:false}value="{$search_keyword}"{/if}/>
+                <input type="input" placeholder="发现你的课程" name="keyword" id="header-normal-search-input" {if $search_keyword|default:false}value="{$search_keyword}"{/if}/>
                 <input type="submit" value="" id="header-normal-search-button"/>
             </form>
         </div>
@@ -157,12 +157,10 @@
 <div id="footer" class="w960 bc">
     <div class="w940 bc">
 
-        <p id="footer-left" class="fl">版权信息</p>
+        <p id="footer-left" class="fl">©    2000-2013    lilystudio  all rights reserved </p>
 
         <ul id="footer-right" class="fr">
-            <li><a href="#">FAQ</a></li>
-            <li><a href="#">关于我们</a></li>
-            <li><a href="#">捐赠ClassIC</a></li>
+            <li><a href="http://wiki.lilystudio.org/">关于我们</a></li>
         </ul>
 
     </div>

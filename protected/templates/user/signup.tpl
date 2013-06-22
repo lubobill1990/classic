@@ -5,7 +5,7 @@
 
 {block name=middle}
     <div class="bc" id="user-main">
-        <h2>欢迎加入Classic</h2>
+        <h2>欢迎加入ClassIC</h2>
         <div id="user-cloud"></div>
         <form class="user-form" action="" method="post" id='signup_form''>
             <div class="form-item">

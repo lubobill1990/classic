@@ -4,7 +4,7 @@
 
 {block name=middle}
     <div class="bc" id="user-main">
-        <h2>登陆Classic</h2>
+        <h2>登陆ClassIC</h2>
         <div id="user-cloud"></div>
         <form class="user-form" action="" method="post" id='login_form'>
             <input type="hidden" name="return_url" value="{$return_url}">

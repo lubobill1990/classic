@@ -1,5 +1,5 @@
 <div class="item clearfix">
-    <img src="" class="fl"/>
+    <img src="/images/common/default.png" class="fl"/>
 
     <div class="item-detail" class="fl">
         <h2><a target="_blank" href="/course/{$course->id}">{$course->name}</a></h2>

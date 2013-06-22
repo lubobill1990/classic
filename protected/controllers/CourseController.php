@@ -42,6 +42,7 @@ class CourseController extends Controller
             'documents' => $document_list,
             'resources' => $resources,
             'books' => $books,
+            'textbooks'=>$course->textBooks,
             'resource_items_per_page'=>Pagination::$items_per_page_map['courseResource']
         ));
     }

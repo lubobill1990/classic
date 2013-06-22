@@ -1,3 +1,9 @@
+$('document').ready(function(){
+    console.log("喜欢ClassIC，还是发现我们的代码写的太匆忙好多bug？不妨一起来为ClassIC添砖加瓦吧！");
+    console.log("http://wiki.lilystudio.org/");
+});
+
+
 //面包屑
 $('.crumb li').mouseover(function(){
     $(this).find('.crumb-li-hover').removeClass('none');
@@ -20,8 +26,11 @@ $('.slide-popup').mouseover(function(){
 }).mouseout(function(){
     return false;
 });
-
+var sliding = 0;
 $('.slide-prev').click(function(){
+    if(sliding){
+        return true;
+    }
     var current_prompt = $('.slide-prompt').find('.current');
     var current_num = current_prompt.data('number');
     if(current_num>0){
@@ -31,7 +40,10 @@ $('.slide-prev').click(function(){
 
         //移动ul
         var offset = parseInt($('.slide-ul-wrapper').css('left').replace('px',''))+509;
-        $('.slide-ul-wrapper').animate({'left':offset+"px"});
+        sliding = 1;
+        $('.slide-ul-wrapper').animate({'left':offset+"px"},function(){
+            sliding = 0;
+        });
     }
 
     //重置按钮
@@ -42,6 +54,9 @@ $('.slide-prev').click(function(){
     }
 });
 $('.slide-next').click(function(){
+    if(sliding){
+        return true;
+    }
     var current_prompt = $('.slide-prompt').find('.current');
     var current_num = current_prompt.data('number');
 //    console.log($('.slide-prompt ').length);
@@ -52,7 +67,10 @@ $('.slide-next').click(function(){
 
         //移动ul
         var offset = parseInt($('.slide-ul-wrapper').css('left').replace('px',''))-509;
-        $('.slide-ul-wrapper').animate({'left':offset+"px"});
+        sliding =1;
+        $('.slide-ul-wrapper').animate({'left':offset+"px"},function(){
+            sliding = 0;
+        });
     }
 
     //重置按钮
