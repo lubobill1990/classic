@@ -312,18 +312,18 @@
             });
 
             $('#recommend-link-form .save').click(function(){
-                url = $('#recommend-link-form input[name="url"]').val();
-                {literal}
-                var strRegex = "^((https|http|ftp|rtsp|mms)://)[a-z0-9A-Z]{3}\.[a-z0-9A-Z][a-z0-9A-Z]{0,61}?[a-z0-9A-Z]\.com|net|cn|cc (:s[0-9]{1-4})?/$";
-                {/literal}
-                var re = new RegExp(strRegex);
-                if(!re.test(url)){
-                    $.WJ('notify', {
-                        title:"链接弄错了？",
-                        content:"请填写完整有效的路径"
-                    })
-                    return false;
-                }
+                {*url = $('#recommend-link-form input[name="url"]').val();*}
+                {*{literal}*}
+                {*var strRegex = "^((https|http|ftp|rtsp|mms)://)[a-z0-9A-Z]{3}\.[a-z0-9A-Z][a-z0-9A-Z]{0,61}?[a-z0-9A-Z]\.com|net|cn|cc (:s[0-9]{1-4})?/$";*}
+                {*{/literal}*}
+                {*var re = new RegExp(strRegex);*}
+                {*if(!re.test(url)){*}
+                    {*$.WJ('notify', {*}
+                        {*title:"链接弄错了？",*}
+                        {*content:"请填写完整有效的路径"*}
+                    {*})*}
+                    {*return false;*}
+                {*}*}
                 $('#recommend-link-form form').submit();
             });
 
