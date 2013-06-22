@@ -30,6 +30,12 @@ class Controller extends CController
 
         $this->smarty->assign('login_user', Yii::app()->user->user);
         $this->smarty->assign('YiiApp', Yii::app());
+        $categories = CourseCategory::model()->findAll();
+        foreach($categories as $category){
+            $category->courses=array_slice($category->courses(),0,14);
+        }
+//        var_dump($categories[0]->courses());
+        $this->smarty->assign('categories',$categories);
     }
 
     private $_smarty = null;

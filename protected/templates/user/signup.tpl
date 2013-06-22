@@ -43,7 +43,7 @@
                 <span class="validate-error" id="frm_error" {if $error['captcha']|default:false}style="display: inline;"{/if}>请输入正确的验证码</span>
             </div>
 
-            <input type="submit" value="登录" id="user-submit" class="btn" />
+            <input type="submit" value="注册" id="user-submit" class="btn" />
         </form>
     </div>
 {/block}

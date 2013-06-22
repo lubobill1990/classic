@@ -2,7 +2,7 @@
 #index-courses ul li h3 {
   font-size: 14px;
   color: #369;
-  margin-bottom: 8px;
+  margin-bottom: 16px;
   display: inline-block;
 }
 /* line 12, ../../../sass/special/site/index.scss */
@@ -31,8 +31,8 @@
 }
 /* line 20, ../../../sass/special/site/index.scss */
 #index-courses ul li table td {
-  width: 120px;
-  height: 34px;
+  width: 150px;
+  height: 32px;
   padding: 2px;
   text-align: center;
   border: 1px solid #f2f2f2;
@@ -44,7 +44,7 @@
   display: inline-block;
   width: 100%;
   height: 100%;
-  line-height: 34px;
+  line-height: 32px;
 }
 /* line 26, ../../../sass/special/site/index.scss */
 #index-courses ul li table td a:hover {
@@ -98,8 +98,24 @@
 #index-courses ul li:nth-child(6) table {
   border-color: #12967e;
 }
+/* line 59, ../../../sass/special/site/index.scss */
+#index-courses ul li:nth-child(7) a:hover {
+  background: #2e7720;
+}
+/* line 60, ../../../sass/special/site/index.scss */
+#index-courses ul li:nth-child(7) table {
+  border-color: #2e7720;
+}
+/* line 63, ../../../sass/special/site/index.scss */
+#index-courses ul li:nth-child(8) a:hover {
+  background: #933;
+}
+/* line 64, ../../../sass/special/site/index.scss */
+#index-courses ul li:nth-child(8) table {
+  border-color: #933;
+}
 
-/* line 61, ../../../sass/special/site/index.scss */
+/* line 69, ../../../sass/special/site/index.scss */
 #index-login {
   padding: 26px 34px;
   background: #f3f3f3;
@@ -107,7 +123,7 @@
   -moz-box-shadow: 0 0 1px #888888;
   box-shadow: 0 0 1px #888888;
 }
-/* line 64, ../../../sass/special/site/index.scss */
+/* line 72, ../../../sass/special/site/index.scss */
 #index-login .form-item {
   width: 230px;
   height: 34px;
@@ -124,7 +140,7 @@
   -o-border-radius: 2px;
   border-radius: 2px;
 }
-/* line 68, ../../../sass/special/site/index.scss */
+/* line 76, ../../../sass/special/site/index.scss */
 #index-login .form-item label {
   background: #fafafa;
   display: inline-block;
@@ -140,12 +156,12 @@
   font-weight: bold;
   font-family: arial;
 }
-/* line 72, ../../../sass/special/site/index.scss */
+/* line 80, ../../../sass/special/site/index.scss */
 #index-login .form-item .label-focus {
   background: #358227;
   color: #fff;
 }
-/* line 76, ../../../sass/special/site/index.scss */
+/* line 84, ../../../sass/special/site/index.scss */
 #index-login .form-item input {
   background: #fff;
   outline: none;
@@ -153,7 +169,7 @@
   margin-left: 16px;
   width: 150px;
 }
-/* line 79, ../../../sass/special/site/index.scss */
+/* line 87, ../../../sass/special/site/index.scss */
 #index-login .form-item input:-webkit-autofill {
   -webkit-box-shadow: 0 0 0px 1000px white inset;
   -moz-box-shadow: 0 0 0px 1000px white inset;

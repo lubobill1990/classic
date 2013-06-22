@@ -10,17 +10,20 @@
         <p id="header-index-content-slogan">ClassIC</p>
         <div id="header-index-content-search-wrapper">
             <form action="/course/search" method='get' id="header-index-content-search">
-                <input type="input" placeholder="发现你的课程" name="keyword" id="header-index-content-search-input"  />
+                <input type="text" placeholder="发现你的课程" name="keyword" id="header-index-content-search-input"  />
                 <input type="submit" value="" id="header-index-content-search-button"/>
             </form>
         </div>
-        <p id="header-index-content-detail">正在建设中<a href="#">Register</a></p>
+        <p id="header-index-content-detail">
+            正在建设中...
+            {*<a href="">你的意见</a>*}
+        </p>
     </div>
 </div>
 {/block}
 
 
-{block name=left}
+{block name=middle}
 {*<div id="index-popular">*}
     {*<ul class="fr slide-prompt">*}
         {*<li data-number="0" class="current"></li>*}
@@ -224,158 +227,48 @@
 {*</div>*}
 
 <div id="index-courses">
-    <h2>发现你的课程</h2>
+    <h2>热门课程</h2>
     <ul>
+        {foreach $categories as $category}
         <li class="index-courses-subject">
-            <h3>数理科学</h3>
+            <h3>{$category->name}</h3>
             <div class="index-courses-subject-decorator"></div>
             <div class="index-courses-subject-decorator"></div>
             <div class="index-courses-subject-decorator"></div>
             <table>
+                {$i=0}
                 <tr>
-                    <td><a href="#">数据学</a></td>
-                    <td><a href="#">网络</a></td>
-                    <td><a href="#">软件工程</a></td>
-                    <td><a href="#">硬件</a></td>
-                    <td><a href="#">编程语言</a></td>
+                    {foreach $category.courses as $course}
+                    {if $i!=0&&$i%4==0}
                 </tr>
                 <tr>
-                    <td><a href="#">Linux</a></td>
-                    <td><a href="#">嵌入式</a></td>
-                    <td><a href="#">web开发</a></td>
-                    <td><a href="#">移动开发</a></td>
-                    <td><a href="#">你懂的</a></td>
-                </tr>
-                <tr>
-                    <td><a href="#">Linux</a></td>
-                    <td><a href="#">嵌入式</a></td>
+                    {/if}
+                    <td><a href="/course/{$course->id}/">{$course->name|truncate:11}</a></td>
+                    {$i=$i+1}
+                    {/foreach}
                 </tr>
             </table>
         </li>
-        <li class="index-courses-subject">
-            <h3>数理科学</h3>
-            <div class="index-courses-subject-decorator"></div>
-            <div class="index-courses-subject-decorator"></div>
-            <div class="index-courses-subject-decorator"></div>
-            <table>
-                <tr>
-                    <td><a href="#">数据学</a></td>
-                    <td><a href="#">网络</a></td>
-                    <td><a href="#">软件工程</a></td>
-                    <td><a href="#">硬件</a></td>
-                    <td><a href="#">编程语言</a></td>
-                </tr>
-                <tr>
-                    <td><a href="#">Linux</a></td>
-                    <td><a href="#">嵌入式</a></td>
-                    <td><a href="#">web开发</a></td>
-                    <td><a href="#">移动开发</a></td>
-                    <td><a href="#">你懂的</a></td>
-                </tr>
-                <tr>
-                    <td><a href="#">Linux</a></td>
-                    <td><a href="#">嵌入式</a></td>
-                </tr>
-            </table>
-        </li>
-        <li class="index-courses-subject">
-            <h3>数理科学</h3>
-            <div class="index-courses-subject-decorator"></div>
-            <div class="index-courses-subject-decorator"></div>
-            <div class="index-courses-subject-decorator"></div>
-            <table>
-                <tr>
-                    <td><a href="#">数据学</a></td>
-                    <td><a href="#">网络</a></td>
-                    <td><a href="#">软件工程</a></td>
-                    <td><a href="#">硬件</a></td>
-                    <td><a href="#">编程语言</a></td>
-                </tr>
-                <tr>
-                    <td><a href="#">Linux</a></td>
-                    <td><a href="#">嵌入式</a></td>
-                    <td><a href="#">web开发</a></td>
-                    <td><a href="#">移动开发</a></td>
-                    <td><a href="#">你懂的</a></td>
-                </tr>
-                <tr>
-                    <td><a href="#">Linux</a></td>
-                    <td><a href="#">嵌入式</a></td>
-                </tr>
-            </table>
-        </li>
-        <li class="index-courses-subject">
-            <h3>数理科学</h3>
-            <div class="index-courses-subject-decorator"></div>
-            <div class="index-courses-subject-decorator"></div>
-            <div class="index-courses-subject-decorator"></div>
-            <table>
-                <tr>
-                    <td><a href="#">数据学</a></td>
-                    <td><a href="#">网络</a></td>
-                    <td><a href="#">软件工程</a></td>
-                    <td><a href="#">硬件</a></td>
-                    <td><a href="#">编程语言</a></td>
-                </tr>
-                <tr>
-                    <td><a href="#">Linux</a></td>
-                    <td><a href="#">嵌入式</a></td>
-                    <td><a href="#">web开发</a></td>
-                    <td><a href="#">移动开发</a></td>
-                    <td><a href="#">你懂的</a></td>
-                </tr>
-                <tr>
-                    <td><a href="#">Linux</a></td>
-                    <td><a href="#">嵌入式</a></td>
-                </tr>
-            </table>
-        </li>
-        <li class="index-courses-subject">
-            <h3>数理科学</h3>
-            <div class="index-courses-subject-decorator"></div>
-            <div class="index-courses-subject-decorator"></div>
-            <div class="index-courses-subject-decorator"></div>
-            <table>
-                <tr>
-                    <td><a href="#">数据学</a></td>
-                    <td><a href="#">网络</a></td>
-                    <td><a href="#">软件工程</a></td>
-                    <td><a href="#">硬件</a></td>
-                    <td><a href="#">编程语言</a></td>
-                </tr>
-                <tr>
-                    <td><a href="#">Linux</a></td>
-                    <td><a href="#">嵌入式</a></td>
-                    <td><a href="#">web开发</a></td>
-                    <td><a href="#">移动开发</a></td>
-                    <td><a href="#">你懂的</a></td>
-                </tr>
-                <tr>
-                    <td><a href="#">Linux</a></td>
-                    <td><a href="#">嵌入式</a></td>
-                </tr>
-            </table>
-        </li>
+        {/foreach}
     </ul>
-
 </div>
 {/block}
 
-{block name=right}
-{if not $login_user}
-<form id="index-login" class="clearfix" method="post" action="/login">
-    <div class="form-item">
-        <label for="index-login-username">User</label><input type="text" name="LoginForm[username]" id="index-login-username" />
+{*{block name=right}*}
+{*{if not $login_user}*}
+{*<form id="index-login" class="clearfix" method="post" action="/login">*}
+    {*<div class="form-item">*}
+        {*<label for="index-login-username">User</label><input type="text" name="LoginForm[username]" id="index-login-username" />*}
     {*<div class="form-item-clear none"></div>*}
-    </div>
-    <div class="form-item">
-        <label for="index-login-password">Pass</label><input type="password" name="LoginForm[password]" id="index-login-password" />
+    {*</div>*}
+    {*<div class="form-item">*}
+        {*<label for="index-login-password">Pass</label><input type="password" name="LoginForm[password]" id="index-login-password" />*}
     {*<div class="form-item-clear none"></div>*}
-    </div>
-    <input type="submit" value="登录" id="index-login-submit" class="btn fr" />
-</form>
-{/if}
-{/block}
+    {*</div>*}
+    {*<input type="submit" value="登录" id="index-login-submit" class="btn fr" />*}
+{*</form>*}
+{*{/if}*}
+{*{/block}*}
 
 {block name=js}
     <script type="text/javascript">
@@ -395,6 +288,13 @@
                 $(this).prev().val('');
                 return true;
             })*/;
+
+            $('#header-index-content-search').submit(function(){
+                if($(this).find('input[type=text]').val().length==0){
+                    return false;
+                }
+            });
+
         });
     </script>
 {/block}

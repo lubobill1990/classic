@@ -37,7 +37,11 @@ class CourseController extends Controller
         $document_list = $course->courseDocuments(array('with' => 'user'));
         $resources = $course->courseResources(array('with' => 'user', 'limit' => Pagination::$items_per_page_map['courseResource']));
         $books = $course->courseBooks(array('with' => 'user'));
+        $category = $course->cat();
+        $category->courses=array_slice($category->courses(),0,8);
+//        var_dump($id);
         $this->smarty->render('view', array(
+            'categoryT'=>$category,
             'course' => $course,
             'documents' => $document_list,
             'resources' => $resources,
@@ -45,6 +49,7 @@ class CourseController extends Controller
             'textbooks'=>$course->textBooks,
             'resource_items_per_page'=>Pagination::$items_per_page_map['courseResource']
         ));
+//        var_dump($course->name);
     }
 
     public function actionSearch()

@@ -6,18 +6,13 @@
 <ul class="crumb">
     <li>
         <div class="crumb-li-hover none"></div>
-        <a>数理科学<span class="arrow"></span></a>
+        <a>{$categoryT->name}
+            <span class="arrow"></span>
+        </a>
         <ul class="crumb-li-subnav none">
-            <li><a href="#">数据学</a></li>
-            <li><a href="#">编程语言</a></li>
-            <li><a href="#">网络</a></li>
-            <li><a href="#">软件工程</a></li>
-            <li><a href="#">Linux</a></li>
-            <li><a href="#">嵌入式</a></li>
-            <li><a href="#">web开发</a></li>
-            <li><a href="#">移动开发</a></li>
-            <li><a href="#">硬件</a></li>
-            <li><a href="#">你懂的</a></li>
+            {foreach $categoryT->courses as $courseT}
+                <li><a href="/course/{$courseT->id}">{$courseT->name|truncate:12}<a/></li>
+            {/foreach}
             <div class="crumb-li-subnav-footer"></div>
         </ul>
     </li>
@@ -25,7 +20,6 @@
     <li>
         <a href="/course/{$class->course->id}">{$class->course->name}</a>
     </li>
-    <div class="crumb-next">&gt;</div>
 </ul>
 
 <div id="course-intro" class="clearfix"  course_id="{$class->course->id}" user_id="{$login_user->id|default:0}">
@@ -61,6 +55,7 @@
 
     <div id="course-book">
         <div class="clearfix">
+            {if $books|count}
             <ul class="fr slide-prompt">
                 {$book_pages=$books|count}
                 <li data-number="0" class="current"></li>
@@ -68,10 +63,16 @@
                     <li data-number="{$smarty.section.foo.index}"></li>
                 {/section}
             </ul>
+            {/if}
             <h2 class="fl">相关书籍</h2>
             <a class="btn2 fl" id="recommend-book">我来推荐书籍</a>
         </div>
-        {include file="file:[0]courseBook/list.tpl" books=$books}
+
+        {if $books|count}
+            {include file="file:[0]courseBook/list.tpl" books=$books}
+        {else}
+            还没有推荐的书籍，来推荐第一本书吧~
+        {/if}
     </div>
 
 <div id="course-resource">
