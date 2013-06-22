@@ -4,7 +4,7 @@
 </div>
 <div id="course_resource_list">
 {if $resources|count==0}
-<p>还没有资料，来上传第一份资料吧~</p>
+<p id="course_resource_list_dd">还没有资料，来上传第一份资料吧~</p>
     {else}
 {include file="file:[0]courseResource/list.tpl" resources=$resources}
 {/if}
@@ -21,6 +21,7 @@
             $.post('/courseResource/list?id=' + pagi_ele.attr('data-id') + "&type=" + pagi_ele.attr('data-type'), {
                 page_no:index
             }, function (data) {
+
                 $('#course_resource_list').html(data)
             })
         })
