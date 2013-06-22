@@ -27,101 +27,23 @@
                     <div id="header-top-nav-hover" class="none"></div>
                     <a>课程分类<span class="arrow"></span></a>
                     <ul id="header-top-nav-subnav" class="none">
-                        <li>数理科学
+                        {foreach $categories as $category}
+                        <li>
+                            {$category->name}
                             <ul class="none">
-                                <li><a href="#">数据学</a></li>
-                                <li><a href="#">编程语言</a></li>
-                                <li><a href="#">网络</a></li>
-                                <li><a href="#">软件工程</a></li>
-                                <li><a href="#">Linux</a></li>
-                                <li><a href="#">嵌入式</a></li>
-                                <li><a href="#">web开发</a></li>
-                                <li><a href="#">移动开发</a></li>
-                                <li><a href="#">硬件</a></li>
-                                <li><a href="#">你懂的</a></li>
+                                {foreach $category->courses as $courseT}
+                                    <li><a href="/course/{$courseT->id}/">{$courseT->name|truncate:16}</a></li>
+                                {/foreach}
                                 <div class="header-top-nav-subsubnav-footer"></div>
                             </ul>
                         </li>
-                        <li>生命、医学
-                            <ul class="none">
-                                <li><a href="#">数据学</a></li>
-                                <li><a href="#">编程语言</a></li>
-                                <li><a href="#">网络</a></li>
-                                <li><a href="#">软件工程</a></li>
-                                <li><a href="#">Linux</a></li>
-                                <li><a href="#">嵌入式</a></li>
-                                <li><a href="#">web开发</a></li>
-                                <li><a href="#">移动开发</a></li>
-                                <li><a href="#">硬件</a></li>
-                                <li><a href="#">你懂的</a></li>
-                                <div class="header-top-nav-subsubnav-footer"></div>
-                            </ul>
-                        </li>
-                        <li>计算机
-                            <ul class="none">
-                                <li><a href="#">数据学</a></li>
-                                <li><a href="#">编程语言</a></li>
-                                <li><a href="#">网络</a></li>
-                                <li><a href="#">软件工程</a></li>
-                                <li><a href="#">Linux</a></li>
-                                <li><a href="#">嵌入式</a></li>
-                                <li><a href="#">web开发</a></li>
-                                <li><a href="#">移动开发</a></li>
-                                <li><a href="#">硬件</a></li>
-                                <li><a href="#">你懂的</a></li>
-                                <div class="header-top-nav-subsubnav-footer"></div>
-                            </ul>
-                        </li>
-                        <li>经济、管理
-                            <ul class="none">
-                                <li><a href="#">数据学</a></li>
-                                <li><a href="#">编程语言</a></li>
-                                <li><a href="#">网络</a></li>
-                                <li><a href="#">软件工程</a></li>
-                                <li><a href="#">Linux</a></li>
-                                <li><a href="#">嵌入式</a></li>
-                                <li><a href="#">web开发</a></li>
-                                <li><a href="#">移动开发</a></li>
-                                <li><a href="#">硬件</a></li>
-                                <li><a href="#">你懂的</a></li>
-                                <div class="header-top-nav-subsubnav-footer"></div>
-                            </ul>
-                        </li>
-                        <li>工程、材料
-                            <ul class="none">
-                                <li><a href="#">数据学</a></li>
-                                <li><a href="#">编程语言</a></li>
-                                <li><a href="#">网络</a></li>
-                                <li><a href="#">软件工程</a></li>
-                                <li><a href="#">Linux</a></li>
-                                <li><a href="#">嵌入式</a></li>
-                                <li><a href="#">web开发</a></li>
-                                <li><a href="#">移动开发</a></li>
-                                <li><a href="#">硬件</a></li>
-                                <li><a href="#">你懂的</a></li>
-                                <div class="header-top-nav-subsubnav-footer"></div>
-                            </ul>
-                        </li>
-                        <li>文史哲学
-                            <ul class="none">
-                                <li><a href="#">数据学</a></li>
-                                <li><a href="#">编程语言</a></li>
-                                <li><a href="#">网络</a></li>
-                                <li><a href="#">软件工程</a></li>
-                                <li><a href="#">Linux</a></li>
-                                <li><a href="#">嵌入式</a></li>
-                                <li><a href="#">web开发</a></li>
-                                <li><a href="#">移动开发</a></li>
-                                <li><a href="#">硬件</a></li>
-                                <li><a href="#">你懂的</a></li>
-                                <div class="header-top-nav-subsubnav-footer"></div>
-                            </ul>
-                        </li>
+                        {/foreach}
                         <div id="header-top-nav-subnav-footer"></div>
                     </ul>
                 </li>
-                <li><a href="#">二手市场</a></li>
-                <li><a href="#">捐赠我们</a></li>
+                <li><a target="_blank" href="http://wiki.lilystudio.org/pages/viewpage.action?pageId=6783179">我的意见</a></li>
+                {*<li><a href="#">二手市场</a></li>*}
+                {*<li><a href="#">捐赠我们</a></li>*}
             </ul>
             <div id="header-top-info" class="fr">
                 {if $login_user}
@@ -140,7 +62,7 @@
     {block name=header_alter}
         <div id="header-normal">
             <form id="header-normal-search" class="bc" action="/course/search" method='get'>
-                <input type="input" placeholder="发现，探索，学习" name="keyword" id="header-normal-search-input" {if $search_keyword|default:false}value="{$search_keyword}"{/if}/>
+                <input type="text" placeholder="发现你的课程" name="keyword" id="header-normal-search-input" {if $search_keyword|default:false}value="{$search_keyword}"{/if}/>
                 <input type="submit" value="" id="header-normal-search-button"/>
             </form>
         </div>
@@ -149,7 +71,7 @@
 </div>
 
 <div id="content" class="w940 bc clearfix">
-    {block name=middle}{/block}
+    <div class="w600 bc">{block name=middle}{/block}</div>
     <div id="content-left" class="fl">{block name=left}{/block}</div>
     <div id="content-right" class="fr">{block name=right}{/block}</div>
 </div>
@@ -157,12 +79,11 @@
 <div id="footer" class="w960 bc">
     <div class="w940 bc">
 
-        <p id="footer-left" class="fl">版权信息</p>
+        <p id="footer-left" class="fl">©    2000-2013 &nbsp;&nbsp;   LilyStudio.org &nbsp;&nbsp;&nbsp; all rights reserved </p>
 
         <ul id="footer-right" class="fr">
-            <li><a href="#">FAQ</a></li>
-            <li><a href="#">关于我们</a></li>
-            <li><a href="#">捐赠ClassIC</a></li>
+            <li><a target="_blank" href="http://micourse.net/">邻居&nbsp;Micourse</a></li>
+            <li><a target="_blank" href="http://wiki.lilystudio.org/">关于我们</a></li>
         </ul>
 
     </div>
@@ -171,6 +92,12 @@
 
 <script type="text/javascript">
 require(['jquery','components'], function ($){
+    $('#header-normal-search').submit(function(){
+        if($(this).find('input[type=text]').val().length==0){
+            return false;
+        }
+    });
+
     $('#header-top-nav li').eq(0).mouseover(function(){
         $(this).find('#header-top-nav-hover').removeClass('none');
         $(this).find('#header-top-nav-subnav').removeClass('none');

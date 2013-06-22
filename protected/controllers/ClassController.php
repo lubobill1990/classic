@@ -23,12 +23,19 @@ class ClassController extends Controller
 //                'order'=>'c52.credit DESC'
             ));
         $resources = $class->courseResources(array('with' => 'user', 'limit' => Pagination::$items_per_page_map['courseResource']));
-
+        $books=$class->courseBooks(array('with'=>'user'));
+        $books2=$class->course->courseBooks(array('with'=>'user','condition'=>'class_id is NULL'));
+        $books=array_merge($books,$books2);
+        $category=CourseCategory::model()->findByPk($class->course->category);
+        $category->courses=array_slice($category->courses(),0,8);
         $this->smarty->renderAll('view', array(
+            'categoryT' => $category,
             'class' => $class,
             'documents' => $document_list,
             'other_classes' => $classes,
             'resources'=>$resources,
+            'books'=>$books,
+            'textbooks'=>$class->textBooks,
             'resource_items_per_page'=>Pagination::$items_per_page_map['courseResource'],
         ));
     }

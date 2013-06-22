@@ -69,6 +69,14 @@ class CourseResourceController extends Controller
     public function actionRecommend()
     {
         $course_resource = new CourseResource();
+        if(isset($_POST['class_id'])&&!empty($_POST['class_id'])){
+            $class=ActualClass::model()->with('course')->findByPk($_POST['class_id']);
+            if(!empty($class)){
+                $_POST['course_id']=$class->course->id;
+            }else{
+                unset($_POST['class_id']);
+            }
+        }
         $course_resource->attributes = array_merge($_POST, array(
             'user_id' => Yii::app()->user->id,
         ));

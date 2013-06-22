@@ -6,18 +6,13 @@
 <ul class="crumb">
     <li>
         <div class="crumb-li-hover none"></div>
-        <a>数理科学<span class="arrow"></span></a>
+        <a>{$categoryT->name}
+            <span class="arrow"></span>
+        </a>
         <ul class="crumb-li-subnav none">
-            <li><a href="#">数据学</a></li>
-            <li><a href="#">编程语言</a></li>
-            <li><a href="#">网络</a></li>
-            <li><a href="#">软件工程</a></li>
-            <li><a href="#">Linux</a></li>
-            <li><a href="#">嵌入式</a></li>
-            <li><a href="#">web开发</a></li>
-            <li><a href="#">移动开发</a></li>
-            <li><a href="#">硬件</a></li>
-            <li><a href="#">你懂的</a></li>
+            {foreach $categoryT->courses as $courseT}
+                <li><a href="/course/{$courseT->id}">{$courseT->name|truncate:12}<a/></li>
+            {/foreach}
             <div class="crumb-li-subnav-footer"></div>
         </ul>
     </li>
@@ -25,13 +20,12 @@
     <li>
         <a href="/course/{$class->course->id}">{$class->course->name}</a>
     </li>
-    <div class="crumb-next">&gt;</div>
 </ul>
 
 <div id="course-intro" class="clearfix"  course_id="{$class->course->id}" user_id="{$login_user->id|default:0}">
     <h1 class="fl">{$class->course->name}</h1>
-    <p class="fr" id="course-intro-edit">信息有误?<a>点此编辑</a></p>
-    <img src="" id="course-intro-cover" class="fl cl"/>
+    {*<p class="fr" id="course-intro-edit">信息有误?<a>点此编辑</a></p>*}
+    <img src="{$textbooks[0]->thumbnail_url|default:'/images/common/default.png'}" id="course-intro-cover" class="fl cl"/>
     <div id="course-intro-detail" class="fl">
         {include file="file:[0]class/_head_info.tpl"}
     </div>
@@ -56,182 +50,30 @@
             </span>
         </span>
     </p>
-    <a class="btn1 cl fl">给它换个封面</a>
+    {*<a class="btn1 cl fl">给它换个封面</a>*}
 </div>
 
-<div id="course-book">
-    <div class="clearfix">
-        <ul class="fr slide-prompt">
-            <li data-number="0" class="current"></li>
-            <li data-number="1"></li>
-            <li data-number="2"></li>
-            <li data-number="3"></li>
-        </ul>
-        <h2 class="fl">相关书籍</h2>
-        <a class="btn2 fl">我来推荐书籍</a>
-    </div>
-
-    <div class="slide clearfix">
-        <div class="slide-prev off"></div>
-        <div class="slide-next"></div>
-        <div class="slide-main">
-            <div class="slide-ul-wrapper">
-                <ul>
-                    <li>
-                        <img src="" />
-                        <div class="slide-popup none">
-                            <div class="slide-popup-left"></div>
-                            <h6>电动力学（第二版）</h6>
-                            <p>推荐人：释小龙</p>
-                            <p>推荐理由：This is f**king awesome</p>
-                        </div>
-                    </li>
-                    <li>
-                        <img src="" />
-                        <div class="slide-popup none">
-                            <div class="slide-popup-left"></div>
-                            <h6>电动力学（第二版）</h6>
-                            <p>推荐人：释小龙</p>
-                            <p>推荐理由：This is f**king awesome</p>
-                        </div>
-                    </li>
-                    <li>
-                        <img src="" />
-                        <div class="slide-popup slide-popup-toLeft none">
-                            <div class="slide-popup-left"></div>
-                            <h6>电动力学（第二版）</h6>
-                            <p>推荐人：释小龙</p>
-                            <p>推荐理由：This is f**king awesome</p>
-                        </div>
-                    </li>
-                    <li>
-                        <img src="" />
-                        <div class="slide-popup slide-popup-toLeft none">
-                            <div class="slide-popup-left"></div>
-                            <h6>电动力学（第二版）</h6>
-                            <p>推荐人：释小龙</p>
-                            <p>推荐理由：This is f**king awesome</p>
-                        </div>
-                    </li>
-                </ul>
-                <ul>
-                    <li>
-                        <img src="" />
-                        <div class="slide-popup none">
-                            <div class="slide-popup-left"></div>
-                            <h6>电动力学（第二版）</h6>
-                            <p>推荐人：释小龙</p>
-                            <p>推荐理由：This is f**king awesome</p>
-                        </div>
-                    </li>
-                    <li>
-                        <img src="" />
-                        <div class="slide-popup none">
-                            <div class="slide-popup-left"></div>
-                            <h6>电动力学（第二版）</h6>
-                            <p>推荐人：释小龙</p>
-                            <p>推荐理由：This is f**king awesome</p>
-                        </div>
-                    </li>
-                    <li>
-                        <img src="" />
-                        <div class="slide-popup slide-popup-toLeft none">
-                            <div class="slide-popup-left"></div>
-                            <h6>电动力学（第二版）</h6>
-                            <p>推荐人：释小龙</p>
-                            <p>推荐理由：This is f**king awesome</p>
-                        </div>
-                    </li>
-                    <li>
-                        <img src="" />
-                        <div class="slide-popup slide-popup-toLeft none">
-                            <div class="slide-popup-left"></div>
-                            <h6>电动力学（第二版）</h6>
-                            <p>推荐人：释小龙</p>
-                            <p>推荐理由：This is f**king awesome</p>
-                        </div>
-                    </li>
-                </ul>
-                <ul>
-                    <li>
-                        <img src="" />
-                        <div class="slide-popup none">
-                            <div class="slide-popup-left"></div>
-                            <h6>电动力学（第二版）</h6>
-                            <p>推荐人：释小龙</p>
-                            <p>推荐理由：This is f**king awesome</p>
-                        </div>
-                    </li>
-                    <li>
-                        <img src="" />
-                        <div class="slide-popup none">
-                            <div class="slide-popup-left"></div>
-                            <h6>电动力学（第二版）</h6>
-                            <p>推荐人：释小龙</p>
-                            <p>推荐理由：This is f**king awesome</p>
-                        </div>
-                    </li>
-                    <li>
-                        <img src="" />
-                        <div class="slide-popup slide-popup-toLeft none">
-                            <div class="slide-popup-left"></div>
-                            <h6>电动力学（第二版）</h6>
-                            <p>推荐人：释小龙</p>
-                            <p>推荐理由：This is f**king awesome</p>
-                        </div>
-                    </li>
-                    <li>
-                        <img src="" />
-                        <div class="slide-popup slide-popup-toLeft none">
-                            <div class="slide-popup-left"></div>
-                            <h6>电动力学（第二版）</h6>
-                            <p>推荐人：释小龙</p>
-                            <p>推荐理由：This is f**king awesome</p>
-                        </div>
-                    </li>
-                </ul>
-                <ul>
-                    <li>
-                        <img src="" />
-                        <div class="slide-popup none">
-                            <div class="slide-popup-left"></div>
-                            <h6>电动力学（第二版）</h6>
-                            <p>推荐人：释小龙</p>
-                            <p>推荐理由：This is f**king awesome</p>
-                        </div>
-                    </li>
-                    <li>
-                        <img src="" />
-                        <div class="slide-popup none">
-                            <div class="slide-popup-left"></div>
-                            <h6>电动力学（第二版）</h6>
-                            <p>推荐人：释小龙</p>
-                            <p>推荐理由：This is f**king awesome</p>
-                        </div>
-                    </li>
-                    <li>
-                        <img src="" />
-                        <div class="slide-popup slide-popup-toLeft none">
-                            <div class="slide-popup-left"></div>
-                            <h6>电动力学（第二版）</h6>
-                            <p>推荐人：释小龙</p>
-                            <p>推荐理由：This is f**king awesome</p>
-                        </div>
-                    </li>
-                    <li>
-                        <img src="" />
-                        <div class="slide-popup slide-popup-toLeft none">
-                            <div class="slide-popup-left"></div>
-                            <h6>电动力学（第二版）</h6>
-                            <p>推荐人：释小龙</p>
-                            <p>推荐理由：This is f**king awesome</p>
-                        </div>
-                    </li>
-                </ul>
-            </div>
+    <div id="course-book">
+        <div class="clearfix">
+            {if $books|count}
+            <ul class="fr slide-prompt">
+                {$book_pages=$books|count}
+                <li data-number="0" class="current"></li>
+                {section name=foo start=1 loop=$book_pages/4+1}
+                    <li data-number="{$smarty.section.foo.index}"></li>
+                {/section}
+            </ul>
+            {/if}
+            <h2 class="fl">相关书籍</h2>
+            <a class="btn2 fl" id="recommend-book">我来推荐书籍</a>
         </div>
+
+        {if $books|count}
+            {include file="file:[0]courseBook/list.tpl" books=$books}
+        {else}
+            还没有推荐的书籍，来推荐第一本书吧~
+        {/if}
     </div>
-</div>
 
 <div id="course-resource">
     <div class="clearfix">
@@ -244,6 +86,67 @@
 <div id="course-link">
 {include file="file:[0]courseResource/container.tpl" resources=$class->courseResources id=$class->id type="class" count=$class->courseResourceCount items_per_page=$resource_items_per_page}
 </div>
+    <div class="modal-container">
+        <div id="recommend-link-form" class="modal hide fade">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h3>推荐链接</h3>
+            </div>
+            <div class="modal-body">
+                <form action="/courseResource/recommend" method="post">
+                    <label for="recommend-link-name">链接名称</label>
+                    <input type="text" id="recommend-link-name" name="title"/>
+                    <label for="recommend-link-url">链接地址</label>
+                    <input type="text" id="recommend-link-url" name="url"/>
+                    <label for="recommend-link-reason">推荐理由</label>
+                    <textarea id="recommend-link-reason" name="description"></textarea>
+                    <br/><br/>
+                    这是一个？<input type="radio" checked="checked" name="category" value="video"/>视频
+                    <input type="radio" name="category" value="link"/>其他
+                    <input type="hidden" name="class_id" value="{$class->id}"/>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <a class="btn btn-primary save">保存</a>
+            </div>
+        </div>
+    </div>
+    <div class="modal-container">
+        <div id="recommend-book-form" class="modal hide fade">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h3>推荐书籍</h3>
+            </div>
+            <div class="modal-body">
+                <form action="/courseBook/recommend"  method="post" class="fl">
+                    <label for="recommend-book-name">书名</label>
+                    <input type="text" id="recommend-book-name" name="name"/>
+                    <label for="recommend-book-author">作者</label>
+
+                    <input type="text" id="recommend-book-author" name="author" />
+                    {*<label for="recommend-book-isbn">isbn</label>*}
+                    {*<input type="text" id="recommend-book-isbn" name="isbn" />*}
+                    <label for="recommend-book-url">豆瓣链接</label>
+                    <input type="text" id="recommend-book-url" name="url"/>
+                    <label for="recommend-book-reason">推荐理由</label>
+
+                    <textarea id="recommend-book-reason" name="comment"></textarea><br/>
+                    这是一本？<input type="radio" checked="checked" name="type" value="textbook" />教材
+                    <input type="radio" name="type" value="reference" />参考书
+                    <input type="radio" name="type" value="expand" />拓展阅读
+                    <input type="hidden" name="thumbnail_url" />
+                    <input type="hidden" name="class_id" value="{$class->id}" />
+                </form>
+                <div id="book-recommend-douban" class="fl">
+                    <img src="" class="fl none" />
+                </div>
+
+            </div>
+            <div class="modal-footer">
+                <a class="btn btn-primary save">保存</a>
+            </div>
+        </div>
+    </div>
 {/block}
 
 {block name=right}
@@ -321,6 +224,110 @@
                     }
                 }, 'json')
             })
+        });
+
+        require(['jquery','bootstrap/modal'], function () {
+            $('#recommend-link').click(function () {
+                if ($("#course-intro").attr('user_id') == 0) {
+                    $.WJ('notify', {
+                        title:"请先登录",
+                        content:"此操作需要登录，是不是还没有<a href='/login'>登录</a>？"
+                    })
+                    return false;
+                }
+                $('#recommend-link-form').modal();
+            });
+            $('#recommend-book').click(function () {
+                if ($("#course-intro").attr('user_id') == 0) {
+                    $.WJ('notify', {
+                        title:"请先登录",
+                        content:"此操作需要登录，是不是还没有<a href='/login'>登录</a>？"
+                    })
+                    return false;
+                }
+                $('#recommend-book-form').modal();
+            });
+            require(['form'], function () {
+                $('#recommend-link-form form').ajaxForm({
+                    dataType:'json',
+                    success:function (data) {
+                        if (data['code'] == 200) {
+                            $('#course_resource_list').append($(data['data']));
+                        } else {
+                            alert('推荐失败');
+                            $.WJ('notty', {
+                                content:data['data'],
+                                title:'推荐失败'
+                            })
+                        }
+                    },
+                    beforeSubmit:function () {
+                        $('#recommend-link-form').modal('hide')
+                    }
+                });
+
+                $('#recommend-link-form .save').click(function(){
+                    url = $('#recommend-link-form input[name="url"]').val();
+                    {literal}
+                    var strRegex = "^((https|http|ftp|rtsp|mms)://)[a-z0-9A-Z]{3}\.[a-z0-9A-Z][a-z0-9A-Z]{0,61}?[a-z0-9A-Z]\.com|net|cn|cc (:s[0-9]{1-4})?/$";
+                    {/literal}
+                    var re = new RegExp(strRegex);
+                    if(!re.test(url)){
+                        $.WJ('notify', {
+                            title:"链接弄错了？",
+                            content:"链接要求填写完整的有效路径"
+                        })
+                        return false;
+                    }
+                    $('#recommend-link-form form').submit();
+                });
+
+                $('#recommend-book-form form').ajaxForm({
+                    dataType:'json',
+                    success:function (data) {
+                        if (data['code'] == 200) {
+                            parent.location.reload();
+                        } else {
+                            $.WJ('notty', {
+                                content:data['data'],
+                                title:'推荐失败'
+                            })
+                        }
+                    },
+                    beforeSubmit:function () {
+                        $('#recommend-book-form').modal('hide')
+                    }
+                });
+
+                $('#recommend-book-form .save').click(function(){
+                    $('#recommend-book-form form').submit();
+                });
+
+                $('#recommend-book-form input[name="name"]').focusout(function(){
+                    var val = $(this).val();
+                    if(val.length!=0){
+                        $.post('/courseBook/getBookInfo?name=' + val, function (data) {
+                            $('#book-recommend-douban').children().not('.none').remove();
+                            for (var i in data){
+                                if(i==0){
+                                    $('#recommend-book-form input[name="url"]').val(data[i].url);
+                                    $('#recommend-book-form input[name="author"]').val(data[i].author);
+                                    $('#recommend-book-form input[name="thumbnail_url"]').val(data[i].thumbnail_url);
+                                }
+                                var newNode = $('#book-recommend-douban').find('.none').clone().removeClass('none')
+                                newNode.attr('src',data[i].thumbnail_url).data('name',data[i].name).data('url',data[i].url).data('thumbnail_url',data[i].thumbnail_url).data('author',data[i].author);
+                                $('#book-recommend-douban').append(newNode);
+                            }
+                        }, 'json')
+                    }
+                });
+
+                $('#book-recommend-douban').on('click','img',function(){
+                    $('#recommend-book-form input[name="url"]').val($(this).data('url'));
+                    $('#recommend-book-form input[name="author"]').val($(this).data('author'));
+                    $('#recommend-book-form input[name="thumbnail_url"]').val($(this).data('thumbnail_url'));
+                });
+            });
         });
     </script>
 {/block}

@@ -15,8 +15,8 @@
 
 #nottys {
   position: fixed;
-  top: 20px;
-  right: 20px;
+  top: 39px;
+  right: 0px;
   width: 280px;
   z-index: 999;
 }
@@ -84,9 +84,7 @@
 }
 
 #nottys .notty .hide:hover {
-  background: white;
-  background: -webkit-linear-gradient(#fff, rgba(255,255,255,0.9));
-  background: -moz-linear-gradient(0% 100% 90deg, rgba(255, 255, 255, 0.9), #fff);
+  background: rgba(255,255,255,0.8);
   color: #369;
   text-shadow: none;
 }
