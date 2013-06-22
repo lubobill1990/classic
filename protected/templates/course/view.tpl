@@ -296,6 +296,7 @@
                 dataType:'json',
                 success:function (data) {
                     if (data['code'] == 200) {
+                        $('#course_resource_list_dd').remove();
                         $('#course_resource_list').append($(data['data']));
                     } else {
                         alert('推荐失败');

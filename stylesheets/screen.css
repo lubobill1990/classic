@@ -987,7 +987,7 @@ body #header #header-index #header-index-content #header-index-content-detail {
   color: #fff;
 }
 /* line 140, ../sass/common/_common.scss */
-body #header #header-index #header-index-content #header-index-content-detail a {
+body #header #header-index #header-index-content #header-index-content-detail span {
   margin-left: 14px;
   color: #ffff00;
   text-decoration: underline;
