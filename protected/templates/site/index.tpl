@@ -16,7 +16,7 @@
         </div>
         <p id="header-index-content-detail">
             正在建设中...
-            <span>你的意见</span>
+            {*<span>你的意见</span>*}
         </p>
     </div>
 </div>
