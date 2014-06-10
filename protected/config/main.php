@@ -86,10 +86,10 @@ return array(
             ),
         ),
         'db' => array(
-            'connectionString' => 'mysql:host=localhost;dbname=devclassic',
+            'connectionString' => 'mysql:host=localhost;dbname=classic_dev',
             'emulatePrepare' => true,
-            'username' => 'lldev',
-            'password' => 'lilystudio',
+            'username' => 'classic',
+            'password' => 'classicpass',
             'charset' => 'utf8',
         ),
         'redis' => array(
