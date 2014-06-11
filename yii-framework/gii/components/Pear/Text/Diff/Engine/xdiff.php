@@ -42,6 +42,9 @@ class Text_Diff_Engine_xdiff {
          * valid, albeit a little less descriptive and efficient. */
         $edits = array();
         foreach ($diff as $line) {
+            if(empty($line)){
+                continue;
+            }
             switch ($line[0]) {
             case ' ':
                 $edits[] = new Text_Diff_Op_copy(array(substr($line, 1)));
