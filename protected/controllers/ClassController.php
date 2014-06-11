@@ -28,7 +28,7 @@ class ClassController extends Controller
         $books=array_merge($books,$books2);
         $category=CourseCategory::model()->findByPk($class->course->category);
         $category->courses=array_slice($category->courses(),0,8);
-        $this->smarty->renderAll('view', array(
+        $this->render('view', array(
             'categoryT' => $category,
             'class' => $class,
             'documents' => $document_list,

@@ -53,9 +53,9 @@ class CourseResourceController extends Controller
             'offset' => $pagination_param['start'],
             'condition'=>"{$type}_id=:cid",
             'params'=>array(':cid'=>$id),
-            'order'=>"create_time ASC"
+            'order'=>"create_at ASC"
         ));
-        $this->smarty->render('list',array('resources'=>$resources));
+        $this->render('list',array('resources'=>$resources));
     }
 
     /**

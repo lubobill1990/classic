@@ -42,7 +42,7 @@ class Message extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-            array('content, ', 'filter', 'filter' => array(Yii::app()->htmlPurifier, 'purify')),
+            array('content, ', 'filter', 'filter' => array(Common::getHtmlPurifier(), 'purify')),
             array('from_user_id, user_id', 'required'),
 			array('from_user_id, user_id', 'length', 'max'=>11),
 			array('has_read', 'length', 'max'=>3),
@@ -50,7 +50,7 @@ class Message extends CActiveRecord
             array('content','length','min'=>1),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
-			array('id, from_user_id, user_id, create_time, has_read, content', 'safe', 'on'=>'search'),
+			array('id, from_user_id, user_id, create_at, has_read, content', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -75,7 +75,7 @@ class Message extends CActiveRecord
 			'id' => 'ID',
 			'from_user_id' => 'From User',
 			'user_id' => 'User',
-			'create_time' => 'Create Time',
+			'create_at' => 'Create Time',
 			'has_read' => 'Has Read',
 			'content' => 'Content',
 		);
@@ -95,7 +95,7 @@ class Message extends CActiveRecord
 		$criteria->compare('id',$this->id,true);
 		$criteria->compare('from_user_id',$this->from_user_id,true);
 		$criteria->compare('user_id',$this->user_id,true);
-		$criteria->compare('create_time',$this->create_time,true);
+		$criteria->compare('create_at',$this->create_at,true);
 		$criteria->compare('has_read',$this->has_read,true);
 		$criteria->compare('content',$this->content,true);
 
@@ -116,7 +116,7 @@ class Message extends CActiveRecord
             //在此设置双方的最近联系人
             //Common::getRedisClient()->zAdd("message:{$this->from_user_id}:recent", $unix_timestamp, $this->user_id);
             //Common::getRedisClient()->zAdd("message:{$this->user_id}:recent", $unix_timestamp, $this->from_user_id);
-            RTSMessenger::sendMessage($this->from_user_id, $this->user_id, $this->content, $this->create_time);
+            RTSMessenger::sendMessage($this->from_user_id, $this->user_id, $this->content, $this->create_at);
         }
     }
 }

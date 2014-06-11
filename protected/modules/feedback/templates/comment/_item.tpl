@@ -6,7 +6,7 @@
     </div>
     <div class="content">
         <div class="author">
-        {$comment->create_time}
+        {$comment->create_at}
             <a href="{$comment->user->url}">{$comment->user->username}</a>
         {*{if $comment->user->signature|default:false}({$comment->user->signature}){/if}*}
 

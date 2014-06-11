@@ -75,10 +75,10 @@ class Comment extends CActiveRecord
             array('node_level', 'length', 'max' => 10),
             array('is_deleted', 'length', 'max' => 3),
             array('who_delete', 'length', 'max' => 20),
-            array('refer_comment_content, create_time, delete_time', 'safe'),
+            array('refer_comment_content, create_at, delete_time', 'safe'),
             // The following rule is used by search().
             // Please remove those attributes that should not be searched.
-            array('id, subject_type, subject_id, refer_comment_id, user_id, node_level, sub_comment_count, refer_comment_content, content, create_time, is_deleted, delete_time, who_delete, digg_count, bury_count', 'safe', 'on' => 'search'),
+            array('id, subject_type, subject_id, refer_comment_id, user_id, node_level, sub_comment_count, refer_comment_content, content, create_at, is_deleted, delete_time, who_delete, digg_count, bury_count', 'safe', 'on' => 'search'),
         );
     }
 
@@ -111,7 +111,7 @@ class Comment extends CActiveRecord
             'sub_comment_count' => 'Sub Comment Count',
             'refer_comment_content' => 'Refer Comment Content',
             'content' => 'Content',
-            'create_time' => 'Create Time',
+            'create_at' => 'Create Time',
             'is_deleted' => 'Is Deleted',
             'delete_time' => 'Delete Time',
             'who_delete' => 'Who Delete',
@@ -140,7 +140,7 @@ class Comment extends CActiveRecord
         $criteria->compare('sub_comment_count', $this->sub_comment_count);
         $criteria->compare('refer_comment_content', $this->refer_comment_content, true);
         $criteria->compare('content', $this->content, true);
-        $criteria->compare('create_time', $this->create_time, true);
+        $criteria->compare('create_at', $this->create_at, true);
         $criteria->compare('is_deleted', $this->is_deleted, true);
         $criteria->compare('delete_time', $this->delete_time, true);
         $criteria->compare('who_delete', $this->who_delete, true);
@@ -214,7 +214,7 @@ class Comment extends CActiveRecord
         $cmt['comments'] = array();
 
         $c = new CDbCriteria();
-        $c->order = "create_time ${order}";
+        $c->order = "create_at ${order}";
         if (is_null($this->refer_comment_id)) {
             $c->condition = "subject_id = '" . $this->subject_id . "' AND subject_type= '" . $this->subject_type . "' AND refer_comment_id is NULL ";
         } else {

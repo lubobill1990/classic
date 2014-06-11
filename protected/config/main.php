@@ -2,20 +2,42 @@
 
 // uncomment the following to define a path alias
 // Yii::setPathOfAlias('local','path/to/local-folder');
-
+if (!function_exists('getBaseUrl')) {
+    function getBaseUrl()
+    {
+        if (isset($_SERVER['HTTP_HOST'])) {
+            return 'http://' . @$_SERVER['HTTP_HOST'];
+        } else {
+            return "http://classic.lilystudio.org";
+        }
+    }
+}
+global $base_path, $www_path, $base_url;
+$base_path = dirname(dirname(__FILE__));
+$www_path = dirname($base_path);
+$app_name = 'ClassIC - 看课';
+$base_url = getBaseUrl();
 // This is the main Web application configuration. Any writable
 // CWebApplication properties can be configured here.
 return array(
     'basePath' => dirname(__FILE__) . DIRECTORY_SEPARATOR . '..',
-    'name' => 'ClassIC',
+    'name' => $app_name,
     'homeUrl' => '/',
     // preloading 'log' component
     'preload' => array('log'),
 
     // autoloading model and component classes
     'import' => array(
+
+        'application.models.global.*',
+        'application.models.classic.*',
+        'application.models.service.*',
         'application.models.*',
+        'application.forms.*',
         'application.components.*',
+        'ext.giix-components.*', // giix components
+        'application.helpers.*',
+
     ),
     'modules' => array(
         'gii' => array(
@@ -23,24 +45,38 @@ return array(
             'password' => 'pass',
             // If removed, Gii defaults to localhost only. Edit carefully to taste.
             'ipFilters' => array('127.0.0.1', '*'),
+            'generatorPaths' => array(
+                'ext.giix-core', // giix generators
+                'ext.gtc' // a path alias
+            ),
         ),
         'feedback',
         'admin',
     ),
-
+    'aliases' => array(
+        'views' => $base_path . '/views',
+        'yiiext' => $base_path . '/extensions/yiiext',
+    ),
     // application components
     'components' => array(
         'user' => array(
             'class' => 'application.components.WebUser',
-            'loginUrl' => array('/login'),
+            'loginUrl' => array('/signin'),
             // enable cookie-based authentication
             'allowAutoLogin' => true,
         ),
-        'smarty' => array(
-            'class' => 'ext.Smarty.CSmarty',
-            'templateDirs' => array(
-                'ext.feedback' => 'ext.feedback.templates',
-            ),
+        'viewRenderer' => array(
+            'class' => 'application.extensions.yiiext.renderers.smarty.ESmartyViewRenderer',
+            'fileExtension' => '.tpl',
+            'pluginsDir' => 'yiiext.renderers.smarty.plugins',
+            'smartyDir' => 'application.vendor.smarty',
+            //'configDir' => 'application.smartyConfig',
+            //'prefilters' => array(array('MyClass','filterMethod')),
+            //'postfilters' => array(),
+            //'config'=>array(
+            //    'force_compile' => YII_DEBUG,
+            //   ... any Smarty object parameter
+            //)
         ),
         'captcha' => array(
             'class' => 'ext.php-captcha.CPhpCaptcha',
@@ -52,26 +88,32 @@ return array(
             'password' => 'npeasypass',
             'smtpServer' => 'smtp.163.com',
             'smtpPort' => 25,
-            'fromName' => "Real-time Server"
+            'fromName' => $app_name
         ),
-        'dom'=>array(
-            'class'=>'ext.simple-html-dom.CSimpleHtmlDom'
+        'dom' => array(
+            'class' => 'ext.simple-html-dom.CSimpleHtmlDom'
         ),
         'request' => array(
             'baseUrl' => '',
         ),
         'urlManager' => array(
             'urlFormat' => 'path',
+//            'urlSuffix'=>'.html',
+            'showScriptName' => false,
             'rules' => array(
                 'captcha' => "Captcha/index",
-                'signup' => 'User/signup',
-                'login' => 'User/login',
-                'logout' => 'User/logout',
-                'account/activate' => "User/activate",
-                'account/resend_activate_code' => "User/resendActivateCode",
-                'account/retrieve_password' => 'User/retrievePassword',
-                'account/reset_password' => 'User/resetPassword',
-                'account/block' => 'User/block',
+
+                'signup' => 'Account/signup',
+                'login' => 'Account/signin',
+                'signin' => 'Account/signin',
+                'logout' => 'Account/signout',
+                'signout' => 'Account/signout',
+                'account/activate' => "Account/activate",
+
+                'resend-activate-code' => "Account/resendActivateCode",
+                'retrieve-password' => 'Account/retrievePassword',
+                'reset-password' => 'Account/resetPassword',
+                'account/block' => 'Account/block',
                 'rts_authorize_url' => "RTS/authorize",
                 'rts_get_user_id' => 'RTS/getUserId',
 
@@ -137,8 +179,10 @@ return array(
     // application-level parameters that can be accessed
     // using Yii::app()->params['paramName']
     'params' => array(
+        'sendEmail' => true,
         // this is used in contact page
         'adminEmail' => 'lubobill1990@163.com',
+        'activateNeeded' => false,
         'useRedis' => false,
         'page_title' => array(
             'default' => 'ClassIC'

@@ -18,7 +18,7 @@
  * @property UploadFile $file
  * @property User $user
  * @property Course $course
- * @property Class $class
+ * @property ActualClass $class
  * @property Teacher $teacher
  */
 class CourseDocument extends CActiveRecord
@@ -49,14 +49,14 @@ class CourseDocument extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-            array('title, description', 'filter', 'filter' => array(Yii::app()->htmlPurifier, 'purify')),
+            array('title, description', 'filter', 'filter' => array(Common::getHtmlPurifier(), 'purify')),
             array('file_id, course_id, title', 'required'),
 			array('user_id, file_id, course_id, class_id, teacher_id', 'length', 'max'=>10),
 			array('title', 'length', 'max'=>255),
 			array('description', 'safe'),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
-			array('id, user_id, file_id, course_id, class_id, teacher_id, create_time, title, description', 'safe', 'on'=>'search'),
+			array('id, user_id, file_id, course_id, class_id, teacher_id, create_at, title, description', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -88,7 +88,7 @@ class CourseDocument extends CActiveRecord
 			'course_id' => 'Course',
 			'class_id' => 'Class',
 			'teacher_id' => 'Teacher',
-			'create_time' => 'Create Time',
+			'create_at' => 'Create Time',
 			'title' => 'Title',
 			'description' => 'Description',
 		);
@@ -111,7 +111,7 @@ class CourseDocument extends CActiveRecord
 		$criteria->compare('course_id',$this->course_id,true);
 		$criteria->compare('class_id',$this->class_id,true);
 		$criteria->compare('teacher_id',$this->teacher_id,true);
-		$criteria->compare('create_time',$this->create_time,true);
+		$criteria->compare('create_at',$this->create_at,true);
 		$criteria->compare('title',$this->title,true);
 		$criteria->compare('description',$this->description,true);
 

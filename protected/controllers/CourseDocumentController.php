@@ -47,19 +47,19 @@ class CourseDocumentController extends Controller
         ));
 
         $document_list = CourseDocument::model()->findAll($q);
-        $this->smarty->render('table', array('documents' => $document_list));
+        $this->render('table', array('documents' => $document_list));
     }
 
     public function actionGetItemHtml($id)
     {
         $document = CourseDocument::model()->findByPk($id);
-        $this->smarty->render('item', array('doc' => $document));
+        $this->render('item', array('doc' => $document));
     }
 
     public function actionList($type, $id)
     {
         $document_list = CourseDocument::model()->findAllByAttributes(array($type . "_id" => $id));
-        $this->smarty->renderAll('list',
+        $this->render('list',
             array(
                 'documents' => $document_list,
                 'course_or_class' => $type,
@@ -71,7 +71,7 @@ class CourseDocumentController extends Controller
     public function actionTable($type, $id, $page = 1)
     {
         $document_list = CourseDocument::model()->findAllByAttributes(array($type . "_id" => $id));
-        $this->smarty->render('table', array('documents' => $document_list));
+        $this->render('table', array('documents' => $document_list));
     }
 
     /**

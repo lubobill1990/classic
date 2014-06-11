@@ -86,6 +86,6 @@ class LikeController extends Controller
             $user_ids[] = $subject_like->user_id;
         }
         $user_list = User::model()->findAllByAttributes(array('id' => $user_ids), array('select' => array('id', 'email', 'username'),));
-        $this->smarty->render('user/_mini_list.tpl', array('user_list' => $user_list), true, false);
+        $this->render('user/_mini_list.tpl', array('user_list' => $user_list), true, false);
     }
 }

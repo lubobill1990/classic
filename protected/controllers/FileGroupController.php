@@ -99,6 +99,6 @@ class FileGroupController extends Controller
     {
         $files = $this->getList($_REQUEST);
 
-        $this->smarty->renderAll('list', array('files' => $files));
+        $this->render('list', array('files' => $files));
     }
 }

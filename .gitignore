@@ -1,6 +1,9 @@
 .sass-cache
 *.~
 \#*\#
+*.swp
+.idea/
+
 assets
 !assets/README
 
@@ -8,5 +11,6 @@ upload
 !upload/README
 
 protected/runtime/*
+!protected/runtime/README
 
 *.tpl.php

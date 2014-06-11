@@ -47,7 +47,7 @@ class ScoreItem extends CActiveRecord
 			array('score_id, user_id', 'length', 'max'=>11),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
-			array('id, score_id, score, user_id, create_time', 'safe', 'on'=>'search'),
+			array('id, score_id, score, user_id, create_at', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -74,7 +74,7 @@ class ScoreItem extends CActiveRecord
 			'score_id' => 'Score',
 			'score' => 'Score',
 			'user_id' => 'User',
-			'create_time' => 'Create Time',
+			'create_at' => 'Create Time',
 		);
 	}
 
@@ -93,7 +93,7 @@ class ScoreItem extends CActiveRecord
 		$criteria->compare('score_id',$this->score_id,true);
 		$criteria->compare('score',$this->score);
 		$criteria->compare('user_id',$this->user_id,true);
-		$criteria->compare('create_time',$this->create_time,true);
+		$criteria->compare('create_at',$this->create_at,true);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,

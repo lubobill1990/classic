@@ -89,10 +89,10 @@ class ImageController extends Controller
 
     }
     public function actionTest(){
-        $this->smarty->renderAll();
+        $this->render();
     }
     public function actionHtml()
     {
-        $this->smarty->render('html');
+        $this->render('html');
     }
 }

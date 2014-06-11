@@ -40,7 +40,7 @@ class CourseController extends Controller
         $category = $course->cat();
         $category->courses=array_slice($category->courses(),0,8);
 //        var_dump($id);
-        $this->smarty->render('view', array(
+        $this->render('view', array(
             'categoryT'=>$category,
             'course' => $course,
             'documents' => $document_list,
@@ -68,9 +68,9 @@ class CourseController extends Controller
                 'search_keyword' => $_REQUEST['keyword'],
                 'courses' => $courses
             );
-            $this->smarty->render('search', $array);
+            $this->render('search', $array);
         } else {
-            $this->smarty->render('search');
+            $this->render('search');
         }
     }
 

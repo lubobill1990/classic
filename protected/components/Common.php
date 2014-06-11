@@ -100,7 +100,7 @@ class Common
             if ($uia1->user_app_seq != $uia2->user_app_seq) {
                 return $uia2->user_app_seq - $uia1->user_app_seq;
             } else {
-                return $uia1->app->create_time > $uia2->app->create_time;
+                return $uia1->app->create_at > $uia2->app->create_at;
             }
         });
         return $uias;
@@ -492,6 +492,15 @@ class Common
 
     }
 
+    private static $_html_purifier = null;
+
+    public static function getHtmlPurifier()
+    {
+        if (empty(self::$_html_purifier)) {
+            self::$_html_purifier = new CHtmlPurifier();
+        }
+        return self::$_html_purifier;
+    }
 }
 
 ?>

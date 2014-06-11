@@ -43,7 +43,7 @@ class CommentController extends Controller
      */
     public function actionIndex()
     {
-        $this->smarty->render('index.tpl');
+        $this->render('index.tpl');
     }
 
     public function actionShow($id)
@@ -53,7 +53,7 @@ class CommentController extends Controller
         $comment = Comment::model()->findByPk($id);
         $current_comment_with_parent_comments = $comment->bottomUp(2);
         $children_comment_tree = $comment->topDown(3, 3);
-        $this->smarty->renderAll('show.tpl', array(
+        $this->render('show.tpl', array(
             'current_comment_with_parent_comments' => $current_comment_with_parent_comments,
             'children_comment_tree' => $children_comment_tree,
             'current_comment' => $comment,
@@ -66,13 +66,13 @@ class CommentController extends Controller
         $pagination_params = Pagination::getParamsFromRequest('comment', $_REQUEST);
         $comments = Comment::getLatest($subject_type, $subject_id, $pagination_params['start'], $pagination_params['items_per_page']);
         if (Yii::app()->request->isPostRequest) {
-            $this->smarty->render('_list.tpl', array(
+            $this->render('_list.tpl', array(
                 'comments' => $comments,
             ));
             Yii::app()->end();
         }
 
-        $this->smarty->render('_show_list_content.tpl', array(
+        $this->render('_show_list_content.tpl', array(
             'comments' => $comments,
             'comment_items_per_page' => $pagination_params['items_per_page'],
             'comment_count' => Comment::countOfSubject($subject_type,$subject_id),
@@ -142,13 +142,13 @@ class CommentController extends Controller
         $pagination_params = Pagination::getParamsFromRequest('comment', $_REQUEST);
         $comments = Comment::getLatest($subject_type, $subject_id, $pagination_params['start'], $pagination_params['items_per_page']);
         if (Yii::app()->request->isPostRequest) {
-            $this->smarty->render('_list.tpl', array(
+            $this->render('_list.tpl', array(
                 'comments' => $comments,
             ));
             Yii::app()->end();
         }
 
-        $this->smarty->render('list_iframe.tpl', array(
+        $this->render('list_iframe.tpl', array(
             'comments' => $comments,
             'comment_items_per_page' => $pagination_params['items_per_page'],
             'comment_count' => Comment::countOfSubject($subject_type,$subject_id),

@@ -42,7 +42,7 @@ class CourseScore extends CActiveRecord
 			array('course_id, user_id', 'length', 'max'=>10),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
-			array('course_id, user_id, score, create_time', 'safe', 'on'=>'search'),
+			array('course_id, user_id, score, create_at', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -66,7 +66,7 @@ class CourseScore extends CActiveRecord
 			'course_id' => 'Course',
 			'user_id' => 'User',
 			'score' => 'Score',
-			'create_time' => 'Create Time',
+			'create_at' => 'Create Time',
 		);
 	}
 
@@ -84,7 +84,7 @@ class CourseScore extends CActiveRecord
 		$criteria->compare('course_id',$this->course_id,true);
 		$criteria->compare('user_id',$this->user_id,true);
 		$criteria->compare('score',$this->score);
-		$criteria->compare('create_time',$this->create_time,true);
+		$criteria->compare('create_at',$this->create_at,true);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,

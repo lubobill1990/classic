@@ -83,7 +83,7 @@ class FileUploadController extends Controller
 
     public function actionHtml()
     {
-        $this->smarty->render('html');
+        $this->render('html');
     }
 
 

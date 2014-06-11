@@ -19,7 +19,7 @@
  * The followings are the available model relations:
  * @property Course $course
  * @property User $user
- * @property Class $class
+ * @property ActualClass $class
  * @property Teacher $teacher
  */
 class CourseResource extends CActiveRecord
@@ -50,14 +50,14 @@ class CourseResource extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-            array('title, description, url, detail', 'filter', 'filter' => array(Yii::app()->htmlPurifier, 'purify')),
+            array('title, description, url, detail', 'filter', 'filter' => array(Common::getHtmlPurifier(), 'purify')),
             array('course_id, title', 'required'),
 			array('user_id, course_id, class_id, teacher_id', 'length', 'max'=>10),
 			array('category', 'length', 'max'=>5),
 			array('title', 'length', 'max'=>255),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
-			array('id, user_id, course_id, class_id, teacher_id, create_time, category, detail, title, description', 'safe', 'on'=>'search'),
+			array('id, user_id, course_id, class_id, teacher_id, create_at, category, detail, title, description', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -87,7 +87,7 @@ class CourseResource extends CActiveRecord
 			'course_id' => 'Course',
 			'class_id' => 'Class',
 			'teacher_id' => 'Teacher',
-			'create_time' => 'Create Time',
+			'create_at' => 'Create Time',
 			'category' => 'Category',
 			'detail' => 'Detail',
 			'title' => 'Title',
@@ -112,7 +112,7 @@ class CourseResource extends CActiveRecord
 		$criteria->compare('course_id',$this->course_id,true);
 		$criteria->compare('class_id',$this->class_id,true);
 		$criteria->compare('teacher_id',$this->teacher_id,true);
-		$criteria->compare('create_time',$this->create_time,true);
+		$criteria->compare('create_at',$this->create_at,true);
 		$criteria->compare('category',$this->category,true);
 		$criteria->compare('detail',$this->detail,true);
 		$criteria->compare('title',$this->title,true);

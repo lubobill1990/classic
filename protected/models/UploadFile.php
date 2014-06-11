@@ -47,16 +47,16 @@ class UploadFile extends CActiveRecord
         // NOTE: you should only define rules for those attributes that
         // will receive user inputs.
         return array(
-            array('title, description, name', 'filter', 'filter' => array(Yii::app()->htmlPurifier, 'purify')),
+            array('title, description, name', 'filter', 'filter' => array(Common::getHtmlPurifier(), 'purify')),
 //			array('path, name', 'required'),
             array('size', 'numerical', 'integerOnly' => true),
             array('user_id', 'length', 'max' => 10),
             array('path, name, description', 'length', 'max' => 255),
             array('title', 'length', 'max' => 100),
-            array('create_time', 'safe'),
+            array('create_at', 'safe'),
             // The following rule is used by search().
             // Please remove those attributes that should not be searched.
-            array('id, user_id, path, size, name, title, description, create_time', 'safe', 'on' => 'search'),
+            array('id, user_id, path, size, name, title, description, create_at', 'safe', 'on' => 'search'),
         );
     }
 
@@ -88,7 +88,7 @@ class UploadFile extends CActiveRecord
             'name' => 'Name',
             'title' => 'Title',
             'description' => 'Description',
-            'create_time' => 'Create Time',
+            'create_at' => 'Create Time',
         );
     }
 
@@ -110,7 +110,7 @@ class UploadFile extends CActiveRecord
         $criteria->compare('name', $this->name, true);
         $criteria->compare('title', $this->title, true);
         $criteria->compare('description', $this->description, true);
-        $criteria->compare('create_time', $this->create_time, true);
+        $criteria->compare('create_at', $this->create_at, true);
 
         return new CActiveDataProvider($this, array(
             'criteria' => $criteria,
@@ -119,7 +119,7 @@ class UploadFile extends CActiveRecord
 
     public function beforeSave()
     {
-        unset($this->create_time);
+        unset($this->create_at);
         return true;
     }
 

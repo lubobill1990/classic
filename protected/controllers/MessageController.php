@@ -51,8 +51,8 @@ class MessageController extends Controller
 
     public function actionConversation($from_user_id)
     {
-        $sql = "SELECT *,create_time as timestamp FROM (( SELECT * FROM message AS m1 WHERE user_id=:user_id AND from_user_id=:from_user_id ORDER BY create_time DESC LIMIT 5 )" .
-            " UNION (SELECT * FROM message AS m2 WHERE user_id=:user_id2 AND from_user_id=:from_user_id2 ORDER BY create_time DESC LIMIT 5 )) AS m3 ORDER BY create_time ASC";
+        $sql = "SELECT *,create_at as timestamp FROM (( SELECT * FROM message AS m1 WHERE user_id=:user_id AND from_user_id=:from_user_id ORDER BY create_at DESC LIMIT 5 )" .
+            " UNION (SELECT * FROM message AS m2 WHERE user_id=:user_id2 AND from_user_id=:from_user_id2 ORDER BY create_at DESC LIMIT 5 )) AS m3 ORDER BY create_at ASC";
         $result = Yii::app()->db->createCommand($sql)->queryAll(true, array(
             ':user_id' => Yii::app()->user->id,
             ':from_user_id' => $from_user_id,
@@ -72,7 +72,7 @@ class MessageController extends Controller
         $msg->attributes = $_REQUEST;
         $msg->from_user_id = Yii::app()->user->id;
         if ($msg->save()) {
-            AjaxResponse::success($msg->create_time);
+            AjaxResponse::success($msg->create_at);
         }
         AjaxResponse::invalidParam();
     }

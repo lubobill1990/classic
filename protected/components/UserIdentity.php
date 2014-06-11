@@ -8,7 +8,7 @@
 class UserIdentity extends CUserIdentity
 {
     private $user_id;
-    const HAS_NOT_BEEN_ACTIVATED=5;
+    const HAS_NOT_BEEN_ACTIVATED = 5;
 
     public function getId()
     {
@@ -29,23 +29,22 @@ class UserIdentity extends CUserIdentity
 
         if ($user === NULL) {
             $this->errorCode = self::ERROR_USERNAME_INVALID;
-            $login_log = new LoginLog();
-            $login_log->attributes = array('user_login_id' => $this->username, 'ip' => Common::getClientIp(), 'is_real_user' => 'no', 'success' => 'no');
+            $login_log = new UserLoginLog();
+            $login_log->attributes = array('user_login_id' => $this->username, 'is_real_user' => 'no', 'success' => 'no');
             $login_log->save();
         } else {
             $this->user_id = $user->id;
-
-            if($user->has_been_activated=='no'){
-                $this->errorCode=self::HAS_NOT_BEEN_ACTIVATED;
-            }elseif ($user->authorizePassword($this->password)) {
+            if ($user->activated == 'no' && @Yii::app()->params['activateNeeded'] === true) {
+                $this->errorCode = self::HAS_NOT_BEEN_ACTIVATED;
+            } elseif ($user->validatePassword($this->password)) {
                 $this->errorCode = self::ERROR_NONE;
-                $login_log=new LoginLog();
-                $login_log->attributes = array('user_login_id' =>$this->username, 'ip' => Common::getClientIp(), 'is_real_user' => 'yes', 'success' => 'yes');
+                $login_log = new UserLoginLog();
+                $login_log->attributes = array('user_login_id' => $this->username, 'is_real_user' => 'yes', 'success' => 'yes');
                 $login_log->save();
             } else {
                 $this->errorCode = self::ERROR_PASSWORD_INVALID;
-                $login_log = new LoginLog();
-                $login_log->attributes = array('user_login_id' => $this->username, 'ip' => Common::getClientIp(), 'is_real_user' => 'yes', 'success' => 'no');
+                $login_log = new UserLoginLog();
+                $login_log->attributes = array('user_login_id' => $this->username, 'is_real_user' => 'yes', 'success' => 'no');
                 $login_log->save();
             }
         }
