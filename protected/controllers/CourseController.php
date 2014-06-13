@@ -38,35 +38,33 @@ class CourseController extends Controller
         $resources = $course->courseResources(array('with' => 'user', 'limit' => Pagination::$items_per_page_map['courseResource']));
         $books = $course->courseBooks(array('with' => 'user'));
         $category = $course->cat();
-        $category->courses=array_slice($category->courses(),0,8);
+        $category->courses = array_slice($category->courses(), 0, 8);
 //        var_dump($id);
         $this->render('view', array(
-            'categoryT'=>$category,
+            'categoryT' => $category,
             'course' => $course,
             'documents' => $document_list,
             'resources' => $resources,
             'books' => $books,
-            'textbooks'=>$course->textBooks,
-            'resource_items_per_page'=>Pagination::$items_per_page_map['courseResource']
+            'textbooks' => $course->textBooks,
+            'resource_items_per_page' => Pagination::$items_per_page_map['courseResource']
         ));
 //        var_dump($course->name);
     }
 
     public function actionSearch()
     {
-        $this->setPageTitle('搜索');
-        if (isset($_REQUEST['keyword']) && mb_strlen($_REQUEST['keyword']) > 0) {
-            $keyword = addcslashes($_REQUEST['keyword'], '%_'); // escape LIKE's special characters
-            //TODO 用like的方式搜索的效率很低，如果数据量比较大，可能需要考虑其他方法
-            $q = new CDbCriteria(array(
-                'condition' => "name LIKE :match", // no quotes around :match
-                'params' => array(':match' => "%$keyword%") // Aha! Wildcards go here
-            ));
-
-            $courses = Course::model()->findAll($q);
+        $this->setPageTitle('搜索课程');
+        $page_number = empty($_REQUEST['page']) ? 0 : intval($_REQUEST['page']);
+        $offset = $page_number * 20;
+        $limit = 20;
+        if (isset($_REQUEST['keyword'])) {
+            $course_searcher = new CourseSearcher();
+            $courses = $course_searcher->search($_REQUEST['keyword'], $search_count, $limit, $offset);
             $array = array(
                 'search_keyword' => $_REQUEST['keyword'],
-                'courses' => $courses
+                'courses' => $courses,
+                'search_count' => $search_count
             );
             $this->render('search', $array);
         } else {

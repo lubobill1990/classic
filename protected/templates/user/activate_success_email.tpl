@@ -1,1 +1,0 @@
-账户{$user->username}已被激活
