@@ -4,20 +4,19 @@
 <link rel="stylesheet" href="/stylesheets/special/site/index.css">
 {/block}
 
-{block name=header_alter}
-<div id="header-index">
-    <div id="header-index-content" class="bc">
-        <p id="header-index-content-slogan">ClassIC</p>
-        <div id="header-index-content-search-wrapper">
-            <form action="/course/search" method='get' id="header-index-content-search">
-                <input type="text" placeholder="发现你的课程" name="keyword" id="header-index-content-search-input"  />
-                <input type="submit" value="" id="header-index-content-search-button"/>
+{block name=header_search}
+<div id="banner-wrapper">
+    <div id="banner" class="bc">
+        <div class="w500 bc pr">
+            <p id="slogan">ClassIC</p>
+            <form class="form-mavericks" action="" method="get">
+                <div class="form-mavericks-wrapper">
+                    <input type="text" placeholder="发现你的课程" name="keyword" required>
+                    <button type="submit" class="submit"></button>
+                    <a href="" class="advanced-search">高级搜索</a>
+                </div>
             </form>
         </div>
-        <p id="header-index-content-detail">
-            正在建设中...
-            {*<span>你的意见</span>*}
-        </p>
     </div>
 </div>
 {/block}

@@ -29,6 +29,7 @@
 .menu{
   position: relative;
   cursor: pointer;
+  display: inline-block;
 
   .menu-title{
     display: inline-block;
@@ -36,17 +37,17 @@
     padding-bottom: 6px;
     z-index: 11;
     position: relative;
-    background: #fff;
   }
 
   .menu-title:after{
-    @include css-triangle(4px, #aaa, top);
+    @include css-triangle(3px, #787878, top);
     position: relative;
-    top: 2px;
+    top: 1px;
     margin-left: 8px;
   }
 
   .menu-content{
+    min-width: 130%;
     display: none;
     position: absolute;
     background: #fff;
@@ -120,6 +121,7 @@
   &.hover{
     .menu-title{
       @include box-shadow(-1px 0 1px -1px #aaa,1px 0 1px -1px #aaa,0 -1px 1px -1px #aaa);
+      background: #fff;
     }
 
     .menu-content{

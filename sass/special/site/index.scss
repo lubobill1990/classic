@@ -1,6 +1,38 @@
 //css3 mixin
 @import "compass/css3";
 
+#banner-wrapper{
+  height: 258px;
+  background-color: #000;
+
+  #banner{
+    background: url("/images/common/header-index-bg.png") no-repeat center;
+    @include box-shadow(50px 0 100px #000 inset,-50px 0 100px #000 inset);
+    @include background-size(100% 100%);
+    width: 1020px;
+    height: 100%;
+    position: relative;
+
+    #slogan{
+      font-size: 60px;
+      font-weight: bold;
+      color: #fff;
+      @include text-shadow(3px 6px 5px #7d7d7d);
+      position: relative;
+      text-align: left;
+      top: 50px;
+    }
+
+    .form-mavericks{
+      margin-top: -14px;
+
+      .advanced-search{
+        color: #fff;
+      }
+    }
+  }
+}
+
 #index-courses{
 
   ul{

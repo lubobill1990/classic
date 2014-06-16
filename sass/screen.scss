@@ -1,12 +1,12 @@
 //css3 mixin
 @import "compass/css3";
 
+@import "classic-ui/classic-ui";
+
 //all
-@import "common/variables";
-@import "common/base";
 @import "common/common";
 @import "common/components";
 
 @import "partials/classynotty";
 
-@import "classic-ui/classic-ui";
+

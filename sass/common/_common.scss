@@ -1,191 +1,130 @@
+$body-width: 940px;
+$left-width: 600px;
+$right-width: 300px;
+
 body{
-  position: relative;width: 100%;min-width:960px;min-height: 100%;background: #fff;
-  font-family: Helvetica,Arial,sans-serif;font-size: 12px;
-
-  h1{
-    margin-top: -4px;margin-bottom: 26px;color: #444;font-size: 18px;font-family: "Microsoft Yahei";
-  }
-
-  h2{
-    margin-top: -4px;margin-bottom: 24px;color: #444;font-size: 16px;font-family: "Microsoft Yahei";
-  }
-
-  a{
-    color: #369;cursor: pointer;
-  }
-
-  #header{
-    min-width:960px;width: 100%;
-
-    #header-top{
-      height: 40px;line-height: 40px;background: url("../../images/common/header-top-bg.png") repeat-x center;
-
-      #header-top-logo{
-        width: 95px;height: 22px;position: relative;top: 9px;display: block;
-        background: url("../../images/common/header-top-logo.png") no-repeat center;
-      }
-
-      #header-top-nav{
-        li{
-          display: inline-block;margin-left: 40px;position: relative;color: #787a78;
-
-          #header-top-nav-hover{
-            position: absolute;width: 90px;height: 34px;background: #fff;top: 6px;left: -14px;z-index: 4;
-            @include box-shadow(-1px 0 1px -1px #aaa,0 -1px 1px -1px #aaa,1px 0 1px -1px #aaa);
-          }
-
-          a{
-            color: #787a78;cursor: pointer;position: relative;z-index: 5;
-            &:hover{
-              color: #2e7720;
-            }
-          }
-
-          #header-top-nav-subnav{
-            position: absolute;width:128px;background: #fff;left: -14px;z-index: 3;@include box-shadow(0 0 1px #aaa);
-            border-bottom: 4px solid #e9e9e9;
-
-            li{
-              margin: 2px;padding-left: 12px;display: block;cursor: pointer;height: 28px;line-height: 28px;
-
-              ul{
-                position: absolute;width: 400px;height:224px;background: #2e7720;z-index: 6;
-                left: 126px;top: 0;padding: 8px 4px;border-bottom: 4px solid #296b1d;
-
-                li{
-                  float:left;width: 180px;height: 30px;
-
-                  &:hover{
-                    background: #58924d;
-                  }
-
-                  a{
-                    color: #fff;
-                  }
-                }
-              }
-
-              &:hover{
-                background: #e9e9e9;
-              }
-            }
-          }
-        }
-      }
-
-      #header-top-info{
-        li{
-          display: inline;
-        }
-
-        a{
-          margin-left: 10px;
-        }
-      }
-    }
-
-    #header-normal{
-      height: 60px;background: #edede7;@include box-shadow(0 1px 3px #aaa);
-
-      #header-normal-search{
-        width: 640px;height: 40px;line-height: 40px;background: #fff;position: relative;top: 10px;
-        @include border-radius(2px);@include box-shadow(0 0 1px #aaa) ;
-
-        #header-normal-search-input{
-          outline: none;border: none;width: 580px;height: 30px;font-size: 18px;margin-left: 20px;
-          position: relative;top: 2px;color: #787a78;
-        }
-
-        #header-normal-search-button{
-          border: none;width: 24px;height: 24px;position: absolute ;top: 10px;cursor: pointer;
-          background: url("../../images/common/header-search-button.png") no-repeat center;
-        }
-      }
-    }
-
-    #header-index{
-      height: 258px;background: url("../../images/common/header-index-bg.png") ;@include background-size(100%,100%);
-      @include box-shadow(0 0 50px #000 inset);
-
-      #header-index-content{
-        width: 500px;position: relative;top: 40px;
-
-        #header-index-content-slogan{
-          font-size: 60px;font-weight: bold;color: #fff;@include text-shadow(3px 6px 5px #7d7d7d);
-          text-align: left;
-        }
-
-        #header-index-content-search-wrapper{
-          background: rgba(211,211,211,0.4);width: 380px;padding: 5px;position: relative;top: 20px;
-          @include border-radius(4px);@include box-shadow(0 1px 4px rgba(0,0,0,0.4));
-
-          #header-index-content-search{
-            width: 380px;height: 40px;background: #fff;position: relative;line-height: 40px;
-
-            #header-index-content-search-input{
-              outline: none;border: none;width: 310px;height: 30px;font-size: 18px;margin-left: 20px;
-              position: relative;color: #787a78;display: inline-block;top: 2px;
-            }
-
-            #header-index-content-search-button{
-              border: none;width: 24px;height: 24px;position: absolute;cursor: pointer;
-              background: url("../../images/common/header-search-button.png") no-repeat center;top: 10px;
-            }
-          }
-        }
-
-        #header-index-content-detail{
-          position: relative;top: 40px;font-size: 22px;color: #fff;
-
-          span{
-            margin-left: 14px;color: #ffff00;text-decoration: underline;
-          }
-        }
-      }
-    }
-  }
-
-  #content{
-    min-height: 500px;margin-top: 50px;
-
-    #content-left{
-      width: 600px;
-    }
-
-    #content-right{
-      width: 300px;
-    }
-  }
-
-  #footer{
-    min-width:960px;height: 36px;line-height: 36px;position: relative;bottom: 20px;
-    border:{ top: 1px solid #e1e1e1;bottom: 1px solid #e1e1e1; }margin-top: 40px;
-
-    #footer-left{
-        color: #999;
-    }
-
-    #footer-right{
-      li{
-        display: inline;margin-left: 34px;
-
-        a{
-          color: #369 ;
-        }
-      }
-    }
-  }
+  position: relative;
+  width: 100%;
+  min-width: $body-width;
+  min-height: 100%;
 }
 
-.back-to-top{
-  left: 1200px;position: fixed;bottom: -20px;display: block;z-index: 9999;
+#header{
+  background: url("/images/common/header-top-bg.png") repeat-x center;
+  height: 40px;
 
-  &:hover{
-    background: #37a;
+  .logo{
+    width: 95px;
+    height: 22px;
+    position: relative;
+    top: 9px;
+    display: inline-block;
+    background: url("/images/common/header-top-logo.png") no-repeat center;
+  }
+
+  .main-nav{
+    position: relative;
+    top: 2px;
+    display: inline-block;
+    margin-left: 32px;
+    height: 20px;
+
+    >a{
+      margin-left: 12px;
+
+      &:hover{
+        color: $classic-green;
+      }
+    }
+
+    >a,.menu-title,.menu-content>li>a{
+      color: #787a78;
+
+    }
+
+    .menu.hover{
+      .menu-title{
+        height: 34px;
+      }
+    }
+  }
+
+  .user-operation{
+    position: relative;
+    display: inline-block;
+    height: 20px;
 
     a{
-      color: #fff;
+      margin-left: 8px;
+    }
+
+    .menu{
+      top: 8px;
+
+      .menu-content{
+        width: 100%;
+        min-width: 0;
+
+        li{
+          padding-left: 10px;
+        }
+      }
+
+      &.hover{
+        .menu-title{
+          height: 32px;
+        }
+      }
+    }
+
+    .notlogin{
+      line-height: 40px;
     }
   }
 }
+
+#content{
+  min-height: 500px;margin-top: 50px;
+
+  #content-left{
+    width: 600px;
+  }
+
+  #content-right{
+    width: 300px;
+  }
+}
+
+#footer{
+  height: 36px;
+  line-height: 36px;
+  position: relative;
+  bottom: 20px;
+  border:{
+    top: 1px solid #e1e1e1;
+    bottom: 1px solid #e1e1e1;
+  }
+  margin-top: 40px;
+
+  #footer-left{
+    color: #999;
+  }
+
+  #footer-right{
+    li{
+      display: inline;
+      margin-left: 34px;
+    }
+  }
+}
+
+
+#search-wrapper{
+  height: 60px;
+  background: #edede7;
+  @include box-shadow(0 1px 3px #aaa);
+  padding-top: 10px;
+}
+
+
 

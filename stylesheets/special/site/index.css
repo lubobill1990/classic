@@ -1,11 +1,49 @@
+/* line 4, ../../../sass/special/site/index.scss */
+#banner-wrapper {
+  height: 258px;
+  background-color: #000;
+}
 /* line 8, ../../../sass/special/site/index.scss */
+#banner-wrapper #banner {
+  background: url("/images/common/header-index-bg.png") no-repeat center;
+  -webkit-box-shadow: 50px 0 100px black inset, -50px 0 100px black inset;
+  -moz-box-shadow: 50px 0 100px black inset, -50px 0 100px black inset;
+  box-shadow: 50px 0 100px black inset, -50px 0 100px black inset;
+  -webkit-background-size: 100% 100%;
+  -moz-background-size: 100% 100%;
+  -o-background-size: 100% 100%;
+  background-size: 100% 100%;
+  width: 1020px;
+  height: 100%;
+  position: relative;
+}
+/* line 16, ../../../sass/special/site/index.scss */
+#banner-wrapper #banner #slogan {
+  font-size: 60px;
+  font-weight: bold;
+  color: #fff;
+  text-shadow: 3px 6px 5px #7d7d7d;
+  position: relative;
+  text-align: left;
+  top: 50px;
+}
+/* line 26, ../../../sass/special/site/index.scss */
+#banner-wrapper #banner .form-mavericks {
+  margin-top: -14px;
+}
+/* line 29, ../../../sass/special/site/index.scss */
+#banner-wrapper #banner .form-mavericks .advanced-search {
+  color: #fff;
+}
+
+/* line 40, ../../../sass/special/site/index.scss */
 #index-courses ul li h3 {
   font-size: 14px;
   color: #369;
   margin-bottom: 16px;
   display: inline-block;
 }
-/* line 12, ../../../sass/special/site/index.scss */
+/* line 44, ../../../sass/special/site/index.scss */
 #index-courses ul li .index-courses-subject-decorator {
   width: 5px;
   height: 5px;
@@ -20,7 +58,7 @@
   position: relative;
   top: -2px;
 }
-/* line 17, ../../../sass/special/site/index.scss */
+/* line 49, ../../../sass/special/site/index.scss */
 #index-courses ul li table {
   background: #fff;
   -webkit-box-shadow: 0 0 1px #222222;
@@ -29,7 +67,7 @@
   border-top: 4px solid  #fff;
   margin-bottom: 34px;
 }
-/* line 20, ../../../sass/special/site/index.scss */
+/* line 52, ../../../sass/special/site/index.scss */
 #index-courses ul li table td {
   width: 150px;
   height: 32px;
@@ -37,7 +75,7 @@
   text-align: center;
   border: 1px solid #f2f2f2;
 }
-/* line 23, ../../../sass/special/site/index.scss */
+/* line 55, ../../../sass/special/site/index.scss */
 #index-courses ul li table td a {
   font-size: 12px;
   color: #369;
@@ -46,76 +84,76 @@
   height: 100%;
   line-height: 32px;
 }
-/* line 26, ../../../sass/special/site/index.scss */
+/* line 58, ../../../sass/special/site/index.scss */
 #index-courses ul li table td a:hover {
   color: white;
 }
-/* line 35, ../../../sass/special/site/index.scss */
+/* line 67, ../../../sass/special/site/index.scss */
 #index-courses ul li:nth-child(1) a:hover {
   background: #2e7720;
 }
-/* line 36, ../../../sass/special/site/index.scss */
+/* line 68, ../../../sass/special/site/index.scss */
 #index-courses ul li:nth-child(1) table {
   border-color: #2e7720;
 }
-/* line 39, ../../../sass/special/site/index.scss */
+/* line 71, ../../../sass/special/site/index.scss */
 #index-courses ul li:nth-child(2) a:hover {
   background: #933;
 }
-/* line 40, ../../../sass/special/site/index.scss */
+/* line 72, ../../../sass/special/site/index.scss */
 #index-courses ul li:nth-child(2) table {
   border-color: #933;
 }
-/* line 43, ../../../sass/special/site/index.scss */
+/* line 75, ../../../sass/special/site/index.scss */
 #index-courses ul li:nth-child(3) a:hover {
   background: #369;
 }
-/* line 44, ../../../sass/special/site/index.scss */
+/* line 76, ../../../sass/special/site/index.scss */
 #index-courses ul li:nth-child(3) table {
   border-color: #369;
 }
-/* line 47, ../../../sass/special/site/index.scss */
+/* line 79, ../../../sass/special/site/index.scss */
 #index-courses ul li:nth-child(4) a:hover {
   background: #4d5993;
 }
-/* line 48, ../../../sass/special/site/index.scss */
+/* line 80, ../../../sass/special/site/index.scss */
 #index-courses ul li:nth-child(4) table {
   border-color: #4d5993;
 }
-/* line 51, ../../../sass/special/site/index.scss */
+/* line 83, ../../../sass/special/site/index.scss */
 #index-courses ul li:nth-child(5) a:hover {
   background: #8f4c9b;
 }
-/* line 52, ../../../sass/special/site/index.scss */
+/* line 84, ../../../sass/special/site/index.scss */
 #index-courses ul li:nth-child(5) table {
   border-color: #8f4c9b;
 }
-/* line 55, ../../../sass/special/site/index.scss */
+/* line 87, ../../../sass/special/site/index.scss */
 #index-courses ul li:nth-child(6) a:hover {
   background: #12967e;
 }
-/* line 56, ../../../sass/special/site/index.scss */
+/* line 88, ../../../sass/special/site/index.scss */
 #index-courses ul li:nth-child(6) table {
   border-color: #12967e;
 }
-/* line 59, ../../../sass/special/site/index.scss */
+/* line 91, ../../../sass/special/site/index.scss */
 #index-courses ul li:nth-child(7) a:hover {
   background: #2e7720;
 }
-/* line 60, ../../../sass/special/site/index.scss */
+/* line 92, ../../../sass/special/site/index.scss */
 #index-courses ul li:nth-child(7) table {
   border-color: #2e7720;
 }
-/* line 63, ../../../sass/special/site/index.scss */
+/* line 95, ../../../sass/special/site/index.scss */
 #index-courses ul li:nth-child(8) a:hover {
   background: #933;
 }
-/* line 64, ../../../sass/special/site/index.scss */
+/* line 96, ../../../sass/special/site/index.scss */
 #index-courses ul li:nth-child(8) table {
   border-color: #933;
 }
 
-/* line 69, ../../../sass/special/site/index.scss */
+/* line 101, ../../../sass/special/site/index.scss */
 #index-login {
   padding: 26px 34px;
   background: #f3f3f3;
@@ -123,7 +161,7 @@
   -moz-box-shadow: 0 0 1px #888888;
   box-shadow: 0 0 1px #888888;
 }
-/* line 72, ../../../sass/special/site/index.scss */
+/* line 104, ../../../sass/special/site/index.scss */
 #index-login .form-item {
   width: 230px;
   height: 34px;
@@ -140,7 +178,7 @@
   -o-border-radius: 2px;
   border-radius: 2px;
 }
-/* line 76, ../../../sass/special/site/index.scss */
+/* line 108, ../../../sass/special/site/index.scss */
 #index-login .form-item label {
   background: #fafafa;
   display: inline-block;
@@ -156,12 +194,12 @@
   font-weight: bold;
   font-family: arial;
 }
-/* line 80, ../../../sass/special/site/index.scss */
+/* line 112, ../../../sass/special/site/index.scss */
 #index-login .form-item .label-focus {
   background: #358227;
   color: #fff;
 }
-/* line 84, ../../../sass/special/site/index.scss */
+/* line 116, ../../../sass/special/site/index.scss */
 #index-login .form-item input {
   background: #fff;
   outline: none;
@@ -169,7 +207,7 @@
   margin-left: 16px;
   width: 150px;
 }
-/* line 87, ../../../sass/special/site/index.scss */
+/* line 119, ../../../sass/special/site/index.scss */
 #index-login .form-item input:-webkit-autofill {
   -webkit-box-shadow: 0 0 0px 1000px white inset;
   -moz-box-shadow: 0 0 0px 1000px white inset;
