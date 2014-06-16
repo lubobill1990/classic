@@ -98,3 +98,17 @@ $(document).on('mouseleave','.float-glass-trigger',function(){
     }
   },200);
 });
+
+// back-to-top
+
+$(window).scroll(function () {
+    if ($(window).scrollTop() > 800) {
+        if ($('.back-to-top').css('bottom') === '-20px') {
+            $('.back-to-top').animate({bottom: "43px"});
+        }
+    } else {
+        if ($('.back-to-top').css('bottom') !== '-20px') {
+            $('.back-to-top').css({bottom: '-20px'});
+        }
+    }
+});

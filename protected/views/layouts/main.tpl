@@ -3,7 +3,7 @@
 
 <head>
     <title>{$page_title|default:Yii::app()->name}</title>
-    <meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+    <meta charset="utf-8" />
 
     <link rel="stylesheet" href="/stylesheets/screen.css">
     {block name=css}{/block}
@@ -119,7 +119,7 @@
 </div>
 
 <script type="text/javascript">
-    require(['jquery', 'components'], function ($) {
+    require(['jquery', 'components', 'classic-ui'], function ($) {
         $('#header-normal-search').submit(function () {
             if($('#search-catalog')){
                 $('#header-normal-search').append($('#search-catalog').clone().hide())
@@ -141,17 +141,7 @@
                 });
 
         {literal}
-        $(window).scroll(function () {
-            if ($(window).scrollTop() > 1000) {
-                if ($('.back-to-top').css('bottom') == '-20px') {
-                    $('.back-to-top').animate({bottom: "48px"});
-                }
-            } else {
-                if ($('.back-to-top').css('bottom') != '-20px') {
-                    $('.back-to-top').css({bottom: '-20px'});
-                }
-            }
-        });
+
         {/literal}
     });
 </script>

@@ -14,6 +14,7 @@ requirejs.config({
     //never includes a ".js" extension since
     //the paths config could be for a directory.
     paths:{
+        'classic-ui': 'classic-ui',
         app:'app',
         jquery:'lib/jquery.1.9.1',
         underscore:'lib/underscore.1.4.4',
@@ -50,6 +51,9 @@ requirejs.config({
         notty:'lib/jquery.classynotty'
     },
     shim:{
+        'classic-ui': {
+            deps: ['jquery']
+        },
         components:{
             deps:['jquery']
         },
