@@ -1,0 +1,64 @@
+@mixin btn(){
+  text-decoration: none;
+  cursor: pointer;
+  text-align: center;
+
+  &:hover{
+    text-decoration: none;
+  }
+}
+
+.btn-forest{
+  @include btn;
+
+  background: $classic-green;
+  padding: 6px 24px;
+  color: #cfe6cd;
+  font-size: 16px;
+  font-family: "Microsoft Yahei";
+  @include text-shadow(0 1px 1px rgba(0, 0, 0, 0.7));
+  @include box-shadow(0 2px 3px rgba(0, 0, 0, 0.2), 0 1px 1px rgba(255, 255, 255 ,0.3) inset);
+  @include border-radius(3px);
+  border: 1px solid #276b1a;
+  border-color: {
+    bottom: #2e7620;
+    top: #1f5e13;
+  }
+
+  &:active{
+    background: #286d1a;
+  }
+}
+
+.btn-apple{
+  @include btn;
+
+  background: #fdf1ed;
+  padding: 4px 10px;
+  color: #b3705b;
+  border: 1px solid #e8b5a5;
+  @include border-radius(2px);
+
+  &:active{
+    background: darken(#fdf1ed, 10%);
+  }
+}
+
+.btn-tree{
+  @include btn;
+
+  background: $classic-green-light;
+  padding: 1px 8px;
+  color: $classic-green;
+  border: 1px solid #83b284;
+  @include border-radius(1px);
+
+  &:active{
+    background: #91b893;
+  }
+}
+
+.btn-simple{
+  @include btn;
+  padding: 2px 7px;
+}

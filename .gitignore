@@ -14,3 +14,5 @@ protected/runtime/*
 !protected/runtime/README
 
 *.tpl.php
+
+stylesheets/*

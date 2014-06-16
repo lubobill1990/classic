@@ -1,0 +1,218 @@
+// normal form
+
+@mixin form-item(){
+  display: block;
+  margin-bottom: 20px;
+
+  label{
+    cursor: pointer;
+    font-size: 14px;
+
+    input,textarea{
+      background: #fff;
+      outline: none;
+    }
+
+    input:-webkit-autofill {
+      @include box-shadow(0 0 0px 1000px white inset);
+    }
+
+    textarea{
+      vertical-align: top;
+    }
+  }
+}
+
+.form-cloud{
+  @include form-item;
+
+  label{
+    color: $classic-blue;
+    position: relative;
+
+    &.user:before,&.pass:before{
+      width: 12px;
+      height: 12px;
+      margin: 0 5px;
+      top: 37px;
+      z-index: 1;
+      position: absolute;
+      display: block;
+      content: '';
+    }
+
+    &.user:before{
+      background: url("/images/classic-ui/form-user.png") no-repeat center;
+    }
+
+    &.pass:before{
+      background: url("/images/classic-ui/form-lock.png") no-repeat center;
+    }
+
+    input{
+      width: 230px;
+      height: 28px;
+      margin-top: 8px;
+      margin-right: 12px;
+      border: 1px solid #d6d6d6;
+      @include border-radius(4px);
+      position: relative;
+      padding:  9px 24px;
+
+      &:focus{
+        box-shadow: 0 0 5px rgba(36, 218, 1, 0.5);
+        border-color: rgba(#d6d6d6,0.5);
+      }
+    }
+  }
+
+  .notice,.error{
+    &:before{
+      margin: 0 6px;
+      position: relative;
+      content: '';
+      @include border-radius(10px);
+      display: inline-block;
+      width: 4px;
+      height: 4px;
+      top: -2px;
+    }
+  }
+
+  .notice{
+    color: $classic-blue;
+
+    &:before{
+      background: $classic-blue;
+    }
+  }
+
+  .error{
+    color: red;
+
+    &:before{
+      background: red;
+    }
+  }
+}
+
+.form-sky{
+  @include form-item;
+
+  label{
+
+    b{
+      width: 80px;
+      font-size: 14px;
+      text-align: right;
+      display: inline-block;
+    }
+
+    input,textarea,select{
+      border: 1px solid #ccc;
+      margin:{
+        left: 16px;
+        right: 16px;
+      }
+      min-height: 26px;
+    }
+  }
+
+  button{
+    margin-left: 100px;
+  }
+
+  .notice{
+    color: $classic-gray;
+  }
+
+  .error{
+    color: red;
+  }
+}
+
+// search form
+
+.form-yosimite{
+  width: 640px;
+  height: 40px;
+  line-height: 40px;
+  background: #fff;
+  position: relative;
+  @include border-radius(2px);
+  @include box-shadow(0 0 1px #aaa) ;
+
+  input[type='text']{
+    outline: none;
+    border: none;
+    width: 580px;
+    height: 30px;
+    font-size: 18px;
+    margin-left: 20px;
+    position: relative;
+    top: 2px;
+    color: #787a78;
+  }
+
+  .submit{
+    border: none;
+    width: 24px;
+    height: 24px;
+    position: relative;
+    top: 10px;
+    cursor: pointer;
+    background: url("/images/classic-ui/magnify.png") no-repeat center;
+  }
+
+  .advanced-search{
+    position: absolute;
+    right: -61px;
+  }
+}
+
+.form-mavericks{
+  background: rgba(211,211,211,0.4);
+  width: 380px;
+  padding: 5px;
+  position: relative;
+  @include border-radius(4px);
+  @include box-shadow(0 1px 4px rgba(0,0,0,0.4));
+
+  .form-mavericks-wrapper{
+    height: 40px;
+    background: #fff;
+    position: relative;
+    line-height: 40px;
+
+    input[type='text']{
+      outline: none;
+      border: none;
+      width: 310px;
+      height: 30px;
+      font-size: 18px;
+      margin-left: 20px;
+      position: relative;
+      color: #787a78;
+      display: inline-block;
+      top: 2px;
+    }
+
+    .submit{
+      border: none;
+      width: 24px;
+      height: 24px;
+      position: absolute;
+      cursor: pointer;
+      background: url("/images/classic-ui/magnify.png") no-repeat center;
+      top: 10px;
+    }
+  }
+
+  .advanced-search{
+    position: absolute;
+    right: -66px;
+  }
+}
+
+
+// file upload
