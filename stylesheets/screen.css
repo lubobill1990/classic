@@ -1,4 +1,4 @@
-@charset "utf-8";
+@charset "UTF-8";
 /* CSS Document */
 /*CSS reset*/
 /* line 4, ../sass/common/_base.scss */
@@ -1337,7 +1337,7 @@ body #footer #footer-right li a {
   color: #AAAAAA;
 }
 
-/*
+/*!
  * jQuery ClassyNotty
  * http://www.class.pm/projects/jquery/classynotty
  *

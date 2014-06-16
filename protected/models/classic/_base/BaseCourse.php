@@ -60,8 +60,8 @@ abstract class BaseCourse extends GxActiveRecord {
         return array(
             'classes' => array(self::HAS_MANY, 'ActualClass', 'course_id'),
             'cat' => array(self::BELONGS_TO, 'CourseCategory', 'category'),
-            'courseDocuments' => array(self::HAS_MANY, 'CourseDocument', 'course_id','order'=>'create_at ASC'),
-            'courseResources' => array(self::HAS_MANY, 'CourseResource', 'course_id','order'=>'create_at ASC'),
+            'courseDocuments' => array(self::HAS_MANY, 'CourseDocument', 'course_id','order'=>'courseDocuments.create_at ASC'),
+            'courseResources' => array(self::HAS_MANY, 'CourseResource', 'course_id','order'=>'courseResources.create_at ASC'),
             'courseResourceCount'=>array(self::STAT,'CourseResource','course_id','select'=>"COUNT(*)"),
             'courseBooks' => array(self::HAS_MANY, 'CourseBook', 'course_id'),
             'textBooks' => array(self::HAS_MANY, 'CourseBook', 'course_id','condition'=>"type='textbook'"),

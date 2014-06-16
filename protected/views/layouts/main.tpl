@@ -28,20 +28,21 @@
                     <a>课程分类<span class="arrow"></span></a>
                     <ul id="header-top-nav-subnav" class="none">
                         {foreach $categories as $category}
-                        <li>
-                            {$category->name}
-                            <ul class="none">
-                                {foreach $category->courses as $courseT}
-                                    <li><a href="/course/{$courseT->id}/">{$courseT->name|truncate:16}</a></li>
-                                {/foreach}
-                                <div class="header-top-nav-subsubnav-footer"></div>
-                            </ul>
-                        </li>
+                            <li>
+                                {$category->name}
+                                <ul class="none">
+                                    {foreach $category->courses as $courseT}
+                                        <li><a href="/course/{$courseT->id}/">{$courseT->name|truncate:16}</a></li>
+                                    {/foreach}
+                                    <div class="header-top-nav-subsubnav-footer"></div>
+                                </ul>
+                            </li>
                         {/foreach}
                         <div id="header-top-nav-subnav-footer"></div>
                     </ul>
                 </li>
-                <li><a target="_blank" href="http://wiki.lilystudio.org/pages/viewpage.action?pageId=6783179">我的意见</a></li>
+                <li><a target="_blank" href="http://wiki.lilystudio.org/pages/viewpage.action?pageId=6783179">我的意见</a>
+                </li>
                 {*<li><a href="#">二手市场</a></li>*}
                 {*<li><a href="#">捐赠我们</a></li>*}
             </ul>
@@ -62,8 +63,35 @@
     {block name=header_alter}
         <div id="header-normal">
             <form id="header-normal-search" class="bc" action="/course/search" method='get'>
-                <input type="text" placeholder="发现你的课程" name="keyword" id="header-normal-search-input" {if $search_keyword|default:false}value="{$search_keyword}"{/if}/>
+                <input type="text" placeholder="发现你的课程" name="keyword" id="header-normal-search-input"
+                       {if $search_keyword|default:false}value="{$search_keyword}"{/if}/>
                 <input type="submit" value="" id="header-normal-search-button"/>
+
+                <div>
+                    上课时间
+                    <span>周一</span>
+                    <span>周二</span>
+                    <span>周三</span>
+                    <span>周四</span>
+                    <span>周五</span>
+                    <span>周六</span>
+                    <span>周日</span>
+                    <input type="text" name="time"/>
+                </div>
+                <div>
+                    上课地点
+                    <div>仙林
+                        <span>仙Ⅰ</span>
+                        <span>仙Ⅱ</span>
+                        <span>逸夫楼</span>
+                        <span>基础实验楼</span>
+                    </div>
+                    <div>鼓楼
+                        <span>教学楼</span>
+                        <span>逸夫馆</span>
+                    </div>
+                    <input type="text" name="site"/>
+                </div>
             </form>
         </div>
     {/block}
@@ -79,7 +107,8 @@
 <div id="footer" class="w960 bc">
     <div class="w940 bc">
 
-        <p id="footer-left" class="fl">©    2000-2013 &nbsp;&nbsp;   LilyStudio.org &nbsp;&nbsp;&nbsp; all rights reserved </p>
+        <p id="footer-left" class="fl">© 2000-2013 &nbsp;&nbsp; LilyStudio.org &nbsp;&nbsp;&nbsp; all rights
+            reserved </p>
 
         <ul id="footer-right" class="fr">
             <li><a target="_blank" href="http://micourse.net/">邻居&nbsp;Micourse</a></li>
@@ -90,41 +119,41 @@
 </div>
 
 <script type="text/javascript">
-require(['jquery','components'], function ($){
-    $('#header-normal-search').submit(function(){
-        if($(this).find('input[type=text]').val().length==0){
-            return false;
-        }
-    });
-
-    $('#header-top-nav li').eq(0).mouseover(function(){
-        $(this).find('#header-top-nav-hover').removeClass('none');
-        $(this).find('#header-top-nav-subnav').removeClass('none');
-    }).mouseout(function(){
-        $(this).find('#header-top-nav-hover').addClass('none');
-        $(this).find('#header-top-nav-subnav').addClass('none');
-    });
-
-    $('#header-top-nav-subnav li').mouseover(function(){
-        $(this).find('ul').removeClass('none');
-    }).mouseout(function(){
-        $(this).find('ul').addClass('none');
-    });
-
-    {literal}
-    $(window).scroll(function () {
-        if($(window).scrollTop()>1000){
-            if($('.back-to-top').css('bottom')=='-20px'){
-                $('.back-to-top').animate({bottom:"48px"});
+    require(['jquery', 'components'], function ($) {
+        $('#header-normal-search').submit(function () {
+            if($('#search-catalog')){
+                $('#header-normal-search').append($('#search-catalog').clone().hide())
             }
-        }else{
-            if($('.back-to-top').css('bottom')!='-20px'){
-                $('.back-to-top').css({bottom:'-20px'});
+        });
+
+        $('#header-top-nav li').eq(0).mouseover(function () {
+            $(this).find('#header-top-nav-hover').removeClass('none');
+            $(this).find('#header-top-nav-subnav').removeClass('none');
+        }).mouseout(function () {
+                    $(this).find('#header-top-nav-hover').addClass('none');
+                    $(this).find('#header-top-nav-subnav').addClass('none');
+                });
+
+        $('#header-top-nav-subnav li').mouseover(function () {
+            $(this).find('ul').removeClass('none');
+        }).mouseout(function () {
+                    $(this).find('ul').addClass('none');
+                });
+
+        {literal}
+        $(window).scroll(function () {
+            if ($(window).scrollTop() > 1000) {
+                if ($('.back-to-top').css('bottom') == '-20px') {
+                    $('.back-to-top').animate({bottom: "48px"});
+                }
+            } else {
+                if ($('.back-to-top').css('bottom') != '-20px') {
+                    $('.back-to-top').css({bottom: '-20px'});
+                }
             }
-        }
+        });
+        {/literal}
     });
-    {/literal}
-});
 </script>
 {block name=js}{/block}
 

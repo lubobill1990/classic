@@ -2,10 +2,10 @@
 @import "partials/file_upload";
 
 .modal-container{
-  @import "bootstrap";
+//  @import "bootstrap";
 }
 .table-container{
-  @import "foundation/components/tables";
+//  @import "foundation/components/tables";
 }
 .upload-toolbar {
   .tool_bar_wrap{
@@ -20,8 +20,8 @@
   }
 }
 #subject_docs{
-  @import "foundation/components/global"; // *always required
-  @import "foundation/components/buttons";
+//  @import "foundation/components/global"; // *always required
+//  @import "foundation/components/buttons";
   .file-icon {
     float: left;
     img{

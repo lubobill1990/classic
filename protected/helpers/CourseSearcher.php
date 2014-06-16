@@ -56,15 +56,19 @@ class CourseSearcher
         $site_list = $this->parseSite($search_site);
         $department_list = $this->parseDepartmentList($search_in_departments);
 
-        $search_keywords = $this->parseKeyword($search_keywords);
+        $keywords = $this->parseKeyword($search_keywords);
 
         $course_criteria = new CDbCriteria();
-        foreach ($search_keywords as $keyword) {
+        foreach ($keywords as $keyword) {
             $course_criteria->addSearchCondition('name', $keyword);
         }
         $course_criteria->alias = "crs";
         $course_criteria->join = "LEFT JOIN " . ActualClass::model()->tableName() . " AS cls ON cls.course_id=crs.id";
-        $course_criteria->addCondition("cls.term=" . $this->getCurrentTerm()); 
+        $course_criteria->addCondition("cls.term=" . $this->getCurrentTerm());
+        if($department_list!=='all'){
+            $course_criteria->addInCondition("cls.major_id",$department_list);
+        }
+
         $search_count_cache_key = "count:" . $search_keywords . $search_in_departments . $search_time . $search_site;
 
         $search_count = Yii::app()->cache->get($search_count_cache_key);

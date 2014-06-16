@@ -34,8 +34,8 @@ class CourseController extends Controller
             throw new CHttpException(404);
         }
         $this->setPageTitle($course->name, '课程');
-        $document_list = $course->courseDocuments(array('with' => 'user'));
-        $resources = $course->courseResources(array('with' => 'user', 'limit' => Pagination::$items_per_page_map['courseResource']));
+        $document_list = $course->courseDocuments(array('with' => array('user')));
+        $resources = $course->courseResources(array('with' => array('user'), 'limit' => Pagination::$items_per_page_map['courseResource']));
         $books = $course->courseBooks(array('with' => 'user'));
         $category = $course->cat();
         $category->courses = array_slice($category->courses(), 0, 8);
@@ -58,18 +58,20 @@ class CourseController extends Controller
         $page_number = empty($_REQUEST['page']) ? 0 : intval($_REQUEST['page']);
         $offset = $page_number * 20;
         $limit = 20;
+        $departments = Department::model()->findAll();
+
+        $array = array('departments' => $departments);
         if (isset($_REQUEST['keyword'])) {
             $course_searcher = new CourseSearcher();
             $courses = $course_searcher->search($_REQUEST['keyword'], $search_count, $limit, $offset);
-            $array = array(
+            $array = array_merge($array, array(
                 'search_keyword' => $_REQUEST['keyword'],
                 'courses' => $courses,
                 'search_count' => $search_count
-            );
-            $this->render('search', $array);
-        } else {
-            $this->render('search');
+            ));
         }
+        $this->render('search', $array);
+
     }
 
     public function actionFollow($id)

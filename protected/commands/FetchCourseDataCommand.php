@@ -356,11 +356,13 @@ class FetchCourseDataCommand extends CConsoleCommand
                     if (!$cour->save()) {
                         throw new Exception("course {$cour->id},{$cour->name} insert fail");
                     }
+                    echo "\n++ insert course " . $cour->raw_id . " - " . $cour->name;
                 } elseif ($cour->name != $course['course_name']) {
                     $cour->name = $course['course_name'];
                     if (!$cour->save()) {
                         throw new Exception("{$cour->id},{$course['course_name']}=>{$cour->name} update fail");
                     }
+                    echo "\n++ update course " . $cour->raw_id . " - " . $cour->name . " => " . $course['course_name'];
                 }
             }
             echo "\n-------courses insert complete----";

@@ -7,42 +7,42 @@
   border-bottom: 1px solid #ccc;
   padding-bottom: 8px;
 }
-/* line 10, ../../../sass/special/course/search.scss */
+/* line 11, ../../../sass/special/course/search.scss */
 #search-container #search-header h3 {
   color: #369;
   font-size: 14px;
 }
-/* line 14, ../../../sass/special/course/search.scss */
+/* line 16, ../../../sass/special/course/search.scss */
 #search-container #search-header span {
   color: #369;
 }
-/* line 19, ../../../sass/special/course/search.scss */
+/* line 21, ../../../sass/special/course/search.scss */
 #search-container .item {
   padding: 24px 0;
   border-bottom: 1px solid #e5e5e5;
 }
-/* line 22, ../../../sass/special/course/search.scss */
+/* line 25, ../../../sass/special/course/search.scss */
 #search-container .item img {
   width: 112px;
   height: 170px;
   margin-bottom: 8px;
   margin-right: 18px;
 }
-/* line 26, ../../../sass/special/course/search.scss */
+/* line 32, ../../../sass/special/course/search.scss */
 #search-container .item .item-detail {
   margin-top: 10px;
   overflow-y: auto;
   height: 165px;
 }
-/* line 29, ../../../sass/special/course/search.scss */
+/* line 37, ../../../sass/special/course/search.scss */
 #search-container .item .item-detail h2 {
   margin-bottom: 12px;
 }
-/* line 33, ../../../sass/special/course/search.scss */
+/* line 41, ../../../sass/special/course/search.scss */
 #search-container .item .item-detail p {
   margin-bottom: 8px;
 }
-/* line 36, ../../../sass/special/course/search.scss */
+/* line 44, ../../../sass/special/course/search.scss */
 #search-container .item .item-detail p .star {
   width: 100px;
   height: 17px;
@@ -50,32 +50,53 @@
   top: 2px;
   display: inline-block;
 }
-/* line 39, ../../../sass/special/course/search.scss */
+/* line 51, ../../../sass/special/course/search.scss */
 #search-container .item .item-detail p .star .star-off {
-  background: url("../../../images/common/star-off.png") no-repeat center;
+  background: url("/images/common/star-off.png") no-repeat center;
   width: 100%;
   height: 100%;
   display: inline-block;
   position: absolute;
 }
-/* line 44, ../../../sass/special/course/search.scss */
+/* line 59, ../../../sass/special/course/search.scss */
 #search-container .item .item-detail p .star .star-on {
-  background: url("../../../images/common/star-on.png") no-repeat;
+  background: url("/images/common/star-on.png") no-repeat;
   width: 0%;
   height: 100%;
   display: inline-block;
   position: absolute;
 }
-/* line 50, ../../../sass/special/course/search.scss */
+/* line 68, ../../../sass/special/course/search.scss */
 #search-container .item .item-detail p .item-detail-left {
   color: #999;
   margin-right: 7px;
 }
-/* line 54, ../../../sass/special/course/search.scss */
+/* line 73, ../../../sass/special/course/search.scss */
 #search-container .item .item-detail p .item-detail-right {
   color: #444;
 }
-/* line 58, ../../../sass/special/course/search.scss */
+/* line 77, ../../../sass/special/course/search.scss */
 #search-container .item .item-detail p.stars {
   margin-bottom: 12px;
+}
+
+/* line 86, ../../../sass/special/course/search.scss */
+#search-catalog > li {
+  list-style: none;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  margin: 15px 0 15px 0;
+  padding-right: 10px;
+}
+/* line 93, ../../../sass/special/course/search.scss */
+#search-catalog .search-catalog-tag {
+  font-size: 12px;
+  cursor: pointer;
+  line-height: 17px;
+  position: relative;
+  margin-bottom: 5px;
+}
+/* line 101, ../../../sass/special/course/search.scss */
+#search-catalog .search-catalog-all {
+  font-weight: bold;
 }
